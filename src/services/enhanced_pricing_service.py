@@ -217,7 +217,7 @@ class EnhancedPricingService:
             self.price_priorities = {
                 PriceSource.PURCHASE: 6,       # Historical cost
                 PriceSource.SCRYFALL_USD: 5,   # Market price
-                PriceSource.SCRYPLAYER_FOIL: 4, # Foil market
+                PriceSource.SCRYFALL_FOIL: 4, # Foil market
                 PriceSource.TCGPLAYER: 3,      # Often higher
                 PriceSource.CARDMARKET: 2,     # Alternative
                 PriceSource.MANUAL: 7          # Override

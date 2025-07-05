@@ -856,8 +856,235 @@ Built with Python and tkinter."""
     def run(self):
         """Start the GUI application."""
         self.root.mainloop()
+    
+    def verify_collection(self):
+        """Verify collection data completeness and suggest improvements."""
+        if not self.current_collection:
+            messagebox.showwarning("Warning", "No collection loaded")
+            return
+        
+        try:
+            # Run the price analysis script results
+            import pandas as pd
+            from decimal import Decimal
+            
+            # Load current CSV data for detailed analysis
+            csv_path = Path("data/enriched_collection_complete.csv")
+            if not csv_path.exists():
+                messagebox.showerror("Error", "Collection CSV file not found")
+                return
+            
+            df = pd.read_csv(csv_path)
+            
+            # Calculate current statistics
+            total_cards = df['Count'].sum()
+            cards_no_price = df[(df['Purchase Price'].isna()) & (df['USD Price'].isna())]
+            foil_cards = df[df['Foil'].isin(['foil', 'etched'])]
+            foil_missing_price = foil_cards[foil_cards['USD Foil Price'].isna()]
+            
+            # Calculate current total value
+            current_total = Decimal('0')
+            for idx, row in df.iterrows():
+                count = int(row['Count'])
+                price = None
+                
+                if pd.notna(row['Purchase Price']):
+                    price = Decimal(str(row['Purchase Price']))
+                elif pd.notna(row['USD Price']):
+                    price = Decimal(str(row['USD Price']))
+                
+                if price:
+                    current_total += price * count
+            
+            report = f"""Collection Verification Report:
 
+Current Collection Status:
+• Total Cards: {total_cards:,}
+• Current Value: ${current_total:,.2f}
+• Target (Moxfield): $2,379.52
+• Gap to Close: ${2379.52 - float(current_total):,.2f}
 
+Pricing Issues Found:
+• Cards without any pricing: {len(cards_no_price):,}
+• Foil cards missing foil pricing: {len(foil_missing_price):,}
+
+Improvement Potential:
+• Adding missing prices could add ~$854
+• Adding foil pricing could add ~$115
+• Total potential: ~$969 additional value
+
+Recommendations:
+1. Run 'Enhanced Price Update' to fill missing prices
+2. Update foil pricing for {len(foil_missing_price)} foil cards  
+3. Consider using premium price sources (TCGPlayer)
+4. Verify purchase prices are current"""
+            
+            messagebox.showinfo("Collection Verification", report)
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Verification failed: {e}")
+    
+    def enhanced_price_update(self):
+        """Run enhanced price update to match Moxfield-like pricing."""
+        if not self.current_collection:
+            messagebox.showwarning("Warning", "No collection loaded")
+            return
+        
+        result = messagebox.askyesno("Enhanced Price Update",
+                                   "This will update card prices using current Scryfall data.\n"
+                                   "This may take several minutes and will:\n\n"
+                                   "• Add USD prices for ~1,025 cards without pricing\n"
+                                   "• Add foil pricing for ~95 foil cards\n"
+                                   "• Use current market rates\n\n"
+                                   "Continue?")
+        if not result:
+            return
+        
+        try:
+            self.status_var.set("Starting enhanced price update...")
+            self.root.update()
+            
+            # Import required modules
+            import pandas as pd
+            import requests
+            import time
+            from decimal import Decimal
+            
+            # Load current CSV
+            csv_path = Path("data/enriched_collection_complete.csv")
+            df = pd.read_csv(csv_path)
+            
+            # Track progress
+            updated_cards = 0
+            total_to_update = 0
+            
+            # Count cards that need updates
+            for idx, row in df.iterrows():
+                needs_update = False
+                
+                # Check if missing USD Price
+                if pd.isna(row.get('USD Price')):
+                    needs_update = True
+                
+                # Check if foil card missing foil price
+                foil_status = str(row.get('Foil', '')).lower()
+                if foil_status in ['foil', 'etched'] and pd.isna(row.get('USD Foil Price')):
+                    needs_update = True
+                
+                if needs_update:
+                    total_to_update += 1
+            
+            if total_to_update == 0:
+                messagebox.showinfo("Price Update", "No cards need price updates")
+                return
+            
+            # Initialize Scryfall session
+            session = requests.Session()
+            session.headers.update({'User-Agent': 'MyManaBox/1.0 Price Updater'})
+            
+            self.status_var.set(f"Updating prices for {total_to_update} cards...")
+            self.root.update()
+            
+            # Update prices
+            for idx, row in df.iterrows():
+                try:
+                    card_name = row.get('Name', '')
+                    if not card_name:
+                        continue
+                    
+                    needs_update = False
+                    
+                    # Check what needs updating
+                    missing_usd = pd.isna(row.get('USD Price'))
+                    foil_status = str(row.get('Foil', '')).lower()
+                    is_foil = foil_status in ['foil', 'etched']
+                    missing_foil = is_foil and pd.isna(row.get('USD Foil Price'))
+                    
+                    if missing_usd or missing_foil:
+                        needs_update = True
+                    
+                    if not needs_update:
+                        continue
+                    
+                    # Search for card on Scryfall
+                    card_set = row.get('Edition', '') or row.get('Set Name', '')
+                    
+                    # Try fuzzy search first
+                    search_url = "https://api.scryfall.com/cards/named"
+                    params = {'fuzzy': card_name}
+                    
+                    response = session.get(search_url, params=params)
+                    
+                    if response.status_code == 200:
+                        card_data = response.json()
+                        prices = card_data.get('prices', {})
+                        
+                        # Update USD Price if missing
+                        if missing_usd and prices.get('usd'):
+                            df.at[idx, 'USD Price'] = float(prices['usd'])
+                            updated_cards += 1
+                        
+                        # Update USD Foil Price if missing and card is foil
+                        if missing_foil and prices.get('usd_foil'):
+                            df.at[idx, 'USD Foil Price'] = float(prices['usd_foil'])
+                            updated_cards += 1
+                    
+                    # Progress update
+                    if updated_cards % 25 == 0:
+                        progress = (updated_cards / total_to_update) * 100
+                        self.status_var.set(f"Updated {updated_cards}/{total_to_update} cards ({progress:.1f}%)")
+                        self.root.update()
+                    
+                    # Rate limiting - Scryfall allows 10 requests per second
+                    time.sleep(0.1)
+                    
+                except Exception as e:
+                    card_name = row.get('Name', 'Unknown')
+                    print(f"Error updating {card_name}: {e}")
+                    continue
+            
+            # Save updated CSV
+            backup_path = csv_path.with_suffix('.csv.backup')
+            df.to_csv(backup_path, index=False)  # Create backup
+            df.to_csv(csv_path, index=False)  # Save updated version
+            
+            # Calculate new total
+            new_total = Decimal('0')
+            for idx, row in df.iterrows():
+                count = int(row['Count'])
+                price = None
+                
+                if pd.notna(row['Purchase Price']):
+                    price = Decimal(str(row['Purchase Price']))
+                else:
+                    foil_status = str(row.get('Foil', '')).lower()
+                    is_foil = foil_status in ['foil', 'etched']
+                    
+                    if is_foil and pd.notna(row.get('USD Foil Price')):
+                        price = Decimal(str(row['USD Foil Price']))
+                    elif pd.notna(row.get('USD Price')):
+                        price = Decimal(str(row['USD Price']))
+                
+                if price:
+                    new_total += price * count
+            
+            # Reload collection to show updates
+            self.load_collection_from_file(str(csv_path))
+            
+            messagebox.showinfo("Price Update Complete",
+                              f"Enhanced price update completed!\n\n"
+                              f"• Updated {updated_cards} card prices\n"
+                              f"• New collection value: ${new_total:,.2f}\n"
+                              f"• Progress toward $2,379.52 target\n"
+                              f"• Backup saved to: {backup_path.name}")
+            
+            self.status_var.set(f"Price update complete: {updated_cards} cards updated")
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Price update failed: {e}")
+            self.status_var.set("Price update failed")
+
+    # ...existing code...
 def main():
     """Main entry point for the GUI application."""
     try:
