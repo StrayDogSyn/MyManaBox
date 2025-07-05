@@ -64,10 +64,12 @@ MyManaBox/
 │   └── utils/             # Utilities and constants
 ├── data/                  # Data files
 ├── docs/                  # Documentation
+├── scripts/               # Development and utility scripts
 ├── legacy/                # Legacy scripts (for reference)
 ├── tests/                 # Test files
 ├── sorted_output/         # Generated sorted collections
 ├── backups/               # Automatic backups
+├── dev.py                 # Development utility script
 └── main.py                # Main entry point
 ```
 

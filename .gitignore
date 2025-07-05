@@ -2,6 +2,10 @@
 sorted_output/*.csv
 backups/*.backup_*
 data/card_cache.json
+enriched_collection.csv
+*_COMPLETE.md
+# Temporary development files
+scripts/temp_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
