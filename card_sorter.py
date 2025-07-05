@@ -13,6 +13,7 @@ from collections import defaultdict
 import argparse
 from colorama import init, Fore, Style
 from tabulate import tabulate
+import shutil
 
 # Initialize colorama for Windows compatibility
 init()
@@ -59,7 +60,7 @@ class MTGCardSorter:
         
         if not top_valuable.empty:
             print(f"\n{Fore.YELLOW}Top 10 Most Valuable Cards:{Style.RESET_ALL}")
-            print(tabulate(top_valuable, headers=['Name', 'Edition', 'Price', 'Count'], tablefmt='grid'))
+            print(tabulate(top_valuable.values, headers=['Name', 'Edition', 'Price', 'Count'], tablefmt='grid'))
     
     def sort_by_color(self) -> Dict[str, List]:
         """Sort cards by color identity (requires API lookup for accurate color data)."""
@@ -213,7 +214,7 @@ class MTGCardSorter:
         
         if not real_duplicates.empty:
             print(f"\n{Fore.YELLOW}=== Duplicate Cards ==={Style.RESET_ALL}")
-            print(tabulate(real_duplicates, headers=['Name', 'Edition', 'Total Count', 'Price'], tablefmt='grid'))
+            print(tabulate(real_duplicates.values, headers=['Name', 'Edition', 'Total Count', 'Price'], tablefmt='grid'))
         else:
             print(f"\n{Fore.GREEN}✓ No duplicate cards found!{Style.RESET_ALL}")
     
@@ -227,7 +228,7 @@ class MTGCardSorter:
         if not results.empty:
             print(f"\n{Fore.CYAN}=== Search Results for '{query}' ==={Style.RESET_ALL}")
             display_cols = ['Name', 'Edition', 'Count', 'Purchase Price', 'Condition']
-            print(tabulate(results[display_cols], headers=display_cols, tablefmt='grid'))
+            print(tabulate(results[display_cols].values, headers=display_cols, tablefmt='grid'))
         else:
             print(f"\n{Fore.YELLOW}No cards found matching '{query}'{Style.RESET_ALL}")
     
@@ -256,6 +257,178 @@ class MTGCardSorter:
         print(f"\n{Fore.YELLOW}Foil Status:{Style.RESET_ALL}")
         print(f"  Foil cards: {foil_count}")
         print(f"  Non-foil cards: {non_foil_count}")
+    
+    def import_from_moxfield_url(self, url: str, backup_existing: bool = True) -> bool:
+        """Import collection from a Moxfield collection URL."""
+        print(f"{Fore.CYAN}Importing collection from Moxfield URL...{Style.RESET_ALL}")
+        
+        # Backup existing collection if requested
+        if backup_existing and Path(self.csv_file).exists():
+            backup_file = f"{self.csv_file}.backup_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}"
+            try:
+                Path(self.csv_file).rename(backup_file)
+                print(f"{Fore.GREEN}✓ Backed up existing collection to {backup_file}{Style.RESET_ALL}")
+            except Exception as e:
+                print(f"{Fore.YELLOW}⚠ Could not backup existing file: {e}{Style.RESET_ALL}")
+        
+        try:
+            # Extract collection ID from URL
+            if "/collection/" in url:
+                collection_id = url.split("/collection/")[1].split("/")[0].split("?")[0]
+            else:
+                print(f"{Fore.RED}✗ Invalid Moxfield collection URL format{Style.RESET_ALL}")
+                return False
+            
+            print(f"{Fore.YELLOW}Attempting to fetch collection data...{Style.RESET_ALL}")
+            
+            # Try different API endpoints and methods
+            endpoints_to_try = [
+                f"https://api.moxfield.com/v2/collections/{collection_id}/export/csv",
+                f"https://api.moxfield.com/v3/collections/{collection_id}/export/csv",
+                f"https://moxfield.com/collections/{collection_id}/export/csv"
+            ]
+            
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/csv,text/plain,*/*',
+                'Referer': url
+            }
+            
+            success = False
+            for endpoint in endpoints_to_try:
+                try:
+                    print(f"{Fore.YELLOW}Trying: {endpoint}{Style.RESET_ALL}")
+                    response = requests.get(endpoint, headers=headers, timeout=30)
+                    
+                    if response.status_code == 200:
+                        # Check if we got CSV content
+                        content = response.text
+                        if content and ('Count' in content or 'Name' in content):
+                            # Save the CSV content
+                            with open(self.csv_file, 'w', encoding='utf-8') as f:
+                                f.write(content)
+                            
+                            print(f"{Fore.GREEN}✓ Collection data downloaded successfully{Style.RESET_ALL}")
+                            success = True
+                            break
+                        else:
+                            print(f"{Fore.YELLOW}⚠ Response doesn't contain expected CSV data{Style.RESET_ALL}")
+                    elif response.status_code == 403:
+                        print(f"{Fore.YELLOW}⚠ Access forbidden - collection may be private{Style.RESET_ALL}")
+                    elif response.status_code == 404:
+                        print(f"{Fore.YELLOW}⚠ Collection not found{Style.RESET_ALL}")
+                    else:
+                        print(f"{Fore.YELLOW}⚠ HTTP {response.status_code} response{Style.RESET_ALL}")
+                        
+                except requests.RequestException as e:
+                    print(f"{Fore.YELLOW}⚠ Request failed: {e}{Style.RESET_ALL}")
+                    continue
+            
+            if not success:
+                print(f"\n{Fore.RED}✗ Could not access the collection data.{Style.RESET_ALL}")
+                print(f"{Fore.YELLOW}This could be because:{Style.RESET_ALL}")
+                print(f"  • The collection is set to private")
+                print(f"  • The collection URL is invalid") 
+                print(f"  • Moxfield's API has changed")
+                print(f"\n{Fore.CYAN}Alternative options:{Style.RESET_ALL}")
+                print(f"  1. Make sure the collection is public on Moxfield")
+                print(f"  2. Export the collection manually from Moxfield:")
+                print(f"     - Go to {url}")
+                print(f"     - Click 'Export' button")
+                print(f"     - Download as CSV")
+                print(f"     - Save as 'moxfield_export.csv' in this directory")
+                return False
+            
+            # Reload the collection
+            self.load_cards()
+            
+            if self.cards_df is not None:
+                print(f"{Fore.GREEN}✓ Collection import completed successfully!{Style.RESET_ALL}")
+                print(f"   - {len(self.cards_df)} unique cards imported")
+                print(f"   - {self.cards_df['Count'].sum()} total cards")
+                return True
+            else:
+                print(f"{Fore.RED}✗ Failed to load imported collection{Style.RESET_ALL}")
+                return False
+                
+        except Exception as e:
+            print(f"{Fore.RED}✗ Error importing collection: {e}{Style.RESET_ALL}")
+            return False
+
+    def import_from_file(self, file_path: str, backup_existing: bool = True) -> bool:
+        """Import collection from a downloaded CSV file."""
+        print(f"{Fore.CYAN}Importing collection from file: {file_path}{Style.RESET_ALL}")
+        
+        if not Path(file_path).exists():
+            print(f"{Fore.RED}✗ File not found: {file_path}{Style.RESET_ALL}")
+            return False
+        
+        # Backup existing collection if requested
+        if backup_existing and Path(self.csv_file).exists():
+            backup_file = f"{self.csv_file}.backup_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}"
+            try:
+                Path(self.csv_file).rename(backup_file)
+                print(f"{Fore.GREEN}✓ Backed up existing collection to {backup_file}{Style.RESET_ALL}")
+            except Exception as e:
+                print(f"{Fore.YELLOW}⚠ Could not backup existing file: {e}{Style.RESET_ALL}")
+        
+        try:
+            # Copy the file to our standard location
+            shutil.copy2(file_path, self.csv_file)
+            print(f"{Fore.GREEN}✓ Collection file copied successfully{Style.RESET_ALL}")
+            
+            # Reload the collection
+            self.load_cards()
+            
+            if self.cards_df is not None:
+                print(f"{Fore.GREEN}✓ Collection import completed successfully!{Style.RESET_ALL}")
+                print(f"   - {len(self.cards_df)} unique cards imported")
+                print(f"   - {self.cards_df['Count'].sum()} total cards")
+                return True
+            else:
+                print(f"{Fore.RED}✗ Failed to load imported collection{Style.RESET_ALL}")
+                return False
+                
+        except Exception as e:
+            print(f"{Fore.RED}✗ Error importing file: {e}{Style.RESET_ALL}")
+            return False
+
+    def show_manual_import_instructions(self, url: str):
+        """Show detailed instructions for manual collection import."""
+        print(f"\n{Fore.CYAN}=== Manual Import Instructions ==={Style.RESET_ALL}")
+        print(f"\nSince automatic import failed, please follow these steps:")
+        print(f"\n{Fore.YELLOW}Step 1: Access Your Collection{Style.RESET_ALL}")
+        print(f"  • Go to: {url}")
+        print(f"  • Make sure you're logged into Moxfield")
+        print(f"  • Ensure the collection is set to 'Public' if you want to share it")
+        
+        print(f"\n{Fore.YELLOW}Step 2: Export Your Collection{Style.RESET_ALL}")
+        print(f"  • Look for an 'Export' or 'Download' button on the collection page")
+        print(f"  • Select 'CSV' format")
+        print(f"  • Download the file")
+        
+        print(f"\n{Fore.YELLOW}Step 3: Import to MyManaBox{Style.RESET_ALL}")
+        print(f"  • Save the downloaded CSV file in this directory:")
+        print(f"    {Path.cwd()}")
+        print(f"  • Rename it to 'moxfield_export.csv' or use the --import-file option:")
+        print(f"    python card_sorter.py --import-file 'your_downloaded_file.csv'")
+        
+        print(f"\n{Fore.GREEN}Alternative: Direct File Import{Style.RESET_ALL}")
+        print(f"  • If you already have the CSV file, use:")
+        print(f"    python card_sorter.py --import-file 'path_to_your_file.csv'")
+        
+        print(f"\n{Fore.CYAN}Once imported, you can use all MyManaBox features!{Style.RESET_ALL}")
+    
+    def update_from_url(self, url: str) -> bool:
+        """Update collection from various supported URLs."""
+        if "moxfield.com" in url.lower():
+            success = self.import_from_moxfield_url(url)
+            if not success:
+                self.show_manual_import_instructions(url)
+            return success
+        else:
+            print(f"{Fore.RED}✗ Unsupported URL format. Currently supported: Moxfield collections{Style.RESET_ALL}")
+            return False
 
 
 def main():
@@ -267,8 +440,33 @@ def main():
     parser.add_argument("--duplicates", action="store_true", help="Find duplicate cards")
     parser.add_argument("--stats", action="store_true", help="Show collection statistics")
     parser.add_argument("--summary", action="store_true", help="Show collection summary")
+    parser.add_argument("--import-url", help="Import collection from URL (Moxfield supported)")
+    parser.add_argument("--import-file", help="Import collection from a local CSV file")
+    parser.add_argument("--no-backup", action="store_true", help="Skip backup when importing")
     
     args = parser.parse_args()
+    
+    # Handle URL import first if specified
+    if args.import_url:
+        print(f"{Fore.CYAN}=== Collection Import ==={Style.RESET_ALL}")
+        sorter = MTGCardSorter(args.csv)
+        success = sorter.update_from_url(args.import_url)
+        if success:
+            print(f"\n{Fore.GREEN}Collection import completed! You can now use other commands.{Style.RESET_ALL}")
+            # Show summary after successful import
+            sorter.display_summary()
+        return
+    
+    # Handle file import
+    if args.import_file:
+        print(f"{Fore.CYAN}=== Collection File Import ==={Style.RESET_ALL}")
+        sorter = MTGCardSorter(args.csv)
+        success = sorter.import_from_file(args.import_file, backup_existing=not args.no_backup)
+        if success:
+            print(f"\n{Fore.GREEN}Collection import completed! You can now use other commands.{Style.RESET_ALL}")
+            # Show summary after successful import
+            sorter.display_summary()
+        return
     
     # Create the sorter instance
     sorter = MTGCardSorter(args.csv)
@@ -283,6 +481,8 @@ def main():
         sorter.search_cards(args.search)
     elif args.sort:
         sorter.export_sorted_collection(args.sort)
+    elif args.import_file:
+        sorter.import_from_file(args.import_file, not args.no_backup)
     else:
         # Interactive mode
         print(f"\n{Fore.CYAN}Welcome to MyManaBox - MTG Card Sorter!{Style.RESET_ALL}")

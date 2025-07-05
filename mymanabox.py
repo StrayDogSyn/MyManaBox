@@ -41,6 +41,10 @@ Examples:
     # Input options
     parser.add_argument("--csv", default="moxfield_export.csv", 
                        help="Path to your card collection CSV file")
+    parser.add_argument("--import-url", metavar="URL",
+                       help="Import collection from URL (supports Moxfield collections)")
+    parser.add_argument("--no-backup", action="store_true",
+                       help="Skip backup when importing new collection")
     
     # Analysis options
     parser.add_argument("--summary", action="store_true",
@@ -74,6 +78,23 @@ Examples:
     
     # Show banner
     show_banner()
+    
+    # Handle URL import first if specified
+    if args.import_url:
+        print(f"{Fore.CYAN}=== Collection Import ==={Style.RESET_ALL}")
+        # Use enhanced mode if available
+        if args.enhanced or args.mana_curve or args.expensive is not None:
+            sorter = EnhancedMTGCardSorter(args.csv, use_api=not args.no_api)
+        else:
+            sorter = MTGCardSorter(args.csv)
+        
+        success = sorter.update_from_url(args.import_url)
+        if success:
+            print(f"\n{Fore.GREEN}Collection import completed! You can now use other commands.{Style.RESET_ALL}")
+            # Show summary after successful import
+            if hasattr(sorter, 'display_summary'):
+                sorter.display_summary()
+        return 0
     
     # Determine which sorter to use
     if args.enhanced or args.mana_curve or args.expensive is not None:
@@ -143,6 +164,10 @@ Examples:
             print("  --mana-curve       Analyze mana curve (enhanced)")
             print("  --expensive PRICE  Find expensive cards (enhanced)")
             print(f"\nUse {Fore.YELLOW}python mymanabox.py --help{Style.RESET_ALL} for detailed help.")
+            print(f"\n{Fore.CYAN}To update your collection from Moxfield:{Style.RESET_ALL}")
+            print(f"  python card_sorter.py --import-url YOUR_MOXFIELD_URL")
+            print(f"  python card_sorter.py --import-file YOUR_CSV_FILE")
+            print(f"\n{Fore.YELLOW}See IMPORT_INSTRUCTIONS.md for detailed import help.{Style.RESET_ALL}")
             
             if hasattr(sorter, 'display_summary'):
                 print(f"\n{Fore.GREEN}Showing collection summary:{Style.RESET_ALL}")
