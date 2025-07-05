@@ -42,24 +42,30 @@ class CardTableWidget:
         self.tree_frame = ttk.Frame(self.frame)
         self.tree_frame.pack(fill=tk.BOTH, expand=True)
         
-        # Define columns based on the enriched data
+        # Define columns based on the target interface
         self.columns = [
             "Qty", "Name", "Set", "Condition", "Language", "Foil", 
-            "Rarity", "Type", "CMC", "Colors", "USD Price", "Total Value"
+            "Rarity", "Type", "CMC", "Colors", "Price", "Total"
         ]
         
-        self.tree = ttk.Treeview(self.tree_frame, columns=self.columns, show='headings', height=20)
+        self.tree = ttk.Treeview(self.tree_frame, columns=self.columns, show='headings', height=25)
         
-        # Configure column headers and widths
+        # Configure column headers and widths to match target
         column_widths = {
-            "Qty": 50, "Name": 200, "Set": 120, "Condition": 80, "Language": 60,
-            "Foil": 50, "Rarity": 80, "Type": 150, "CMC": 50, "Colors": 80,
-            "USD Price": 80, "Total Value": 80
+            "Qty": 50, "Name": 250, "Set": 180, "Condition": 90, "Language": 70,
+            "Foil": 50, "Rarity": 90, "Type": 200, "CMC": 50, "Colors": 70,
+            "Price": 80, "Total": 80
         }
         
+        # Configure columns with better alignment
         for col in self.columns:
             self.tree.heading(col, text=col, command=lambda c=col: self.sort_column(c))
-            self.tree.column(col, width=column_widths.get(col, 100), minwidth=50)
+            width = column_widths.get(col, 100)
+            self.tree.column(col, width=width, minwidth=50)
+            
+            # Center align numeric columns
+            if col in ["Qty", "CMC", "Price", "Total"]:
+                self.tree.column(col, anchor='center')
         
         # Add scrollbars
         v_scrollbar = ttk.Scrollbar(self.tree_frame, orient=tk.VERTICAL, command=self.tree.yview)
@@ -132,7 +138,7 @@ class CardTableWidget:
                 str(card.count),
                 card.name,
                 card.set_name or card.edition,
-                card.condition.value if card.condition else "",
+                card.condition.value if card.condition else "NM",
                 "EN",  # Default language
                 "Yes" if card.foil else "",
                 card.rarity.value if card.rarity else "",
@@ -170,7 +176,7 @@ class CardTableWidget:
                 str(card.count),
                 card.name,
                 card.set_name or card.edition,
-                card.condition.value if card.condition else "",
+                card.condition.value if card.condition else "NM",
                 "EN",
                 "Yes" if card.foil else "",
                 card.rarity.value if card.rarity else "",
@@ -187,42 +193,49 @@ class CardDetailPanel:
     """Panel showing detailed information about selected card."""
     
     def __init__(self, parent, main_gui=None):
-        self.frame = ttk.LabelFrame(parent, text="Card Details", padding=10)
-        self.frame.pack(fill=tk.X, padx=10, pady=5)
+        self.frame = ttk.LabelFrame(parent, text="Card Details", padding=15)
+        self.frame.pack(fill=tk.X, pady=(0, 10))
         self.main_gui = main_gui
         
-        # Create detail labels
+        # Create detail labels with better spacing
         self.detail_vars = {}
         detail_fields = [
             ("Name", "name"), ("Set", "set"), ("Rarity", "rarity"),
             ("Type", "type"), ("Mana Cost", "mana_cost"), ("CMC", "cmc"),
-            ("Power/Toughness", "pt"), ("Oracle Text", "oracle_text"),
-            ("Market Price", "price"), ("Purchase Price", "purchase_price")
+            ("Power/Toughness", "pt"), ("Market Price", "price")
         ]
         
-        row = 0
-        for label, key in detail_fields:
-            ttk.Label(self.frame, text=f"{label}:", font=('TkDefaultFont', 9, 'bold')).grid(
-                row=row, column=0, sticky='w', padx=(0, 10), pady=2
-            )
+        for i, (label, key) in enumerate(detail_fields):
+            # Create frame for each field
+            field_frame = ttk.Frame(self.frame)
+            field_frame.pack(fill=tk.X, pady=3)
             
+            # Label
+            ttk.Label(field_frame, text=f"{label}:", 
+                     font=('Segoe UI', 9, 'bold')).pack(side=tk.LEFT, anchor='w')
+            
+            # Value
             var = tk.StringVar()
             self.detail_vars[key] = var
-            
-            if key == "oracle_text":
-                # Multi-line text for oracle text
-                text_widget = tk.Text(self.frame, height=4, width=50, wrap=tk.WORD, 
-                                    font=('TkDefaultFont', 9))
-                text_widget.grid(row=row, column=1, sticky='ew', pady=2)
-                self.oracle_text_widget = text_widget
-            else:
-                ttk.Label(self.frame, textvariable=var, font=('TkDefaultFont', 9)).grid(
-                    row=row, column=1, sticky='w', pady=2
-                )
-            
-            row += 1
+            ttk.Label(field_frame, textvariable=var, 
+                     font=('Segoe UI', 9)).pack(side=tk.RIGHT, anchor='e')
         
-        self.frame.grid_columnconfigure(1, weight=1)
+        # Oracle text in a separate section
+        oracle_frame = ttk.Frame(self.frame)
+        oracle_frame.pack(fill=tk.BOTH, expand=True, pady=(10, 0))
+        
+        ttk.Label(oracle_frame, text="Oracle Text:", 
+                 font=('Segoe UI', 9, 'bold')).pack(anchor='w')
+        
+        # Text widget for oracle text
+        text_frame = ttk.Frame(oracle_frame)
+        text_frame.pack(fill=tk.BOTH, expand=True, pady=(5, 0))
+        
+        self.oracle_text_widget = tk.Text(text_frame, height=6, width=30, wrap=tk.WORD, 
+                                        font=('Segoe UI', 8),
+                                        bg='#404040', fg='white', borderwidth=1,
+                                        relief='solid', insertbackground='white')
+        self.oracle_text_widget.pack(fill=tk.BOTH, expand=True)
     
     def update_details(self, card_values):
         """Update the detail panel with selected card information."""
@@ -259,7 +272,6 @@ class CardDetailPanel:
             self.detail_vars["pt"].set(pt_text)
             
             self.detail_vars["price"].set(f"${found_card.market_value:.2f}" if found_card.market_value else "")
-            self.detail_vars["purchase_price"].set(f"${found_card.purchase_price:.2f}" if found_card.purchase_price else "")
             
             # Oracle text
             self.oracle_text_widget.delete(1.0, tk.END)
@@ -277,7 +289,6 @@ class CardDetailPanel:
             self.detail_vars["cmc"].set(card_values[8] if len(card_values) > 8 else "")
             self.detail_vars["pt"].set("")
             self.detail_vars["price"].set(card_values[10] if len(card_values) > 10 else "")
-            self.detail_vars["purchase_price"].set("")
             
             self.oracle_text_widget.delete(1.0, tk.END)
             self.oracle_text_widget.insert(1.0, "Card details not available")
@@ -293,34 +304,41 @@ class CollectionStatsPanel:
     """Panel showing collection statistics."""
     
     def __init__(self, parent):
-        self.frame = ttk.LabelFrame(parent, text="Collection Statistics", padding=10)
-        self.frame.pack(fill=tk.X, padx=10, pady=5)
+        # Main stats frame with modern styling
+        self.frame = ttk.Frame(parent)
+        self.frame.pack(fill=tk.X, pady=(0, 10))
         
-        # Create stats frame with grid layout
-        stats_frame = ttk.Frame(self.frame)
-        stats_frame.pack(fill=tk.X)
+        # Stats container with better layout
+        stats_container = ttk.Frame(self.frame)
+        stats_container.pack(fill=tk.X)
         
-        # Define stat labels
+        # Define stat labels with improved styling
         self.stat_vars = {}
         stats = [
             ("Total Cards:", "total_cards"),
-            ("Unique Cards:", "unique_cards"),
+            ("Unique Cards:", "unique_cards"), 
             ("Total Value:", "total_value"),
             ("Average Value:", "avg_value")
         ]
         
-        col = 0
-        for label, key in stats:
-            ttk.Label(stats_frame, text=label, font=('TkDefaultFont', 9, 'bold')).grid(
-                row=0, column=col*2, sticky='w', padx=(0, 5)
-            )
+        # Create stats in a horizontal layout
+        for i, (label, key) in enumerate(stats):
+            stat_frame = ttk.Frame(stats_container)
+            stat_frame.pack(side=tk.LEFT, padx=(0, 30) if i < len(stats)-1 else (0, 0))
             
+            # Label
+            label_widget = ttk.Label(stat_frame, text=label, font=('Segoe UI', 10, 'bold'))
+            label_widget.pack(anchor='w')
+            
+            # Value
             var = tk.StringVar()
             self.stat_vars[key] = var
-            ttk.Label(stats_frame, textvariable=var, font=('TkDefaultFont', 9)).grid(
-                row=0, column=col*2+1, sticky='w', padx=(0, 20)
-            )
-            col += 1
+            value_widget = ttk.Label(stat_frame, textvariable=var, font=('Segoe UI', 14, 'bold'))
+            value_widget.pack(anchor='w')
+        
+        # Add a separator line
+        separator = ttk.Separator(self.frame, orient='horizontal')
+        separator.pack(fill=tk.X, pady=(10, 0))
     
     def update_stats(self, collection: Collection):
         """Update statistics from collection."""
@@ -338,7 +356,8 @@ class MyManaBoxGUI:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("MyManaBox - MTG Collection Manager")
-        self.root.geometry("1400x800")
+        self.root.geometry("1600x900")
+        self.root.minsize(1200, 700)
         
         # Initialize services
         self.csv_loader = None
@@ -360,13 +379,103 @@ class MyManaBoxGUI:
         """Configure ttk styles for modern appearance."""
         style = ttk.Style()
         
-        # Configure colors
-        style.configure('Title.TLabel', font=('TkDefaultFont', 12, 'bold'))
-        style.configure('Header.TLabel', font=('TkDefaultFont', 10, 'bold'))
+        # Set a modern theme
+        style.theme_use('clam')
         
-        # Configure treeview
-        style.configure('Treeview', rowheight=25)
-        style.configure('Treeview.Heading', font=('TkDefaultFont', 9, 'bold'))
+        # Define color scheme (dark theme)
+        bg_color = '#2b2b2b'
+        fg_color = '#ffffff'
+        select_color = '#404040'
+        accent_color = '#0078d4'
+        header_color = '#333333'
+        
+        # Configure root window
+        self.root.configure(bg=bg_color)
+        
+        # Configure general styles
+        style.configure('Title.TLabel', 
+                       font=('Segoe UI', 14, 'bold'), 
+                       background=bg_color, 
+                       foreground=fg_color)
+        style.configure('Header.TLabel', 
+                       font=('Segoe UI', 11, 'bold'), 
+                       background=bg_color, 
+                       foreground=fg_color)
+        
+        # Configure treeview for modern look
+        style.configure('Treeview', 
+                       background=bg_color,
+                       foreground=fg_color,
+                       fieldbackground=bg_color,
+                       borderwidth=0,
+                       rowheight=28,
+                       font=('Segoe UI', 9))
+        
+        style.configure('Treeview.Heading', 
+                       background=header_color,
+                       foreground=fg_color,
+                       borderwidth=1,
+                       relief='flat',
+                       font=('Segoe UI', 9, 'bold'))
+        
+        style.map('Treeview.Heading',
+                 background=[('active', accent_color)])
+        
+        style.map('Treeview',
+                 background=[('selected', accent_color)],
+                 foreground=[('selected', fg_color)])
+        
+        # Configure frames
+        style.configure('TFrame', background=bg_color)
+        style.configure('TLabelFrame', 
+                       background=bg_color,
+                       foreground=fg_color,
+                       borderwidth=1,
+                       relief='solid')
+        style.configure('TLabelFrame.Label', 
+                       background=bg_color,
+                       foreground=fg_color,
+                       font=('Segoe UI', 10, 'bold'))
+        
+        # Configure labels
+        style.configure('TLabel', 
+                       background=bg_color,
+                       foreground=fg_color,
+                       font=('Segoe UI', 9))
+        
+        # Configure buttons
+        style.configure('TButton',
+                       background=accent_color,
+                       foreground=fg_color,
+                       borderwidth=0,
+                       focuscolor='none',
+                       font=('Segoe UI', 9))
+        
+        style.map('TButton',
+                 background=[('active', '#106ebe'),
+                            ('pressed', '#005a9e')])
+        
+        # Configure entry widgets
+        style.configure('TEntry',
+                       fieldbackground=select_color,
+                       borderwidth=1,
+                       insertcolor=fg_color,
+                       foreground=fg_color,
+                       font=('Segoe UI', 9))
+        
+        # Configure combobox
+        style.configure('TCombobox',
+                       fieldbackground=select_color,
+                       borderwidth=1,
+                       foreground=fg_color,
+                       font=('Segoe UI', 9))
+        
+        # Configure checkbutton
+        style.configure('TCheckbutton',
+                       background=bg_color,
+                       foreground=fg_color,
+                       focuscolor='none',
+                       font=('Segoe UI', 9))
     
     def create_menu(self):
         """Create application menu bar."""
@@ -398,96 +507,120 @@ class MyManaBoxGUI:
     
     def create_toolbar(self):
         """Create toolbar with common actions."""
+        # Main toolbar frame with padding
         toolbar = ttk.Frame(self.root)
-        toolbar.pack(fill=tk.X, padx=5, pady=5)
+        toolbar.pack(fill=tk.X, padx=15, pady=(10, 5))
         
-        # Search frame
+        # Left side - Collection info and filters
+        left_frame = ttk.Frame(toolbar)
+        left_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        
+        # Collection title
+        title_label = ttk.Label(left_frame, text="Collection Overview", style='Title.TLabel')
+        title_label.pack(side=tk.LEFT, anchor='w')
+        
+        # Search frame (moved to right side)
         search_frame = ttk.Frame(toolbar)
-        search_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        search_frame.pack(side=tk.RIGHT)
         
-        ttk.Label(search_frame, text="Search:").pack(side=tk.LEFT, padx=(0, 5))
+        # Search with modern styling
+        ttk.Label(search_frame, text="Search:", style='Header.TLabel').pack(side=tk.LEFT, padx=(0, 8))
         
         self.search_var = tk.StringVar()
         self.search_var.trace('w', self.on_search_change)
-        search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=30)
-        search_entry.pack(side=tk.LEFT, padx=(0, 10))
+        search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=25, font=('Segoe UI', 10))
+        search_entry.pack(side=tk.LEFT, padx=(0, 8))
         
-        # Filter buttons
+        # Action buttons with modern styling
         ttk.Button(search_frame, text="Clear", command=self.clear_search).pack(side=tk.LEFT, padx=2)
-        
-        # Action buttons
-        button_frame = ttk.Frame(toolbar)
-        button_frame.pack(side=tk.RIGHT)
-        
-        ttk.Button(button_frame, text="Refresh", command=self.refresh_collection).pack(side=tk.LEFT, padx=2)
-        ttk.Button(button_frame, text="Enrich", command=self.enrich_collection).pack(side=tk.LEFT, padx=2)
+        ttk.Button(search_frame, text="Refresh", command=self.refresh_collection).pack(side=tk.LEFT, padx=2)
+        ttk.Button(search_frame, text="Enrich", command=self.enrich_collection).pack(side=tk.LEFT, padx=2)
     
     def create_main_interface(self):
         """Create the main interface layout."""
-        # Main paned window
-        main_paned = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
-        main_paned.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        # Main container with better padding
+        main_container = ttk.Frame(self.root)
+        main_container.pack(fill=tk.BOTH, expand=True, padx=15, pady=(5, 10))
         
-        # Left panel for table
-        left_frame = ttk.Frame(main_paned)
-        main_paned.add(left_frame, weight=3)
+        # Top stats panel (similar to target)
+        self.stats_panel = CollectionStatsPanel(main_container)
         
-        # Collection stats
-        self.stats_panel = CollectionStatsPanel(left_frame)
+        # Main content area with paned window
+        content_paned = ttk.PanedWindow(main_container, orient=tk.HORIZONTAL)
+        content_paned.pack(fill=tk.BOTH, expand=True, pady=(10, 0))
         
-        # Card table
-        self.card_table = CardTableWidget(left_frame, on_selection_change=self.on_card_selection)
+        # Left panel for table (larger portion)
+        left_panel = ttk.Frame(content_paned)
+        content_paned.add(left_panel, weight=4)
         
-        # Right panel for details
-        right_frame = ttk.Frame(main_paned)
-        main_paned.add(right_frame, weight=1)
+        # Card table with modern styling
+        self.card_table = CardTableWidget(left_panel, on_selection_change=self.on_card_selection)
         
-        # Card details
-        self.detail_panel = CardDetailPanel(right_frame, main_gui=self)
+        # Right panel for details and filters (smaller portion)
+        right_panel = ttk.Frame(content_paned)
+        content_paned.add(right_panel, weight=1)
         
-        # Additional info panels could go here
-        self.create_filter_panel(right_frame)
+        # Card details panel
+        self.detail_panel = CardDetailPanel(right_panel, main_gui=self)
+        
+        # Filters panel
+        self.create_filter_panel(right_panel)
     
     def create_filter_panel(self, parent):
         """Create filter options panel."""
-        filter_frame = ttk.LabelFrame(parent, text="Filters", padding=10)
-        filter_frame.pack(fill=tk.X, padx=10, pady=5)
+        filter_frame = ttk.LabelFrame(parent, text="Filters", padding=15)
+        filter_frame.pack(fill=tk.X, pady=(0, 10))
         
         # Rarity filter
-        ttk.Label(filter_frame, text="Rarity:").grid(row=0, column=0, sticky='w', pady=2)
+        rarity_frame = ttk.Frame(filter_frame)
+        rarity_frame.pack(fill=tk.X, pady=5)
+        
+        ttk.Label(rarity_frame, text="Rarity:", font=('Segoe UI', 9, 'bold')).pack(anchor='w')
         self.rarity_var = tk.StringVar()
-        rarity_combo = ttk.Combobox(filter_frame, textvariable=self.rarity_var, 
-                                  values=["All", "Common", "Uncommon", "Rare", "Mythic"])
-        rarity_combo.grid(row=0, column=1, sticky='ew', pady=2)
+        rarity_combo = ttk.Combobox(rarity_frame, textvariable=self.rarity_var, 
+                                  values=["All", "Common", "Uncommon", "Rare", "Mythic"],
+                                  state='readonly', width=15)
+        rarity_combo.pack(fill=tk.X, pady=(2, 0))
         rarity_combo.set("All")
         
         # Set filter
-        ttk.Label(filter_frame, text="Set:").grid(row=1, column=0, sticky='w', pady=2)
+        set_frame = ttk.Frame(filter_frame)
+        set_frame.pack(fill=tk.X, pady=5)
+        
+        ttk.Label(set_frame, text="Set:", font=('Segoe UI', 9, 'bold')).pack(anchor='w')
         self.set_var = tk.StringVar()
-        self.set_combo = ttk.Combobox(filter_frame, textvariable=self.set_var)
-        self.set_combo.grid(row=1, column=1, sticky='ew', pady=2)
+        self.set_combo = ttk.Combobox(set_frame, textvariable=self.set_var,
+                                     state='readonly', width=15)
+        self.set_combo.pack(fill=tk.X, pady=(2, 0))
         self.set_combo.set("All")
         
         # Foil filter
+        foil_frame = ttk.Frame(filter_frame)
+        foil_frame.pack(fill=tk.X, pady=5)
+        
         self.foil_var = tk.BooleanVar()
-        ttk.Checkbutton(filter_frame, text="Foils Only", variable=self.foil_var).grid(
-            row=2, column=0, columnspan=2, sticky='w', pady=2
-        )
+        ttk.Checkbutton(foil_frame, text="Foils Only", 
+                       variable=self.foil_var).pack(anchor='w')
         
         # Apply filters button
-        ttk.Button(filter_frame, text="Apply Filters", command=self.apply_filters).grid(
-            row=3, column=0, columnspan=2, pady=10
-        )
-        
-        filter_frame.grid_columnconfigure(1, weight=1)
+        ttk.Button(filter_frame, text="Apply Filters", 
+                  command=self.apply_filters).pack(fill=tk.X, pady=(10, 0))
     
     def create_status_bar(self):
         """Create status bar."""
         self.status_var = tk.StringVar()
         self.status_var.set("Ready")
         
-        status_bar = ttk.Label(self.root, textvariable=self.status_var, relief=tk.SUNKEN, anchor=tk.W)
-        status_bar.pack(side=tk.BOTTOM, fill=tk.X)
+        status_frame = ttk.Frame(self.root)
+        status_frame.pack(side=tk.BOTTOM, fill=tk.X, padx=15, pady=(0, 10))
+        
+        # Add separator
+        separator = ttk.Separator(status_frame, orient='horizontal')
+        separator.pack(fill=tk.X, pady=(0, 5))
+        
+        status_bar = ttk.Label(status_frame, textvariable=self.status_var, 
+                              font=('Segoe UI', 9), anchor=tk.W)
+        status_bar.pack(side=tk.LEFT, fill=tk.X, expand=True)
     
     def load_default_collection(self):
         """Load the default collection if available."""
