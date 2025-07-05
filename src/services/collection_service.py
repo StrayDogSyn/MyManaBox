@@ -60,3 +60,30 @@ class CollectionService:
             'set_stats': self.collection.get_set_stats(),
             'foil_stats': self.collection.get_foil_stats()
         }
+    
+    def export_enriched_collection(self, file_path: str = "enriched_collection.csv") -> bool:
+        """Export collection with all available Scryfall data."""
+        if not self.collection:
+            return False
+        
+        print(f"Enriching collection with Scryfall data...")
+        enriched_count = self.enrich_collection_data()
+        print(f"Enriched {enriched_count} cards with API data")
+        
+        print(f"Exporting enriched collection to {file_path}...")
+        success = self.save_collection(file_path)
+        
+        if success:
+            print(f"✓ Enriched collection exported to {file_path}")
+            print(f"The CSV now includes comprehensive Scryfall data:")
+            print("- Current market prices")
+            print("- Card colors, types, and rarity")
+            print("- Mana cost and CMC")
+            print("- Power/toughness/loyalty")
+            print("- Oracle text and flavor text")
+            print("- Artist and set information")
+            print("- Legal format information")
+            print("- Image URLs")
+            print("- Rankings and properties")
+        
+        return success

@@ -85,6 +85,8 @@ Examples:
         # API options
         parser.add_argument("--enrich", action="store_true",
                           help="Enrich collection with Scryfall API data")
+        parser.add_argument("--export-enriched", metavar="FILE",
+                          help="Export enriched collection with all Scryfall data to CSV")
         parser.add_argument("--no-api", action="store_true",
                           help="Disable API features")
         

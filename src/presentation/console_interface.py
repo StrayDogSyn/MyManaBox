@@ -21,7 +21,11 @@ class ConsoleInterface:
     
     def run(self, args=None):
         """Run the console interface."""
-        # For now, just test basic functionality
+        # Check for export-enriched command
+        if hasattr(args, 'export_enriched') and args.export_enriched:
+            return self._handle_export_enriched(args.export_enriched)
+        
+        # Standard interactive mode
         print(f"{Fore.CYAN}MyManaBox - MTG Card Collection Manager{Style.RESET_ALL}")
         print("Refactored with separation of concerns!")
         
@@ -65,5 +69,30 @@ class ConsoleInterface:
                 # Show some duplicates
                 duplicates = self.search_service.find_duplicates(collection)
                 print(f"Duplicate cards: {len(duplicates)}")
+                
+                # Offer enriched export
+                print(f"\n{Fore.CYAN}=== Export Options ==={Style.RESET_ALL}")
+                export_enriched = input(f"Export enriched collection with all Scryfall data? (y/N): ").lower().strip()
+                
+                if export_enriched == 'y' or export_enriched == 'yes':
+                    self.collection_service.export_enriched_collection("enriched_collection.csv")
         else:
             print(f"{Fore.YELLOW}No collection loaded{Style.RESET_ALL}")
+
+    def _handle_export_enriched(self, output_file: str) -> int:
+        """Handle the export-enriched command."""
+        print(f"{Fore.CYAN}MyManaBox - Enriched Export Mode{Style.RESET_ALL}")
+        
+        if not self.collection_service.load_collection():
+            print(f"{Fore.RED}Failed to load collection{Style.RESET_ALL}")
+            return 1
+        
+        collection = self.collection_service.get_collection()
+        if not collection:
+            print(f"{Fore.RED}Collection is empty{Style.RESET_ALL}")
+            return 1
+        
+        print(f"Loaded {collection.unique_cards} unique cards ({collection.total_cards} total)")
+        
+        success = self.collection_service.export_enriched_collection(output_file)
+        return 0 if success else 1
