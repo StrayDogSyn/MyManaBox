@@ -33,10 +33,10 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Akoum Refuge,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,289,False,False,0.16,,,,0.0,,B|R,,,,,,,0.18,,,,,,,,,,,,,,,,,,,,,,,,,uncommon,,,,,https://scryfall.com/card/scd/289/akoum-refuge?utm_source=api,Starter Commander Decks,,,,0.04,,,Land,,,$0.28
 1,1,Akroan Skyguard,bng,Near Mint,English,,,2025-01-08 21:49:55.733000,3,False,False,0.12,,,,2.0,,W,,W,,,,0.6,0.1,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,common,,,,,https://scryfall.com/card/bng/3/akroan-skyguard?utm_source=api,Born of the Gods,,,,0.04,,,Creature — Human Soldier,,0.5,$0.18
 1,1,"Akroma, Angel of Fury",mkc,Near Mint,English,,,2025-01-08 21:49:55.733000,146,False,False,0.19,,,,8.0,,R,,R,,,,,0.32,,,,,,,,,,,,,,,,,{5}{R}{R}{R},,,,,,,,mythic,,,,,https://scryfall.com/card/mkc/146/akroma-angel-of-fury?utm_source=api,Murders at Karlov Manor Commander,,,,0.27,,,Legendary Creature — Angel,,,$0.52
-1,1,"Akroma, Angel of Wrath",c20,Near Mint,English,,,2025-01-08 21:49:55.733000,73,False,False,$20.43,,,,8.0,,W,,W,,,,,2.72,,,,,,,,,,,,,,,,,{5}{W}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/c20/73/akroma-angel-of-wrath?utm_source=api,Commander 2020,,,,,,,Legendary Creature — Angel,,,$26.24
-1,1,"Akroma, Vision of Ixidor",cmr,Near Mint,English,,,2025-01-08 21:49:55.733000,2,False,False,$37.70,,,,7.0,,W,,W,,,,11.38,9.06,,,,,,,,,,,,,,,,,{5}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/cmr/2/akroma-vision-of-ixidor?utm_source=api,Commander Legends,,,,2.62,,,Legendary Creature — Angel,,12.33,$49.08
+1,1,"Akroma, Angel of Wrath",c20,Near Mint,English,,,2025-01-08 21:49:55.733000,73,False,False,5.07,,,,8.0,,W,,W,,,,,2.72,,,,,,,,,,,,,,,,,{5}{W}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/c20/73/akroma-angel-of-wrath?utm_source=api,Commander 2020,,,,,,,Legendary Creature — Angel,,,$26.24
+1,1,"Akroma, Vision of Ixidor",cmr,Near Mint,English,,,2025-01-08 21:49:55.733000,2,False,False,8.65,,,,7.0,,W,,W,,,,11.38,9.06,,,,,,,,,,,,,,,,,{5}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/cmr/2/akroma-vision-of-ixidor?utm_source=api,Commander Legends,,,,2.62,,,Legendary Creature — Angel,,12.33,$49.08
 1,1,Akroma's Vengeance,c18,Near Mint,English,,,2025-01-08 21:49:55.733000,62,False,False,0.37,,,,6.0,,W,,W,,,,,0.36,,,,,,,,,,,,,,,,,{4}{W}{W},,,,,,,,rare,,,,,https://scryfall.com/card/c18/62/akromas-vengeance?utm_source=api,Commander 2018,,,,,,,Sorcery,,,$0.88
-1,1,Akroma's Will,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,165,False,False,$64.78,,,,4.0,,W,,W,,,,12.47,10.76,,,,,,,,,,,,,,,,,{3}{W},,,,,,,,rare,,,,,https://scryfall.com/card/m3c/165/akromas-will?utm_source=api,Modern Horizons 3 Commander,,,,10.38,,,Instant,,,$78.76
+1,1,Akroma's Will,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,165,False,False,9.66,,,,4.0,,W,,W,,,,12.47,10.76,,,,,,,,,,,,,,,,,{3}{W},,,,,,,,rare,,,,,https://scryfall.com/card/m3c/165/akromas-will?utm_source=api,Modern Horizons 3 Commander,,,,10.38,,,Instant,,,$78.76
 1,1,Alchemist's Retrieval,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,47,False,False,0.06,,,,1.0,,U,,U,,,,0.34,0.11,,,,,,,,,,,,,,,,,{U},,,,,,,,common,,,,,https://scryfall.com/card/vow/47/alchemists-retrieval?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Instant,,0.23,$0.14
 1,1,Alchemist's Retrieval,vow,Near Mint,English,,,2025-03-04 21:48:46.180000,47,False,False,,,,,1.0,,U,,U,,,,0.34,0.11,,,,,,,,,,,,,,,,,{U},,,,,,,,common,,,,,https://scryfall.com/card/vow/47/alchemists-retrieval?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Instant,,0.23,$0.14
 1,1,"Alesha, Who Laughs at Fate",fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,115,False,False,0.81,,,,3.0,,B|R,,B|R,,,,1.3,1.25,,,,,,,,,,,,,,,,,{1}{B}{R},,,,,,,,rare,,,,,https://scryfall.com/card/fdn/115/alesha-who-laughs-at-fate?utm_source=api,Foundations,,,,0.02,,,Legendary Creature — Human Warrior,,$10.98,$4.22
@@ -79,7 +79,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Archway Commons,stx,Near Mint,English,,,2025-01-08 21:49:55.733000,263,False,False,0.08,,,,0.0,,,,,,,,0.18,0.1,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/stx/263/archway-commons?utm_source=api,Strixhaven: School of Mages,,,,0.03,,,Land,,0.2,$0.14
 1,1,Ardent Elementalist,mid,Near Mint,English,,,2025-03-07 23:06:42.490000,128,False,False,,,,,4.0,,R,,R,,,,0.33,0.09,,,,,,,,,,,,,,,,,{3}{R},,,,,,,,common,,,,,https://scryfall.com/card/mid/128/ardent-elementalist?utm_source=api,Innistrad: Midnight Hunt,,,,0.03,,,Creature — Human Shaman,,0.22,$0.15
 1,1,Arena Athlete,uma,Near Mint,English,,,2025-01-08 21:49:55.733000,123,False,False,0.02,,,,2.0,,R,,R,,,,0.11,0.11,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/uma/123/arena-athlete?utm_source=api,Ultimate Masters,,,,0.06,,,Creature — Human,,0.37,$0.04
-1,1,Arena of Glory,mh3,Near Mint,English,,,2025-04-30 17:28:51.310000,215,False,False,$66.78,,,,0.0,,R,,,,,,15.8,13.6,,,,,,,,,,,,,,,,,,,,,,,,,rare,,,,,https://scryfall.com/card/mh3/215/arena-of-glory?utm_source=api,Modern Horizons 3,,,,2.49,,,Land,,11.91,$77.60
+1,1,Arena of Glory,mh3,Near Mint,English,,,2025-04-30 17:28:51.310000,215,False,False,$9.66,,,,0.0,,R,,,,,,15.8,13.6,,,,,,,,,,,,,,,,,,,,,,,,,rare,,,,,https://scryfall.com/card/mh3/215/arena-of-glory?utm_source=api,Modern Horizons 3,,,,2.49,,,Land,,11.91,$77.60
 1,1,Argivian Cavalier,dmu,Near Mint,English,,,2025-03-06 21:09:49.057000,4,False,False,,,,,3.0,,W,,W,,,,0.06,0.02,,,,,,,,,,,,,,,,,{2}{W},,,,,,,,common,,,,,https://scryfall.com/card/dmu/4/argivian-cavalier?utm_source=api,Dominaria United,,,,0.03,,,Creature — Orc Knight,,0.07,$0.04
 2,2,Arlinn's Wolf,war,Near Mint,English,,,2025-03-05 00:46:02.193000,151,False,False,,,,,3.0,,G,,G,,,,0.3,0.09,,,,,,,,,,,,,,,,,{2}{G},,,,,,,,common,,,,,https://scryfall.com/card/war/151/arlinns-wolf?utm_source=api,War of the Spark,,,,0.03,,,Creature — Wolf,,0.38,$0.18
 2,2,Armorcraft Judge,cmr,Near Mint,English,,,2025-03-06 21:12:14.213000,218,False,False,,,,,4.0,,G,,G,,,,0.28,0.05,,,,,,,,,,,,,,,,,{3}{G},,,,,,,,uncommon,,,,,https://scryfall.com/card/cmr/218/armorcraft-judge?utm_source=api,Commander Legends,,,,0.04,,,Creature — Elf Artificer,,0.19,$0.11
@@ -100,11 +100,11 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Atog,3ed,Near Mint,English,,,2025-03-07 22:38:08.747000,139,False,False,,,,,2.0,,R,,R,,,,,0.49,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/3ed/139/atog?utm_source=api,Revised Edition,,,,,,,Creature — Atog,,,$0.28
 1,1,Audience with Trostani,mkm,Near Mint,English,,,2025-03-06 19:07:10.583000,309,False,False,,,,,3.0,,G,,G,,,,0.33,0.14,,,,,,,,,,,,,,,,,{2}{G},,,,,,,,rare,,,,,https://scryfall.com/card/mkm/152/audience-with-trostani?utm_source=api,Murders at Karlov Manor,,,,0.02,,,Sorcery,,0.21,$2.30
 1,1,"Aurelia, the Law Above",mkm,Near Mint,English,,,2025-01-08 21:49:55.733000,357,False,False,0.87,,,,5.0,,R|W,,R|W,,,,1.24,1.17,,,,,,,,,,,,,,,,,{3}{R}{W},,,,,,,,rare,,,,,https://scryfall.com/card/mkm/188/aurelia-the-law-above?utm_source=api,Murders at Karlov Manor,,,,0.02,,,Legendary Creature — Angel,,1.02,$2.50
-1,1,"Aurelia, the Warleader",fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,651,False,False,$49.19,,,,6.0,,R|W,,R|W,,,,,7.63,,,,,,,,,,,,,,,,,{2}{R}{R}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/fdn/651/aurelia-the-warleader?utm_source=api,Foundations,,,,0.06,,,Legendary Creature — Angel,,,$57.40
+1,1,"Aurelia, the Warleader",fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,651,False,False,3.61,,,,6.0,,R|W,,R|W,,,,,7.63,,,,,,,,,,,,,,,,,{2}{R}{R}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/fdn/651/aurelia-the-warleader?utm_source=api,Foundations,,,,0.06,,,Legendary Creature — Angel,,,$57.40
 1,1,Aurora Shifter,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,97,False,False,0.13,,,,2.0,,U,,U,,,,,,,,,,,,,,,,,,,,,,{1}{U},,,,,,,,rare,,,,,https://scryfall.com/card/m3c/45/aurora-shifter?utm_source=api,Modern Horizons 3 Commander,,,,2.65,,,Creature — Shapeshifter,,,$1.68
 1,1,Austere Command,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,167,False,False,0.49,,,,6.0,,W,,W,,,,1.84,0.53,,,,,,,,,,,,,,,,,{4}{W}{W},,,,,,,,rare,,,,,https://scryfall.com/card/m3c/167/austere-command?utm_source=api,Modern Horizons 3 Commander,,,,0.23,,,Sorcery,,,$2.38
 1,1,Automated Assembly Line,pip,Near Mint,English,,,2025-01-08 21:49:55.733000,10,False,False,0.12,,,,2.0,,W,,W,,,,0.5,0.2,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,rare,,,,,https://scryfall.com/card/pip/10/automated-assembly-line?utm_source=api,Fallout,,,,0.81,,,Artifact,,0.54,$0.46
-1,1,"Avacyn, Angel of Hope",cmm,Near Mint,English,,,2025-04-21 01:43:22.327000,14,False,False,$165.14,,,,8.0,,W,,W,,,,30.28,22.38,,,,,,,,,,,,,,,,,{5}{W}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/cmm/14/avacyn-angel-of-hope?utm_source=api,Commander Masters,,,,1.39,,,Legendary Creature — Angel,,35.41,$190.36
+1,1,"Avacyn, Angel of Hope",cmm,Near Mint,English,,,2025-04-21 01:43:22.327000,14,False,False,$23.20,,,,8.0,,W,,W,,,,30.28,22.38,,,,,,,,,,,,,,,,,{5}{W}{W}{W},,,,,,,,mythic,,,,,https://scryfall.com/card/cmm/14/avacyn-angel-of-hope?utm_source=api,Commander Masters,,,,1.39,,,Legendary Creature — Angel,,35.41,$190.36
 1,1,Avacynian Priest,isd,Near Mint,English,,,2025-03-07 23:20:48.890000,4,False,False,,,,,2.0,,W,,W,,,,0.22,0.06,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,common,,,,,https://scryfall.com/card/isd/4/avacynian-priest?utm_source=api,Innistrad,,,,0.04,,,Creature — Human Cleric,,0.3,$0.10
 1,1,Avacynian Priest,inr,Near Mint,English,,,2025-02-15 03:13:31.330000,12,False,False,,,,,2.0,,W,,W,,,,0.09,0.07,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,common,,,,,https://scryfall.com/card/inr/12/avacynian-priest?utm_source=api,Innistrad Remastered,,,,,,,Creature — Human Cleric,,0.02,$0.04
 1,1,Avacyn's Collar,dka,Near Mint,English,,,2025-03-05 01:17:19.563000,145,False,False,,,,,1.0,,,,,,,,0.37,0.1,,,,,,,,,,,,,,,,,{1},,,,,,,,uncommon,,,,,https://scryfall.com/card/dka/145/avacyns-collar?utm_source=api,Dark Ascension,,,,0.03,,,Artifact — Equipment,,0.46,$0.11
@@ -122,7 +122,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,"Baird, Argivian Recruiter",dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,195,False,False,0.1,,,,2.0,,R|W,,R|W,,,,0.21,0.15,,,,,,,,,,,,,,,,,{R}{W},,,,,,,,uncommon,,,,,https://scryfall.com/card/dmu/195/baird-argivian-recruiter?utm_source=api,Dominaria United,,,,0.03,,,Legendary Creature — Human Soldier,,0.18,$0.15
 1,1,Baithook Angler // Hook-Haunt Drifter,mid,Near Mint,English,,,2025-03-07 23:16:34.467000,42,False,False,,,,,2.0,,U,,,,,,0.09,0.02,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/mid/42/baithook-angler-hook-haunt-drifter?utm_source=api,Innistrad: Midnight Hunt,,,,0.03,,,Creature — Human Peasant // Creature — Spirit,,0.02,$0.04
 1,1,Bake into a Pie,eld,Near Mint,English,,,2025-03-07 19:56:24.360000,76,False,False,,,,,4.0,,B,,B,,,,0.08,0.11,,,,,,,,,,,,,,,,,{2}{B}{B},,,,,,,,common,,,,,https://scryfall.com/card/eld/76/bake-into-a-pie?utm_source=api,Throne of Eldraine,,,,0.03,,,Instant,,0.2,$0.18
-1,1,Balefire Dragon,isd,Near Mint,English,,,2025-04-30 17:26:48.610000,129,False,False,$92.39,,,,7.0,,R,,R,,,,18.3,10.5,,,,,,,,,,,,,,,,,{5}{R}{R},,,,,,,,mythic,,,,,https://scryfall.com/card/isd/129/balefire-dragon?utm_source=api,Innistrad,,,,0.02,,,Creature — Dragon,,21.3,$102.52
+1,1,Balefire Dragon,isd,Near Mint,English,,,2025-04-30 17:26:48.610000,129,False,False,$11.29,,,,7.0,,R,,R,,,,18.3,10.5,,,,,,,,,,,,,,,,,{5}{R}{R},,,,,,,,mythic,,,,,https://scryfall.com/card/isd/129/balefire-dragon?utm_source=api,Innistrad,,,,0.02,,,Creature — Dragon,,21.3,$102.52
 1,1,"Balmor, Battlemage Captain",dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,196,False,False,0.26,,,,2.0,,R|U,,R|U,,,,0.25,0.08,,,,,,,,,,,,,,,,,{U}{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/dmu/196/balmor-battlemage-captain?utm_source=api,Dominaria United,,,,0.03,,,Legendary Creature — Bird Wizard,,0.25,$0.24
 1,1,Banishing Light,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,9,False,False,0.04,,,,3.0,,W,,W,,,,,0.15,,,,,,,,,,,,,,,,,{2}{W},,,,,,,,uncommon,,,,,https://scryfall.com/card/scd/9/banishing-light?utm_source=api,Starter Commander Decks,,,,0.45,,,Enchantment,,,$0.10
 1,1,Banishing Light,blb,Near Mint,English,,,2025-03-06 20:22:49.833000,1,False,False,,,,,3.0,,W,,W,,,,0.1,0.07,,,,,,,,,,,,,,,,,{2}{W},,,,,,,,common,,,,,https://scryfall.com/card/blb/1/banishing-light?utm_source=api,Bloomburrow,,,,0.03,,,Enchantment,,0.09,$0.08
@@ -166,7 +166,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Bladebrand,cmr,Near Mint,English,,,2025-03-04 23:17:08.860000,110,False,False,,,,,2.0,,B,,B,,,,0.08,0.07,,,,,,,,,,,,,,,,,{1}{B},,,,,,,,common,,,,,https://scryfall.com/card/cmr/110/bladebrand?utm_source=api,Commander Legends,,,,0.05,,,Instant,,0.06,$0.06
 1,1,Bladebrand,mid,Near Mint,English,,,2025-03-07 23:16:00.170000,87,False,False,,,,,2.0,,B,,B,,,,0.08,0.03,,,,,,,,,,,,,,,,,{1}{B},,,,,,,,common,,,,,https://scryfall.com/card/mid/87/bladebrand?utm_source=api,Innistrad: Midnight Hunt,,,,0.03,,,Instant,,0.11,$0.08
 1,1,Blasphemous Act,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,124,False,False,2.91,,,,9.0,,R,,R,,,,,2.68,,,,,,,,,,,,,,,,,{8}{R},,,,,,,,rare,,,,,https://scryfall.com/card/scd/124/blasphemous-act?utm_source=api,Starter Commander Decks,,,,0.12,,,Sorcery,,,$3.98
-1,1,Blasphemous Edict,fdn,Near Mint,English,,,2025-03-02 19:28:35.263000,57,False,False,$20.09,,,,5.0,,B,,B,,,,7.19,6.54,,,,,,,,,,,,,,,,,{3}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/fdn/57/blasphemous-edict?utm_source=api,Foundations,,,,0.02,,,Sorcery,,5.33,$26.76
+1,1,Blasphemous Edict,fdn,Near Mint,English,,,2025-03-02 19:28:35.263000,57,False,False,$4.03,,,,5.0,,B,,B,,,,7.19,6.54,,,,,,,,,,,,,,,,,{3}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/fdn/57/blasphemous-edict?utm_source=api,Foundations,,,,0.02,,,Sorcery,,5.33,$26.76
 1,1,Blaster Hulk,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,107,False,False,0.11,,,,8.0,,R,,R,,,,,,,,,,,,,,,,,,,,,,{6}{R}{R},,,,,,,,rare,,,,,https://scryfall.com/card/m3c/55/blaster-hulk?utm_source=api,Modern Horizons 3 Commander,,,,3.61,,,Artifact Creature — Pirate,,,$0.81
 1,1,Blast-Furnace Hellkite,brc,Near Mint,English,,,2025-04-30 17:25:43.963000,59,False,False,$1.73,,,,9.0,,R,,R,,,,,2.11,,,,,,,,,,,,,,,,,{7}{R}{R},,,,,,,,rare,,,,,https://scryfall.com/card/brc/12/blast-furnace-hellkite?utm_source=api,The Brothers' War Commander,,,,1.04,,,Creature — Dragon,,,$4.53
 1,1,Blazing Torch,inr,Near Mint,English,,,2025-02-15 02:48:26.727000,254,False,False,,,,,1.0,,,,,,,,0.03,0.02,,,,,,,,,,,,,,,,,{1},,,,,,,,common,,,,,https://scryfall.com/card/inr/254/blazing-torch?utm_source=api,Innistrad Remastered,,,,,,,Artifact — Equipment,,0.09,$0.04
@@ -183,19 +183,19 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 3,3,Blood Petal Celebrant,vow,Near Mint,English,,,2025-03-07 22:19:34.957000,303,False,False,,,,,2.0,,R,,R,,,,0.11,0.03,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/vow/146/blood-petal-celebrant?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.14,$0.04
 1,1,Blood Petal Celebrant,vow,Near Mint,English,,,2025-03-05 00:23:07.597000,303,False,False,0.02,,,,2.0,,R,,R,,,,0.11,0.03,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/vow/146/blood-petal-celebrant?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.14,$0.04
 1,1,Blood Seeker,zen,Near Mint,English,,,2025-02-11 05:43:18.697000,80,False,False,,,,,2.0,,B,,B,,,,2.75,0.35,,,,,,,,,,,,,,,,,{1}{B},,,,,,,,common,,,,,https://scryfall.com/card/zen/80/blood-seeker?utm_source=api,Zendikar,,,,0.03,,,Creature — Vampire Shaman,,9.61,$0.29
-1,1,Blood Tribute,zen,Near Mint,English,,,2025-06-28 19:09:24.003000,81,False,False,$21.86,,,,6.0,,B,,B,,,,5.3,1.31,,,,,,,,,,,,,,,,,{4}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/zen/81/blood-tribute?utm_source=api,Zendikar,,,,0.02,,,Sorcery,,18.91,$27.96
+1,1,Blood Tribute,zen,Near Mint,English,,,2025-06-28 19:09:24.003000,81,False,False,$3.76,,,,6.0,,B,,B,,,,5.3,1.31,,,,,,,,,,,,,,,,,{4}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/zen/81/blood-tribute?utm_source=api,Zendikar,,,,0.02,,,Sorcery,,18.91,$27.96
 3,3,Bloodcrazed Socialite,vow,Near Mint,English,,,2025-03-05 01:11:10.067000,96,False,False,,,,,4.0,,B,,B,,,,0.05,0.05,,,,,,,,,,,,,,,,,{3}{B},,,,,,,,common,,,,,https://scryfall.com/card/vow/96/bloodcrazed-socialite?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.07,$0.08
 1,1,Bloodcrazed Socialite,vow,Near Mint,English,,,2025-03-05 00:23:14.247000,96,False,False,0.01,,,,4.0,,B,,B,,,,0.05,0.05,,,,,,,,,,,,,,,,,{3}{B},,,,,,,,common,,,,,https://scryfall.com/card/vow/96/bloodcrazed-socialite?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.07,$0.08
 1,1,Bloodcrazed Socialite,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,288,False,False,0.02,,,,4.0,,B,,B,,,,0.05,0.05,,,,,,,,,,,,,,,,,{3}{B},,,,,,,,common,,,,,https://scryfall.com/card/vow/96/bloodcrazed-socialite?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.07,$0.08
 1,1,Bloodfell Caves,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,290,False,False,0.12,,,,0.0,,B|R,,,,,,,0.23,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/scd/290/bloodfell-caves?utm_source=api,Starter Commander Decks,,,,0.04,,,Land,,,$0.28
 1,1,Bloodgift Demon,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,69,False,False,1.34,,,,5.0,,B,,B,,,,,1.2,,,,,,,,,,,,,,,,,{3}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/scd/69/bloodgift-demon?utm_source=api,Starter Commander Decks,,,,0.18,,,Creature — Demon,,,$1.37
-1,1,Bloodletter of Aclazotz,lci,Near Mint,English,,,2025-04-21 02:00:00.933000,336,False,False,$158.93,,,,4.0,,B,,B,,,,29.85,25.92,,,,,,,,,,,,,,,,,{1}{B}{B}{B},,,,,,,,mythic,,,,,https://scryfall.com/card/lci/92/bloodletter-of-aclazotz?utm_source=api,The Lost Caverns of Ixalan,,,,1.64,,,Creature — Vampire Demon,,26.97,$171.16
-1,1,Bloodline Keeper // Lord of Lineage,inr,Near Mint,English,,,2025-03-09 18:52:36.470000,461,False,False,$23.33,,,,4.0,,B,,,,,,8.02,6.04,,,,,,,,,,,,,,,,,,,,,,,,,mythic,,,,,https://scryfall.com/card/inr/98/bloodline-keeper-lord-of-lineage?utm_source=api,Innistrad Remastered,,,,,,,Creature — Vampire // Creature — Vampire,,6.21,$29.64
+1,1,Bloodletter of Aclazotz,lci,Near Mint,English,,,2025-04-21 02:00:00.933000,336,False,False,$16.84,,,,4.0,,B,,B,,,,29.85,25.92,,,,,,,,,,,,,,,,,{1}{B}{B}{B},,,,,,,,mythic,,,,,https://scryfall.com/card/lci/92/bloodletter-of-aclazotz?utm_source=api,The Lost Caverns of Ixalan,,,,1.64,,,Creature — Vampire Demon,,26.97,$171.16
+1,1,Bloodline Keeper // Lord of Lineage,inr,Near Mint,English,,,2025-03-09 18:52:36.470000,461,False,False,$3.68,,,,4.0,,B,,,,,,8.02,6.04,,,,,,,,,,,,,,,,,,,,,,,,,mythic,,,,,https://scryfall.com/card/inr/98/bloodline-keeper-lord-of-lineage?utm_source=api,Innistrad Remastered,,,,,,,Creature — Vampire // Creature — Vampire,,6.21,$29.64
 2,2,Bloodmad Vampire,inr,Near Mint,English,,,2025-03-05 00:37:02.960000,145,False,False,,,,,3.0,,R,,R,,,,0.12,0.09,,,,,,,,,,,,,,,,,{2}{R},,,,,,,,common,,,,,https://scryfall.com/card/inr/145/bloodmad-vampire?utm_source=api,Innistrad Remastered,,,,,,,Creature — Vampire Berserker,,0.11,$0.06
 1,1,Bloodsoaked Altar,m20,Near Mint,English,,,2025-01-08 21:49:55.733000,90,False,False,0.06,,,,6.0,,B,,B,,,,0.2,0.11,,,,,,,,,,,,,,,,,{4}{B}{B},,,,,,,,uncommon,,,,,https://scryfall.com/card/m20/90/bloodsoaked-altar?utm_source=api,Core Set 2020,,,,0.05,,,Artifact,,0.31,$0.14
 1,1,Bloodsoaked Insight // Sanguine Morass,mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,252,False,False,0.16,,,,7.0,,B|R,,,,,,0.44,0.2,,,,,,,,,,,,,,,,,,,,,,,,,uncommon,,,,,https://scryfall.com/card/mh3/252/bloodsoaked-insight-sanguine-morass?utm_source=api,Modern Horizons 3,,,,0.03,,,Sorcery // Land,,1.15,$0.39
 1,1,Bloodsworn Steward,voc,Near Mint,English,,,2025-03-02 19:26:16.827000,144,False,False,,,,,4.0,,R,,R,,,,,0.28,,,,,,,,,,,,,,,,,{2}{R}{R},,,,,,,,rare,,,,,https://scryfall.com/card/voc/144/bloodsworn-steward?utm_source=api,Crimson Vow Commander,,,,0.1,,,Creature — Vampire Knight,,,$0.57
-1,1,Bloodthirster,40k,Near Mint,English,,,2025-04-21 01:44:27.003000,73,False,False,$105.42,,,,6.0,,R,,R,,,,,14.7,,,,,,,,,,,,,,,,,{5}{R},,,,,,,,rare,,,,,https://scryfall.com/card/40k/73/bloodthirster?utm_source=api,"Warhammer 40,000 Commander",,,,2.79,,,Creature — Demon,,,$121.84
+1,1,Bloodthirster,40k,Near Mint,English,,,2025-04-21 01:44:27.003000,73,False,False,$12.48,,,,6.0,,R,,R,,,,,14.7,,,,,,,,,,,,,,,,,{5}{R},,,,,,,,rare,,,,,https://scryfall.com/card/40k/73/bloodthirster?utm_source=api,"Warhammer 40,000 Commander",,,,2.79,,,Creature — Demon,,,$121.84
 1,1,Bloodtithe Harvester,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,232,False,False,0.22,,,,2.0,,B|R,,B|R,,,,0.57,0.19,,,,,,,,,,,,,,,,,{B}{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/vow/232/bloodtithe-harvester?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Vampire,,0.32,$0.20
 2,2,Bloodwater Entity,hou,Near Mint,English,,,2025-03-06 21:59:20.977000,138,False,False,,,,,3.0,,R|U,,R|U,,,,0.62,0.14,,,,,,,,,,,,,,,,,{1}{U}{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/hou/138/bloodwater-entity?utm_source=api,Hour of Devastation,,,,0.03,,,Creature — Elemental,,1.04,$0.20
 1,1,Boar,tvow,Near Mint,English,,,2025-03-04 21:26:56.213000,12,False,False,,,,,0.0,,G,,G,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/tvow/12/boar?utm_source=api,Innistrad: Crimson Vow Tokens,,,,,,,Token Creature — Boar,,,$0.06
@@ -236,7 +236,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Brute Strength,akh,Near Mint,English,,,2025-03-07 20:23:55.690000,122,False,False,,,,,2.0,,R,,R,,,,0.24,0.02,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/akh/122/brute-strength?utm_source=api,Amonkhet,,,,0.05,,,Instant,,0.35,$0.08
 1,1,Burning Prophet,war,Near Mint,English,,,2025-03-06 21:58:14.923000,117,False,False,,,,,2.0,,R,,R,,,,0.46,0.03,,,,,,,,,,,,,,,,,{1}{R},,,,,,,,common,,,,,https://scryfall.com/card/war/117/burning-prophet?utm_source=api,War of the Spark,,,,0.03,,,Creature — Human Wizard,,0.41,$0.11
 1,1,Burning Vengeance,inr,Near Mint,English,,,2025-02-22 21:47:51.483000,147,False,False,,,,,3.0,,R,,R,,,,0.08,0.11,,,,,,,,,,,,,,,,,{2}{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/inr/147/burning-vengeance?utm_source=api,Innistrad Remastered,,,,,,,Enchantment,,0.04,$0.11
-1,1,Burning-Rune Demon,khm,Near Mint,English,,,2025-02-25 02:27:30.717000,81,False,False,$20.52,,,,6.0,,B,,B,,,,5.67,5.72,,,,,,,,,,,,,,,,,{4}{B}{B},,,,,,,,mythic,,,,,https://scryfall.com/card/khm/81/burning-rune-demon?utm_source=api,Kaldheim,,,,0.02,,,Creature — Demon Berserker,,5.25,$25.04
+1,1,Burning-Rune Demon,khm,Near Mint,English,,,2025-02-25 02:27:30.717000,81,False,False,$3.24,,,,6.0,,B,,B,,,,5.67,5.72,,,,,,,,,,,,,,,,,{4}{B}{B},,,,,,,,mythic,,,,,https://scryfall.com/card/khm/81/burning-rune-demon?utm_source=api,Kaldheim,,,,0.02,,,Creature — Demon Berserker,,5.25,$25.04
 1,1,Burnished Hart,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,260,False,False,0.09,,,,3.0,,,,,,,,,0.18,,,,,,,,,,,,,,,,,{3},,,,,,,,uncommon,,,,,https://scryfall.com/card/scd/260/burnished-hart?utm_source=api,Starter Commander Decks,,,,0.04,,,Artifact Creature — Elk,,,$0.15
 1,1,Burnished Hart,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,284,False,False,0.07,,,,3.0,,,,,,,,0.45,0.13,,,,,,,,,,,,,,,,,{3},,,,,,,,uncommon,,,,,https://scryfall.com/card/m3c/284/burnished-hart?utm_source=api,Modern Horizons 3 Commander,,,,0.04,,,Artifact Creature — Elk,,,$0.25
 1,1,Bushwhack,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,215,False,False,0.12,,,,1.0,,G,,G,,,,0.28,0.13,,,,,,,,,,,,,,,,,{G},,,,,,,,common,,,,,https://scryfall.com/card/fdn/215/bushwhack?utm_source=api,Foundations,,,,0.03,,,Sorcery,,0.39,$0.31
@@ -251,7 +251,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Canyon Slough,pip,Near Mint,English,,,2025-02-21 02:20:35.850000,256,False,False,,,,,0.0,,B|R,,,,,,0.43,0.19,,,,,,,,,,,,,,,,,,,,,,,,,rare,,,,,https://scryfall.com/card/pip/256/canyon-slough?utm_source=api,Fallout,,,,0.2,,,Land — Swamp Mountain,,0.61,$0.29
 1,1,Captain's Call,cmr,Near Mint,English,,,2025-03-07 23:15:06.283000,15,False,False,,,,,4.0,,W,,W,,,,0.12,0.03,,,,,,,,,,,,,,,,,{3}{W},,,,,,,,common,,,,,https://scryfall.com/card/cmr/15/captains-call?utm_source=api,Commander Legends,,,,0.04,,,Sorcery,,0.09,$0.06
 2,2,Captivating Cave,lci,Near Mint,English,foil,,2025-01-12 06:06:56.707000,268,False,False,0.11,,,,0.0,,,,,,,,0.08,0.07,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/lci/268/captivating-cave?utm_source=api,The Lost Caverns of Ixalan,,,,0.03,,,Land — Cave,,$0.76,$0.28
-1,1,Captivating Vampire,inr,Near Mint,English,foil,,2025-03-09 18:54:09.023000,100,False,False,$16.27,,,,3.0,,B,,B,,,,1.54,2.02,,,,,,,,,,,,,,,,,{1}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/inr/100/captivating-vampire?utm_source=api,Innistrad Remastered,,,,,,,Creature — Vampire,,$22.64,$5.28
+1,1,Captivating Vampire,inr,Near Mint,English,foil,,2025-03-09 18:54:09.023000,100,False,False,$1.09,,,,3.0,,B,,B,,,,1.54,2.02,,,,,,,,,,,,,,,,,{1}{B}{B},,,,,,,,rare,,,,,https://scryfall.com/card/inr/100/captivating-vampire?utm_source=api,Innistrad Remastered,,,,,,,Creature — Vampire,,$22.64,$5.28
 2,2,Carnage Gladiator,dgm,Near Mint,English,,,2025-03-06 21:56:30.163000,61,False,False,,,,,4.0,,B|R,,B|R,,,,0.26,0.12,,,,,,,,,,,,,,,,,{2}{B}{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/dgm/61/carnage-gladiator?utm_source=api,Dragon's Maze,,,,0.03,,,Creature — Skeleton Warrior,,0.21,$0.10
 2,2,Carnivorous Canopy,one,Near Mint,English,,,2025-03-07 19:47:45.817000,162,False,False,,,,,3.0,,G,,G,,,,0.09,0.1,,,,,,,,,,,,,,,,,{2}{G},,,,,,,,common,,,,,https://scryfall.com/card/one/162/carnivorous-canopy?utm_source=api,Phyrexia: All Will Be One,,,,0.03,,,Sorcery,,0.23,$0.14
 1,1,Carrion Locust,bro,Near Mint,English,,,2025-03-04 23:24:40.410000,87,False,False,,,,,3.0,,B,,B,,,,0.06,0.02,,,,,,,,,,,,,,,,,{2}{B},,,,,,,,common,,,,,https://scryfall.com/card/bro/87/carrion-locust?utm_source=api,The Brothers' War,,,,0.03,,,Creature — Insect Horror,,0.11,$0.14
@@ -262,7 +262,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 3,3,Cat Bird,tscd,Near Mint,English,,,2025-01-08 21:49:55.733000,5,False,False,0.23,,,,0.0,,W,,W,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/tscd/5/cat-bird?utm_source=api,Starter Commander Deck Tokens,,,,,,,Token Creature — Cat Bird,,,$0.49
 1,1,Catapult Fodder // Catapult Captain,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,99,False,False,0.07,,,,3.0,,B,,,,,,0.26,0.15,,,,,,,,,,,,,,,,,,,,,,,,,uncommon,,,,,https://scryfall.com/card/vow/99/catapult-fodder-catapult-captain?utm_source=api,Innistrad: Crimson Vow,,,,0.03,,,Creature — Zombie // Creature — Zombie,,0.26,$0.29
 1,1,Cathar Commando,inr,Near Mint,English,foil,,2025-02-22 21:35:39.190000,15,False,False,,,,,2.0,,W,,W,,,,0.2,0.12,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,common,,,,,https://scryfall.com/card/inr/15/cathar-commando?utm_source=api,Innistrad Remastered,,,,,,,Creature — Human Soldier,,$1.19,$0.25
-1,1,Cathars' Crusade,inr,Near Mint,English,,,2025-07-05 01:02:20.150000,17,False,False,$18.72,,,,5.0,,W,,W,,,,4.41,4.63,,,,,,,,,,,,,,,,,{3}{W}{W},,,,,,,,rare,,,,,https://scryfall.com/card/inr/17/cathars-crusade?utm_source=api,Innistrad Remastered,,,,,,,Enchantment,,4.59,$23.40
+1,1,Cathars' Crusade,inr,Near Mint,English,,,2025-07-05 01:02:20.150000,17,False,False,$3.36,,,,5.0,,W,,W,,,,4.41,4.63,,,,,,,,,,,,,,,,,{3}{W}{W},,,,,,,,rare,,,,,https://scryfall.com/card/inr/17/cathars-crusade?utm_source=api,Innistrad Remastered,,,,,,,Enchantment,,4.59,$23.40
 2,2,Cavalry Pegasus,ths,Near Mint,English,,,2025-03-07 23:12:07.960000,2,False,False,,,,,2.0,,W,,W,,,,0.3,0.14,,,,,,,,,,,,,,,,,{1}{W},,,,,,,,common,,,,,https://scryfall.com/card/ths/2/cavalry-pegasus?utm_source=api,Theros,,,,0.03,,,Creature — Pegasus,,0.73,$0.11
 2,2,Cave of Temptation,mh1,Near Mint,English,,,2025-01-12 06:07:14.287000,237,False,False,0.04,,,,0.0,,,,,,,,0.76,0.15,,,,,,,,,,,,,,,,,,,,,,,,,common,,,,,https://scryfall.com/card/mh1/237/cave-of-temptation?utm_source=api,Modern Horizons,,,,0.03,,,Land,,0.57,$0.11
 1,1,Caves of Koilos,dmu,Near Mint,English,,,2025-07-05 01:34:23.997000,244,False,False,,,,,0.0,,B|W,,,,,,1.13,0.77,,,,,,,,,,,,,,,,,,,,,,,,,rare,,,,,https://scryfall.com/card/dmu/244/caves-of-koilos?utm_source=api,Dominaria United,,,,0.02,,,Land,,0.89,$1.78
@@ -366,7 +366,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Cryptolith Fragment // Aurora of Emrakul,inr,Near Mint,English,,,2025-02-15 02:43:29.360000,260,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.81
 1,1,Crystallization,arb,Near Mint,English,,,2025-03-06 22:28:12.123000,144,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.56
 2,2,Cunning Strike,frf,Near Mint,English,,,2025-03-05 01:22:02.990000,150,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Curious Homunculus // Voracious Reader,emn,Near Mint,English,foil,,2025-01-12 06:10:10.717000,54,False,False,$13.40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$18.04,$2.38
+1,1,Curious Homunculus // Voracious Reader,emn,Near Mint,English,foil,,2025-01-12 06:10:10.717000,54,False,False,0.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$18.04,$2.38
 1,1,Curse of Opulence,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,209,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.36
 1,1,Curse of the Swine,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,149,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.50
 1,1,Cut Short,mom,Near Mint,English,,,2025-03-06 19:19:48.687000,10,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
@@ -376,7 +376,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Dapper Shieldmate,snc,Near Mint,English,,,2025-03-07 22:41:29.330000,9,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.38
 1,1,Daring Escape,snc,Near Mint,English,,,2025-03-06 22:12:57.983000,104,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Daring Saboteur,cmr,Near Mint,English,,,2025-03-05 00:48:11.070000,64,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
-1,1,Dark Ritual,sta,Near Mint,English,,,2025-01-14 17:15:40.353000,26,False,False,$27.88,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$36.88
+1,1,Dark Ritual,sta,Near Mint,English,,,2025-01-14 17:15:40.353000,26,False,False,$8.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$36.88
 1,1,Dark Tutelage,wot,Near Mint,English,,,2025-01-08 21:49:55.733000,28,False,False,0.08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.84
 1,1,Darkstar Augur,blb,Near Mint,English,,,2025-02-24 02:21:09.533000,90,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.99
 1,1,Darkstar Augur,tblb,Near Mint,English,,,2025-02-24 02:20:51.867000,11,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.87
@@ -394,7 +394,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Deadly Tempest,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,75,False,False,0.49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.06
 1,1,Deadly Tempest,scd,Near Mint,English,,,2025-07-04 23:37:52.843000,75,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.02
 1,1,Deathbloom Gardener,dmu,Near Mint,English,foil,,2025-01-08 21:49:55.733000,159,False,False,0.3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.60,$0.56
-1,1,Decanter of Endless Water,clb,Near Mint,English,foil,,2025-01-12 06:11:12.817000,444,False,False,$25.51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$33.16,$22.75
+1,1,Decanter of Endless Water,clb,Near Mint,English,foil,,2025-01-12 06:11:12.817000,444,False,False,0.47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$33.16,$22.75
 1,1,Decoction Module,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,288,False,False,0.15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
 1,1,Decree of Pain,40k,Near Mint,English,,,2025-01-11 03:07:52.093000,198,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.94
 1,1,Deem Worthy,akh,Near Mint,English,,,2025-03-07 20:24:39.813000,127,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
@@ -405,7 +405,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Delver of Secrets // Insectile Aberration,inr,Near Mint,English,,,2025-03-05 00:36:07.743000,60,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
 1,1,Demolition Field,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,335,False,False,0.68,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.78
 2,2,Demon,tscd,Near Mint,English,,,2025-01-08 21:49:55.733000,12,False,False,0.12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
-1,1,Demonic Counsel,dsk,Near Mint,English,foil,,2025-01-12 06:11:48.933000,310,False,False,$16.34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.28,$11.41
+1,1,Demonic Counsel,dsk,Near Mint,English,foil,,2025-01-12 06:11:48.933000,310,False,False,1.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.28,$11.41
 1,1,Demonic Covenant,dsc,Near Mint,English,,,2025-01-08 21:49:55.733000,49,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Demonic Embrace,m21,Near Mint,English,,,2025-01-08 21:49:55.733000,95,False,False,0.21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.70
 2,2,Demonic Lore,cmr,Near Mint,English,,,2025-03-06 21:23:31.017000,118,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
@@ -424,7 +424,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Diabolic Vision,ice,Near Mint,English,,,2025-01-08 21:49:55.733000,284,False,False,0.74,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.31
 1,1,Dig Up,vow,Near Mint,English,,,2025-03-04 21:47:12.580000,197,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.80
 1,1,Dig Up the Body,snc,Near Mint,English,,,2025-03-07 22:15:28.147000,76,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
-1,1,"Dihada, Binder of Wills",dmc,Near Mint,English,foil,,2025-01-08 21:49:55.733000,1,False,False,$300.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$317.08,$205.36
+1,1,"Dihada, Binder of Wills",dmc,Near Mint,English,foil,,2025-01-08 21:49:55.733000,1,False,False,9.7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$317.08,$205.36
 1,1,Diluvian Primordial,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,47,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.77
 1,1,Dimir Aqueduct,afc,Near Mint,English,,,2025-02-21 02:15:00.293000,234,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.83
 1,1,Dimir Guildgate,grn,Near Mint,English,,,2025-01-08 21:49:55.733000,246,False,False,0.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.31
@@ -447,7 +447,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Docent of Perfection // Final Iteration,inr,Near Mint,English,,,2025-03-04 21:42:35.347000,62,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.91
 1,1,"Donal, Herald of Wings",voc,Near Mint,English,foil,,2025-01-08 21:49:55.733000,3,False,False,0.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.55,$3.01
 2,2,Doomed Dissenter,vow,Near Mint,English,,,2025-03-05 00:39:28.210000,106,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.27
-1,1,Door of Destinies,ltc,Near Mint,English,,,2025-07-05 00:34:52.450000,277,False,False,$15.40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.54
+1,1,Door of Destinies,ltc,Near Mint,English,,,2025-07-05 00:34:52.450000,277,False,False,$6.64,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.54
 1,1,Doorkeeper,rtr,Near Mint,English,,,2025-01-08 21:49:55.733000,37,False,False,0.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 6,6,Double-Faced Substitute Card,svow,Near Mint,English,,,2025-03-04 20:57:29.850000,9,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Dovin's Veto,war,Near Mint,English,,,2025-01-08 21:49:55.733000,193,False,False,2.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$7.17
@@ -462,7 +462,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Drakewing Krasis,gtc,Near Mint,English,,,2025-03-06 21:04:43.650000,157,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,"Drakuseth, Maw of Flames",m20,Near Mint,English,,,2025-01-08 21:49:55.733000,136,False,False,0.48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.09
 1,1,Drana and Linvala,mom,Near Mint,English,,,2025-04-21 01:59:50.670000,222,False,False,$4.43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$11.79
-1,1,Drana and Linvala,mom,Near Mint,English,foil,,2025-02-24 02:17:04.487000,222,False,False,$63.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$70.96,$18.72
+1,1,Drana and Linvala,mom,Near Mint,English,foil,,2025-02-24 02:17:04.487000,222,False,False,$4.10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$70.96,$18.72
 1,1,"Drana, Kalastria Bloodchief",c17,Near Mint,English,,,2025-03-12 21:46:50.257000,112,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.18
 1,1,"Drana, Liberator of Malakir",jmp,Near Mint,English,,,2025-04-21 01:59:46.420000,225,False,False,$1.24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.30
 1,1,"Drana, the Last Bloodchief",znr,Near Mint,English,,,2025-03-12 21:48:06.433000,98,False,False,$2.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.86
@@ -493,7 +493,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Eat to Extinction,thb,Near Mint,English,,,2025-02-21 02:20:10.083000,312,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Eccentric Farmer,mid,Near Mint,English,,,2025-03-04 22:36:48.507000,185,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 2,2,Echoing Courage,cns,Near Mint,English,,,2025-03-07 19:37:24.407000,161,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
-1,1,Edgar Markov,inr,Near Mint,English,,,2025-02-25 02:52:45.243000,234,False,False,$122.16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$133.10
+1,1,Edgar Markov,inr,Near Mint,English,,,2025-02-25 02:52:45.243000,234,False,False,$26.33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$133.10
 1,1,"Edgar, Charmed Groom // Edgar Markov's Coffin",vow,Near Mint,English,,,2025-04-21 01:59:40.373000,236,False,False,$3.46,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$10.01
 1,1,"Elas il-Kor, Sadistic Pilgrim",dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,297,False,False,0.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.05
 1,1,Eldrazi Horror,tinr,Near Mint,English,,,2025-03-04 21:28:17.503000,1,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
@@ -505,7 +505,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Electrostatic Pummeler,kld,Near Mint,English,,,2025-01-08 21:49:55.733000,210,False,False,0.31,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.94
 1,1,Elenda and Azor,moc,Near Mint,English,foil,,2025-01-12 06:13:51.393000,6,False,False,0.26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.46,$2.75
 1,1,"Elenda, Saint of Dusk",fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,119,False,False,0.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$7.74,$3.49
-1,1,"Elenda, the Dusk Rose",lcc,Near Mint,English,,,2025-07-05 00:27:00.100000,268,False,False,$13.39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.97
+1,1,"Elenda, the Dusk Rose",lcc,Near Mint,English,,,2025-07-05 00:27:00.100000,268,False,False,$5.74,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.97
 1,1,Elephant,tscd,Near Mint,English,,,2025-01-08 21:49:55.733000,20,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.39
 1,1,Elfsworn Giant,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,103,False,False,0.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Elite Headhunter,eld,Near Mint,English,,,2025-01-29 03:40:03.760000,209,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
@@ -548,9 +548,9 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Expendable Lackey,snc,Near Mint,English,,,2025-03-06 20:13:42.367000,43,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Explosion of Riches,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,140,False,False,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Expressive Iteration,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,288,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.29
-1,1,Exquisite Blood,lcc,Near Mint,English,,,2025-03-02 19:32:57.520000,195,False,False,$148.17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$167.12
+1,1,Exquisite Blood,lcc,Near Mint,English,,,2025-03-02 19:32:57.520000,195,False,False,$29.53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$167.12
 1,1,Exsanguinate,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,173,False,False,0.53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.83
-1,1,Fabled Passage,pw21,Near Mint,English,foil,,2025-07-05 01:04:34.510000,4,False,False,$60.32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$71.24,$49.44
+1,1,Fabled Passage,pw21,Near Mint,English,foil,,2025-07-05 01:04:34.510000,4,False,False,$9.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$71.24,$49.44
 1,1,Fabrication Module,kld,Near Mint,English,,,2025-01-08 21:49:55.733000,211,False,False,0.21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.50
 1,1,Faerie Duelist,rna,Near Mint,English,,,2025-03-04 23:09:41.553000,39,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Faerie Mechanist,con,Near Mint,English,,,2025-03-05 01:13:13.667000,27,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
@@ -576,14 +576,14 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Fearless Halberdier,grn,Near Mint,English,,,2025-03-05 01:35:37.270000,100,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Feed the Swarm,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,77,False,False,0.32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.60
 2,2,Felhide Minotaur,ths,Near Mint,English,,,2025-03-06 21:08:56.650000,87,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.03
-2,2,Fell the Profane // Fell Mire,mh3,Near Mint,English,,,2025-03-15 16:06:06.467000,244,False,False,$12.70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.18
+2,2,Fell the Profane // Fell Mire,mh3,Near Mint,English,,,2025-03-15 16:06:06.467000,244,False,False,$5.68,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.18
 1,1,Fell the Profane // Fell Mire,mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,244,False,False,3.71,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$14.09
 1,1,Fellwar Stone,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,318,False,False,$1.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.02
 1,1,Ferrous Lake,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,361,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.77
 1,1,Fervent Charge,pip,Near Mint,English,,,2025-01-08 21:49:55.733000,215,False,False,0.16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$7.57
 1,1,Festival Crasher,inr,Near Mint,English,foil,,2025-03-05 00:42:48.807000,153,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.56,$0.08
 2,2,Festival Crasher,mid,Near Mint,English,,,2025-03-07 20:47:55.423000,140,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Fetid Heath,eve,Near Mint,English,,,2025-07-05 01:27:22.963000,176,False,False,$36.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$45.04
+1,1,Fetid Heath,eve,Near Mint,English,,,2025-07-05 01:27:22.963000,176,False,False,$10.96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$45.04
 1,1,Fetid Pools,pip,Near Mint,English,,,2025-01-08 21:49:55.733000,265,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Field Creeper,emn,Near Mint,English,,,2025-01-08 21:49:55.733000,195,False,False,0.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 2,2,Field of Ruin,ltc,Near Mint,English,,,2025-02-21 02:27:25.177000,308,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.53
@@ -599,14 +599,14 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Firebrand Archer,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,196,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.25
 1,1,Firemane Angel,ima,Near Mint,English,,,2025-01-08 21:49:55.733000,199,False,False,0.28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.69
 1,1,Firemane Avenger,gk1,Near Mint,English,,,2025-01-08 21:49:55.733000,89,False,False,0.39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.64
-1,1,Firemane Commando,moc,Near Mint,English,,,2025-01-12 06:16:17.923000,81,False,False,$37.43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$46.20
+1,1,Firemane Commando,moc,Near Mint,English,,,2025-01-12 06:16:17.923000,81,False,False,$6.65,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$46.20
 1,1,First Response,cmr,Near Mint,English,,,2025-03-07 23:13:58.077000,22,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 2,2,Fists of the Anvil,mrd,Near Mint,English,,,2025-01-08 21:49:55.733000,91,False,False,0.11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.28
 1,1,Flame Discharge,neo,Near Mint,English,,,2025-03-07 19:41:06.833000,142,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 2,2,Flame-Blessed Bolt,vow,Near Mint,English,,,2025-03-05 00:43:20.767000,158,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Flames of the Firebrand,m14,Near Mint,English,,,2025-03-07 23:22:16.927000,139,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Flametongue Kavu,e01,Near Mint,English,,,2025-03-05 01:41:39.557000,48,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.32
-1,1,Flawless Maneuver,cmm,Near Mint,English,,,2025-04-21 01:44:47.747000,24,False,False,$71.43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$83.51
+1,1,Flawless Maneuver,cmm,Near Mint,English,,,2025-04-21 01:44:47.747000,24,False,False,$16.93,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$83.51
 2,2,Fleeting Spirit,vow,Near Mint,English,,,2025-03-07 23:07:55.827000,14,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Flicker of Fate,thb,Near Mint,English,,,2025-03-07 23:25:47.507000,16,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.53
 1,1,Fling,eld,Near Mint,English,,,2025-03-07 19:54:46.150000,126,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
@@ -645,7 +645,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Ghost Quarter,ltc,Near Mint,English,,,2025-01-08 21:49:55.733000,314,False,False,0.48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.84
 1,1,Ghostblade Eidolon,bng,Near Mint,English,,,2025-01-08 21:49:55.733000,12,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.57
 1,1,Ghostly Prison,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,116,False,False,$5.40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$14.63
-1,1,Ghostly Prison,khc,Near Mint,English,,,2025-01-27 02:56:37.780000,26,False,False,$10.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.01
+1,1,Ghostly Prison,khc,Near Mint,English,,,2025-01-27 02:56:37.780000,26,False,False,$5.44,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.01
 1,1,Ghoulcaller's Accomplice,soi,Near Mint,English,,,2025-03-05 01:15:21.257000,112,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Ghoulcaller's Bell,isd,Near Mint,English,,,2025-03-06 22:21:36.423000,224,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.70
 1,1,"Giada, Font of Hope",snc,Near Mint,English,,,2025-01-08 21:49:55.733000,14,False,False,1.34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.29
@@ -660,12 +660,12 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Gilt-Blade Prowler,mh2,Near Mint,English,,,2025-03-06 21:36:13.087000,86,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.03
 1,1,Gisa's Bidding,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,114,False,False,0.11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,"Gisela, Blade of Goldnight",cmm,Near Mint,English,,,2025-01-08 21:49:55.733000,338,False,False,1.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.14
-1,1,"Gisela, the Broken Blade",inr,Near Mint,English,,,2025-07-05 01:43:15.980000,24,False,False,$73.91,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$88.02
+1,1,"Gisela, the Broken Blade",inr,Near Mint,English,,,2025-07-05 01:43:15.980000,24,False,False,$17.73,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$88.02
 1,1,Glacial Fortress,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,367,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.02
 1,1,Glacial Fortress,ltc,Near Mint,English,,,2025-01-08 21:49:55.733000,315,False,False,0.82,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.88
 1,1,Glamorous Outlaw,snc,Near Mint,English,,,2025-03-07 20:12:42.437000,190,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Gleaming Barrier,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,252,False,False,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
-1,1,Gleeful Arsonist,dsc,Near Mint,English,,,2025-01-13 18:26:30.760000,56,False,False,$18.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$23.60
+1,1,Gleeful Arsonist,dsc,Near Mint,English,,,2025-01-13 18:26:30.760000,56,False,False,$6.88,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$23.60
 1,1,Glimmer of Genius,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,187,False,False,0.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Glint,dtk,Near Mint,English,,,2025-01-08 21:49:55.733000,55,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 2,2,Glittermonger,snc,Near Mint,English,,,2025-03-07 23:11:36.293000,149,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
@@ -680,7 +680,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Golden Egg,eld,Near Mint,English,,,2025-01-08 21:49:55.733000,220,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Gold-Forged Thopteryx,mat,Near Mint,English,foil,,2025-01-08 21:49:55.733000,31,False,False,0.13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.72,$1.93
 1,1,Goldmire Bridge,moc,Near Mint,English,,,2025-01-08 21:49:55.733000,407,False,False,0.15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.84
-1,1,Goldspan Dragon,m3c,Near Mint,English,,,2025-01-12 06:18:09.000000,212,False,False,$27.47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$36.14
+1,1,Goldspan Dragon,m3c,Near Mint,English,,,2025-01-12 06:18:09.000000,212,False,False,8.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$36.14
 3,3,Golem Artisan,cmr,Near Mint,English,,,2025-03-07 23:27:03.557000,311,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Gonti's Aether Heart,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,294,False,False,0.58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$5.71
 1,1,Graf Rats,emn,Near Mint,English,,,2025-03-05 00:23:20.337000,91,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
@@ -711,7 +711,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Gwaihir the Windlord,ltr,Near Mint,English,foil,,2025-01-08 21:49:55.733000,210,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.16,$1.29
 1,1,"Gwaihir, Greatest of the Eagles",ltc,Near Mint,English,,,2025-01-12 06:18:53.427000,15,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.64
 1,1,"Halana and Alena, Partners",vow,Near Mint,English,,,2025-03-04 21:45:38.150000,239,False,False,$1.10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.06
-1,1,Hall of the Bandit Lord,chk,Near Mint,English,,,2025-04-30 17:29:58.863000,277,False,False,$53.63,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$63.21
+1,1,Hall of the Bandit Lord,chk,Near Mint,English,,,2025-04-30 17:29:58.863000,277,False,False,$12.81,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$63.21
 1,1,Hamlet Captain,inr,Near Mint,English,,,2025-02-15 03:05:15.387000,201,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Hand of Silumgar,bbd,Near Mint,English,,,2025-03-07 22:13:19.280000,146,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Hanged Executioner,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,25,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.28
@@ -736,12 +736,12 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Hedron Archive,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,266,False,False,0.14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Hedron Archive,tsr,Near Mint,English,,,2025-01-08 21:49:55.733000,395,False,False,0.39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,"Heiko Yamazaki, the General",neo,Near Mint,English,,,2025-03-07 19:40:27.657000,321,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
-2,2,Heirloom Blade,pw24,Near Mint,English,foil,,2025-01-08 21:49:55.733000,16,False,False,$26.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$31.82,$1.66
+2,2,Heirloom Blade,pw24,Near Mint,English,foil,,2025-01-08 21:49:55.733000,16,False,False,16.81,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$31.82,$1.66
 1,1,HELIOS One,pip,Near Mint,English,,,2025-07-04 23:36:19.303000,149,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.18
 1,1,Hellhole Flailer,rtr,Near Mint,English,,,2025-03-07 23:02:30.467000,167,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
-1,1,Hellkite Tyrant,rvr,Near Mint,English,,,2025-01-27 02:47:04.130000,111,False,False,$31.94,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$39.32
-1,1,Helm of the Host,plst,Near Mint,English,,,2025-04-21 01:45:01.883000,DOM-217,False,False,$71.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$82.46
-1,1,Herald's Horn,lcc,Near Mint,English,,,2025-03-12 21:29:24.853000,304,False,False,$11.58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.33
+1,1,Hellkite Tyrant,rvr,Near Mint,English,,,2025-01-27 02:47:04.130000,111,False,False,$8.33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$39.32
+1,1,Helm of the Host,plst,Near Mint,English,,,2025-04-21 01:45:01.883000,DOM-217,False,False,$17.31,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$82.46
+1,1,Herald's Horn,lcc,Near Mint,English,,,2025-03-12 21:29:24.853000,304,False,False,$5.53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.33
 1,1,Hermit of the Natterknolls // Lone Wolf of the Natterknolls,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,209,False,False,0.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.74
 1,1,Heron of Hope,vow,Near Mint,English,,,2025-03-05 01:34:20.750000,18,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 2,2,Hero's Blade,frf,Near Mint,English,,,2025-03-05 01:21:45.960000,160,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
@@ -782,7 +782,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Inner Demon,bbd,Near Mint,English,,,2025-01-08 21:49:55.733000,48,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Inner Demon,j22,Near Mint,English,,,2025-01-11 03:08:57.327000,428,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Inquisitor's Ox,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,24,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
-1,1,Insatiable Avarice,otj,Near Mint,English,foil,,2025-01-22 16:34:47.593000,91,False,False,$26.89,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$35.21,$12.31
+1,1,Insatiable Avarice,otj,Near Mint,English,foil,,2025-01-22 16:34:47.593000,91,False,False,$3.12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$35.21,$12.31
 1,1,Insect,tvow,Near Mint,English,,,2025-01-08 21:49:55.733000,13,False,False,0.16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.34
 1,1,Inspiration from Beyond,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,43,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Inspired Inventor,mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,32,False,False,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
@@ -812,7 +812,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 3,3,Island,tdm,Near Mint,English,,,2025-04-21 05:53:34.557000,279,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.27
 1,1,Isolated Chapel,tdc,Near Mint,English,,,2025-04-30 17:24:44.610000,373,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.62
 1,1,"Isperia, Supreme Judge",scd,Near Mint,English,etched,,2025-01-08 21:49:55.733000,4,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$9.09,$1.63
-1,1,"Isshin, Two Heavens as One",neo,Near Mint,English,,,2025-02-22 22:36:31.433000,328,False,False,$11.79,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.06
+1,1,"Isshin, Two Heavens as One",neo,Near Mint,English,,,2025-02-22 22:36:31.433000,328,False,False,$5.56,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.06
 1,1,It of the Horrid Swarm,emn,Near Mint,English,,,2025-03-07 23:08:37.510000,8,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Izzet Boilerworks,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,350,False,False,0.26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.70
 1,1,Izzet Charm,rtr,Near Mint,English,,,2025-01-08 21:49:55.733000,172,False,False,0.17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
@@ -833,8 +833,8 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Juniper Order Rootweaver,dmu,Near Mint,English,foil,,2025-01-08 21:49:55.733000,22,False,False,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.28,$0.17
 1,1,Junkblade Bruiser,blb,Near Mint,English,,,2025-03-07 22:36:11.473000,220,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Kaalia of the Vast,mh3,Near Mint,English,,,2025-04-30 17:37:57.060000,290,False,False,$3.39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$9.56
-1,1,Kaalia of the Vast,mh3,Near Mint,English,etched,,2025-01-08 21:49:55.733000,489,False,False,$53.59,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.60,$23.68
-2,2,"Kaalia, Zenith Seeker",m20,Near Mint,English,,,2025-04-30 17:38:30.953000,210,False,False,$31.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$40.98
+1,1,Kaalia of the Vast,mh3,Near Mint,English,etched,,2025-01-08 21:49:55.733000,489,False,False,5.51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.60,$23.68
+2,2,"Kaalia, Zenith Seeker",m20,Near Mint,English,,,2025-04-30 17:38:30.953000,210,False,False,$8.96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$40.98
 1,1,Kabira Outrider,znr,Near Mint,English,,,2025-03-07 23:28:24.100000,18,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Kaervek the Merciless,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,233,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.60
 1,1,"Kaito, Cunning Infiltrator Emblem",tfdn,Near Mint,English,,,2025-02-15 03:16:30.313000,24,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
@@ -842,7 +842,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,"Kangee, Sky Warden",scd,Near Mint,English,,,2025-01-08 21:49:55.733000,234,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.57
 1,1,Kangee's Lieutenant,cmr,Near Mint,English,,,2025-03-07 22:51:46.697000,26,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.32
 1,1,Kangee's Lieutenant,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,27,False,False,0.14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.28
-1,1,"Kardur, Doomscourge",scd,Near Mint,English,etched,,2025-01-08 21:49:55.733000,5,False,False,$22.88,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$27.83,$4.97
+1,1,"Kardur, Doomscourge",scd,Near Mint,English,etched,,2025-01-08 21:49:55.733000,5,False,False,0.78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$27.83,$4.97
 1,1,Karfell Harbinger,khm,Near Mint,English,,,2025-03-05 00:51:59.163000,65,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Karn's Sylex,dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,234,False,False,0.7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.42
 1,1,"Kastral, the Windcrested",blb,Near Mint,English,foil,,2025-01-08 21:49:55.733000,221,False,False,0.21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.78,$2.66
@@ -854,7 +854,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Kiln Fiend,j25,Near Mint,English,,,2025-01-08 21:49:55.733000,139,False,False,0.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
 1,1,Kindly Ancestor // Ancestor's Embrace,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,22,False,False,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Kindly Ancestor // Ancestor's Embrace,vow,Near Mint,English,,,2025-03-04 21:44:38.837000,22,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
-1,1,Kindred Dominance,woc,Near Mint,English,,,2025-01-08 21:49:55.733000,113,False,False,$31.51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.30
+1,1,Kindred Dominance,woc,Near Mint,English,,,2025-01-08 21:49:55.733000,113,False,False,9.45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.30
 1,1,King Darien XLVIII,dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,204,False,False,0.58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.19
 1,1,"Kiora, the Crashing Wave Emblem",tbng,Near Mint,English,,,2025-01-08 21:49:55.733000,11,False,False,3.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Kitesail Skirmisher,cmr,Near Mint,English,,,2025-03-07 23:04:45.393000,77,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
@@ -892,13 +892,13 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Lethal Sting,hou,Near Mint,English,,,2025-03-07 22:26:39.620000,67,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
 1,1,"Liberty Prime, Recharged",pip,Near Mint,English,foil,,2025-01-08 21:49:55.733000,5,False,False,0.2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.55,$0.70
 1,1,Lich-Knights' Conquest,woe,Near Mint,English,,,2025-03-15 01:11:21.357000,96,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.05
-1,1,"Licia, Sanguine Tribune",c17,Near Mint,English,foil,,2025-07-05 00:35:44.463000,40,False,False,$52.81,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$63.04,$36.48
+1,1,"Licia, Sanguine Tribune",c17,Near Mint,English,foil,,2025-07-05 00:35:44.463000,40,False,False,$8.32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$63.04,$36.48
 1,1,"Lier, Disciple of the Drowned",tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,157,False,False,$1.77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.54
 1,1,"Liesa, Forgotten Archangel",mid,Near Mint,English,,,2025-01-08 21:49:55.733000,232,False,False,6.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.18
 1,1,"Liesa, Shroud of Dusk",cmr,Near Mint,English,,,2025-01-08 21:49:55.733000,286,False,False,0.52,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.81
 1,1,Light Up the Stage,plst,Near Mint,English,,,2025-01-12 05:33:37.297000,RNA-107,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.59
 1,1,Lightning Bolt,2x2,Near Mint,English,,,2025-01-29 02:58:31.633000,117,False,False,,,,,1.0,,R,,R,,,,,1.36,,,,,,,,,,,,,,,,,{R},,,,,,,,uncommon,,,,,https://scryfall.com/card/clu/141/lightning-bolt?utm_source=api,Ravnica: Clue Edition,,,,0.02,,,Instant,,,$1.84
-1,1,Lightning Greaves,plst,Near Mint,English,,,2025-02-21 02:24:23.920000,CMM-398,False,False,$12.69,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$17.62
+1,1,Lightning Greaves,plst,Near Mint,English,,,2025-02-21 02:24:23.920000,CMM-398,False,False,$6.21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$17.62
 1,1,Lightning Greaves,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,269,False,False,5.12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$13.63
 3,3,Lightning Helix,rvr,Near Mint,English,,,2025-01-11 03:07:19.960000,197,False,False,0.26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Lightning Mauler,inr,Near Mint,English,,,2025-02-22 21:51:35.503000,163,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
@@ -917,7 +917,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Locthwain Paladin,eld,Near Mint,English,,,2025-03-06 20:24:03.120000,93,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Lonely Sandbar,ltc,Near Mint,English,,,2025-01-08 21:49:55.733000,319,False,False,0.13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.31
 1,1,Looming Shade,m10,Near Mint,English,,,2025-03-06 20:24:22.623000,103,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
-1,1,Lord of the Void,rvr,Near Mint,English,,,2025-04-30 17:27:26.857000,424,False,False,$64.56,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$71.94
+1,1,Lord of the Void,rvr,Near Mint,English,,,2025-04-30 17:27:26.857000,424,False,False,$14.32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$71.94
 1,1,Loreseeker's Stone,cmr,Near Mint,English,,,2025-03-05 00:49:38.290000,320,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.27
 1,1,Loyal Drake,c18,Near Mint,English,,,2025-01-08 21:49:55.733000,10,False,False,0.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.59
 1,1,Lullmage's Domination,znr,Near Mint,English,,,2025-03-06 19:15:55.537000,66,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
@@ -925,7 +925,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Lumengrid Warden,10e,Near Mint,English,,,2025-03-07 20:56:21.347000,89,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Lumengrid Warden,9ed,Near Mint,English,,,2025-03-07 20:56:04.550000,84,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Lunarch Mantle,inr,Near Mint,English,,,2025-02-22 21:48:04.837000,344,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Lyra Dawnbringer,fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,707,False,False,$27.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$33.88,$0.90
+1,1,Lyra Dawnbringer,fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,707,False,False,2.57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$33.88,$0.90
 1,1,Magister Sphinx,2x2,Near Mint,English,,,2025-01-09 22:32:49.373000,247,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.86
 2,2,Magma Jet,ths,Near Mint,English,,,2025-03-05 01:15:56.330000,128,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Magma Opus,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,296,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.67
@@ -934,8 +934,8 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Magnigoth Sentry,dmu,Near Mint,English,,,2025-03-07 19:58:01.903000,172,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Makeshift Mauler,inr,Near Mint,English,,,2025-02-22 21:46:00.260000,73,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.03
 2,2,Makindi Ox,znr,Near Mint,English,,,2025-03-07 19:49:44.520000,25,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
-1,1,Malakir Bloodwitch,voc,Near Mint,English,,,2025-07-05 00:35:16.313000,131,False,False,$18.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$24.40
-1,1,Malakir Bloodwitch,zen,Near Mint,English,,,2025-06-28 19:07:45.000000,100,False,False,$27.87,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.16
+1,1,Malakir Bloodwitch,voc,Near Mint,English,,,2025-07-05 00:35:16.313000,131,False,False,$7.16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$24.40
+1,1,Malakir Bloodwitch,zen,Near Mint,English,,,2025-06-28 19:07:45.000000,100,False,False,$7.70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.16
 1,1,Malakir Cullblade,ori,Near Mint,English,,,2025-07-05 00:33:15.567000,108,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.38
 1,1,Malevolent Whispers,c19,Near Mint,English,,,2025-03-05 01:14:28.253000,150,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Mana Geyser,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,223,False,False,$2.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$14.68
@@ -956,11 +956,11 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Mask of Avacyn,cmr,Near Mint,English,,,2025-01-12 06:24:43.497000,466,False,False,2.72,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$13.25
 1,1,Maskwood Nexus,drc,Near Mint,English,,,2025-02-15 04:27:31.153000,132,False,False,$1.31,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.33
 1,1,Massacre Girl,war,Near Mint,English,,,2025-01-12 06:28:08.133000,99,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.69
-1,1,"Massacre Girl, Known Killer",mkm,Near Mint,English,,,2025-03-12 21:45:25.620000,94,False,False,$15.42,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.00
+1,1,"Massacre Girl, Known Killer",mkm,Near Mint,English,,,2025-03-12 21:45:25.620000,94,False,False,$6.35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.00
 1,1,Massacre Wurm,moc,Near Mint,English,,,2025-02-04 20:07:52.123000,256,False,False,$1.90,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.67
 1,1,Massive Might,vow,Near Mint,English,,,2025-03-06 19:31:31.243000,208,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
-1,1,Master of Cruelties,2x2,Near Mint,English,,,2025-01-09 22:31:49.903000,251,False,False,$13.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$17.39
-1,1,Master of Dark Rites,lcc,Near Mint,English,,,2025-03-15 16:07:25.483000,83,False,False,$16.68,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.80
+1,1,Master of Cruelties,2x2,Near Mint,English,,,2025-01-09 22:31:49.903000,251,False,False,$6.33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$17.39
+1,1,Master of Dark Rites,lcc,Near Mint,English,,,2025-03-15 16:07:25.483000,83,False,False,$7.58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.80
 1,1,"Mavren Fein, Dusk Apostle",xln,Near Mint,English,,,2025-03-02 19:29:19.903000,24,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.62
 2,2,Maw of the Obzedat,dgm,Near Mint,English,,,2025-03-07 19:39:52.393000,83,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.27
 1,1,Mayhem Devil,dsc,Near Mint,English,,,2025-01-11 03:06:44.223000,225,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.23
@@ -994,7 +994,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Mischievous Catgeist // Catlike Curiosity,vow,Near Mint,English,foil,,2025-01-08 21:49:55.733000,69,False,False,0.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.63,$0.81
 1,1,Mischievous Chimera,thb,Near Mint,English,,,2025-03-07 23:24:30.773000,223,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Mizzium Skin,rtr,Near Mint,English,,,2025-01-08 21:49:55.733000,45,False,False,0.17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.39
-1,1,"Mogis, God of Slaughter",bng,Near Mint,English,,,2025-02-21 03:08:27.477000,151,False,False,$11.91,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.64
+1,1,"Mogis, God of Slaughter",bng,Near Mint,English,,,2025-02-21 03:08:27.477000,151,False,False,$5.58,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.64
 1,1,Moldgraf Millipede,inr,Near Mint,English,foil,,2025-02-22 21:39:44.277000,208,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.48,$0.08
 2,2,Moldgraf Millipede,inr,Near Mint,English,,,2025-03-05 00:35:16.530000,208,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Molten Slagheap,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,309,False,False,0.08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
@@ -1023,7 +1023,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 2,2,Mountain,tdm,Near Mint,English,,,2025-04-21 05:53:34.557000,284,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
 1,1,Mourning Patrol // Morning Apparition,mid,Near Mint,English,,,2025-03-07 23:23:44.537000,28,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 2,2,Mugging,gtc,Near Mint,English,,,2025-01-08 21:49:55.733000,102,False,False,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
-1,1,"Muldrotha, the Gravetide",fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,243,False,False,$52.49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$65.20,$29.96
+1,1,"Muldrotha, the Gravetide",fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,243,False,False,1.96,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$65.20,$29.96
 1,1,Mulldrifter,mm2,Near Mint,English,,,2025-01-08 21:49:55.733000,51,False,False,0.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.67
 1,1,Murderous Compulsion,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,126,False,False,0.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Murmuration,blc,Near Mint,English,,,2025-01-12 06:30:46.870000,46,False,False,0.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$6.90
@@ -1081,7 +1081,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Obscura Charm,snc,Near Mint,English,foil,,2025-01-12 06:33:00.427000,323,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.76,$0.48
 1,1,Obscura Storefront,dsc,Near Mint,English,,,2025-01-08 21:49:55.733000,291,False,False,0.16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.53
 1,1,"Odric, Lunarch Marshal",inr,Near Mint,English,,,2025-02-22 19:26:01.133000,36,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.99
-8,8,Ogre,tscd,Near Mint,English,,,2025-01-08 21:49:55.733000,18,False,False,$37.39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$46.66
+8,8,Ogre,tscd,Near Mint,English,,,2025-01-08 21:49:55.733000,18,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$46.66
 1,1,Old Rutstein,vow,Near Mint,English,foil,,2025-01-12 06:33:16.497000,244,False,False,0.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$7.20,$4.58
 1,1,Olivia Voldaren,inr,Near Mint,English,,,2025-07-05 00:25:37.003000,246,False,False,$2.94,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$9.18
 1,1,Olivia's Dragoon,inr,Near Mint,English,,,2025-02-22 21:36:58.470000,127,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
@@ -1113,7 +1113,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Panicked Bystander // Cackling Culprit,vow,Near Mint,English,,,2025-03-05 01:33:16.743000,28,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Paragon of Modernity,snc,Near Mint,English,,,2025-03-07 20:12:02.843000,242,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Pardic Wanderer,dom,Near Mint,English,,,2025-03-06 21:36:29.270000,226,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Patchwork Banner,pmei,Near Mint,English,foil,,2025-04-21 02:03:19.450000,2024-7,False,False,$51.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.36,$41.88
+1,1,Patchwork Banner,pmei,Near Mint,English,foil,,2025-04-21 02:03:19.450000,2024-7,False,False,$7.64,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.36,$41.88
 2,2,Path of Ancestry,pip,Near Mint,English,foil,,2025-01-12 05:13:00.627000,279,False,False,0.17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$9.57,$1.57
 1,1,Path of Ancestry,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,382,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.50
 1,1,Patron of the Vein,lcc,Near Mint,English,,,2025-03-09 18:53:15.377000,207,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.50
@@ -1126,7 +1126,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Perilous Landscape,mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,223,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.31
 1,1,Perilous Landscape,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,383,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
 1,1,Persistent Constrictor,dsc,Near Mint,English,,,2025-02-04 20:07:58.143000,52,False,False,$1.66,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.30
-1,1,Pest Control,big,Near Mint,English,,,2025-07-05 01:09:39.227000,22,False,False,$15.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.10
+1,1,Pest Control,big,Near Mint,English,,,2025-07-05 01:09:39.227000,22,False,False,$7.37,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.10
 1,1,Pestilence Demon,c14,Near Mint,English,,,2025-01-08 21:49:55.733000,153,False,False,0.53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.90
 1,1,Pestilent Wolf,mid,Near Mint,English,,,2025-03-06 21:14:38.187000,192,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Phantom Carriage,mid,Near Mint,English,,,2025-03-07 23:05:40.580000,70,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
@@ -1215,7 +1215,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Rampaging Ferocidon,dsc,Near Mint,English,,,2025-01-29 02:49:55.000000,167,False,False,$0.99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.35
 1,1,Raugrin Crystal,iko,Near Mint,English,,,2025-03-05 01:20:03.127000,238,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
 1,1,Raugrin Crystal,iko,Near Mint,English,,,2025-01-08 21:49:55.733000,238,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
-1,1,"Razaketh, the Foulblooded",hou,Near Mint,English,,,2025-01-13 18:26:51.357000,73,False,False,$50.83,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.41
+1,1,"Razaketh, the Foulblooded",hou,Near Mint,English,,,2025-01-13 18:26:51.357000,73,False,False,$12.99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$60.41
 1,1,Razaketh's Rite,hou,Near Mint,English,,,2025-01-08 21:49:55.733000,74,False,False,0.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.69
 1,1,Razaketh's Rite,hou,Near Mint,English,,,2025-01-08 21:49:55.733000,74,False,False,0.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.69
 1,1,Raze the Effigy,mid,Near Mint,English,,,2025-03-04 22:37:42.510000,156,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
@@ -1283,7 +1283,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Rugged Prairie,2xm,Near Mint,English,,,2025-07-05 01:06:56.990000,325,False,False,$1.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.97
 1,1,Rugged Prairie,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,389,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.22
 1,1,Ruin Rat,hou,Near Mint,English,,,2025-03-06 21:03:39.207000,75,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
-1,1,Ruinous Ultimatum,piko,Near Mint,English,,,2025-04-21 02:02:27.903000,204p,False,False,$17.11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.18
+1,1,Ruinous Ultimatum,piko,Near Mint,English,,,2025-04-21 02:02:27.903000,204p,False,False,$6.97,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.18
 1,1,Ruinous Ultimatum,iko,Near Mint,English,,,2025-01-08 21:49:55.733000,204,False,False,2.9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$13.30
 1,1,Rumbling Sentry,thb,Near Mint,English,,,2025-03-07 23:24:48.450000,35,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Rummaging Goblin,cmr,Near Mint,English,,,2025-03-07 23:14:52.663000,198,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
@@ -1317,7 +1317,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Satyr Hoplite,j25,Near Mint,English,,,2025-01-08 21:49:55.733000,595,False,False,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.10
 1,1,Savage Gorger,m20,Near Mint,English,,,2025-07-05 00:29:49.580000,291,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.99
 1,1,Savage Surge,rtr,Near Mint,English,,,2025-01-08 21:49:55.733000,133,False,False,0.08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
-1,1,Savai Triome,iko,Near Mint,English,,,2025-04-30 17:22:38.680000,312,False,False,$125.14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$132.90
+1,1,Savai Triome,iko,Near Mint,English,,,2025-04-30 17:22:38.680000,312,False,False,$26.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$132.90
 1,1,Scaled Behemoth,cmr,Near Mint,English,,,2025-03-06 21:11:55.873000,251,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Scales of Shale,blb,Near Mint,English,,,2025-03-05 01:01:33.753000,110,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 2,2,Scattered Thoughts,vow,Near Mint,English,,,2025-03-06 22:26:33.460000,74,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
@@ -1336,7 +1336,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Secluded Steppe,cmr,Near Mint,English,,,2025-01-11 21:41:15.187000,491,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.27
 1,1,Secrets of the Key,mid,Near Mint,English,,,2025-03-07 23:22:56.047000,73,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Seedpod Squire,blb,Near Mint,English,,,2025-03-06 22:16:37.247000,232,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
-1,1,Seething Song,ddg,Near Mint,English,,,2025-01-08 21:49:55.733000,70,False,False,$17.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.10
+1,1,Seething Song,ddg,Near Mint,English,,,2025-01-08 21:49:55.733000,70,False,False,6.99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$22.10
 1,1,Seize the Storm,inr,Near Mint,English,,,2025-02-22 21:49:37.057000,170,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,Sejiri Refuge,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,317,False,False,0.17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.59
 2,2,Selesnya Guildgate,dgm,Near Mint,English,,,2025-03-05 01:55:06.757000,155,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
@@ -1353,7 +1353,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Serpentine Ambush,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,77,False,False,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Serpentine Ambush,vow,Near Mint,English,,,2025-03-04 20:45:39.437000,77,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Serra Angel,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,147,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.20
-4,4,Servo,tmh3,Near Mint,English,,,2025-01-08 21:49:55.733000,33,False,False,$68.15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$77.02
+4,4,Servo,tmh3,Near Mint,English,,,2025-01-08 21:49:55.733000,33,False,False,$54.82,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$77.02
 2,2,Settle the Score,dom,Near Mint,English,,,2025-03-07 22:39:44.080000,103,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Sevinne's Reclamation,dmr,Near Mint,English,foil,,2025-01-12 06:40:13.677000,27,False,False,0.28,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$6.66,$3.30
 1,1,Sewer Crocodile,snc,Near Mint,English,,,2025-03-07 23:11:05.327000,60,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
@@ -1371,7 +1371,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Shatter,4ed,Near Mint,English,,,2025-03-06 21:01:23.077000,219,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Shatter the Sky,thb,Near Mint,English,,,2025-02-05 21:09:11.273000,37,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.48
 1,1,Shattered Landscape,mh3,Near Mint,English,,,2025-01-25 23:07:31.933000,226,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
-1,1,Shattered Sanctum,vow,Near Mint,English,,,2025-01-11 21:41:20.360000,264,False,False,$11.64,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.73
+1,1,Shattered Sanctum,vow,Near Mint,English,,,2025-01-11 21:41:20.360000,264,False,False,$5.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.73
 1,1,"Shaun, Father of Synths",pip,Near Mint,English,,,2025-01-08 21:49:55.733000,119,False,False,0.15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 2,2,"Shiko and Narset, Unified",tdc,Near Mint,English,foil,,2025-04-21 05:53:34.557000,7,False,False,$1.59,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$6.88,$5.76
 1,1,"Shilgengar, Sire of Famine",mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,109,False,False,0.32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
@@ -1393,7 +1393,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Sigardian Savior,mid,Near Mint,English,foil,,2025-07-05 01:09:16.753000,331,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.97,$1.06
 1,1,Sigil Blessing,ala,Near Mint,English,,,2025-03-06 22:27:12.807000,195,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.29
 1,1,Sign in Blood,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,107,False,False,0.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.37
-1,1,Silence,tsr,Near Mint,English,,,2025-07-05 01:01:04.757000,302,False,False,$46.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$56.14
+1,1,Silence,tsr,Near Mint,English,,,2025-07-05 01:01:04.757000,302,False,False,$11.49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$56.14
 1,1,Silent Observer,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,86,False,False,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Silumgar Sorcerer,dtk,Near Mint,English,,,2025-01-08 21:49:55.733000,76,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.15
 1,1,Silverbluff Bridge,pip,Near Mint,English,,,2025-02-21 02:30:34.370000,290,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.70
@@ -1430,8 +1430,8 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Snake of the Golden Grove,bng,Near Mint,English,,,2025-01-08 21:49:55.733000,141,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.10
 1,1,Snarling Wolf,vow,Near Mint,English,,,2025-03-04 21:49:50.377000,219,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Snow-Covered Forest,khm,Near Mint,English,,,2025-01-08 21:49:55.733000,285,False,False,0.92,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.02
-3,3,Sol Ring,scd,Near Mint,English,,,2025-01-12 06:42:27.637000,276,False,False,$17.44,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.84
-1,1,Sol Ring,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,106,False,False,$11.85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.36
+3,3,Sol Ring,scd,Near Mint,English,,,2025-01-12 06:42:27.637000,276,False,False,1.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.84
+1,1,Sol Ring,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,106,False,False,$1.13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$16.36
 1,1,Solar Transformer,mh3,Near Mint,English,,,2025-01-08 21:49:55.733000,211,False,False,0.12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 2,2,Soldier,tdmu,Near Mint,English,,,2025-01-08 21:49:55.733000,4,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.29
 4,4,Soldier,tmoc,Near Mint,English,,,2025-01-08 21:49:55.733000,8,False,False,0.13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.29
@@ -1537,7 +1537,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Syncopate,vow,Near Mint,English,,,2025-03-07 23:30:59.127000,83,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
 1,1,Syncopate,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,83,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 2,2,Syncopate,inr,Near Mint,English,,,2025-03-05 00:35:33.367000,89,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Synth Eradicator,pip,Near Mint,English,foil,,2025-01-08 21:49:55.733000,67,False,False,$22.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$28.91,$1.44
+1,1,Synth Eradicator,pip,Near Mint,English,foil,,2025-01-08 21:49:55.733000,67,False,False,0.51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$28.91,$1.44
 2,2,Syphon Essence,vow,Near Mint,English,,,2025-03-07 19:53:13.977000,84,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Syphon Mind,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,111,False,False,0.49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.33
 1,1,"Syr Konrad, the Grim",m3c,Near Mint,English,,,2025-01-11 03:07:03.917000,207,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.78
@@ -1546,7 +1546,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Tail Slash,dtk,Near Mint,English,,,2025-01-08 21:49:55.733000,161,False,False,0.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.15
 1,1,Tainted Isle,woc,Near Mint,English,,,2025-01-08 21:49:55.733000,169,False,False,0.57,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.74
 1,1,Tainted Peak,voc,Near Mint,English,,,2025-01-27 03:53:01.120000,184,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.99
-1,1,Tainted Remedy,ori,Near Mint,English,,,2025-03-09 18:50:54.627000,120,False,False,$12.41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.91
+1,1,Tainted Remedy,ori,Near Mint,English,,,2025-03-09 18:50:54.627000,120,False,False,$5.86,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.91
 2,2,Tajuru Blightblade,znr,Near Mint,English,,,2025-03-06 22:18:37.100000,208,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Take Inventory,emn,Near Mint,English,,,2025-03-07 22:58:34.957000,76,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
 1,1,Talisman of Conviction,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,307,False,False,0.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.64
@@ -1559,7 +1559,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Talisman of Hierarchy,lcc,Near Mint,English,,,2025-01-25 18:36:43.677000,315,False,False,$1.22,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.90
 1,1,Talisman of Indulgence,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,282,False,False,2.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$5.39
 1,1,Talisman of Indulgence,who,Near Mint,English,,,2025-02-11 05:45:48.883000,252,False,False,$1.82,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$5.01
-1,1,Talisman of Indulgence,who,Near Mint,English,foil,,2025-03-09 18:48:49.333000,843,False,False,$46.99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$55.64,$8.94
+1,1,Talisman of Indulgence,who,Near Mint,English,foil,,2025-03-09 18:48:49.333000,843,False,False,$1.97,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$55.64,$8.94
 1,1,Talisman of Progress,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,283,False,False,0.54,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.02
 1,1,Talisman of Progress,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,333,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.18
 1,1,Tanglesap,zen,Near Mint,English,,,2025-03-07 20:25:40.230000,186,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.24
@@ -1570,7 +1570,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Tavern Ruffian // Tavern Smasher,mid,Near Mint,English,,,2025-03-07 23:15:23.487000,296,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.03
 1,1,Tazeem Roilmage,znr,Near Mint,English,,,2025-03-06 20:24:39.243000,84,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Tectonic Giant,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,161,False,False,0.15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
-1,1,"Teferi, Hero of Dominaria",dom,Near Mint,English,,,2025-01-09 22:31:29.240000,207,False,False,$19.69,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$25.54
+1,1,"Teferi, Hero of Dominaria",dom,Near Mint,English,,,2025-01-09 22:31:29.240000,207,False,False,$8.33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$25.54
 1,1,Teferi's Ageless Insight,m21,Near Mint,English,,,2025-01-08 21:49:55.733000,294,False,False,1.53,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$5.81
 2,2,Tempest Angler,blb,Near Mint,English,,,2025-03-05 01:39:29.883000,235,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Tempest Technique,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,16,False,False,$2.74,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$6.96
@@ -1584,7 +1584,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Temple of Triumph,m3c,Near Mint,English,,,2025-01-08 21:49:55.733000,392,False,False,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
 1,1,Temple of Triumph,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,407,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
 1,1,Temur Charger,ktk,Near Mint,English,,,2025-03-07 19:44:23.070000,153,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
-1,1,"Tergrid, God of Fright // Tergrid's Lantern",khm,Near Mint,English,,,2025-02-20 03:30:31.973000,307,False,False,$69.01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$78.34
+1,1,"Tergrid, God of Fright // Tergrid's Lantern",khm,Near Mint,English,,,2025-02-20 03:30:31.973000,307,False,False,$15.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$78.34
 1,1,Terminate,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,249,False,False,0.34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.78
 1,1,Terminate,acr,Near Mint,English,,,2025-01-08 21:49:55.733000,98,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.78
 1,1,Terramorphic Expanse,mma,Near Mint,English,,,2025-03-05 02:44:00.697000,224,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.67
@@ -1627,7 +1627,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Thunderclap Wyvern,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,251,False,False,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.50
 1,1,Thundering Rebuke,znr,Near Mint,English,,,2025-03-06 19:18:55.720000,170,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 1,1,"Tibalt, the Fiend-Blooded",avr,Near Mint,English,,,2025-01-28 19:15:19.250000,161,False,False,$0.97,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.69
-2,2,Tibalt's Trickery,khm,Near Mint,English,,,2025-02-21 02:23:34.487000,153,False,False,$36.20,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$45.04
+2,2,Tibalt's Trickery,khm,Near Mint,English,,,2025-02-21 02:23:34.487000,153,False,False,$9.99,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$45.04
 1,1,Tide Skimmer,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,62,False,False,0.08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Timberland Guide,mid,Near Mint,English,,,2025-03-07 23:21:37.877000,202,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Time Wipe,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,308,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.41
@@ -1636,14 +1636,14 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Tireless Tracker,inr,Near Mint,English,foil,,2025-02-22 21:42:08.890000,219,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.61,$1.68
 1,1,Titan Hunter,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,112,False,False,0.11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Titan's Strength,j25,Near Mint,English,,,2025-01-08 21:49:55.733000,603,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.28
-1,1,"Tivit, Seller of Secrets",ncc,Near Mint,English,foil,,2025-01-08 21:49:55.733000,10,False,False,$24.85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$29.63,$38.52
+1,1,"Tivit, Seller of Secrets",ncc,Near Mint,English,foil,,2025-01-08 21:49:55.733000,10,False,False,0.72,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$29.63,$38.52
 1,1,"Toluz, Clever Conductor",snc,Near Mint,English,foil,,2025-01-12 06:46:56.380000,336,False,False,0.1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.60,$0.73
 1,1,Tor Wauki the Younger,dmc,Near Mint,English,etched,,2025-02-04 20:08:14.940000,68,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$5.28,$2.16
 1,1,"Tori D'Avenant, Fury Rider",dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,322,False,False,0.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.34
 1,1,Torrential Gearhulk,kld,Near Mint,English,,,2025-01-08 21:49:55.733000,67,False,False,0.89,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.62
 1,1,Totally Lost,gtc,Near Mint,English,,,2025-03-06 19:32:39.020000,54,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
 1,1,Tourach's Canticle,mh2,Near Mint,English,,,2025-03-07 22:43:05.407000,103,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
-1,1,Toxic Deluge,mh3,Near Mint,English,,,2025-07-04 23:35:54.973000,277,False,False,$15.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.88
+1,1,Toxic Deluge,mh3,Near Mint,English,,,2025-07-04 23:35:54.973000,277,False,False,$6.45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.88
 1,1,Tragic Banshee,fdn,Near Mint,English,,,2025-02-21 02:38:17.123000,73,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
 2,2,Trail of Crumbs,eld,Near Mint,English,,,2025-03-07 23:17:28.403000,179,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.26
 1,1,Tranquil Cove,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,329,False,False,0.07,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
@@ -1691,12 +1691,12 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,"Urdnan, Dromoka Warrior",j25,Near Mint,English,,,2025-02-15 02:42:25.563000,34,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.91
 1,1,Urza's Ruinous Blast,cmm,Near Mint,English,,,2025-02-21 02:35:41.203000,842,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.39
 2,2,Utter End,c18,Near Mint,English,,,2025-01-12 06:48:05.160000,193,False,False,0.24,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.34
-1,1,Utvara Hellkite,rtr,Near Mint,English,,,2025-01-09 22:38:00.913000,110,False,False,$74.78,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$88.99
+1,1,Utvara Hellkite,rtr,Near Mint,English,,,2025-01-09 22:38:00.913000,110,False,False,$18.66,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$88.99
 1,1,"Uurg, Spawn of Turg",dmu,Near Mint,English,,,2025-01-08 21:49:55.733000,324,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.20
 1,1,"Valduk, Keeper of the Flame",mul,Near Mint,English,etched,,2025-03-06 19:07:47.313000,89,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.95,$0.34
 1,1,Valeron Outlander,con,Near Mint,English,,,2025-03-06 20:30:10.270000,130,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
-1,1,"Valgavoth, Harrower of Souls",dsc,Near Mint,English,,,2025-01-12 06:48:19.383000,6,False,False,$72.48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$89.21
-1,1,"Valgavoth, Terror Eater",dsk,Near Mint,English,,,2025-01-22 16:34:16.700000,352,False,False,$62.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$77.15
+1,1,"Valgavoth, Harrower of Souls",dsc,Near Mint,English,,,2025-01-12 06:48:19.383000,6,False,False,$19.43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$89.21
+1,1,"Valgavoth, Terror Eater",dsk,Near Mint,English,,,2025-01-22 16:34:16.700000,352,False,False,$16.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$77.15
 1,1,Valgavoth's Faithful,dsk,Near Mint,English,,,2025-01-11 02:51:39.500000,121,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.32
 1,1,Valgavoth's Lair,dsk,Near Mint,English,,,2025-01-29 03:04:39.993000,327,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$2.22
 1,1,Valgavoth's Lair,dsk,Near Mint,English,foil,,2025-01-12 06:48:41.013000,271,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$12.03,$3.17
@@ -1707,7 +1707,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 3,3,Vampire Demon,tlci,Near Mint,English,,,2025-03-12 21:40:20.207000,15,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 4,4,Vampire Knight,tmoc,Near Mint,English,,,2025-01-08 21:49:55.733000,20,False,False,0.14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Vampire Nighthawk,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,115,False,False,0.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.35
-1,1,Vampire Nocturnus,m13,Near Mint,English,,,2025-03-15 01:09:21.810000,113,False,False,$31.85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.86
+1,1,Vampire Nocturnus,m13,Near Mint,English,,,2025-03-15 01:09:21.810000,113,False,False,$9.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$37.86
 3,3,Vampire Rogue,totj,Near Mint,English,,,2025-03-12 21:40:00.190000,8,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.49
 1,1,Vampire Soulcaller,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,75,False,False,0.03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.10
 2,2,Vampire's Kiss,vow,Near Mint,English,,,2025-03-05 00:44:03.007000,136,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.64
@@ -1716,14 +1716,14 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Vandalize,dtk,Near Mint,English,,,2025-01-08 21:49:55.733000,165,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Vanquish the Horde,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,91,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.26
 1,1,Vanquish the Weak,xln,Near Mint,English,,,2025-03-06 21:21:31.990000,127,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
-1,1,Vanquisher's Banner,ltc,Near Mint,English,,,2025-03-12 21:29:15.163000,289,False,False,$11.19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.30
-1,1,"Varina, Lich Queen",c18,Near Mint,English,foil,,2025-01-08 21:49:55.733000,48,False,False,$112.68,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$128.92,$54.36
+1,1,Vanquisher's Banner,ltc,Near Mint,English,,,2025-03-12 21:29:15.163000,289,False,False,$5.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$15.30
+1,1,"Varina, Lich Queen",c18,Near Mint,English,foil,,2025-01-08 21:49:55.733000,48,False,False,0.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$128.92,$54.36
 1,1,"Varragoth, Bloodsky Sire",khm,Near Mint,English,,,2025-01-08 21:49:55.733000,115,False,False,3.86,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$9.31
 1,1,Vault 112: Sadistic Simulation,pip,Near Mint,English,foil,,2025-01-12 06:49:22.300000,123,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$11.52,$0.93
 1,1,Vault of the Archangel,lcc,Near Mint,English,,,2025-03-15 16:08:24.857000,367,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.09
 1,1,Vault of the Archangel,lcc,Near Mint,English,,,2025-01-08 21:49:55.733000,367,False,False,0.42,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.09
 1,1,Vedalken Outlander,con,Near Mint,English,,,2025-03-06 20:30:29.817000,132,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Velomachus Lorehold,stx,Near Mint,English,foil,,2025-01-12 06:49:40.380000,245,False,False,$15.77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.30,$2.38
+1,1,Velomachus Lorehold,stx,Near Mint,English,foil,,2025-01-12 06:49:40.380000,245,False,False,1.52,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.30,$2.38
 1,1,Velomachus Lorehold,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,309,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.67
 1,1,Vengeful Bloodwitch,fdn,Near Mint,English,,,2025-01-08 21:49:55.733000,76,False,False,0.23,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.57
 1,1,Vengeful Rebel,aer,Near Mint,English,,,2025-03-04 23:10:29.010000,73,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.08
@@ -1731,13 +1731,13 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,"Verrak, Warped Sengir",dmc,Near Mint,English,,,2025-03-12 21:34:18.973000,92,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.86
 1,1,Vessel of Ephemera,soi,Near Mint,English,,,2025-01-08 21:49:55.733000,48,False,False,0.02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.10
 1,1,Veteran Guardmouse,blb,Near Mint,English,,,2025-03-06 22:25:56.467000,237,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,"Veyran, Voice of Duality",tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,310,False,False,$16.55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.96
+1,1,"Veyran, Voice of Duality",tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,310,False,False,$7.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$20.96
 1,1,Vial Smasher the Fierce,dsc,Near Mint,English,,,2025-01-13 18:29:10.037000,239,False,False,$1.73,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.24
 1,1,Viashino Outrider,usg,Near Mint,English,,,2025-03-05 01:03:24.763000,223,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.43
 1,1,Victimize,cmr,Near Mint,English,,,2025-03-05 00:49:14.803000,157,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.62
 1,1,Vile Entomber,mh2,Near Mint,English,,,2025-03-07 22:43:27.133000,108,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.85
 1,1,Vile Mutilator,dsk,Near Mint,English,,,2025-01-08 21:49:55.733000,122,False,False,0.08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.25
-1,1,"Vilis, Broker of Blood",j25,Near Mint,English,,,2025-01-08 21:49:55.733000,70,False,False,$29.95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$39.60
+1,1,"Vilis, Broker of Blood",j25,Near Mint,English,,,2025-01-08 21:49:55.733000,70,False,False,4.43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$39.60
 1,1,Village Rites,inr,Near Mint,English,,,2025-02-22 21:46:22.237000,137,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.59
 1,1,Villagers of Estwald // Howlpack of Estwald,inr,Near Mint,English,,,2025-02-15 03:01:48.497000,224,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 1,1,Vindicate,mh2,Near Mint,English,,,2025-01-08 21:49:55.733000,294,False,False,1.04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.58
@@ -1795,7 +1795,7 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Wild-Field Scarecrow,inr,Near Mint,English,,,2025-02-22 21:49:55.607000,274,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.18
 1,1,Wildfire Devils,scd,Near Mint,English,,,2025-01-08 21:49:55.733000,170,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.59
 1,1,Wildwood Tracker,eld,Near Mint,English,,,2025-03-07 19:56:04.430000,183,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.11
-1,1,Will of the Jeskai,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,40,False,False,$19.80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$25.08
+1,1,Will of the Jeskai,tdc,Near Mint,English,,,2025-04-21 05:53:34.557000,40,False,False,$7.29,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$25.08
 1,1,Wind Strider,j25,Near Mint,English,,,2025-01-08 21:49:55.733000,389,False,False,0.09,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.15
 1,1,Windcrag Siege,tdm,Near Mint,English,,,2025-04-30 17:32:59.857000,392,False,False,$1.77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$4.86
 1,1,Wind-Kin Raiders,aer,Near Mint,English,,,2025-03-05 01:42:09.657000,50,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
@@ -1806,10 +1806,10 @@ Count,Tradelist Count,Name,Edition,Condition,Language,Foil,Tags,Last Modified,Co
 1,1,Wingshield Agent,snc,Near Mint,English,,,2025-03-05 01:38:01.367000,64,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Wirewood Pride,ons,Near Mint,English,,,2025-03-06 21:35:10.127000,303,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.56
 1,1,Wispdrinker Vampire,mkm,Near Mint,English,,,2025-02-24 02:17:19.977000,243,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.56
-1,1,Witch's Clinic,dsc,Near Mint,English,,,2025-02-11 05:46:13.070000,325,False,False,$15.36,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.72
+1,1,Witch's Clinic,dsc,Near Mint,English,,,2025-02-11 05:46:13.070000,325,False,False,$6.88,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$21.72
 4,4,Witch's Web,vow,Near Mint,English,,,2025-03-07 20:54:36.957000,227,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.06
 2,2,Withercrown,khm,Near Mint,English,,,2025-03-05 00:33:56.470000,119,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.21
-1,1,Withering Torment,dsk,Near Mint,English,foil,,2025-02-21 02:22:44.367000,124,False,False,$30.40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$35.93,$13.18
+1,1,Withering Torment,dsk,Near Mint,English,foil,,2025-02-21 02:22:44.367000,124,False,False,$3.26,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$35.93,$13.18
 1,1,Witness Protection,fdn,Near Mint,English,foil,,2025-01-08 21:49:55.733000,168,False,False,0.18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$1.68,$1.20
 1,1,Witness the Future,vow,Near Mint,English,,,2025-01-08 21:49:55.733000,90,False,False,0.05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$0.14
 1,1,Wizard Class,afr,Near Mint,English,,,2025-01-08 21:49:55.733000,81,False,False,2.27,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$3.58
