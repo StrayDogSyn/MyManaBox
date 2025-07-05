@@ -113,7 +113,8 @@ class CardTableWidget:
                 item = selected_items[0]
                 values = self.tree.item(item, 'values')
                 self.on_selection_change(values)
-      def populate_data(self, cards: List[Card]):
+    
+    def populate_data(self, cards: List[Card]):
         """Populate the table with card data."""
         # Clear existing data
         for item in self.tree.get_children():
