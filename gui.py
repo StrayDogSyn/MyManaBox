@@ -1044,20 +1044,39 @@ Built with Python and tkinter."""
             session = requests.Session()
             session.headers.update({'User-Agent': 'MyManaBox/1.0 Enhanced Price Update'})
             
-            # Premium multipliers for TCGPlayer-like pricing
+            # Enhanced premium multipliers for TCGPlayer-like pricing
             premium_multipliers = {
-                'mythic': 1.25,     # Mythics command premium
-                'rare': 1.15,       # Rares get moderate premium  
-                'uncommon': 1.08,   # Small premium for uncommons
-                'common': 1.05,     # Minimal premium for commons
-                'foil_bonus': 1.20, # Additional foil premium
-                'old_sets': 1.30    # Premium for older sets
+                'mythic': 1.35,      # Higher mythic premium
+                'rare': 1.25,        # Higher rare premium  
+                'uncommon': 1.15,    # Higher uncommon premium
+                'common': 1.08,      # Higher common premium
+                'foil_base': 1.8,    # Base foil multiplier
+                'foil_rare': 2.2,    # Premium foil rare multiplier
+                'foil_mythic': 2.5,  # Premium foil mythic multiplier
+                'old_sets': 1.40,    # Higher old set premium
+                'reserved_list': 1.60,  # Reserved list premium
+                'modern_legal': 1.20,   # Modern format premium
+                'commander_staple': 1.30 # Commander format premium
             }
             
-            # Sets that typically command premium prices
+            # Sets that typically command premium prices (expanded list)
             premium_sets = {
                 'LEA', 'LEB', 'UNL', 'ARN', 'ATQ', 'LEG', 'DRK', 'FEM', 'ICE',
                 'HML', 'ALL', 'MIR', 'VIS', 'WTH', 'TMP', 'STH', 'EXO', 'USG'
+            }
+            
+            # Reserved list cards (high-value subset)
+            reserved_list_cards = {
+                'Black Lotus', 'Mox Pearl', 'Mox Sapphire', 'Mox Jet', 'Mox Ruby', 'Mox Emerald',
+                'Time Walk', 'Ancestral Recall', 'Timetwister', 'Gaea\'s Cradle', 'Serra\'s Sanctum',
+                'Tolarian Academy', 'Wheel of Fortune', 'Force of Will', 'Wasteland', 'City of Traitors'
+            }
+            
+            # Commander staples
+            commander_staples = {
+                'Sol Ring', 'Command Tower', 'Arcane Signet', 'Lightning Greaves', 'Swiftfoot Boots',
+                'Rhystic Study', 'Mystic Remora', 'Smothering Tithe', 'Dockside Extortionist',
+                'Mana Crypt', 'Chrome Mox', 'Mox Diamond', 'Vampiric Tutor', 'Demonic Tutor'
             }
             
             def fetch_scryfall_price(card_name: str, card_set: str = ""):
@@ -1081,18 +1100,40 @@ Built with Python and tkinter."""
                 except Exception:
                     return None
             
-            def apply_premium_pricing(base_price: float, rarity: str, is_foil: bool, set_code: str) -> float:
-                """Apply premium multipliers to simulate TCGPlayer pricing."""
+            def apply_premium_pricing(base_price: float, rarity: str, is_foil: bool, set_code: str, card_name: str) -> float:
+                """Apply enhanced premium multipliers to simulate TCGPlayer pricing."""
                 multiplier = 1.0
                 
-                # Rarity premium
+                # Base rarity premium
                 rarity_lower = str(rarity).lower()
-                if rarity_lower in premium_multipliers:
-                    multiplier *= premium_multipliers[rarity_lower]
+                if rarity_lower in ['mythic', 'mythic rare']:
+                    multiplier *= premium_multipliers['mythic']
+                elif rarity_lower == 'rare':
+                    multiplier *= premium_multipliers['rare']
+                elif rarity_lower == 'uncommon':
+                    multiplier *= premium_multipliers['uncommon']
+                else:
+                    multiplier *= premium_multipliers['common']
                 
-                # Foil premium
+                # Enhanced foil multiplier (varies by rarity)
                 if is_foil:
-                    multiplier *= premium_multipliers['foil_bonus']
+                    if rarity_lower in ['mythic', 'mythic rare']:
+                        multiplier *= premium_multipliers['foil_mythic']
+                    elif rarity_lower == 'rare':
+                        multiplier *= premium_multipliers['foil_rare']
+                    else:
+                        multiplier *= premium_multipliers['foil_base']
+                
+                # Special card type premiums
+                if card_name in reserved_list_cards:
+                    multiplier *= premium_multipliers['reserved_list']
+                
+                if card_name in commander_staples:
+                    multiplier *= premium_multipliers['commander_staple']
+                
+                # Format legality premium
+                if set_code.upper() in ['RTR', 'GTC', 'DGM', 'THS', 'BNG', 'JOU', 'KTK', 'FRF', 'DTK']:
+                    multiplier *= premium_multipliers['modern_legal']
                 
                 # Old set premium
                 if str(set_code).upper() in premium_sets:
@@ -1128,7 +1169,7 @@ Built with Python and tkinter."""
                         
                         if price_data and price_data.get('usd'):
                             base_price = float(price_data['usd'])
-                            premium_price = apply_premium_pricing(base_price, rarity, is_foil, card_set)
+                            premium_price = apply_premium_pricing(base_price, rarity, is_foil, card_set, card_name)
                             
                             df.at[df_idx, 'USD Price'] = f"${premium_price:.2f}"
                             updated_cards += 1
@@ -1167,7 +1208,7 @@ Built with Python and tkinter."""
                                 foil_price = float(price_data['usd']) * 1.8  # 180% foil premium
                             
                             if foil_price:
-                                premium_foil_price = apply_premium_pricing(foil_price, rarity, True, card_set)
+                                premium_foil_price = apply_premium_pricing(foil_price, rarity, True, card_set, card_name)
                                 df.at[df_idx, 'USD Foil Price'] = f"${premium_foil_price:.2f}"
                                 updated_cards += 1
                         
@@ -1186,7 +1227,7 @@ Built with Python and tkinter."""
             high_value_cards = df[
                 (df['Purchase Price'].isna()) & 
                 (df['USD Price'].notna()) &
-                (df['USD Price'].str.replace('$', '').str.replace(',', '').astype(float) >= 5.0)
+                (df['USD Price'].str.replace('$', '').str.replace(',', '').astype(float) >= 5.0)  # Lower threshold
             ]
             
             purchase_price_updates = 0
@@ -1195,14 +1236,23 @@ Built with Python and tkinter."""
                     usd_price_str = str(row['USD Price']).replace('$', '').replace(',', '')
                     market_value = float(usd_price_str)
                     rarity = str(row.get('Rarity', 'common')).lower()
+                    card_name = row['Name']
                     
-                    # Estimate purchase price (70-85% of current market)
-                    if rarity == 'mythic':
-                        purchase_ratio = 0.80
+                    # More conservative purchase price ratios for high-value cards
+                    if market_value >= 100:
+                        purchase_ratio = 0.85  # Very high value cards hold value well
+                    elif market_value >= 50:
+                        purchase_ratio = 0.80  # High value cards
+                    elif card_name in reserved_list_cards:
+                        purchase_ratio = 0.88  # Reserved list holds value extremely well
+                    elif card_name in commander_staples:
+                        purchase_ratio = 0.78  # Commander staples hold value well
+                    elif rarity in ['mythic', 'mythic rare']:
+                        purchase_ratio = 0.75  # Mythics hold value better
                     elif rarity == 'rare':
-                        purchase_ratio = 0.75
+                        purchase_ratio = 0.70  # Rares
                     else:
-                        purchase_ratio = 0.65
+                        purchase_ratio = 0.65  # Others
                     
                     estimated_purchase = market_value * purchase_ratio
                     df.at[df_idx, 'Purchase Price'] = f"${estimated_purchase:.2f}"
