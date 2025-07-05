@@ -147,14 +147,30 @@ class Card:
             except (ValueError, TypeError):
                 purchase_price = None
         
-        # Parse market value from USD Price column
-        market_str = str(row_data.get('USD Price', '')).replace('$', '').strip()
+        # Parse foil status first (needed for price selection)
+        foil_str = str(row_data.get('Foil', '')).strip()
+        foil = bool(foil_str and foil_str.lower() not in ['', 'false', 'no', '0'])
+        
+        # Parse market value from USD Price column (with foil pricing support)
         market_value = None
-        if market_str and market_str != 'nan':
-            try:
-                market_value = Decimal(market_str)
-            except (ValueError, TypeError):
-                market_value = None
+        
+        # For foil cards, prefer USD Foil Price if available
+        if foil:
+            foil_price_str = str(row_data.get('USD Foil Price', '')).replace('$', '').strip()
+            if foil_price_str and foil_price_str != 'nan':
+                try:
+                    market_value = Decimal(foil_price_str)
+                except (ValueError, TypeError):
+                    market_value = None
+        
+        # If no foil price found or not a foil card, use regular USD Price
+        if market_value is None:
+            market_str = str(row_data.get('USD Price', '')).replace('$', '').strip()
+            if market_str and market_str != 'nan':
+                try:
+                    market_value = Decimal(market_str)
+                except (ValueError, TypeError):
+                    market_value = None
         
         # Parse condition
         condition_str = row_data.get('Condition', 'Near Mint')
@@ -164,25 +180,25 @@ class Card:
                 condition = cond
                 break
         
-        # Parse foil status
-        foil_str = str(row_data.get('Foil', '')).strip()
-        foil = bool(foil_str and foil_str.lower() not in ['', 'false', 'no', '0'])
+        # Parse foil status (already done above, remove duplicate)
         
         # Parse rarity
         rarity = None
-        rarity_str = row_data.get('Rarity', '').strip()
-        if rarity_str:
+        rarity_str = row_data.get('Rarity', '')
+        if rarity_str and str(rarity_str).strip():
+            rarity_val = str(rarity_str).strip()
             for r in CardRarity:
-                if r.value.lower() == rarity_str.lower():
+                if r.value.lower() == rarity_val.lower():
                     rarity = r
                     break
         
         # Parse colors
         colors = None
-        colors_str = row_data.get('Colors', '').strip()
-        if colors_str:
+        colors_str = row_data.get('Colors', '')
+        if colors_str and str(colors_str).strip():
             colors = set()
-            for color_char in colors_str.split('|'):
+            color_val = str(colors_str).strip()
+            for color_char in color_val.split('|'):
                 color_char = color_char.strip()
                 if color_char == 'W':
                     colors.add(CardColor.WHITE)
@@ -197,16 +213,16 @@ class Card:
         
         # Parse CMC
         cmc = None
-        cmc_str = row_data.get('CMC', '').strip()
-        if cmc_str:
+        cmc_str = row_data.get('CMC', '')
+        if cmc_str and str(cmc_str).strip():
             try:
-                cmc = int(float(cmc_str))
+                cmc = int(float(str(cmc_str).strip()))
             except (ValueError, TypeError):
                 cmc = None
         
         return cls(
-            name=row_data.get('Name', ''),
-            edition=row_data.get('Edition', ''),
+            name=str(row_data.get('Name', '')),
+            edition=str(row_data.get('Edition', '')),
             count=int(row_data.get('Count', 1)),
             purchase_price=purchase_price,
             market_value=market_value,
@@ -215,16 +231,16 @@ class Card:
             rarity=rarity,
             colors=colors,
             cmc=cmc,
-            type_line=row_data.get('Type Line', ''),
-            mana_cost=row_data.get('Mana Cost', ''),
-            oracle_text=row_data.get('Oracle Text', ''),
-            set_name=row_data.get('Set Name', ''),
-            power=row_data.get('Power', ''),
-            toughness=row_data.get('Toughness', ''),
-            loyalty=row_data.get('Loyalty', ''),
-            artist=row_data.get('Artist', ''),
-            scryfall_id=row_data.get('Scryfall ID', ''),
-            collector_number=row_data.get('Collector Number', '')
+            type_line=str(row_data.get('Type Line', '') or ''),
+            mana_cost=str(row_data.get('Mana Cost', '') or ''),
+            oracle_text=str(row_data.get('Oracle Text', '') or ''),
+            set_name=str(row_data.get('Set Name', '') or ''),
+            power=str(row_data.get('Power', '') or ''),
+            toughness=str(row_data.get('Toughness', '') or ''),
+            loyalty=str(row_data.get('Loyalty', '') or ''),
+            artist=str(row_data.get('Artist', '') or ''),
+            scryfall_id=str(row_data.get('Scryfall ID', '') or ''),
+            collector_number=str(row_data.get('Collector Number', '') or '')
         )
     
     def to_dict(self) -> dict:
