@@ -22,7 +22,7 @@ git clone <your-repo-url>
 cd MyManaBox
 ```
 
-2. Create and activate a virtual environment:
+1. Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
@@ -30,7 +30,7 @@ python -m venv .venv
 # source .venv/bin/activate  # Linux/Mac
 ```
 
-3. Install dependencies:
+1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
