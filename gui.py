@@ -145,8 +145,8 @@ class CardTableWidget:
                 card.type_line or "",
                 str(card.cmc) if card.cmc else "",
                 "|".join(c.value for c in card.colors) if card.colors else "",
-                f"${market_val:.2f}" if market_val else "",
-                f"${total_val:.2f}" if total_val else ""
+                f"${market_val:.2f}" if market_val > 0 else "",
+                f"${total_val:.2f}" if total_val > 0 else ""
             ]
             self.tree.insert('', 'end', values=values)
     
@@ -183,8 +183,8 @@ class CardTableWidget:
                 card.type_line or "",
                 str(card.cmc) if card.cmc else "",
                 "|".join(c.value for c in card.colors) if card.colors else "",
-                f"${market_val:.2f}" if market_val else "",
-                f"${total_val:.2f}" if total_val else ""
+                f"${market_val:.2f}" if market_val > 0 else "",
+                f"${total_val:.2f}" if total_val > 0 else ""
             ]
             self.tree.insert('', 'end', values=values)
 

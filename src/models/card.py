@@ -147,6 +147,15 @@ class Card:
             except (ValueError, TypeError):
                 purchase_price = None
         
+        # Parse market value from USD Price column
+        market_str = str(row_data.get('USD Price', '')).replace('$', '').strip()
+        market_value = None
+        if market_str and market_str != 'nan':
+            try:
+                market_value = Decimal(market_str)
+            except (ValueError, TypeError):
+                market_value = None
+        
         # Parse condition
         condition_str = row_data.get('Condition', 'Near Mint')
         condition = Condition.NEAR_MINT
@@ -159,13 +168,63 @@ class Card:
         foil_str = str(row_data.get('Foil', '')).strip()
         foil = bool(foil_str and foil_str.lower() not in ['', 'false', 'no', '0'])
         
+        # Parse rarity
+        rarity = None
+        rarity_str = row_data.get('Rarity', '').strip()
+        if rarity_str:
+            for r in CardRarity:
+                if r.value.lower() == rarity_str.lower():
+                    rarity = r
+                    break
+        
+        # Parse colors
+        colors = None
+        colors_str = row_data.get('Colors', '').strip()
+        if colors_str:
+            colors = set()
+            for color_char in colors_str.split('|'):
+                color_char = color_char.strip()
+                if color_char == 'W':
+                    colors.add(CardColor.WHITE)
+                elif color_char == 'U':
+                    colors.add(CardColor.BLUE)
+                elif color_char == 'B':
+                    colors.add(CardColor.BLACK)
+                elif color_char == 'R':
+                    colors.add(CardColor.RED)
+                elif color_char == 'G':
+                    colors.add(CardColor.GREEN)
+        
+        # Parse CMC
+        cmc = None
+        cmc_str = row_data.get('CMC', '').strip()
+        if cmc_str:
+            try:
+                cmc = int(float(cmc_str))
+            except (ValueError, TypeError):
+                cmc = None
+        
         return cls(
             name=row_data.get('Name', ''),
             edition=row_data.get('Edition', ''),
             count=int(row_data.get('Count', 1)),
             purchase_price=purchase_price,
+            market_value=market_value,
             condition=condition,
-            foil=foil
+            foil=foil,
+            rarity=rarity,
+            colors=colors,
+            cmc=cmc,
+            type_line=row_data.get('Type Line', ''),
+            mana_cost=row_data.get('Mana Cost', ''),
+            oracle_text=row_data.get('Oracle Text', ''),
+            set_name=row_data.get('Set Name', ''),
+            power=row_data.get('Power', ''),
+            toughness=row_data.get('Toughness', ''),
+            loyalty=row_data.get('Loyalty', ''),
+            artist=row_data.get('Artist', ''),
+            scryfall_id=row_data.get('Scryfall ID', ''),
+            collector_number=row_data.get('Collector Number', '')
         )
     
     def to_dict(self) -> dict:
