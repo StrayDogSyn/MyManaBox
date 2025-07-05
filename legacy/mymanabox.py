@@ -8,6 +8,7 @@ from enhanced_sorter import EnhancedMTGCardSorter
 from colorama import init, Fore, Style
 import argparse
 import sys
+from typing import Union
 
 init()
 
@@ -97,6 +98,7 @@ Examples:
         return 0
     
     # Determine which sorter to use
+    sorter: Union[MTGCardSorter, EnhancedMTGCardSorter]
     if args.enhanced or args.mana_curve or args.expensive is not None:
         print(f"{Fore.YELLOW}Using enhanced mode with API integration...{Style.RESET_ALL}")
         sorter = EnhancedMTGCardSorter(args.csv, use_api=not args.no_api)
@@ -133,7 +135,7 @@ Examples:
                 print(f"{Fore.RED}Search not available in this mode{Style.RESET_ALL}")
                 
         elif args.sort:
-            if is_enhanced and hasattr(sorter, 'export_enhanced_collection'):
+            if is_enhanced and isinstance(sorter, EnhancedMTGCardSorter):
                 sorter.export_enhanced_collection(args.sort, args.output_dir)
             elif hasattr(sorter, 'export_sorted_collection'):
                 sorter.export_sorted_collection(args.sort, args.output_dir)
@@ -141,13 +143,13 @@ Examples:
                 print(f"{Fore.RED}Sorting not available in this mode{Style.RESET_ALL}")
                 
         elif args.mana_curve:
-            if is_enhanced and hasattr(sorter, 'analyze_mana_curve'):
+            if is_enhanced and isinstance(sorter, EnhancedMTGCardSorter):
                 sorter.analyze_mana_curve()
             else:
                 print(f"{Fore.RED}Mana curve analysis requires enhanced mode{Style.RESET_ALL}")
                 
         elif args.expensive is not None:
-            if is_enhanced and hasattr(sorter, 'find_expensive_cards'):
+            if is_enhanced and isinstance(sorter, EnhancedMTGCardSorter):
                 sorter.find_expensive_cards(args.expensive)
             else:
                 print(f"{Fore.RED}Expensive card search requires enhanced mode{Style.RESET_ALL}")
