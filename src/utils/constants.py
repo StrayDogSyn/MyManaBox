@@ -7,8 +7,8 @@ class Constants:
     """Application constants."""
     
     # File paths
-    DEFAULT_CSV_FILE = "moxfield_export.csv"
-    DEFAULT_CACHE_FILE = "card_cache.json"
+    DEFAULT_CSV_FILE = "data/moxfield_export.csv"
+    DEFAULT_CACHE_FILE = "data/card_cache.json"
     DEFAULT_OUTPUT_DIR = "sorted_output"
     DEFAULT_BACKUP_DIR = "backups"
     

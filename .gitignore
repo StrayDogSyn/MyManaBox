@@ -1,3 +1,8 @@
+# MyManaBox specific
+sorted_output/*.csv
+backups/*.backup_*
+data/card_cache.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

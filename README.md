@@ -1,72 +1,110 @@
-# MyManaBox
-Python program for organizing my MTG cards
+# MyManaBox - Magic: The Gathering Collection Manager
+
+A comprehensive Python tool for managing and organizing Magic: The Gathering card collections.
 
 ## Features
-- Import and analyze MTG card collections from Moxfield CSV exports
-- Sort cards by color, type, rarity, and set
-- Find duplicate cards and expensive cards
-- Mana curve analysis with API integration
-- Export sorted collections to CSV files
+
+- **Collection Management**: Import and manage MTG card collections from various sources
+- **Smart Sorting**: Sort cards by set, color, type, rarity, and more
+- **Search & Filter**: Advanced search capabilities across your collection
+- **Analytics**: Generate statistics and insights about your collection
+- **Multiple Formats**: Support for CSV imports from Moxfield and other platforms
+- **Cache System**: Efficient card data caching with Scryfall API integration
 
 ## Quick Start
 
-### Basic Usage
+### Installation
+
+1. Clone the repository:
+
 ```bash
-# Show collection summary
-python mymanabox.py --summary
-
-# Search for specific cards
-python mymanabox.py --search "Lightning Bolt"
-
-# Find duplicate cards
-python mymanabox.py --duplicates
-
-# Sort by color and export
-python mymanabox.py --sort color
+git clone <your-repo-url>
+cd MyManaBox
 ```
 
-### Enhanced Features (with API)
+2. Create and activate a virtual environment:
+
 ```bash
-# Use enhanced mode with Scryfall API
-python mymanabox.py --enhanced --summary
-
-# Analyze mana curve
-python mymanabox.py --enhanced --mana-curve
-
-# Find expensive cards ($20+)
-python mymanabox.py --enhanced --expensive 20
-
-# Enhanced sorting with accurate type data
-python mymanabox.py --enhanced --sort type
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # Linux/Mac
 ```
 
-## Installation
+3. Install dependencies:
 
-1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Place your Moxfield export CSV in the project directory as `moxfield_export.csv`
+### Basic Usage
 
-3. Run the program:
 ```bash
-python mymanabox.py --help
+# Sort your collection by set
+python main.py --sort set --input data/moxfield_export.csv
+
+# Search for specific cards
+python main.py --search "Lightning Bolt"
+
+# Generate collection analytics
+python main.py --analytics
+
+# Get help
+python main.py --help
 ```
 
-## Files
-- `mymanabox.py` - Main CLI interface
-- `card_sorter.py` - Basic card sorting functionality
-- `enhanced_sorter.py` - Enhanced features with API integration
-- `scryfall_api.py` - Scryfall API integration for card data
-- `requirements.txt` - Python dependencies
+## Project Structure
 
-## API Features
-When using `--enhanced` mode, the program connects to the Scryfall API to get accurate card data including:
-- Precise color identity
-- Exact card types and subtypes
-- Real rarity information
-- Current market prices
-- Mana cost information
+```text
+MyManaBox/
+├── src/                    # Main source code
+│   ├── models/            # Data models (Card, Collection, etc.)
+│   ├── data/              # Data access layer (CSV, API, file management)
+│   ├── services/          # Business logic (sorting, search, analytics)
+│   ├── presentation/      # User interface (CLI, formatters)
+│   └── utils/             # Utilities and constants
+├── data/                  # Data files
+├── docs/                  # Documentation
+├── legacy/                # Legacy scripts (for reference)
+├── tests/                 # Test files
+├── sorted_output/         # Generated sorted collections
+├── backups/               # Automatic backups
+└── main.py                # Main entry point
+```
 
-Note: API calls are cached locally to improve performance and reduce API usage.
+## Documentation
+
+- [Usage Guide](docs/USAGE.md) - Detailed usage instructions
+- [Import Instructions](docs/IMPORT_INSTRUCTIONS.md) - How to import collections
+- [Refactoring Summary](docs/REFACTORING_SUMMARY.md) - Technical details about the codebase
+
+## Requirements
+
+- Python 3.8+
+- pandas
+- requests
+- colorama
+- tabulate
+- python-mtgsdk
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+See [LICENSE](LICENSE) file for details.
+
+## Legacy Support
+
+The `legacy/` directory contains the original scripts for backward compatibility:
+
+- `card_sorter.py` - Original sorting functionality
+- `enhanced_sorter.py` - Enhanced version with additional features
+- `mymanabox.py` - Alternative interface
+- `scryfall_api.py` - Original API integration
+
+These can still be used independently if needed.
