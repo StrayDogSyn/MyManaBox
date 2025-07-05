@@ -23,12 +23,14 @@ Total CSV Export Fields: ~85+ comprehensive fields
 ### 🔧 Implementation Details
 
 #### Enhanced Card Model (`src/models/card.py`)
+
 - ✅ Added **all** Scryfall API fields as optional attributes
 - ✅ Updated `to_dict()` method to export all fields to CSV
 - ✅ Proper handling of complex data types (sets, lists, dicts)
 - ✅ Formatted output for CSV compatibility
 
 #### Enhanced Scryfall Client (`src/data/scryfall_client.py`)
+
 - ✅ Fetches and populates **all** available Scryfall fields
 - ✅ Handles Core Card Fields (IDs, metadata)
 - ✅ Handles Gameplay Fields (colors, types, rules text)
@@ -38,6 +40,7 @@ Total CSV Export Fields: ~85+ comprehensive fields
 - ✅ Handles complex objects (card faces, legalities)
 
 #### Export Functionality
+
 - ✅ `CollectionService.export_enriched_collection()` method
 - ✅ CLI option: `--export-enriched`
 - ✅ Interactive console option
@@ -46,41 +49,50 @@ Total CSV Export Fields: ~85+ comprehensive fields
 ### 📋 Complete Field List
 
 **Basic Card Information:**
+
 - Name, Edition, Count, Purchase Price, Market Value, Total Value, Condition, Foil
 
 **Scryfall Game Data:**
+
 - Scryfall ID, Oracle ID, Colors, Color Identity, Rarity, Types, Type Line
 - Mana Cost, CMC, Power, Toughness, Loyalty, Defense, Oracle Text, Keywords
 
 **Pricing (7 currencies/formats):**
+
 - USD Price, USD Foil Price, USD Etched Price
 - EUR Price, EUR Foil Price, EUR Etched Price, TIX Price
 
 **Set & Print Information:**
+
 - Set Name, Set Type, Set ID, Released At, Collector Number
 - Border Color, Frame, Frame Effects, Security Stamp, Layout, Watermark
 - Artist, Artist IDs, Flavor Text, Flavor Name
 
 **External Platform IDs:**
+
 - Arena ID, MTGO ID, MTGO Foil ID, Multiverse IDs
 - TCGPlayer ID, TCGPlayer Etched ID, Cardmarket ID
 
 **Card Properties & Flags:**
+
 - Reserved, Digital, Reprint, Variation, Promo, Textless, Full Art
 - Story Spotlight, Game Changer, Booster, Content Warning
 - Highres Image, Oversized
 
 **Advanced Gameplay:**
+
 - Color Indicator, Produced Mana, Hand Modifier, Life Modifier
 - All Parts (related cards), Card Faces (multiface cards)
 - Legalities (all formats), Rankings (EDHREC, Penny Dreadful)
 
 **Print Specifics:**
+
 - Printed Name, Printed Text, Printed Type Line
 - Finishes, Games, Promo Types, Attraction Lights
 - Variation info, Technical IDs, Image status
 
 **Images & URLs:**
+
 - Image Small, Image Normal, Image Large, Image PNG
 - Image Art Crop, Image Border Crop
 - Scryfall URIs, Purchase URIs, Related URIs
@@ -88,16 +100,19 @@ Total CSV Export Fields: ~85+ comprehensive fields
 ### 🚀 How to Use
 
 1. **Enrich and Export via Script:**
+
    ```bash
    python enrich_collection.py
    ```
 
 2. **Enrich and Export via CLI:**
+
    ```bash
    python main.py --export-enriched
    ```
 
 3. **Use Interactive Menu:**
+
    ```bash
    python main.py
    # Select option for enriched export
@@ -115,6 +130,7 @@ Total CSV Export Fields: ~85+ comprehensive fields
 ### 📁 Output
 
 The enriched CSV will be saved as `data/enriched_collection.csv` with:
+
 - All your collection cards as rows
 - 85+ comprehensive columns with all available Scryfall data
 - Proper formatting for Excel/Google Sheets compatibility

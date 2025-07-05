@@ -22,7 +22,7 @@ class ConsoleInterface:
     def run(self, args=None):
         """Run the console interface."""
         # Check for export-enriched command
-        if hasattr(args, 'export_enriched') and args.export_enriched:
+        if args is not None and hasattr(args, 'export_enriched') and args.export_enriched:
             return self._handle_export_enriched(args.export_enriched)
         
         # Standard interactive mode
