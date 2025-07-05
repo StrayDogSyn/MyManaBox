@@ -128,9 +128,10 @@ class Card:
     
     @property
     def total_value(self) -> Decimal:
-        """Calculate total value of all copies using market value if available, otherwise purchase price."""
-        # Prefer market value (current) over purchase price (historical)
-        price = self.market_value or self.purchase_price
+        """Calculate total value of all copies using purchase price if available, otherwise market value."""
+        # Prefer purchase price (historical cost) over market value (current market)
+        # This matches Moxfield's behavior which prioritizes purchase/acquisition cost
+        price = self.purchase_price or self.market_value
         if price is None:
             return Decimal('0')
         return price * self.count
@@ -139,36 +140,50 @@ class Card:
     def from_csv_row(cls, row_data: dict) -> 'Card':
         """Create Card from CSV row data."""
         # Parse purchase price
-        price_str = str(row_data.get('Purchase Price', '')).replace('$', '').strip()
         purchase_price = None
-        if price_str and price_str != 'nan':
+        purchase_val = row_data.get('Purchase Price')
+        if purchase_val is not None and str(purchase_val).strip() and str(purchase_val) != 'nan':
             try:
-                purchase_price = Decimal(price_str)
+                # If it's already a number, use it directly
+                if isinstance(purchase_val, (int, float)):
+                    purchase_price = Decimal(str(purchase_val))
+                else:
+                    # If it's a string, clean it and parse
+                    price_str = str(purchase_val).replace('$', '').strip()
+                    purchase_price = Decimal(price_str)
             except (ValueError, TypeError):
                 purchase_price = None
         
         # Parse foil status first (needed for price selection)
-        foil_str = str(row_data.get('Foil', '')).strip()
-        foil = bool(foil_str and foil_str.lower() not in ['', 'false', 'no', '0'])
+        foil_str = str(row_data.get('Foil', '')).strip().lower()
+        foil = foil_str in ['foil', 'etched']  # Only 'foil' or 'etched' values are considered foil
         
         # Parse market value from USD Price column (with foil pricing support)
         market_value = None
         
         # For foil cards, prefer USD Foil Price if available
         if foil:
-            foil_price_str = str(row_data.get('USD Foil Price', '')).replace('$', '').strip()
-            if foil_price_str and foil_price_str != 'nan':
+            foil_price_val = row_data.get('USD Foil Price')
+            if foil_price_val is not None and str(foil_price_val).strip() and str(foil_price_val) != 'nan':
                 try:
-                    market_value = Decimal(foil_price_str)
+                    if isinstance(foil_price_val, (int, float)):
+                        market_value = Decimal(str(foil_price_val))
+                    else:
+                        foil_price_str = str(foil_price_val).replace('$', '').strip()
+                        market_value = Decimal(foil_price_str)
                 except (ValueError, TypeError):
                     market_value = None
         
         # If no foil price found or not a foil card, use regular USD Price
         if market_value is None:
-            market_str = str(row_data.get('USD Price', '')).replace('$', '').strip()
-            if market_str and market_str != 'nan':
+            market_val = row_data.get('USD Price')
+            if market_val is not None and str(market_val).strip() and str(market_val) != 'nan':
                 try:
-                    market_value = Decimal(market_str)
+                    if isinstance(market_val, (int, float)):
+                        market_value = Decimal(str(market_val))
+                    else:
+                        market_str = str(market_val).replace('$', '').strip()
+                        market_value = Decimal(market_str)
                 except (ValueError, TypeError):
                     market_value = None
         

@@ -130,9 +130,9 @@ class CardTableWidget:
 
         # Add card data
         for card in cards:
-            # Calculate total value
-            market_val = float(card.market_value) if card.market_value else 0.0
-            total_val = market_val * card.count if market_val else 0.0
+            # Use the same price priority as the card model: purchase price first, then market value
+            price_val = float(card.purchase_price) if card.purchase_price else (float(card.market_value) if card.market_value else 0.0)
+            total_val = price_val * card.count if price_val else 0.0
             
             values = [
                 str(card.count),
@@ -140,12 +140,12 @@ class CardTableWidget:
                 card.set_name or card.edition,
                 card.condition.value if card.condition else "NM",
                 "EN",  # Default language
-                "Yes" if card.foil else "",
+                "Foil" if card.foil else "",  # Fixed: Show "Foil" only for foil cards, empty for non-foil
                 card.rarity.value if card.rarity else "",
                 card.type_line or "",
                 str(card.cmc) if card.cmc else "",
                 "|".join(c.value for c in card.colors) if card.colors else "",
-                f"${market_val:.2f}" if market_val > 0 else "",
+                f"${price_val:.2f}" if price_val > 0 else "",
                 f"${total_val:.2f}" if total_val > 0 else ""
             ]
             self.tree.insert('', 'end', values=values)
@@ -498,6 +498,9 @@ class MyManaBoxGUI:
         menubar.add_cascade(label="Tools", menu=tools_menu)
         tools_menu.add_command(label="Enrich Collection", command=self.enrich_collection)
         tools_menu.add_command(label="Update Prices", command=self.update_prices)
+        tools_menu.add_command(label="Verify Collection", command=self.verify_collection)
+        tools_menu.add_separator()
+        tools_menu.add_command(label="Enhanced Price Update", command=self.enhanced_price_update)
         tools_menu.add_command(label="Analytics", command=self.show_analytics)
         
         # Help menu
