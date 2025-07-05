@@ -3,6 +3,7 @@
 import requests
 import time
 import json
+from decimal import Decimal
 from typing import Dict, Optional, Any, Set
 from pathlib import Path
 from ..models import Card, CardColor, CardRarity, CardType
@@ -136,6 +137,23 @@ class ScryfallClient:
             # Scryfall ID
             if 'id' in data:
                 card.scryfall_id = data['id']
+            
+            # Market price from Scryfall
+            if 'prices' in data and data['prices']:
+                # Prefer non-foil USD price, fallback to foil if needed
+                usd_price = data['prices'].get('usd')
+                usd_foil_price = data['prices'].get('usd_foil')
+                
+                if card.foil and usd_foil_price:
+                    try:
+                        card.market_value = Decimal(str(usd_foil_price))
+                    except (ValueError, TypeError):
+                        pass
+                elif usd_price:
+                    try:
+                        card.market_value = Decimal(str(usd_price))
+                    except (ValueError, TypeError):
+                        pass
                 
         except Exception:
             pass

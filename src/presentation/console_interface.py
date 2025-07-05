@@ -31,9 +31,32 @@ class ConsoleInterface:
             if collection:
                 print(f"{Fore.GREEN}✓ Loaded collection with {collection.unique_cards} unique cards{Style.RESET_ALL}")
                 
-                # Show basic summary
+                # Show basic summary with purchase prices first
                 print(f"Total cards: {collection.total_cards}")
-                print(f"Total value: ${collection.total_value:.2f}")
+                print(f"Total purchase value: ${collection.total_value:.2f}")
+                
+                # Ask if user wants to enrich with current market data
+                print(f"\n{Fore.CYAN}Note: This shows purchase prices from your CSV.{Style.RESET_ALL}")
+                print(f"{Fore.CYAN}To see current market values (like Moxfield shows), we can enrich the data.{Style.RESET_ALL}")
+                print(f"{Fore.YELLOW}This will take about 2-3 minutes for {collection.unique_cards} unique cards.{Style.RESET_ALL}")
+                
+                enrich = input(f"\nEnrich with current market prices? (y/N): ").lower().strip()
+                
+                if enrich == 'y' or enrich == 'yes':
+                    # Enrich collection with current market prices
+                    print(f"{Fore.YELLOW}Enriching collection with current market data...{Style.RESET_ALL}")
+                    
+                    def progress_callback(current, total):
+                        percent = (current / total) * 100
+                        if current % 50 == 0 or current == total:  # Show progress every 50 cards
+                            print(f"Progress: {current}/{total} cards ({percent:.1f}%)")
+                    
+                    enriched_count = self.collection_service.enrich_collection_data(progress_callback)
+                    if enriched_count > 0:
+                        print(f"{Fore.GREEN}✓ Enriched {enriched_count} cards with market data{Style.RESET_ALL}")
+                        print(f"Total current market value: ${collection.total_value:.2f}")
+                    else:
+                        print(f"{Fore.YELLOW}No cards were enriched (may be using cached data){Style.RESET_ALL}")
                 
                 # Test sorting
                 color_groups = self.sorting_service.sort_by_color(collection)

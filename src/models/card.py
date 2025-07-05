@@ -14,6 +14,7 @@ class Card:
     edition: str
     count: int = 1
     purchase_price: Optional[Decimal] = None
+    market_value: Optional[Decimal] = None  # Current market price from API
     condition: Condition = Condition.NEAR_MINT
     foil: bool = False
     
@@ -50,10 +51,12 @@ class Card:
     
     @property
     def total_value(self) -> Decimal:
-        """Calculate total value of all copies."""
-        if self.purchase_price is None:
+        """Calculate total value of all copies using market value if available, otherwise purchase price."""
+        # Prefer market value (current) over purchase price (historical)
+        price = self.market_value or self.purchase_price
+        if price is None:
             return Decimal('0')
-        return self.purchase_price * self.count
+        return price * self.count
     
     @classmethod
     def from_csv_row(cls, row_data: dict) -> 'Card':
