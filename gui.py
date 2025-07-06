@@ -36,7 +36,7 @@ class CardTableWidget:
         
         # Create main frame
         self.frame = ttk.Frame(parent)
-        self.frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
+        self.frame.pack(fill=tk.BOTH, expand=True, padx=(10, 5), pady=(0, 5))
         
         # Create treeview with scrollbars
         self.tree_frame = ttk.Frame(self.frame)
@@ -45,16 +45,16 @@ class CardTableWidget:
         # Define columns based on the enriched data
         self.columns = [
             "Qty", "Name", "Set", "Condition", "Language", "Foil", 
-            "Rarity", "Type", "CMC", "Colors", "USD Price", "Total Value"
+            "Rarity", "Type", "CMC", "Colors", "Price", "Total"
         ]
         
-        self.tree = ttk.Treeview(self.tree_frame, columns=self.columns, show='headings', height=20)
+        self.tree = ttk.Treeview(self.tree_frame, columns=self.columns, show='headings', height=25)
         
         # Configure column headers and widths
         column_widths = {
-            "Qty": 50, "Name": 200, "Set": 120, "Condition": 80, "Language": 60,
-            "Foil": 50, "Rarity": 80, "Type": 150, "CMC": 50, "Colors": 80,
-            "USD Price": 80, "Total Value": 80
+            "Qty": 50, "Name": 180, "Set": 250, "Condition": 80, "Language": 70,
+            "Foil": 50, "Rarity": 80, "Type": 200, "CMC": 50, "Colors": 60,
+            "Price": 80, "Total": 80
         }
         
         for col in self.columns:
@@ -187,8 +187,8 @@ class CardDetailPanel:
     """Panel showing detailed information about selected card."""
     
     def __init__(self, parent, main_gui=None):
-        self.frame = ttk.LabelFrame(parent, text="Card Details", padding=10)
-        self.frame.pack(fill=tk.X, padx=10, pady=5)
+        self.frame = ttk.LabelFrame(parent, text="Card Details", padding=15)
+        self.frame.pack(fill=tk.BOTH, expand=True, padx=(5, 10), pady=(0, 5))
         self.main_gui = main_gui
         
         # Create detail labels
@@ -293,12 +293,19 @@ class CollectionStatsPanel:
     """Panel showing collection statistics."""
     
     def __init__(self, parent):
-        self.frame = ttk.LabelFrame(parent, text="Collection Statistics", padding=10)
-        self.frame.pack(fill=tk.X, padx=10, pady=5)
+        # Create a frame with dark background to match the target image
+        self.frame = tk.Frame(parent, bg='#1e1e1e', relief='flat', bd=1)
+        self.frame.pack(fill=tk.X, padx=10, pady=(0, 10))
+        
+        # Title label
+        title_label = tk.Label(self.frame, text="Collection Overview", 
+                              font=('TkDefaultFont', 12, 'bold'),
+                              bg='#1e1e1e', fg='white')
+        title_label.pack(anchor='w', padx=15, pady=(15, 10))
         
         # Create stats frame with grid layout
-        stats_frame = ttk.Frame(self.frame)
-        stats_frame.pack(fill=tk.X)
+        stats_frame = tk.Frame(self.frame, bg='#1e1e1e')
+        stats_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
         
         # Define stat labels
         self.stat_vars = {}
@@ -311,14 +318,16 @@ class CollectionStatsPanel:
         
         col = 0
         for label, key in stats:
-            ttk.Label(stats_frame, text=label, font=('TkDefaultFont', 9, 'bold')).grid(
+            tk.Label(stats_frame, text=label, font=('TkDefaultFont', 10, 'bold'),
+                    bg='#1e1e1e', fg='white').grid(
                 row=0, column=col*2, sticky='w', padx=(0, 5)
             )
             
             var = tk.StringVar()
             self.stat_vars[key] = var
-            ttk.Label(stats_frame, textvariable=var, font=('TkDefaultFont', 9)).grid(
-                row=0, column=col*2+1, sticky='w', padx=(0, 20)
+            tk.Label(stats_frame, textvariable=var, font=('TkDefaultFont', 10),
+                    bg='#1e1e1e', fg='white').grid(
+                row=0, column=col*2+1, sticky='w', padx=(0, 30)
             )
             col += 1
     
@@ -338,7 +347,9 @@ class MyManaBoxGUI:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("MyManaBox - MTG Collection Manager")
-        self.root.geometry("1400x800")
+        self.root.geometry("1600x900")
+        self.root.minsize(1200, 700)
+        self.root.configure(bg='#2b2b2b')  # Dark background
         
         # Initialize services
         self.csv_loader = None
@@ -360,13 +371,37 @@ class MyManaBoxGUI:
         """Configure ttk styles for modern appearance."""
         style = ttk.Style()
         
-        # Configure colors
-        style.configure('Title.TLabel', font=('TkDefaultFont', 12, 'bold'))
-        style.configure('Header.TLabel', font=('TkDefaultFont', 10, 'bold'))
+        # Set dark theme
+        style.theme_use('clam')
         
-        # Configure treeview
-        style.configure('Treeview', rowheight=25)
-        style.configure('Treeview.Heading', font=('TkDefaultFont', 9, 'bold'))
+        # Configure dark colors
+        style.configure('Title.TLabel', font=('TkDefaultFont', 12, 'bold'), foreground='white', background='#2b2b2b')
+        style.configure('Header.TLabel', font=('TkDefaultFont', 10, 'bold'), foreground='white', background='#2b2b2b')
+        
+        # Configure dark treeview
+        style.configure('Treeview', 
+                       rowheight=25,
+                       background='#3c3c3c',
+                       foreground='white',
+                       fieldbackground='#3c3c3c',
+                       selectbackground='#0078d4',
+                       selectforeground='white')
+        style.configure('Treeview.Heading', 
+                       font=('TkDefaultFont', 9, 'bold'),
+                       background='#2b2b2b',
+                       foreground='white',
+                       relief='flat')
+        
+        # Configure frames and labels for dark theme
+        style.configure('TFrame', background='#2b2b2b')
+        style.configure('TLabelFrame', background='#2b2b2b', foreground='white')
+        style.configure('TLabelFrame.Label', background='#2b2b2b', foreground='white', font=('TkDefaultFont', 10, 'bold'))
+        style.configure('TLabel', background='#2b2b2b', foreground='white')
+        style.configure('TButton', background='#404040', foreground='white', borderwidth=1, focuscolor='none')
+        style.map('TButton', background=[('active', '#505050')])
+        style.configure('TEntry', fieldbackground='#404040', foreground='white', borderwidth=1)
+        style.configure('TCombobox', fieldbackground='#404040', foreground='white', borderwidth=1)
+        style.configure('TCheckbutton', background='#2b2b2b', foreground='white')
     
     def create_menu(self):
         """Create application menu bar."""
@@ -399,79 +434,94 @@ class MyManaBoxGUI:
     def create_toolbar(self):
         """Create toolbar with common actions."""
         toolbar = ttk.Frame(self.root)
-        toolbar.pack(fill=tk.X, padx=5, pady=5)
+        toolbar.pack(fill=tk.X, padx=10, pady=(5, 0))
         
         # Search frame
         search_frame = ttk.Frame(toolbar)
         search_frame.pack(side=tk.LEFT, fill=tk.X, expand=True)
         
-        ttk.Label(search_frame, text="Search:").pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Label(search_frame, text="Search:", font=('TkDefaultFont', 9)).pack(side=tk.LEFT, padx=(0, 8))
         
         self.search_var = tk.StringVar()
         self.search_var.trace('w', self.on_search_change)
-        search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=30)
-        search_entry.pack(side=tk.LEFT, padx=(0, 10))
+        search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=35, font=('TkDefaultFont', 9))
+        search_entry.pack(side=tk.LEFT, padx=(0, 15))
         
-        # Filter buttons
-        ttk.Button(search_frame, text="Clear", command=self.clear_search).pack(side=tk.LEFT, padx=2)
+        # Filter buttons with blue styling like in target image
+        clear_btn = tk.Button(search_frame, text="Clear", command=self.clear_search,
+                             bg='#6ba6cd', fg='white', bd=0, padx=15, pady=5,
+                             font=('TkDefaultFont', 9))
+        clear_btn.pack(side=tk.LEFT, padx=(0, 5))
         
         # Action buttons
         button_frame = ttk.Frame(toolbar)
         button_frame.pack(side=tk.RIGHT)
         
-        ttk.Button(button_frame, text="Refresh", command=self.refresh_collection).pack(side=tk.LEFT, padx=2)
-        ttk.Button(button_frame, text="Enrich", command=self.enrich_collection).pack(side=tk.LEFT, padx=2)
+        refresh_btn = tk.Button(button_frame, text="Refresh", command=self.refresh_collection,
+                               bg='#6ba6cd', fg='white', bd=0, padx=15, pady=5,
+                               font=('TkDefaultFont', 9))
+        refresh_btn.pack(side=tk.LEFT, padx=(0, 5))
+        
+        enrich_btn = tk.Button(button_frame, text="Enrich", command=self.enrich_collection,
+                              bg='#3498db', fg='white', bd=0, padx=15, pady=5,
+                              font=('TkDefaultFont', 9))
+        enrich_btn.pack(side=tk.LEFT, padx=(0, 5))
     
     def create_main_interface(self):
         """Create the main interface layout."""
-        # Main paned window
-        main_paned = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
-        main_paned.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        # Main container frame
+        main_frame = ttk.Frame(self.root)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
-        # Left panel for table
-        left_frame = ttk.Frame(main_paned)
-        main_paned.add(left_frame, weight=3)
+        # Collection stats at the top
+        self.stats_panel = CollectionStatsPanel(main_frame)
         
-        # Collection stats
-        self.stats_panel = CollectionStatsPanel(left_frame)
+        # Main content area with horizontal paned window
+        content_paned = ttk.PanedWindow(main_frame, orient=tk.HORIZONTAL)
+        content_paned.pack(fill=tk.BOTH, expand=True, pady=(5, 0))
+        
+        # Left panel for table (main content)
+        left_frame = ttk.Frame(content_paned)
+        content_paned.add(left_frame, weight=4)
         
         # Card table
         self.card_table = CardTableWidget(left_frame, on_selection_change=self.on_card_selection)
         
-        # Right panel for details
-        right_frame = ttk.Frame(main_paned)
-        main_paned.add(right_frame, weight=1)
+        # Right panel for details and filters
+        right_frame = ttk.Frame(content_paned)
+        content_paned.add(right_frame, weight=1)
         
         # Card details
         self.detail_panel = CardDetailPanel(right_frame, main_gui=self)
         
-        # Additional info panels could go here
+        # Filters panel
         self.create_filter_panel(right_frame)
     
     def create_filter_panel(self, parent):
         """Create filter options panel."""
-        filter_frame = ttk.LabelFrame(parent, text="Filters", padding=10)
-        filter_frame.pack(fill=tk.X, padx=10, pady=5)
+        filter_frame = ttk.LabelFrame(parent, text="Filters", padding=15)
+        filter_frame.pack(fill=tk.X, padx=(5, 10), pady=5)
         
         # Rarity filter
-        ttk.Label(filter_frame, text="Rarity:").grid(row=0, column=0, sticky='w', pady=2)
+        ttk.Label(filter_frame, text="Rarity:", font=('TkDefaultFont', 9)).grid(row=0, column=0, sticky='w', pady=3)
         self.rarity_var = tk.StringVar()
         rarity_combo = ttk.Combobox(filter_frame, textvariable=self.rarity_var, 
-                                  values=["All", "Common", "Uncommon", "Rare", "Mythic"])
-        rarity_combo.grid(row=0, column=1, sticky='ew', pady=2)
+                                  values=["All", "Common", "Uncommon", "Rare", "Mythic"],
+                                  font=('TkDefaultFont', 9))
+        rarity_combo.grid(row=0, column=1, sticky='ew', pady=3)
         rarity_combo.set("All")
         
         # Set filter
-        ttk.Label(filter_frame, text="Set:").grid(row=1, column=0, sticky='w', pady=2)
+        ttk.Label(filter_frame, text="Set:", font=('TkDefaultFont', 9)).grid(row=1, column=0, sticky='w', pady=3)
         self.set_var = tk.StringVar()
-        self.set_combo = ttk.Combobox(filter_frame, textvariable=self.set_var)
-        self.set_combo.grid(row=1, column=1, sticky='ew', pady=2)
+        self.set_combo = ttk.Combobox(filter_frame, textvariable=self.set_var, font=('TkDefaultFont', 9))
+        self.set_combo.grid(row=1, column=1, sticky='ew', pady=3)
         self.set_combo.set("All")
         
         # Foil filter
         self.foil_var = tk.BooleanVar()
         ttk.Checkbutton(filter_frame, text="Foils Only", variable=self.foil_var).grid(
-            row=2, column=0, columnspan=2, sticky='w', pady=2
+            row=2, column=0, columnspan=2, sticky='w', pady=5
         )
         
         # Apply filters button
@@ -486,7 +536,8 @@ class MyManaBoxGUI:
         self.status_var = tk.StringVar()
         self.status_var.set("Ready")
         
-        status_bar = ttk.Label(self.root, textvariable=self.status_var, relief=tk.SUNKEN, anchor=tk.W)
+        status_bar = tk.Label(self.root, textvariable=self.status_var, relief=tk.SUNKEN, anchor=tk.W,
+                             bg='#1e1e1e', fg='white', font=('TkDefaultFont', 9))
         status_bar.pack(side=tk.BOTTOM, fill=tk.X)
     
     def load_default_collection(self):
