@@ -236,8 +236,8 @@ class Card:
                 cmc = None
         
         return cls(
-            name=str(row_data.get('Name', '')),
-            edition=str(row_data.get('Edition', '')),
+            name=Card._safe_str(row_data.get('Name', '')),
+            edition=Card._safe_str(row_data.get('Edition', '')),
             count=int(row_data.get('Count', 1)),
             purchase_price=purchase_price,
             market_value=market_value,
@@ -246,16 +246,16 @@ class Card:
             rarity=rarity,
             colors=colors,
             cmc=cmc,
-            type_line=str(row_data.get('Type Line', '') or ''),
-            mana_cost=str(row_data.get('Mana Cost', '') or ''),
-            oracle_text=str(row_data.get('Oracle Text', '') or ''),
-            set_name=str(row_data.get('Set Name', '') or ''),
-            power=str(row_data.get('Power', '') or ''),
-            toughness=str(row_data.get('Toughness', '') or ''),
-            loyalty=str(row_data.get('Loyalty', '') or ''),
-            artist=str(row_data.get('Artist', '') or ''),
-            scryfall_id=str(row_data.get('Scryfall ID', '') or ''),
-            collector_number=str(row_data.get('Collector Number', '') or '')
+            type_line=Card._safe_str(row_data.get('Type Line', '')),
+            mana_cost=Card._safe_str(row_data.get('Mana Cost', '')),
+            oracle_text=Card._safe_str(row_data.get('Oracle Text', '')),
+            set_name=Card._safe_str(row_data.get('Set Name', '')),
+            power=Card._safe_str(row_data.get('Power', '')),
+            toughness=Card._safe_str(row_data.get('Toughness', '')),
+            loyalty=Card._safe_str(row_data.get('Loyalty', '')),
+            artist=Card._safe_str(row_data.get('Artist', '')),
+            scryfall_id=Card._safe_str(row_data.get('Scryfall ID', '')),
+            collector_number=Card._safe_str(row_data.get('Collector Number', ''))
         )
     
     def to_dict(self) -> dict:
@@ -405,3 +405,24 @@ class Card:
             'Image Art Crop': self.image_uris.get('art_crop') if self.image_uris else "",
             'Image Border Crop': self.image_uris.get('border_crop') if self.image_uris else "",
         }
+    
+    @staticmethod
+    def _safe_str(value) -> str:
+        """Safely convert a value to string, handling NaN and None values."""
+        if value is None:
+            return ""
+        
+        # Handle pandas NaN values
+        try:
+            import pandas as pd
+            if pd.isna(value):
+                return ""
+        except (ImportError, TypeError):
+            pass
+        
+        # Convert to string and check for 'nan'
+        str_val = str(value).strip()
+        if str_val.lower() in ('nan', 'none', ''):
+            return ""
+        
+        return str_val

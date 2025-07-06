@@ -270,9 +270,11 @@ class CardDetailPanel:
             
             # Power/Toughness or Loyalty
             pt_text = ""
-            if found_card.power and found_card.toughness:
-                pt_text = f"{found_card.power}/{found_card.toughness}"
-            elif found_card.loyalty:
+            if found_card.power and found_card.toughness and found_card.power.strip() and found_card.toughness.strip():
+                # Only show if both values are present and not empty/NaN
+                if found_card.power.lower() != 'nan' and found_card.toughness.lower() != 'nan':
+                    pt_text = f"{found_card.power}/{found_card.toughness}"
+            elif found_card.loyalty and found_card.loyalty.strip() and found_card.loyalty.lower() != 'nan':
                 pt_text = f"Loyalty: {found_card.loyalty}"
             self.detail_vars["pt"].set(pt_text)
             
@@ -280,7 +282,7 @@ class CardDetailPanel:
             
             # Oracle text
             self.oracle_text_widget.delete(1.0, tk.END)
-            if found_card.oracle_text:
+            if found_card.oracle_text and found_card.oracle_text.strip() and found_card.oracle_text.lower() != 'nan':
                 self.oracle_text_widget.insert(1.0, found_card.oracle_text)
             else:
                 self.oracle_text_widget.insert(1.0, "No oracle text available")
