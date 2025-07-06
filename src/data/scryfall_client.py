@@ -4,7 +4,7 @@ import requests
 import time
 import json
 from decimal import Decimal
-from typing import Dict, Optional, Any, Set
+from typing import Dict, Optional, Any, Set, List
 from pathlib import Path
 from ..models import Card, CardColor, CardRarity, CardType
 
@@ -68,8 +68,8 @@ class ScryfallClient:
         """Fetch card data from Scryfall API."""
         try:
             # Try exact search first
-            url = f"{self.BASE_URL}/cards/named/exact"
-            params = {"name": name}
+            url = f"{self.BASE_URL}/cards/named"
+            params = {"exact": name}
             if set_code:
                 params["set"] = set_code
             
@@ -80,8 +80,8 @@ class ScryfallClient:
             
             # Fallback to fuzzy search
             if response.status_code == 404:
-                url = f"{self.BASE_URL}/cards/named/fuzzy"
-                response = self.session.get(url, params={"name": name})
+                params = {"fuzzy": name}
+                response = self.session.get(url, params=params)
                 
                 if response.status_code == 200:
                     return response.json()
@@ -327,7 +327,7 @@ class ScryfallClient:
         except Exception:
             pass
     
-    def enrich_collection(self, cards: list[Card], progress_callback=None) -> int:
+    def enrich_collection(self, cards: List[Card], progress_callback=None) -> int:
         """Enrich multiple cards with API data."""
         enriched_count = 0
         total_cards = len(cards)

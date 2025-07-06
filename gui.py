@@ -820,6 +820,10 @@ class MyManaBoxGUI:
             messagebox.showerror("Error", "Collection service not initialized")
             return
         
+        if not self.collection_service.scryfall_client:
+            messagebox.showerror("Error", "Scryfall client not initialized")
+            return
+        
         result = messagebox.askyesno("Enrich Collection", 
                                    "This will fetch data from Scryfall API. Continue?")
         if result:
@@ -829,13 +833,20 @@ class MyManaBoxGUI:
                 
                 enriched_count = self.collection_service.enrich_collection_data()
                 
+                # Save the enriched collection
+                if enriched_count > 0:
+                    enriched_path = "data/enriched_collection_complete.csv"
+                    self.collection_service.save_collection(enriched_path)
+                    self.status_var.set(f"Enriched {enriched_count} cards - saved to {enriched_path}")
+                
                 # Refresh display
                 self.refresh_collection()
                 
                 messagebox.showinfo("Success", f"Enriched {enriched_count} cards with Scryfall data")
-                self.status_var.set(f"Enriched {enriched_count} cards")
             except Exception as e:
-                messagebox.showerror("Error", f"Failed to enrich collection: {e}")
+                import traceback
+                error_msg = f"Failed to enrich collection: {e}\n\nTraceback:\n{traceback.format_exc()}"
+                messagebox.showerror("Error", error_msg)
                 self.status_var.set("Enrichment failed")
     
     def update_prices(self):
