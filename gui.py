@@ -94,7 +94,7 @@ class CardTableWidget:
         # Convert to appropriate type for sorting
         try:
             # Try numeric sort first
-            items = [(float(val.replace('$', '').replace(',', '') if val else 0), child) for val, child in items]
+            items = [(float(str(val).replace('$', '').replace(',', '') if val else 0), child) for val, child in items]
         except ValueError:
             # Fall back to string sort
             items = [(str(val).lower(), child) for val, child in items]
