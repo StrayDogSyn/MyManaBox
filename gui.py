@@ -6,12 +6,17 @@ A comprehensive graphical interface for viewing and managing your Magic: The Gat
 
 import sys
 import os
+import time
+import requests
+import importlib.util
 from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import pandas as pd
 from typing import List, Dict, Optional
 import json
+from datetime import datetime
+from decimal import Decimal
 
 # Add src directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent / "src"))
@@ -1324,8 +1329,29 @@ Built with Python and tkinter."""
             # Import the average pricing service
             import sys
             from pathlib import Path
-            sys.path.append(str(Path(__file__).parent / "scripts"))
-            from average_pricing import AveragePricingService
+            
+            # Add scripts directory to path if not already there
+            scripts_path = str(Path(__file__).parent / "scripts")
+            if scripts_path not in sys.path:
+                sys.path.append(scripts_path)
+            
+            # Import with error handling
+            try:
+                from scripts.average_pricing import AveragePricingService
+            except ImportError:
+                # Fallback import method
+                import importlib.util
+                pricing_file = Path(__file__).parent / "scripts" / "average_pricing.py"
+                if pricing_file.exists():
+                    spec = importlib.util.spec_from_file_location("average_pricing", pricing_file)
+                    if spec and spec.loader:
+                        average_pricing_module = importlib.util.module_from_spec(spec)
+                        spec.loader.exec_module(average_pricing_module)
+                        AveragePricingService = average_pricing_module.AveragePricingService
+                    else:
+                        raise ImportError("Could not load average_pricing module")
+                else:
+                    raise ImportError("average_pricing.py not found in scripts directory")
             
             # Run the analysis
             pricing_service = AveragePricingService()

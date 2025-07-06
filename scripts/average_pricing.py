@@ -197,31 +197,32 @@ class AveragePricingService:
         
         condition_stats = {}
         
-        for condition, group in self.df.groupby('Condition'):
-            prices = []
-            total_value = 0
-            total_quantity = 0
-            
-            for _, row in group.iterrows():
-                price, source = self.get_card_price(row)
-                quantity = int(row.get('Quantity', 1) or 1)
+        if self.df is not None:
+            for condition, group in self.df.groupby('Condition'):
+                prices = []
+                total_value = 0
+                total_quantity = 0
                 
-                if price > 0:
-                    prices.append(price)
-                    total_value += price * quantity
-                    total_quantity += quantity
-            
-            if prices:
-                condition_stats[condition] = {
-                    'card_count': len(group),
-                    'total_quantity': total_quantity,
-                    'average_price': np.mean(prices),
-                    'median_price': np.median(prices),
-                    'total_value': total_value,
-                    'min_price': min(prices),
-                    'max_price': max(prices),
-                    'price_std': np.std(prices) if len(prices) > 1 else 0
-                }
+                for _, row in group.iterrows():
+                    price, source = self.get_card_price(row)
+                    quantity = int(row.get('Quantity', 1) or 1)
+                    
+                    if price > 0:
+                        prices.append(price)
+                        total_value += price * quantity
+                        total_quantity += quantity
+                
+                if prices:
+                    condition_stats[condition] = {
+                        'card_count': len(group),
+                        'total_quantity': total_quantity,
+                        'average_price': np.mean(prices),
+                        'median_price': np.median(prices),
+                        'total_value': total_value,
+                        'min_price': min(prices),
+                        'max_price': max(prices),
+                        'price_std': np.std(prices) if len(prices) > 1 else 0
+                    }
         
         print(f"   Analyzed {len(condition_stats)} condition types")
         return condition_stats
@@ -232,41 +233,42 @@ class AveragePricingService:
         
         foil_stats = {}
         
-        # Separate foil and non-foil
-        foil_cards = self.df[self.df['Foil'].str.lower().isin(['foil', 'etched'])]
-        nonfoil_cards = self.df[~self.df['Foil'].str.lower().isin(['foil', 'etched'])]
-        
-        for category, group in [('foil', foil_cards), ('non-foil', nonfoil_cards)]:
-            prices = []
-            total_value = 0
-            total_quantity = 0
+        if self.df is not None:
+            # Separate foil and non-foil
+            foil_cards = self.df[self.df['Foil'].str.lower().isin(['foil', 'etched'])]
+            nonfoil_cards = self.df[~self.df['Foil'].str.lower().isin(['foil', 'etched'])]
             
-            for _, row in group.iterrows():
-                price, source = self.get_card_price(row)
-                quantity = int(row.get('Quantity', 1) or 1)
+            for category, group in [('foil', foil_cards), ('non-foil', nonfoil_cards)]:
+                prices = []
+                total_value = 0
+                total_quantity = 0
                 
-                if price > 0:
-                    prices.append(price)
-                    total_value += price * quantity
-                    total_quantity += quantity
+                for _, row in group.iterrows():
+                    price, source = self.get_card_price(row)
+                    quantity = int(row.get('Quantity', 1) or 1)
+                    
+                    if price > 0:
+                        prices.append(price)
+                        total_value += price * quantity
+                        total_quantity += quantity
+                
+                if prices:
+                    foil_stats[category] = {
+                        'card_count': len(group),
+                        'total_quantity': total_quantity,
+                        'average_price': np.mean(prices),
+                        'median_price': np.median(prices),
+                        'total_value': total_value,
+                        'min_price': min(prices),
+                        'max_price': max(prices),
+                        'price_std': np.std(prices) if len(prices) > 1 else 0
+                    }
             
-            if prices:
-                foil_stats[category] = {
-                    'card_count': len(group),
-                    'total_quantity': total_quantity,
-                    'average_price': np.mean(prices),
-                    'median_price': np.median(prices),
-                    'total_value': total_value,
-                    'min_price': min(prices),
-                    'max_price': max(prices),
-                    'price_std': np.std(prices) if len(prices) > 1 else 0
-                }
-        
-        # Calculate foil premium
-        if 'foil' in foil_stats and 'non-foil' in foil_stats:
-            foil_premium = foil_stats['foil']['average_price'] / foil_stats['non-foil']['average_price']
-            foil_stats['foil_premium'] = foil_premium
-            print(f"   Foil premium: {foil_premium:.2f}x")
+            # Calculate foil premium
+            if 'foil' in foil_stats and 'non-foil' in foil_stats:
+                foil_premium = foil_stats['foil']['average_price'] / foil_stats['non-foil']['average_price']
+                foil_stats['foil_premium'] = foil_premium
+                print(f"   Foil premium: {foil_premium:.2f}x")
         
         return foil_stats
     
@@ -285,26 +287,27 @@ class AveragePricingService:
             'ultra_high': (100, float('inf'))
         }
         
-        for tier_name, (min_price, max_price) in tiers.items():
-            tier_cards = []
-            
-            for _, row in self.df.iterrows():
-                price, source = self.get_card_price(row)
-                if min_price <= price < max_price:
-                    quantity = int(row.get('Quantity', 1) or 1)
-                    tier_cards.extend([price] * quantity)
-            
-            if tier_cards:
-                tier_stats[tier_name] = {
-                    'card_count': len(tier_cards),
-                    'price_range': f"${min_price}-${max_price if max_price != float('inf') else '∞'}",
-                    'average_price': np.mean(tier_cards),
-                    'median_price': np.median(tier_cards),
-                    'total_value': sum(tier_cards),
-                    'min_price': min(tier_cards),
-                    'max_price': max(tier_cards),
-                    'price_std': np.std(tier_cards) if len(tier_cards) > 1 else 0
-                }
+        if self.df is not None:
+            for tier_name, (min_price, max_price) in tiers.items():
+                tier_cards = []
+                
+                for _, row in self.df.iterrows():
+                    price, source = self.get_card_price(row)
+                    if min_price <= price < max_price:
+                        quantity = int(row.get('Quantity', 1) or 1)
+                        tier_cards.extend([price] * quantity)
+                
+                if tier_cards:
+                    tier_stats[tier_name] = {
+                        'card_count': len(tier_cards),
+                        'price_range': f"${min_price}-${max_price if max_price != float('inf') else '∞'}",
+                        'average_price': np.mean(tier_cards),
+                        'median_price': np.median(tier_cards),
+                        'total_value': sum(tier_cards),
+                        'min_price': min(tier_cards),
+                        'max_price': max(tier_cards),
+                        'price_std': np.std(tier_cards) if len(tier_cards) > 1 else 0
+                    }
         
         print(f"   Analyzed {len(tier_stats)} price tiers")
         return tier_stats
@@ -316,7 +319,7 @@ class AveragePricingService:
         
         results = {
             'timestamp': datetime.now().isoformat(),
-            'collection_size': len(self.df),
+            'collection_size': len(self.df) if self.df is not None else 0,
             'card_level': self.calculate_card_level_averages(),
             'set_level': self.calculate_set_averages(),
             'rarity_level': self.calculate_rarity_averages(),
@@ -329,17 +332,18 @@ class AveragePricingService:
         all_prices = []
         total_value = 0
         
-        for _, row in self.df.iterrows():
-            price, source = self.get_card_price(row)
-            quantity = int(row.get('Quantity', 1) or 1)
-            
-            if price > 0:
-                all_prices.extend([price] * quantity)
-                total_value += price * quantity
+        if self.df is not None:
+            for _, row in self.df.iterrows():
+                price, source = self.get_card_price(row)
+                quantity = int(row.get('Quantity', 1) or 1)
+                
+                if price > 0:
+                    all_prices.extend([price] * quantity)
+                    total_value += price * quantity
         
         if all_prices:
             results['collection_overview'] = {
-                'total_cards': len(self.df),
+                'total_cards': len(self.df) if self.df is not None else 0,
                 'total_quantity': len(all_prices),
                 'total_value': total_value,
                 'average_card_price': np.mean(all_prices),
