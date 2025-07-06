@@ -293,18 +293,18 @@ class CollectionStatsPanel:
     """Panel showing collection statistics."""
     
     def __init__(self, parent):
-        # Create a frame with dark background to match the target image
-        self.frame = tk.Frame(parent, bg='#1e1e1e', relief='flat', bd=1)
+        # Create a frame with purple background to match Moxfield
+        self.frame = tk.Frame(parent, bg='#241e35', relief='flat', bd=1)
         self.frame.pack(fill=tk.X, padx=10, pady=(0, 10))
         
         # Title label
         title_label = tk.Label(self.frame, text="Collection Overview", 
                               font=('TkDefaultFont', 12, 'bold'),
-                              bg='#1e1e1e', fg='white')
+                              bg='#241e35', fg='white')
         title_label.pack(anchor='w', padx=15, pady=(15, 10))
         
         # Create stats frame with grid layout
-        stats_frame = tk.Frame(self.frame, bg='#1e1e1e')
+        stats_frame = tk.Frame(self.frame, bg='#241e35')
         stats_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
         
         # Define stat labels
@@ -319,14 +319,14 @@ class CollectionStatsPanel:
         col = 0
         for label, key in stats:
             tk.Label(stats_frame, text=label, font=('TkDefaultFont', 10, 'bold'),
-                    bg='#1e1e1e', fg='white').grid(
+                    bg='#241e35', fg='#b8b0d0').grid(  # Lighter purple text for labels
                 row=0, column=col*2, sticky='w', padx=(0, 5)
             )
             
             var = tk.StringVar()
             self.stat_vars[key] = var
             tk.Label(stats_frame, textvariable=var, font=('TkDefaultFont', 10),
-                    bg='#1e1e1e', fg='white').grid(
+                    bg='#241e35', fg='white').grid(
                 row=0, column=col*2+1, sticky='w', padx=(0, 30)
             )
             col += 1
@@ -349,7 +349,7 @@ class MyManaBoxGUI:
         self.root.title("MyManaBox - MTG Collection Manager")
         self.root.geometry("1600x900")
         self.root.minsize(1200, 700)
-        self.root.configure(bg='#2b2b2b')  # Dark background
+        self.root.configure(bg='#1a1625')  # Dark purple background like Moxfield
         
         # Initialize services
         self.csv_loader = None
@@ -374,34 +374,34 @@ class MyManaBoxGUI:
         # Set dark theme
         style.theme_use('clam')
         
-        # Configure dark colors
-        style.configure('Title.TLabel', font=('TkDefaultFont', 12, 'bold'), foreground='white', background='#2b2b2b')
-        style.configure('Header.TLabel', font=('TkDefaultFont', 10, 'bold'), foreground='white', background='#2b2b2b')
+        # Configure purple/dark colors like Moxfield
+        style.configure('Title.TLabel', font=('TkDefaultFont', 12, 'bold'), foreground='white', background='#1a1625')
+        style.configure('Header.TLabel', font=('TkDefaultFont', 10, 'bold'), foreground='white', background='#1a1625')
         
-        # Configure dark treeview
+        # Configure dark purple treeview
         style.configure('Treeview', 
                        rowheight=25,
-                       background='#3c3c3c',
+                       background='#2a2235',
                        foreground='white',
-                       fieldbackground='#3c3c3c',
-                       selectbackground='#0078d4',
+                       fieldbackground='#2a2235',
+                       selectbackground='#5a4fcf',  # Purple selection like Moxfield
                        selectforeground='white')
         style.configure('Treeview.Heading', 
                        font=('TkDefaultFont', 9, 'bold'),
-                       background='#2b2b2b',
+                       background='#1a1625',
                        foreground='white',
                        relief='flat')
         
-        # Configure frames and labels for dark theme
-        style.configure('TFrame', background='#2b2b2b')
-        style.configure('TLabelFrame', background='#2b2b2b', foreground='white')
-        style.configure('TLabelFrame.Label', background='#2b2b2b', foreground='white', font=('TkDefaultFont', 10, 'bold'))
-        style.configure('TLabel', background='#2b2b2b', foreground='white')
-        style.configure('TButton', background='#404040', foreground='white', borderwidth=1, focuscolor='none')
-        style.map('TButton', background=[('active', '#505050')])
-        style.configure('TEntry', fieldbackground='#404040', foreground='white', borderwidth=1)
-        style.configure('TCombobox', fieldbackground='#404040', foreground='white', borderwidth=1)
-        style.configure('TCheckbutton', background='#2b2b2b', foreground='white')
+        # Configure frames and labels for purple theme
+        style.configure('TFrame', background='#1a1625')
+        style.configure('TLabelFrame', background='#1a1625', foreground='white')
+        style.configure('TLabelFrame.Label', background='#1a1625', foreground='white', font=('TkDefaultFont', 10, 'bold'))
+        style.configure('TLabel', background='#1a1625', foreground='white')
+        style.configure('TButton', background='#3a3344', foreground='white', borderwidth=1, focuscolor='none')
+        style.map('TButton', background=[('active', '#4a4354')])
+        style.configure('TEntry', fieldbackground='#3a3344', foreground='white', borderwidth=1)
+        style.configure('TCombobox', fieldbackground='#3a3344', foreground='white', borderwidth=1)
+        style.configure('TCheckbutton', background='#1a1625', foreground='white')
     
     def create_menu(self):
         """Create application menu bar."""
@@ -444,13 +444,15 @@ class MyManaBoxGUI:
         
         self.search_var = tk.StringVar()
         self.search_var.trace('w', self.on_search_change)
-        search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=35, font=('TkDefaultFont', 9))
+        # Create custom search entry with purple theme
+        search_entry = tk.Entry(search_frame, textvariable=self.search_var, width=35, font=('TkDefaultFont', 9),
+                               bg='#3a3344', fg='white', insertbackground='white', bd=1, relief='solid')
         search_entry.pack(side=tk.LEFT, padx=(0, 15))
         
-        # Filter buttons with blue styling like in target image
+        # Filter buttons with purple styling like Moxfield
         clear_btn = tk.Button(search_frame, text="Clear", command=self.clear_search,
-                             bg='#6ba6cd', fg='white', bd=0, padx=15, pady=5,
-                             font=('TkDefaultFont', 9))
+                             bg='#5a4fcf', fg='white', bd=0, padx=15, pady=5,
+                             font=('TkDefaultFont', 9), activebackground='#6a5fdf')
         clear_btn.pack(side=tk.LEFT, padx=(0, 5))
         
         # Action buttons
@@ -458,13 +460,13 @@ class MyManaBoxGUI:
         button_frame.pack(side=tk.RIGHT)
         
         refresh_btn = tk.Button(button_frame, text="Refresh", command=self.refresh_collection,
-                               bg='#6ba6cd', fg='white', bd=0, padx=15, pady=5,
-                               font=('TkDefaultFont', 9))
+                               bg='#5a4fcf', fg='white', bd=0, padx=15, pady=5,
+                               font=('TkDefaultFont', 9), activebackground='#6a5fdf')
         refresh_btn.pack(side=tk.LEFT, padx=(0, 5))
         
         enrich_btn = tk.Button(button_frame, text="Enrich", command=self.enrich_collection,
-                              bg='#3498db', fg='white', bd=0, padx=15, pady=5,
-                              font=('TkDefaultFont', 9))
+                              bg='#7c6dd8', fg='white', bd=0, padx=15, pady=5,
+                              font=('TkDefaultFont', 9), activebackground='#8c7de8')
         enrich_btn.pack(side=tk.LEFT, padx=(0, 5))
     
     def create_main_interface(self):
@@ -537,7 +539,7 @@ class MyManaBoxGUI:
         self.status_var.set("Ready")
         
         status_bar = tk.Label(self.root, textvariable=self.status_var, relief=tk.SUNKEN, anchor=tk.W,
-                             bg='#1e1e1e', fg='white', font=('TkDefaultFont', 9))
+                             bg='#1a1625', fg='#b8b0d0', font=('TkDefaultFont', 9))
         status_bar.pack(side=tk.BOTTOM, fill=tk.X)
     
     def load_default_collection(self):
