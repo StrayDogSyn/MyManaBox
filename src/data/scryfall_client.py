@@ -119,12 +119,12 @@ class ScryfallClient:
             
             # Type line and types
             if 'type_line' in data:
-                card.type_line = data['type_line']
+                card.type_line = Card._safe_str(data['type_line'])
                 card.types = CardType.from_type_line(data['type_line'])
             
             # Mana cost
             if 'mana_cost' in data:
-                card.mana_cost = data['mana_cost']
+                card.mana_cost = Card._safe_str(data['mana_cost'])
             
             # Converted mana cost
             if 'cmc' in data:
@@ -132,7 +132,7 @@ class ScryfallClient:
             
             # Oracle text
             if 'oracle_text' in data:
-                card.oracle_text = data['oracle_text']
+                card.oracle_text = Card._safe_str(data['oracle_text'])
             
             # Scryfall ID
             if 'id' in data:
@@ -160,23 +160,23 @@ class ScryfallClient:
             
             # Power/Toughness/Loyalty/Defense
             if 'power' in data:
-                card.power = data['power']
+                card.power = Card._safe_str(data['power'])
             if 'toughness' in data:
-                card.toughness = data['toughness']
+                card.toughness = Card._safe_str(data['toughness'])
             if 'loyalty' in data:
-                card.loyalty = data['loyalty']
+                card.loyalty = Card._safe_str(data['loyalty'])
             if 'defense' in data:
-                card.defense = data['defense']
+                card.defense = Card._safe_str(data['defense'])
             
             # Artist and flavor
             if 'artist' in data:
-                card.artist = data['artist']
+                card.artist = Card._safe_str(data['artist'])
             if 'artist_ids' in data:
                 card.artist_ids = data['artist_ids']
             if 'flavor_text' in data:
-                card.flavor_text = data['flavor_text']
+                card.flavor_text = Card._safe_str(data['flavor_text'])
             if 'flavor_name' in data:
-                card.flavor_name = data['flavor_name']
+                card.flavor_name = Card._safe_str(data['flavor_name'])
             
             # Image URIs
             if 'image_uris' in data:

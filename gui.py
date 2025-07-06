@@ -270,10 +270,12 @@ class CardDetailPanel:
             
             # Power/Toughness or Loyalty
             pt_text = ""
-            if found_card.power and found_card.toughness and found_card.power.strip() and found_card.toughness.strip():
-                # Only show if both values are present and not empty/NaN
-                if found_card.power.lower() != 'nan' and found_card.toughness.lower() != 'nan':
-                    pt_text = f"{found_card.power}/{found_card.toughness}"
+            # Check if we have valid power/toughness values (not empty and not 'nan')
+            power_valid = found_card.power and found_card.power.strip() and found_card.power.lower() != 'nan'
+            toughness_valid = found_card.toughness and found_card.toughness.strip() and found_card.toughness.lower() != 'nan'
+            
+            if power_valid and toughness_valid:
+                pt_text = f"{found_card.power}/{found_card.toughness}"
             elif found_card.loyalty and found_card.loyalty.strip() and found_card.loyalty.lower() != 'nan':
                 pt_text = f"Loyalty: {found_card.loyalty}"
             self.detail_vars["pt"].set(pt_text)
