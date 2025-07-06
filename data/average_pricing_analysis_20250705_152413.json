@@ -1,0 +1,4391 @@
+{
+  "timestamp": "2025-07-05T15:24:13.295950",
+  "collection_size": 1834,
+  "card_level": {
+    "Abrade": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.21333333333333335,
+      "median_price": 0.21,
+      "min_price": 0.19,
+      "max_price": 0.24,
+      "price_std": 0.02054804667656325,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Abundant Growth": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.25,
+      "median_price": 0.25,
+      "min_price": 0.25,
+      "max_price": 0.25,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Adarkar Wastes": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.735,
+      "median_price": 1.735,
+      "min_price": 1.02,
+      "max_price": 2.45,
+      "price_std": 0.7150000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Aether Hub": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.25,
+      "median_price": 0.25,
+      "min_price": 0.16,
+      "max_price": 0.34,
+      "price_std": 0.09000000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Alchemist's Retrieval": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.1,
+      "median_price": 0.1,
+      "min_price": 0.06,
+      "max_price": 0.14,
+      "price_std": 0.04000000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Ancestral Anger": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.10500000000000001,
+      "median_price": 0.10500000000000001,
+      "min_price": 0.1,
+      "max_price": 0.11,
+      "price_std": 0.0049999999999999975,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Anvilwrought Raptor": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.07,
+      "median_price": 0.07,
+      "min_price": 0.06,
+      "max_price": 0.08,
+      "price_std": 0.010000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Arcane Denial": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 2.38,
+      "median_price": 2.38,
+      "min_price": 2.33,
+      "max_price": 2.43,
+      "price_std": 0.050000000000000044,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Arcane Signet": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 1.1375,
+      "median_price": 1.115,
+      "min_price": 0.45,
+      "max_price": 1.87,
+      "price_std": 0.6508984175737409,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Ash Barrens": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.30333333333333334,
+      "median_price": 0.28,
+      "min_price": 0.24,
+      "max_price": 0.39,
+      "price_std": 0.06342099196813483,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Avacynian Priest": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.07,
+      "median_price": 0.07,
+      "min_price": 0.04,
+      "max_price": 0.1,
+      "price_std": 0.030000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Azorius Signet": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.35666666666666663,
+      "median_price": 0.39,
+      "min_price": 0.19,
+      "max_price": 0.49,
+      "price_std": 0.1247219128924647,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Banishing Light": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.06,
+      "median_price": 0.06,
+      "min_price": 0.04,
+      "max_price": 0.08,
+      "price_std": 0.02,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Battlefield Forge": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.9933333333333332,
+      "median_price": 0.98,
+      "min_price": 0.84,
+      "max_price": 1.16,
+      "price_std": 0.13097921802925663,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Battlewing Mystic": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.04,
+      "median_price": 0.04,
+      "min_price": 0.04,
+      "max_price": 0.04,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Belligerent Guest": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.05,
+      "median_price": 0.05,
+      "min_price": 0.02,
+      "max_price": 0.08,
+      "price_std": 0.030000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Bident of Thassa": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.63,
+      "median_price": 0.63,
+      "min_price": 0.44,
+      "max_price": 0.82,
+      "price_std": 0.18999999999999997,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Bladebrand": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.07,
+      "median_price": 0.07,
+      "min_price": 0.06,
+      "max_price": 0.08,
+      "price_std": 0.010000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Blood Pact": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.21000000000000002,
+      "median_price": 0.21000000000000002,
+      "min_price": 0.14,
+      "max_price": 0.28,
+      "price_std": 0.07,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Blood Petal Celebrant": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.03,
+      "median_price": 0.03,
+      "min_price": 0.02,
+      "max_price": 0.04,
+      "price_std": 0.01,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Bloodcrazed Socialite": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.03666666666666667,
+      "median_price": 0.02,
+      "min_price": 0.01,
+      "max_price": 0.08,
+      "price_std": 0.030912061651652344,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Boros Guildgate": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 0.1325,
+      "median_price": 0.14,
+      "min_price": 0.11,
+      "max_price": 0.14,
+      "price_std": 0.012990381056766585,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Boros Signet": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.93,
+      "median_price": 0.83,
+      "min_price": 0.6,
+      "max_price": 1.36,
+      "price_std": 0.31822423959633667,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Burnished Hart": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.08,
+      "median_price": 0.08,
+      "min_price": 0.07,
+      "max_price": 0.09,
+      "price_std": 0.009999999999999995,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Canyon Slough": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.5,
+      "median_price": 0.5,
+      "min_price": 0.29,
+      "max_price": 0.71,
+      "price_std": 0.21,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Chromatic Lantern": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.54,
+      "median_price": 1.54,
+      "min_price": 1.49,
+      "max_price": 1.59,
+      "price_std": 0.050000000000000044,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Cinder Barrens": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.095,
+      "median_price": 0.095,
+      "min_price": 0.08,
+      "max_price": 0.11,
+      "price_std": 0.015,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Clifftop Retreat": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.6950000000000001,
+      "median_price": 0.6950000000000001,
+      "min_price": 0.48,
+      "max_price": 0.91,
+      "price_std": 0.21500000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Clockwork Drawbridge": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.07,
+      "median_price": 0.07,
+      "min_price": 0.03,
+      "max_price": 0.11,
+      "price_std": 0.04,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Combustible Gearhulk": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.475,
+      "median_price": 0.475,
+      "min_price": 0.3,
+      "max_price": 0.65,
+      "price_std": 0.17500000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Command Tower": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 1.6425,
+      "median_price": 1.625,
+      "min_price": 0.2,
+      "max_price": 3.12,
+      "price_std": 1.423101805915515,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Commander's Sphere": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.5499999999999999,
+      "median_price": 0.16,
+      "min_price": 0.16,
+      "max_price": 1.33,
+      "price_std": 0.551543289325507,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Copy": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.5349999999999999,
+      "median_price": 0.5349999999999999,
+      "min_price": 0.49,
+      "max_price": 0.58,
+      "price_std": 0.04499999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Counterspell": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.635,
+      "median_price": 1.635,
+      "min_price": 1.57,
+      "max_price": 1.7,
+      "price_std": 0.06499999999999995,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Coveted Jewel": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.185,
+      "median_price": 0.185,
+      "min_price": 0.17,
+      "max_price": 0.2,
+      "price_std": 0.015,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Crackling Doom": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.045,
+      "median_price": 1.045,
+      "min_price": 0.28,
+      "max_price": 1.81,
+      "price_std": 0.7650000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Crawl from the Cellar": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.11000000000000001,
+      "median_price": 0.11000000000000001,
+      "min_price": 0.08,
+      "max_price": 0.14,
+      "price_std": 0.030000000000000006,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Cryptolith Fragment // Aurora of Emrakul": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.81,
+      "median_price": 0.81,
+      "min_price": 0.81,
+      "max_price": 0.81,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Darkstar Augur": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.9299999999999999,
+      "median_price": 0.9299999999999999,
+      "min_price": 0.87,
+      "max_price": 0.99,
+      "price_std": 0.06,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Dawnhart Disciple": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.06,
+      "median_price": 0.06,
+      "min_price": 0.06,
+      "max_price": 0.06,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Deadly Tempest": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.255,
+      "median_price": 1.255,
+      "min_price": 0.49,
+      "max_price": 2.02,
+      "price_std": 0.7650000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Desperate Farmer // Depraved Harvester": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.065,
+      "median_price": 0.065,
+      "min_price": 0.02,
+      "max_price": 0.11,
+      "price_std": 0.045,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Disenchant": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.09333333333333334,
+      "median_price": 0.08,
+      "min_price": 0.06,
+      "max_price": 0.14,
+      "price_std": 0.0339934634239519,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Dismal Backwater": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.155,
+      "median_price": 0.155,
+      "min_price": 0.1,
+      "max_price": 0.21,
+      "price_std": 0.05499999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Drana and Linvala": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 33.75,
+      "median_price": 33.75,
+      "min_price": 4.43,
+      "max_price": 63.07,
+      "price_std": 29.32,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Duskwatch Recruiter // Krallenhorde Howler": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.7350000000000001,
+      "median_price": 0.7350000000000001,
+      "min_price": 0.35,
+      "max_price": 1.12,
+      "price_std": 0.38500000000000006,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Electrify": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.24,
+      "median_price": 0.24,
+      "min_price": 0.21,
+      "max_price": 0.27,
+      "price_std": 0.030000000000000013,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Estwald Shieldbasher": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.055,
+      "median_price": 0.055,
+      "min_price": 0.03,
+      "max_price": 0.08,
+      "price_std": 0.025,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Evolving Wilds": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 0.2175,
+      "median_price": 0.255,
+      "min_price": 0.07,
+      "max_price": 0.29,
+      "price_std": 0.08699856320652657,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Faithless Looting": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 1.7266666666666666,
+      "median_price": 0.7,
+      "min_price": 0.7,
+      "max_price": 3.78,
+      "price_std": 1.4519259240363775,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Falkenrath Celebrants": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.07,
+      "median_price": 0.07,
+      "min_price": 0.03,
+      "max_price": 0.11,
+      "price_std": 0.04,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Fell the Profane // Fell Mire": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 8.205,
+      "median_price": 8.205,
+      "min_price": 3.71,
+      "max_price": 12.7,
+      "price_std": 4.495,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Festival Crasher": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.335,
+      "median_price": 0.335,
+      "min_price": 0.11,
+      "max_price": 0.56,
+      "price_std": 0.22500000000000003,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Forest": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 0.4,
+      "median_price": 0.48,
+      "min_price": 0.11,
+      "max_price": 0.53,
+      "price_std": 0.17233687939614087,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Ghostly Prison": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 7.97,
+      "median_price": 7.97,
+      "min_price": 5.4,
+      "max_price": 10.54,
+      "price_std": 2.5699999999999994,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Gift of Fangs": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.21,
+      "median_price": 0.21,
+      "min_price": 0.18,
+      "max_price": 0.24,
+      "price_std": 0.03,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Glacial Fortress": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.9199999999999999,
+      "median_price": 0.9199999999999999,
+      "min_price": 0.82,
+      "max_price": 1.02,
+      "price_std": 0.10000000000000003,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Gluttonous Guest": {
+      "copies": 4,
+      "total_quantity": 4,
+      "average_price": 0.24999999999999997,
+      "median_price": 0.08,
+      "min_price": 0.08,
+      "max_price": 0.76,
+      "price_std": 0.2944486372867091,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Grisly Ritual": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.055,
+      "median_price": 0.055,
+      "min_price": 0.03,
+      "max_price": 0.08,
+      "price_std": 0.025,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Guttersnipe": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.35000000000000003,
+      "median_price": 0.35000000000000003,
+      "min_price": 0.17,
+      "max_price": 0.53,
+      "price_std": 0.18,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Haunted Dead": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.11,
+      "median_price": 0.11,
+      "min_price": 0.11,
+      "max_price": 0.11,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Haunted Ridge": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 5.026666666666666,
+      "median_price": 4.88,
+      "min_price": 4.75,
+      "max_price": 5.45,
+      "price_std": 0.3040102337458762,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Hedron Archive": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.14,
+      "max_price": 0.39,
+      "price_std": 0.125,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Hero's Blade": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.35,
+      "median_price": 0.35,
+      "min_price": 0.29,
+      "max_price": 0.41,
+      "price_std": 0.06,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Hopeful Initiate": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.755,
+      "median_price": 0.755,
+      "min_price": 0.68,
+      "max_price": 0.83,
+      "price_std": 0.07499999999999996,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Inner Demon": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.305,
+      "median_price": 0.305,
+      "min_price": 0.18,
+      "max_price": 0.43,
+      "price_std": 0.125,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Invoke the Divine": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.1,
+      "median_price": 0.1,
+      "min_price": 0.06,
+      "max_price": 0.14,
+      "price_std": 0.04000000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Irrigated Farmland": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.23,
+      "median_price": 0.23,
+      "min_price": 0.14,
+      "max_price": 0.32,
+      "price_std": 0.09,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Island": {
+      "copies": 10,
+      "total_quantity": 10,
+      "average_price": 0.185,
+      "median_price": 0.16,
+      "min_price": 0.05,
+      "max_price": 0.48,
+      "price_std": 0.133285408053545,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Izzet Signet": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.04,
+      "median_price": 1.04,
+      "min_price": 0.85,
+      "max_price": 1.23,
+      "price_std": 0.19,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Kaalia of the Vast": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 28.490000000000002,
+      "median_price": 28.490000000000002,
+      "min_price": 3.39,
+      "max_price": 53.59,
+      "price_std": 25.1,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Kangee's Lieutenant": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.23,
+      "median_price": 0.23,
+      "min_price": 0.14,
+      "max_price": 0.32,
+      "price_std": 0.09,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Kindly Ancestor // Ancestor's Embrace": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.05,
+      "median_price": 0.05,
+      "min_price": 0.02,
+      "max_price": 0.08,
+      "price_std": 0.030000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Laboratory Maniac": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.03,
+      "median_price": 1.03,
+      "min_price": 1.01,
+      "max_price": 1.05,
+      "price_std": 0.020000000000000018,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Lacerate Flesh": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.04666666666666666,
+      "median_price": 0.04,
+      "min_price": 0.02,
+      "max_price": 0.08,
+      "price_std": 0.024944382578492942,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 2
+    },
+    "Lantern Bearer // Lanterns' Lift": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.13,
+      "median_price": 0.13,
+      "min_price": 0.08,
+      "max_price": 0.18,
+      "price_std": 0.049999999999999996,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Lazotep Chancellor": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.18,
+      "median_price": 0.18,
+      "min_price": 0.18,
+      "max_price": 0.18,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Lightning Greaves": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 8.905,
+      "median_price": 8.905,
+      "min_price": 5.12,
+      "max_price": 12.69,
+      "price_std": 3.7849999999999997,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Lumengrid Warden": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.175,
+      "median_price": 0.175,
+      "min_price": 0.06,
+      "max_price": 0.29,
+      "price_std": 0.11499999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Malakir Bloodwitch": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 23.05,
+      "median_price": 23.05,
+      "min_price": 18.23,
+      "max_price": 27.87,
+      "price_std": 4.82,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Mardu Banner": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.27,
+      "median_price": 0.27,
+      "min_price": 0.11,
+      "max_price": 0.43,
+      "price_std": 0.16,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Midnight Scavengers": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.515,
+      "median_price": 0.515,
+      "min_price": 0.08,
+      "max_price": 0.95,
+      "price_std": 0.435,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Mind Rot": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.06,
+      "median_price": 0.06,
+      "min_price": 0.04,
+      "max_price": 0.08,
+      "price_std": 0.02,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Mind Stone": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.175,
+      "median_price": 0.175,
+      "min_price": 0.17,
+      "max_price": 0.18,
+      "price_std": 0.0049999999999999906,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Moldgraf Millipede": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.27,
+      "median_price": 0.27,
+      "min_price": 0.06,
+      "max_price": 0.48,
+      "price_std": 0.21,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Moonlight Hunt": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.21500000000000002,
+      "median_price": 0.21500000000000002,
+      "min_price": 0.16,
+      "max_price": 0.27,
+      "price_std": 0.05500000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Mountain": {
+      "copies": 13,
+      "total_quantity": 13,
+      "average_price": 0.21153846153846154,
+      "median_price": 0.19,
+      "min_price": 0.06,
+      "max_price": 0.41,
+      "price_std": 0.12787290287602304,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Mystic Monastery": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.325,
+      "median_price": 0.325,
+      "min_price": 0.15,
+      "max_price": 0.5,
+      "price_std": 0.175,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Nomad Outpost": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.8800000000000001,
+      "median_price": 0.8800000000000001,
+      "min_price": 0.4,
+      "max_price": 1.36,
+      "price_std": 0.48000000000000004,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Opt": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.25,
+      "median_price": 0.25,
+      "min_price": 0.09,
+      "max_price": 0.41,
+      "price_std": 0.16,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Orzhov Locket": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.1,
+      "median_price": 0.1,
+      "min_price": 0.09,
+      "max_price": 0.11,
+      "price_std": 0.010000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Orzhov Signet": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.7533333333333333,
+      "median_price": 0.54,
+      "min_price": 0.19,
+      "max_price": 1.53,
+      "price_std": 0.5674700187870917,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Panicked Bystander // Cackling Culprit": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.13999999999999999,
+      "median_price": 0.13999999999999999,
+      "min_price": 0.04,
+      "max_price": 0.24,
+      "price_std": 0.09999999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Path of Ancestry": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.335,
+      "median_price": 0.335,
+      "min_price": 0.17,
+      "max_price": 0.5,
+      "price_std": 0.165,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Perilous Landscape": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.21999999999999997,
+      "median_price": 0.21999999999999997,
+      "min_price": 0.09,
+      "max_price": 0.35,
+      "price_std": 0.13,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Phyrexian Arena": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.91,
+      "median_price": 1.91,
+      "min_price": 1.17,
+      "max_price": 2.65,
+      "price_std": 0.74,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Plains": {
+      "copies": 16,
+      "total_quantity": 16,
+      "average_price": 0.325625,
+      "median_price": 0.16,
+      "min_price": 0.05,
+      "max_price": 1.03,
+      "price_std": 0.35872985570621246,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Prairie Stream": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.335,
+      "median_price": 0.335,
+      "min_price": 0.17,
+      "max_price": 0.5,
+      "price_std": 0.165,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Pyre Spawn": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.04,
+      "median_price": 0.04,
+      "min_price": 0.02,
+      "max_price": 0.06,
+      "price_std": 0.02,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Rakdos Locket": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.225,
+      "median_price": 0.225,
+      "min_price": 0.07,
+      "max_price": 0.38,
+      "price_std": 0.155,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Rakdos Signet": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 1.1566666666666667,
+      "median_price": 1.32,
+      "min_price": 0.61,
+      "max_price": 1.54,
+      "price_std": 0.39684869772860404,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Raugrin Crystal": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.15,
+      "median_price": 0.15,
+      "min_price": 0.09,
+      "max_price": 0.21,
+      "price_std": 0.06,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Razaketh's Rite": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.29,
+      "median_price": 0.29,
+      "min_price": 0.29,
+      "max_price": 0.29,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Reliquary Tower": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 2.135,
+      "median_price": 2.135,
+      "min_price": 1.83,
+      "max_price": 2.44,
+      "price_std": 0.30499999999999994,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Restless Bloodseeker // Bloodsoaked Reveler": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.24,
+      "median_price": 0.24,
+      "min_price": 0.24,
+      "max_price": 0.24,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Restoration Angel": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.525,
+      "median_price": 0.525,
+      "min_price": 0.38,
+      "max_price": 0.67,
+      "price_std": 0.14500000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Rogue's Passage": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.675,
+      "median_price": 0.675,
+      "min_price": 0.47,
+      "max_price": 0.88,
+      "price_std": 0.20500000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Rugged Prairie": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.8850000000000002,
+      "median_price": 1.8850000000000002,
+      "min_price": 1.55,
+      "max_price": 2.22,
+      "price_std": 0.3350000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Ruinous Ultimatum": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 10.004999999999999,
+      "median_price": 10.004999999999999,
+      "min_price": 2.9,
+      "max_price": 17.11,
+      "price_std": 7.1049999999999995,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Rummaging Goblin": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.11000000000000001,
+      "median_price": 0.11000000000000001,
+      "min_price": 0.08,
+      "max_price": 0.14,
+      "price_std": 0.030000000000000006,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Scoured Barrens": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.215,
+      "median_price": 0.215,
+      "min_price": 0.11,
+      "max_price": 0.32,
+      "price_std": 0.105,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Serpentine Ambush": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.045,
+      "median_price": 0.045,
+      "min_price": 0.03,
+      "max_price": 0.06,
+      "price_std": 0.015,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Shivan Reef": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.085,
+      "median_price": 1.085,
+      "min_price": 0.85,
+      "max_price": 1.32,
+      "price_std": 0.23500000000000004,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Skycloud Expanse": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.15,
+      "max_price": 0.38,
+      "price_std": 0.115,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Smoldering Marsh": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.59,
+      "median_price": 0.59,
+      "min_price": 0.21,
+      "max_price": 0.97,
+      "price_std": 0.38,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Sol Ring": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 14.645,
+      "median_price": 14.645,
+      "min_price": 11.85,
+      "max_price": 17.44,
+      "price_std": 2.795000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Soldier": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.11,
+      "median_price": 0.11,
+      "min_price": 0.09,
+      "max_price": 0.13,
+      "price_std": 0.020000000000000004,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Solemn Simulacrum": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.365,
+      "median_price": 0.365,
+      "min_price": 0.32,
+      "max_price": 0.41,
+      "price_std": 0.044999999999999984,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Soulcipher Board // Cipherbound Spirit": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.055,
+      "median_price": 0.055,
+      "min_price": 0.03,
+      "max_price": 0.08,
+      "price_std": 0.025,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Spirit": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.05,
+      "median_price": 0.05,
+      "min_price": 0.03,
+      "max_price": 0.07,
+      "price_std": 0.020000000000000004,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Spore Crawler": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.08,
+      "median_price": 0.08,
+      "min_price": 0.08,
+      "max_price": 0.08,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Stone Quarry": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.225,
+      "median_price": 0.225,
+      "min_price": 0.18,
+      "max_price": 0.27,
+      "price_std": 0.04500000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Stormchaser Drake": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.22499999999999998,
+      "median_price": 0.22499999999999998,
+      "min_price": 0.16,
+      "max_price": 0.29,
+      "price_std": 0.06499999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Sulfur Falls": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.8799999999999999,
+      "median_price": 0.8799999999999999,
+      "min_price": 0.82,
+      "max_price": 0.94,
+      "price_std": 0.06,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Swamp": {
+      "copies": 8,
+      "total_quantity": 8,
+      "average_price": 0.285,
+      "median_price": 0.21999999999999997,
+      "min_price": 0.08,
+      "max_price": 0.59,
+      "price_std": 0.1847971861257633,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Swiftfoot Boots": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 2.385,
+      "median_price": 2.385,
+      "min_price": 2.26,
+      "max_price": 2.51,
+      "price_std": 0.125,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Swords to Plowshares": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.42,
+      "median_price": 1.42,
+      "min_price": 1.28,
+      "max_price": 1.56,
+      "price_std": 0.14,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Syncopate": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.13333333333333333,
+      "median_price": 0.11,
+      "min_price": 0.05,
+      "max_price": 0.24,
+      "price_std": 0.0793025150224688,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Talisman of Conviction": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.5766666666666667,
+      "median_price": 0.67,
+      "min_price": 0.29,
+      "max_price": 0.77,
+      "price_std": 0.20677416559027767,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Talisman of Dominance": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.13,
+      "median_price": 1.13,
+      "min_price": 0.95,
+      "max_price": 1.31,
+      "price_std": 0.18000000000000005,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Talisman of Hierarchy": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.345,
+      "median_price": 1.345,
+      "min_price": 1.22,
+      "max_price": 1.47,
+      "price_std": 0.125,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Talisman of Indulgence": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 17.12,
+      "median_price": 2.55,
+      "min_price": 1.82,
+      "max_price": 46.99,
+      "price_std": 21.123381989318535,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Talisman of Progress": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.86,
+      "median_price": 0.86,
+      "min_price": 0.54,
+      "max_price": 1.18,
+      "price_std": 0.31999999999999995,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Tavern Ruffian // Tavern Smasher": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.03,
+      "median_price": 0.03,
+      "min_price": 0.03,
+      "max_price": 0.03,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Temple of Enlightenment": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.12,
+      "max_price": 0.41,
+      "price_std": 0.145,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Temple of Epiphany": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.15,
+      "max_price": 0.38,
+      "price_std": 0.115,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Temple of Triumph": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.255,
+      "median_price": 0.255,
+      "min_price": 0.1,
+      "max_price": 0.41,
+      "price_std": 0.155,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Terminate": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.30500000000000005,
+      "median_price": 0.30500000000000005,
+      "min_price": 0.27,
+      "max_price": 0.34,
+      "price_std": 0.035,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Terramorphic Expanse": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.41000000000000003,
+      "median_price": 0.41000000000000003,
+      "min_price": 0.15,
+      "max_price": 0.67,
+      "price_std": 0.26,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Thopter": {
+      "copies": 3,
+      "total_quantity": 3,
+      "average_price": 0.25333333333333335,
+      "median_price": 0.14,
+      "min_price": 0.13,
+      "max_price": 0.49,
+      "price_std": 0.1673983937265296,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Thought Vessel": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.68,
+      "median_price": 1.68,
+      "min_price": 1.67,
+      "max_price": 1.69,
+      "price_std": 0.010000000000000009,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Time Wipe": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.26,
+      "median_price": 0.26,
+      "min_price": 0.11,
+      "max_price": 0.41,
+      "price_std": 0.15,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Trestle Troll": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.12,
+      "median_price": 0.12,
+      "min_price": 0.03,
+      "max_price": 0.21,
+      "price_std": 0.09,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Unholy Officiant": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.05,
+      "median_price": 0.05,
+      "min_price": 0.02,
+      "max_price": 0.08,
+      "price_std": 0.030000000000000002,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Valgavoth's Lair": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 7.125,
+      "median_price": 7.125,
+      "min_price": 2.22,
+      "max_price": 12.03,
+      "price_std": 4.904999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Vampire": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.65,
+      "median_price": 0.65,
+      "min_price": 0.53,
+      "max_price": 0.77,
+      "price_std": 0.12,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Vampire's Kiss": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.42000000000000004,
+      "median_price": 0.42000000000000004,
+      "min_price": 0.2,
+      "max_price": 0.64,
+      "price_std": 0.22,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Vault of the Archangel": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.755,
+      "median_price": 0.755,
+      "min_price": 0.42,
+      "max_price": 1.09,
+      "price_std": 0.3350000000000001,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Velomachus Lorehold": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 8.22,
+      "median_price": 8.22,
+      "min_price": 0.67,
+      "max_price": 15.77,
+      "price_std": 7.55,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": true,
+      "foil_count": 1
+    },
+    "Vindicate": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 1.4100000000000001,
+      "median_price": 1.4100000000000001,
+      "min_price": 1.04,
+      "max_price": 1.78,
+      "price_std": 0.37,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Volatile Fault": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.35,
+      "median_price": 0.35,
+      "min_price": 0.35,
+      "max_price": 0.35,
+      "price_std": 0.0,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Voldaren Epicure": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.18,
+      "max_price": 0.35,
+      "price_std": 0.08499999999999999,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Wandering Mind": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.125,
+      "median_price": 0.125,
+      "min_price": 0.11,
+      "max_price": 0.14,
+      "price_std": 0.015000000000000006,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Warden of Evos Isle": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.245,
+      "median_price": 0.245,
+      "min_price": 0.08,
+      "max_price": 0.41,
+      "price_std": 0.16499999999999998,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Wayfarer's Bauble": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.32,
+      "median_price": 0.32,
+      "min_price": 0.3,
+      "max_price": 0.34,
+      "price_std": 0.020000000000000018,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Wretched Gryff": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.10500000000000001,
+      "median_price": 0.10500000000000001,
+      "min_price": 0.08,
+      "max_price": 0.13,
+      "price_std": 0.025,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    },
+    "Zombie": {
+      "copies": 2,
+      "total_quantity": 2,
+      "average_price": 0.265,
+      "median_price": 0.265,
+      "min_price": 0.26,
+      "max_price": 0.27,
+      "price_std": 0.0050000000000000044,
+      "conditions": [
+        "Near Mint"
+      ],
+      "has_foils": false,
+      "foil_count": 0
+    }
+  },
+  "set_level": {
+    "10e": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.06,
+      "median_card_price": 0.06,
+      "total_set_value": 0.06,
+      "min_price": 0.06,
+      "max_price": 0.06,
+      "price_std": 0,
+      "set_name": "10e"
+    },
+    "2x2": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 3.8216666666666668,
+      "median_card_price": 1.96,
+      "total_set_value": 22.93,
+      "min_price": 1.84,
+      "max_price": 13.04,
+      "price_std": 4.125293592245553,
+      "set_name": "2x2"
+    },
+    "2xm": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.9325000000000001,
+      "median_card_price": 0.835,
+      "total_set_value": 3.7300000000000004,
+      "min_price": 0.51,
+      "max_price": 1.55,
+      "price_std": 0.38899710795840114,
+      "set_name": "2xm"
+    },
+    "3ed": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.28,
+      "median_card_price": 0.28,
+      "total_set_value": 0.28,
+      "min_price": 0.28,
+      "max_price": 0.28,
+      "price_std": 0,
+      "set_name": "3ed"
+    },
+    "40k": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 21.896,
+      "median_card_price": 0.94,
+      "total_set_value": 109.48,
+      "min_price": 0.28,
+      "max_price": 105.42,
+      "price_std": 41.76869143269873,
+      "set_name": "40k"
+    },
+    "4ed": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.29,
+      "median_card_price": 0.29,
+      "total_set_value": 0.29,
+      "min_price": 0.29,
+      "max_price": 0.29,
+      "price_std": 0,
+      "set_name": "4ed"
+    },
+    "9ed": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.29,
+      "median_card_price": 0.29,
+      "total_set_value": 0.29,
+      "min_price": 0.29,
+      "max_price": 0.29,
+      "price_std": 0,
+      "set_name": "9ed"
+    },
+    "a25": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.17500000000000002,
+      "median_card_price": 0.17500000000000002,
+      "total_set_value": 0.35000000000000003,
+      "min_price": 0.08,
+      "max_price": 0.27,
+      "price_std": 0.09500000000000001,
+      "set_name": "a25"
+    },
+    "acr": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 1.1179999999999999,
+      "median_card_price": 0.28,
+      "total_set_value": 5.59,
+      "min_price": 0.16,
+      "max_price": 4.53,
+      "price_std": 1.7070840635422735,
+      "set_name": "acr"
+    },
+    "aer": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 0.364,
+      "median_card_price": 0.21,
+      "total_set_value": 1.82,
+      "min_price": 0.06,
+      "max_price": 1.09,
+      "price_std": 0.3805574858020796,
+      "set_name": "aer"
+    },
+    "afc": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 1.204,
+      "median_card_price": 0.88,
+      "total_set_value": 6.02,
+      "min_price": 0.4,
+      "max_price": 2.26,
+      "price_std": 0.6641264939753571,
+      "set_name": "afc"
+    },
+    "afr": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.50625,
+      "median_card_price": 0.28,
+      "total_set_value": 4.050000000000001,
+      "min_price": 0.11,
+      "max_price": 2.27,
+      "price_std": 0.672494191424729,
+      "set_name": "afr"
+    },
+    "akh": {
+      "card_count": 9,
+      "total_quantity": 9,
+      "average_card_price": 0.8333333333333334,
+      "median_card_price": 0.27,
+      "total_set_value": 7.499999999999999,
+      "min_price": 0.08,
+      "max_price": 4.71,
+      "price_std": 1.3936682213177967,
+      "set_name": "akh"
+    },
+    "ala": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.29,
+      "median_card_price": 0.29,
+      "total_set_value": 0.29,
+      "min_price": 0.29,
+      "max_price": 0.29,
+      "price_std": 0,
+      "set_name": "ala"
+    },
+    "arb": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 0.36833333333333335,
+      "median_card_price": 0.33999999999999997,
+      "total_set_value": 2.21,
+      "min_price": 0.24,
+      "max_price": 0.56,
+      "price_std": 0.12320939718850814,
+      "set_name": "arb"
+    },
+    "arc": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.475,
+      "median_card_price": 0.475,
+      "total_set_value": 0.95,
+      "min_price": 0.31,
+      "max_price": 0.64,
+      "price_std": 0.165,
+      "set_name": "arc"
+    },
+    "avr": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.41,
+      "median_card_price": 0.18,
+      "total_set_value": 1.23,
+      "min_price": 0.08,
+      "max_price": 0.97,
+      "price_std": 0.39807871918336285,
+      "set_name": "avr"
+    },
+    "bbd": {
+      "card_count": 7,
+      "total_quantity": 7,
+      "average_card_price": 0.18000000000000002,
+      "median_card_price": 0.11,
+      "total_set_value": 1.2600000000000002,
+      "min_price": 0.06,
+      "max_price": 0.63,
+      "price_std": 0.18814887722226778,
+      "set_name": "bbd"
+    },
+    "bfz": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.38,
+      "median_card_price": 0.38,
+      "total_set_value": 0.76,
+      "min_price": 0.35,
+      "max_price": 0.41,
+      "price_std": 0.03,
+      "set_name": "bfz"
+    },
+    "big": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 15.95,
+      "median_card_price": 15.95,
+      "total_set_value": 15.95,
+      "min_price": 15.95,
+      "max_price": 15.95,
+      "price_std": 0,
+      "set_name": "big"
+    },
+    "blb": {
+      "card_count": 31,
+      "total_quantity": 31,
+      "average_card_price": 0.27161290322580645,
+      "median_card_price": 0.18,
+      "total_set_value": 8.42,
+      "min_price": 0.04,
+      "max_price": 1.95,
+      "price_std": 0.35718520337624027,
+      "set_name": "blb"
+    },
+    "blc": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.82,
+      "median_card_price": 0.19,
+      "total_set_value": 2.46,
+      "min_price": 0.17,
+      "max_price": 2.1,
+      "price_std": 0.9051335076477209,
+      "set_name": "blc"
+    },
+    "bng": {
+      "card_count": 19,
+      "total_quantity": 19,
+      "average_card_price": 0.8205263157894737,
+      "median_card_price": 0.08,
+      "total_set_value": 15.590000000000002,
+      "min_price": 0.02,
+      "max_price": 11.91,
+      "price_std": 2.6327501604220283,
+      "set_name": "bng"
+    },
+    "brc": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.9499999999999998,
+      "median_card_price": 0.97,
+      "total_set_value": 2.8499999999999996,
+      "min_price": 0.15,
+      "max_price": 1.73,
+      "price_std": 0.645187311303211,
+      "set_name": "brc"
+    },
+    "bro": {
+      "card_count": 9,
+      "total_quantity": 9,
+      "average_card_price": 0.30666666666666664,
+      "median_card_price": 0.11,
+      "total_set_value": 2.7600000000000002,
+      "min_price": 0.06,
+      "max_price": 1.16,
+      "price_std": 0.37193189340702326,
+      "set_name": "bro"
+    },
+    "c13": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.21,
+      "median_card_price": 0.21,
+      "total_set_value": 0.21,
+      "min_price": 0.21,
+      "max_price": 0.21,
+      "price_std": 0,
+      "set_name": "c13"
+    },
+    "c14": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.34,
+      "median_card_price": 0.34,
+      "total_set_value": 0.68,
+      "min_price": 0.15,
+      "max_price": 0.53,
+      "price_std": 0.19000000000000003,
+      "set_name": "c14"
+    },
+    "c15": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.34,
+      "median_card_price": 0.31,
+      "total_set_value": 1.02,
+      "min_price": 0.11,
+      "max_price": 0.6,
+      "price_std": 0.20116328359486146,
+      "set_name": "c15"
+    },
+    "c16": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.27,
+      "median_card_price": 0.27,
+      "total_set_value": 0.27,
+      "min_price": 0.27,
+      "max_price": 0.27,
+      "price_std": 0,
+      "set_name": "c16"
+    },
+    "c17": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 9.776666666666666,
+      "median_card_price": 1.2349999999999999,
+      "total_set_value": 58.66,
+      "min_price": 0.33,
+      "max_price": 52.81,
+      "price_std": 19.252263647570267,
+      "set_name": "c17"
+    },
+    "c18": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 22.926000000000002,
+      "median_card_price": 0.54,
+      "total_set_value": 114.63000000000001,
+      "min_price": 0.24,
+      "max_price": 112.68,
+      "price_std": 44.87739101151046,
+      "set_name": "c18"
+    },
+    "c19": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 0.5840000000000001,
+      "median_card_price": 0.35,
+      "total_set_value": 2.9200000000000004,
+      "min_price": 0.11,
+      "max_price": 1.8,
+      "price_std": 0.621630115100612,
+      "set_name": "c19"
+    },
+    "c20": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 5.76,
+      "median_card_price": 1.225,
+      "total_set_value": 23.04,
+      "min_price": 0.16,
+      "max_price": 20.43,
+      "price_std": 8.490962842928946,
+      "set_name": "c20"
+    },
+    "c21": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.5650000000000001,
+      "median_card_price": 0.5650000000000001,
+      "total_set_value": 1.1300000000000001,
+      "min_price": 0.07,
+      "max_price": 1.06,
+      "price_std": 0.495,
+      "set_name": "c21"
+    },
+    "chk": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 53.63,
+      "median_card_price": 53.63,
+      "total_set_value": 53.63,
+      "min_price": 53.63,
+      "max_price": 53.63,
+      "price_std": 0,
+      "set_name": "chk"
+    },
+    "clb": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 7.0825000000000005,
+      "median_card_price": 1.075,
+      "total_set_value": 28.330000000000002,
+      "min_price": 0.67,
+      "max_price": 25.51,
+      "price_std": 10.640665803886522,
+      "set_name": "clb"
+    },
+    "cm2": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 1.36,
+      "median_card_price": 1.36,
+      "total_set_value": 1.36,
+      "min_price": 1.36,
+      "max_price": 1.36,
+      "price_std": 0,
+      "set_name": "cm2"
+    },
+    "cmm": {
+      "card_count": 7,
+      "total_quantity": 7,
+      "average_card_price": 34.301428571428566,
+      "median_card_price": 1.39,
+      "total_set_value": 240.10999999999996,
+      "min_price": 0.03,
+      "max_price": 165.14,
+      "price_std": 58.72679491353436,
+      "set_name": "cmm"
+    },
+    "cmr": {
+      "card_count": 55,
+      "total_quantity": 55,
+      "average_card_price": 0.9572727272727273,
+      "median_card_price": 0.18,
+      "total_set_value": 52.65000000000001,
+      "min_price": 0.06,
+      "max_price": 37.7,
+      "price_std": 5.016893082212048,
+      "set_name": "cmr"
+    },
+    "cns": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.2933333333333333,
+      "median_card_price": 0.32,
+      "total_set_value": 0.8799999999999999,
+      "min_price": 0.21,
+      "max_price": 0.35,
+      "price_std": 0.06018490028422596,
+      "set_name": "cns"
+    },
+    "con": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.2333333333333333,
+      "median_card_price": 0.18,
+      "total_set_value": 0.7,
+      "min_price": 0.11,
+      "max_price": 0.41,
+      "price_std": 0.1281492185782739,
+      "set_name": "con"
+    },
+    "ddg": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 17.54,
+      "median_card_price": 17.54,
+      "total_set_value": 17.54,
+      "min_price": 17.54,
+      "max_price": 17.54,
+      "price_std": 0,
+      "set_name": "ddg"
+    },
+    "dgm": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.18,
+      "median_card_price": 0.16,
+      "total_set_value": 1.44,
+      "min_price": 0.06,
+      "max_price": 0.41,
+      "price_std": 0.10594810050208545,
+      "set_name": "dgm"
+    },
+    "dka": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.295,
+      "median_card_price": 0.295,
+      "total_set_value": 0.59,
+      "min_price": 0.11,
+      "max_price": 0.48,
+      "price_std": 0.185,
+      "set_name": "dka"
+    },
+    "dmc": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 61.754,
+      "median_card_price": 1.86,
+      "total_set_value": 308.77,
+      "min_price": 0.4,
+      "max_price": 300.07,
+      "price_std": 119.16968231895224,
+      "set_name": "dmc"
+    },
+    "dmr": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.48624999999999996,
+      "median_card_price": 0.29500000000000004,
+      "total_set_value": 3.8899999999999997,
+      "min_price": 0.05,
+      "max_price": 1.7,
+      "price_std": 0.5177822298032253,
+      "set_name": "dmr"
+    },
+    "dmu": {
+      "card_count": 47,
+      "total_quantity": 47,
+      "average_card_price": 0.2195744680851064,
+      "median_card_price": 0.07,
+      "total_set_value": 10.32,
+      "min_price": 0.02,
+      "max_price": 1.78,
+      "price_std": 0.36330022428446507,
+      "set_name": "dmu"
+    },
+    "dom": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 2.57,
+      "median_card_price": 0.11,
+      "total_set_value": 20.560000000000002,
+      "min_price": 0.06,
+      "max_price": 19.69,
+      "price_std": 6.471101142773153,
+      "set_name": "dom"
+    },
+    "dpa": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.94,
+      "median_card_price": 0.94,
+      "total_set_value": 0.94,
+      "min_price": 0.94,
+      "max_price": 0.94,
+      "price_std": 0,
+      "set_name": "dpa"
+    },
+    "drc": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 1.4,
+      "median_card_price": 1.3900000000000001,
+      "total_set_value": 5.6,
+      "min_price": 0.95,
+      "max_price": 1.87,
+      "price_std": 0.33030289129827495,
+      "set_name": "drc"
+    },
+    "dsc": {
+      "card_count": 23,
+      "total_quantity": 23,
+      "average_card_price": 5.586956521739131,
+      "median_card_price": 1.23,
+      "total_set_value": 128.5,
+      "min_price": 0.16,
+      "max_price": 72.48,
+      "price_std": 14.938788273654131,
+      "set_name": "dsc"
+    },
+    "dsk": {
+      "card_count": 15,
+      "total_quantity": 15,
+      "average_card_price": 9.329333333333333,
+      "median_card_price": 2.23,
+      "total_set_value": 139.94,
+      "min_price": 0.03,
+      "max_price": 62.95,
+      "price_std": 16.425923197461046,
+      "set_name": "dsk"
+    },
+    "dtk": {
+      "card_count": 15,
+      "total_quantity": 15,
+      "average_card_price": 0.24399999999999994,
+      "median_card_price": 0.05,
+      "total_set_value": 3.6599999999999993,
+      "min_price": 0.02,
+      "max_price": 2.37,
+      "price_std": 0.5814212471751156,
+      "set_name": "dtk"
+    },
+    "e01": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.32,
+      "median_card_price": 0.32,
+      "total_set_value": 0.32,
+      "min_price": 0.32,
+      "max_price": 0.32,
+      "price_std": 0,
+      "set_name": "e01"
+    },
+    "e02": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.11,
+      "median_card_price": 0.11,
+      "total_set_value": 0.11,
+      "min_price": 0.11,
+      "max_price": 0.11,
+      "price_std": 0,
+      "set_name": "e02"
+    },
+    "eld": {
+      "card_count": 18,
+      "total_quantity": 18,
+      "average_card_price": 1.4172222222222222,
+      "median_card_price": 0.16,
+      "total_set_value": 25.509999999999994,
+      "min_price": 0.06,
+      "max_price": 20.56,
+      "price_std": 4.652386252183515,
+      "set_name": "eld"
+    },
+    "ema": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.7266666666666667,
+      "median_card_price": 0.29,
+      "total_set_value": 2.18,
+      "min_price": 0.11,
+      "max_price": 1.78,
+      "price_std": 0.7484354050654977,
+      "set_name": "ema"
+    },
+    "emn": {
+      "card_count": 22,
+      "total_quantity": 22,
+      "average_card_price": 0.7540909090909089,
+      "median_card_price": 0.11,
+      "total_set_value": 16.589999999999993,
+      "min_price": 0.02,
+      "max_price": 13.4,
+      "price_std": 2.762511471125355,
+      "set_name": "emn"
+    },
+    "eve": {
+      "card_count": 7,
+      "total_quantity": 7,
+      "average_card_price": 5.58,
+      "median_card_price": 0.48,
+      "total_set_value": 39.06,
+      "min_price": 0.14,
+      "max_price": 36.0,
+      "price_std": 12.42451148795339,
+      "set_name": "eve"
+    },
+    "fdn": {
+      "card_count": 48,
+      "total_quantity": 48,
+      "average_card_price": 3.4952083333333337,
+      "median_card_price": 0.18,
+      "total_set_value": 167.77,
+      "min_price": 0.02,
+      "max_price": 52.49,
+      "price_std": 10.9920823758102,
+      "set_name": "fdn"
+    },
+    "frf": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.16125,
+      "median_card_price": 0.10500000000000001,
+      "total_set_value": 1.29,
+      "min_price": 0.08,
+      "max_price": 0.41,
+      "price_std": 0.1146121175967009,
+      "set_name": "frf"
+    },
+    "gk1": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.81,
+      "median_card_price": 0.81,
+      "total_set_value": 1.62,
+      "min_price": 0.39,
+      "max_price": 1.23,
+      "price_std": 0.42,
+      "set_name": "gk1"
+    },
+    "gk2": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.35,
+      "median_card_price": 0.35,
+      "total_set_value": 0.35,
+      "min_price": 0.35,
+      "max_price": 0.35,
+      "price_std": 0,
+      "set_name": "gk2"
+    },
+    "gpt": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.315,
+      "median_card_price": 0.315,
+      "total_set_value": 0.63,
+      "min_price": 0.28,
+      "max_price": 0.35,
+      "price_std": 0.034999999999999976,
+      "set_name": "gpt"
+    },
+    "grn": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.14750000000000002,
+      "median_card_price": 0.11000000000000001,
+      "total_set_value": 1.1800000000000002,
+      "min_price": 0.06,
+      "max_price": 0.38,
+      "price_std": 0.10437312872574052,
+      "set_name": "grn"
+    },
+    "gtc": {
+      "card_count": 13,
+      "total_quantity": 13,
+      "average_card_price": 0.19692307692307695,
+      "median_card_price": 0.21,
+      "total_set_value": 2.5600000000000005,
+      "min_price": 0.03,
+      "max_price": 0.35,
+      "price_std": 0.10148016974794141,
+      "set_name": "gtc"
+    },
+    "hml": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.48,
+      "median_card_price": 0.48,
+      "total_set_value": 0.48,
+      "min_price": 0.48,
+      "max_price": 0.48,
+      "price_std": 0,
+      "set_name": "hml"
+    },
+    "hou": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 6.54625,
+      "median_card_price": 0.25,
+      "total_set_value": 52.36999999999999,
+      "min_price": 0.06,
+      "max_price": 50.83,
+      "price_std": 16.738026270665845,
+      "set_name": "hou"
+    },
+    "ice": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.74,
+      "median_card_price": 0.74,
+      "total_set_value": 0.74,
+      "min_price": 0.74,
+      "max_price": 0.74,
+      "price_std": 0,
+      "set_name": "ice"
+    },
+    "iko": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 16.193749999999998,
+      "median_card_price": 0.27999999999999997,
+      "total_set_value": 129.55,
+      "min_price": 0.06,
+      "max_price": 125.14,
+      "price_std": 41.18744558038894,
+      "set_name": "iko"
+    },
+    "ima": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 1.4649999999999999,
+      "median_card_price": 1.0899999999999999,
+      "total_set_value": 5.859999999999999,
+      "min_price": 0.24,
+      "max_price": 3.44,
+      "price_std": 1.3223747577748148,
+      "set_name": "ima"
+    },
+    "inr": {
+      "card_count": 120,
+      "total_quantity": 120,
+      "average_card_price": 2.5909166666666663,
+      "median_card_price": 0.24,
+      "total_set_value": 310.90999999999997,
+      "min_price": 0.03,
+      "max_price": 122.16,
+      "price_std": 13.181076650248349,
+      "set_name": "inr"
+    },
+    "inv": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.22499999999999998,
+      "median_card_price": 0.22499999999999998,
+      "total_set_value": 0.44999999999999996,
+      "min_price": 0.21,
+      "max_price": 0.24,
+      "price_std": 0.015,
+      "set_name": "inv"
+    },
+    "isd": {
+      "card_count": 9,
+      "total_quantity": 9,
+      "average_card_price": 10.753333333333332,
+      "median_card_price": 0.24,
+      "total_set_value": 96.77999999999999,
+      "min_price": 0.08,
+      "max_price": 92.39,
+      "price_std": 28.873983676197735,
+      "set_name": "isd"
+    },
+    "j22": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.3566666666666667,
+      "median_card_price": 0.37,
+      "total_set_value": 1.07,
+      "min_price": 0.27,
+      "max_price": 0.43,
+      "price_std": 0.06599663291074442,
+      "set_name": "j22"
+    },
+    "j25": {
+      "card_count": 31,
+      "total_quantity": 31,
+      "average_card_price": 1.142258064516129,
+      "median_card_price": 0.1,
+      "total_set_value": 35.410000000000004,
+      "min_price": 0.04,
+      "max_price": 29.95,
+      "price_std": 5.262886310808878,
+      "set_name": "j25"
+    },
+    "jmp": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 1.24,
+      "median_card_price": 1.24,
+      "total_set_value": 1.24,
+      "min_price": 1.24,
+      "max_price": 1.24,
+      "price_std": 0,
+      "set_name": "jmp"
+    },
+    "jou": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.16333333333333333,
+      "median_card_price": 0.14,
+      "total_set_value": 0.49,
+      "min_price": 0.14,
+      "max_price": 0.21,
+      "price_std": 0.032998316455372205,
+      "set_name": "jou"
+    },
+    "jud": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.97,
+      "median_card_price": 0.97,
+      "total_set_value": 0.97,
+      "min_price": 0.97,
+      "max_price": 0.97,
+      "price_std": 0,
+      "set_name": "jud"
+    },
+    "khc": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 10.54,
+      "median_card_price": 10.54,
+      "total_set_value": 10.54,
+      "min_price": 10.54,
+      "max_price": 10.54,
+      "price_std": 0,
+      "set_name": "khc"
+    },
+    "khm": {
+      "card_count": 22,
+      "total_quantity": 22,
+      "average_card_price": 6.159545454545457,
+      "median_card_price": 0.135,
+      "total_set_value": 135.51000000000005,
+      "min_price": 0.03,
+      "max_price": 69.01,
+      "price_std": 16.076392199651785,
+      "set_name": "khm"
+    },
+    "kld": {
+      "card_count": 10,
+      "total_quantity": 10,
+      "average_card_price": 0.628,
+      "median_card_price": 0.315,
+      "total_set_value": 6.28,
+      "min_price": 0.04,
+      "max_price": 2.73,
+      "price_std": 0.7632666637552042,
+      "set_name": "kld"
+    },
+    "ktk": {
+      "card_count": 7,
+      "total_quantity": 7,
+      "average_card_price": 0.4471428571428572,
+      "median_card_price": 0.38,
+      "total_set_value": 3.1300000000000003,
+      "min_price": 0.11,
+      "max_price": 1.36,
+      "price_std": 0.3917621102409065,
+      "set_name": "ktk"
+    },
+    "lcc": {
+      "card_count": 23,
+      "total_quantity": 23,
+      "average_card_price": 9.05782608695652,
+      "median_card_price": 0.99,
+      "total_set_value": 208.33,
+      "min_price": 0.19,
+      "max_price": 148.17,
+      "price_std": 29.99329185240705,
+      "set_name": "lcc"
+    },
+    "lci": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 20.9125,
+      "median_card_price": 0.255,
+      "total_set_value": 167.30000000000004,
+      "min_price": 0.04,
+      "max_price": 158.93,
+      "price_std": 52.21786565678456,
+      "set_name": "lci"
+    },
+    "lrw": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.67,
+      "median_card_price": 0.67,
+      "total_set_value": 0.67,
+      "min_price": 0.67,
+      "max_price": 0.67,
+      "price_std": 0,
+      "set_name": "lrw"
+    },
+    "ltc": {
+      "card_count": 10,
+      "total_quantity": 10,
+      "average_card_price": 3.229,
+      "median_card_price": 0.7949999999999999,
+      "total_set_value": 32.29,
+      "min_price": 0.13,
+      "max_price": 15.4,
+      "price_std": 5.13989192493383,
+      "set_name": "ltc"
+    },
+    "ltr": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.5833333333333334,
+      "median_card_price": 0.37,
+      "total_set_value": 1.75,
+      "min_price": 0.18,
+      "max_price": 1.2,
+      "price_std": 0.44289451967207216,
+      "set_name": "ltr"
+    },
+    "m10": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.19333333333333333,
+      "median_card_price": 0.19,
+      "total_set_value": 0.58,
+      "min_price": 0.15,
+      "max_price": 0.24,
+      "price_std": 0.03681787005729087,
+      "set_name": "m10"
+    },
+    "m11": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.21,
+      "median_card_price": 0.11,
+      "total_set_value": 0.63,
+      "min_price": 0.11,
+      "max_price": 0.41,
+      "price_std": 0.14142135623730948,
+      "set_name": "m11"
+    },
+    "m12": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 1.105,
+      "median_card_price": 1.105,
+      "total_set_value": 2.21,
+      "min_price": 0.59,
+      "max_price": 1.62,
+      "price_std": 0.515,
+      "set_name": "m12"
+    },
+    "m13": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 10.723333333333334,
+      "median_card_price": 0.18,
+      "total_set_value": 32.17,
+      "min_price": 0.14,
+      "max_price": 31.85,
+      "price_std": 14.938818189163722,
+      "set_name": "m13"
+    },
+    "m14": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.15,
+      "median_card_price": 0.11,
+      "total_set_value": 0.44999999999999996,
+      "min_price": 0.05,
+      "max_price": 0.29,
+      "price_std": 0.10198039027185568,
+      "set_name": "m14"
+    },
+    "m19": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.18,
+      "median_card_price": 0.16,
+      "total_set_value": 0.72,
+      "min_price": 0.11,
+      "max_price": 0.29,
+      "price_std": 0.07549834435270748,
+      "set_name": "m19"
+    },
+    "m20": {
+      "card_count": 15,
+      "total_quantity": 15,
+      "average_card_price": 2.44,
+      "median_card_price": 0.1,
+      "total_set_value": 36.6,
+      "min_price": 0.03,
+      "max_price": 31.19,
+      "price_std": 7.714458287311343,
+      "set_name": "m20"
+    },
+    "m21": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 1.094,
+      "median_card_price": 0.28,
+      "total_set_value": 5.470000000000001,
+      "min_price": 0.21,
+      "max_price": 3.24,
+      "price_std": 1.1849827002956625,
+      "set_name": "m21"
+    },
+    "m3c": {
+      "card_count": 73,
+      "total_quantity": 73,
+      "average_card_price": 1.754109589041096,
+      "median_card_price": 0.22,
+      "total_set_value": 128.05,
+      "min_price": 0.04,
+      "max_price": 64.78,
+      "price_std": 8.096947139156315,
+      "set_name": "m3c"
+    },
+    "mat": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.375,
+      "median_card_price": 0.375,
+      "total_set_value": 0.75,
+      "min_price": 0.13,
+      "max_price": 0.62,
+      "price_std": 0.245,
+      "set_name": "mat"
+    },
+    "mh1": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 0.42,
+      "median_card_price": 0.25,
+      "total_set_value": 3.3600000000000003,
+      "min_price": 0.04,
+      "max_price": 1.68,
+      "price_std": 0.4981214711292819,
+      "set_name": "mh1"
+    },
+    "mh2": {
+      "card_count": 20,
+      "total_quantity": 20,
+      "average_card_price": 0.44400000000000006,
+      "median_card_price": 0.235,
+      "total_set_value": 8.88,
+      "min_price": 0.03,
+      "max_price": 1.57,
+      "price_std": 0.4403793818970184,
+      "set_name": "mh2"
+    },
+    "mh3": {
+      "card_count": 42,
+      "total_quantity": 42,
+      "average_card_price": 4.083809523809524,
+      "median_card_price": 0.155,
+      "total_set_value": 171.51999999999998,
+      "min_price": 0.02,
+      "max_price": 66.78,
+      "price_std": 13.002878976519183,
+      "set_name": "mh3"
+    },
+    "mic": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.7949999999999999,
+      "median_card_price": 0.7949999999999999,
+      "total_set_value": 1.5899999999999999,
+      "min_price": 0.41,
+      "max_price": 1.18,
+      "price_std": 0.385,
+      "set_name": "mic"
+    },
+    "mid": {
+      "card_count": 62,
+      "total_quantity": 62,
+      "average_card_price": 0.3667741935483871,
+      "median_card_price": 0.11,
+      "total_set_value": 22.73999999999999,
+      "min_price": 0.03,
+      "max_price": 6.23,
+      "price_std": 1.0761142375404449,
+      "set_name": "mid"
+    },
+    "mkc": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.81,
+      "median_card_price": 0.255,
+      "total_set_value": 3.24,
+      "min_price": 0.08,
+      "max_price": 2.65,
+      "price_std": 1.065715721944647,
+      "set_name": "mkc"
+    },
+    "mkm": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 4.448333333333333,
+      "median_card_price": 1.585,
+      "total_set_value": 26.689999999999998,
+      "min_price": 0.48,
+      "max_price": 15.42,
+      "price_std": 5.408093985458792,
+      "set_name": "mkm"
+    },
+    "mm2": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.32,
+      "median_card_price": 0.32,
+      "total_set_value": 0.64,
+      "min_price": 0.23,
+      "max_price": 0.41,
+      "price_std": 0.08999999999999998,
+      "set_name": "mm2"
+    },
+    "mm3": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.54,
+      "median_card_price": 0.54,
+      "total_set_value": 0.54,
+      "min_price": 0.54,
+      "max_price": 0.54,
+      "price_std": 0,
+      "set_name": "mm3"
+    },
+    "mma": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.615,
+      "median_card_price": 0.615,
+      "total_set_value": 1.23,
+      "min_price": 0.56,
+      "max_price": 0.67,
+      "price_std": 0.05499999999999999,
+      "set_name": "mma"
+    },
+    "mmq": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.48,
+      "median_card_price": 0.48,
+      "total_set_value": 0.48,
+      "min_price": 0.48,
+      "max_price": 0.48,
+      "price_std": 0,
+      "set_name": "mmq"
+    },
+    "moc": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 5.1175,
+      "median_card_price": 0.315,
+      "total_set_value": 40.93999999999999,
+      "min_price": 0.11,
+      "max_price": 37.43,
+      "price_std": 12.225112218298857,
+      "set_name": "moc"
+    },
+    "mom": {
+      "card_count": 8,
+      "total_quantity": 8,
+      "average_card_price": 8.613750000000001,
+      "median_card_price": 0.16,
+      "total_set_value": 68.91000000000001,
+      "min_price": 0.06,
+      "max_price": 63.07,
+      "price_std": 20.629733358371357,
+      "set_name": "mom"
+    },
+    "mrd": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.11,
+      "median_card_price": 0.11,
+      "total_set_value": 0.11,
+      "min_price": 0.11,
+      "max_price": 0.11,
+      "price_std": 0,
+      "set_name": "mrd"
+    },
+    "mul": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 1.4466666666666665,
+      "median_card_price": 1.32,
+      "total_set_value": 4.34,
+      "min_price": 0.95,
+      "max_price": 2.07,
+      "price_std": 0.4659279868057819,
+      "set_name": "mul"
+    },
+    "ncc": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 4.9750000000000005,
+      "median_card_price": 1.3399999999999999,
+      "total_set_value": 29.85,
+      "min_price": 0.29,
+      "max_price": 24.85,
+      "price_std": 8.901104332235036,
+      "set_name": "ncc"
+    },
+    "nec": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 2.51,
+      "median_card_price": 2.51,
+      "total_set_value": 2.51,
+      "min_price": 2.51,
+      "max_price": 2.51,
+      "price_std": 0,
+      "set_name": "nec"
+    },
+    "nem": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.375,
+      "median_card_price": 0.375,
+      "total_set_value": 0.75,
+      "min_price": 0.32,
+      "max_price": 0.43,
+      "price_std": 0.05499999999999999,
+      "set_name": "nem"
+    },
+    "neo": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 2.6479999999999997,
+      "median_card_price": 0.21,
+      "total_set_value": 13.239999999999998,
+      "min_price": 0.18,
+      "max_price": 11.79,
+      "price_std": 4.577940148145233,
+      "set_name": "neo"
+    },
+    "ody": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.27,
+      "median_card_price": 0.27,
+      "total_set_value": 0.27,
+      "min_price": 0.27,
+      "max_price": 0.27,
+      "price_std": 0,
+      "set_name": "ody"
+    },
+    "ogw": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.16249999999999998,
+      "median_card_price": 0.16,
+      "total_set_value": 0.6499999999999999,
+      "min_price": 0.06,
+      "max_price": 0.27,
+      "price_std": 0.08227241335952168,
+      "set_name": "ogw"
+    },
+    "onc": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.18,
+      "median_card_price": 0.18,
+      "total_set_value": 0.18,
+      "min_price": 0.18,
+      "max_price": 0.18,
+      "price_std": 0,
+      "set_name": "onc"
+    },
+    "one": {
+      "card_count": 12,
+      "total_quantity": 12,
+      "average_card_price": 0.3875,
+      "median_card_price": 0.125,
+      "total_set_value": 4.65,
+      "min_price": 0.02,
+      "max_price": 1.58,
+      "price_std": 0.5329497318384415,
+      "set_name": "one"
+    },
+    "ons": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.36333333333333334,
+      "median_card_price": 0.29,
+      "total_set_value": 1.09,
+      "min_price": 0.24,
+      "max_price": 0.56,
+      "price_std": 0.1405544576153868,
+      "set_name": "ons"
+    },
+    "ori": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 4.29,
+      "median_card_price": 0.38,
+      "total_set_value": 12.870000000000001,
+      "min_price": 0.08,
+      "max_price": 12.41,
+      "price_std": 5.743013146424097,
+      "set_name": "ori"
+    },
+    "otc": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 1.955,
+      "median_card_price": 1.955,
+      "total_set_value": 3.91,
+      "min_price": 0.18,
+      "max_price": 3.73,
+      "price_std": 1.7750000000000001,
+      "set_name": "otc"
+    },
+    "otj": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 6.138,
+      "median_card_price": 1.25,
+      "total_set_value": 30.69,
+      "min_price": 0.39,
+      "max_price": 26.89,
+      "price_std": 10.383452990214769,
+      "set_name": "otj"
+    },
+    "p30a": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.95,
+      "median_card_price": 0.95,
+      "total_set_value": 0.95,
+      "min_price": 0.95,
+      "max_price": 0.95,
+      "price_std": 0,
+      "set_name": "p30a"
+    },
+    "piko": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 17.11,
+      "median_card_price": 17.11,
+      "total_set_value": 17.11,
+      "min_price": 17.11,
+      "max_price": 17.11,
+      "price_std": 0,
+      "set_name": "piko"
+    },
+    "pip": {
+      "card_count": 31,
+      "total_quantity": 31,
+      "average_card_price": 1.1132258064516132,
+      "median_card_price": 0.18,
+      "total_set_value": 34.510000000000005,
+      "min_price": 0.07,
+      "max_price": 22.55,
+      "price_std": 3.934427356862851,
+      "set_name": "pip"
+    },
+    "plc": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.65,
+      "median_card_price": 0.65,
+      "total_set_value": 0.65,
+      "min_price": 0.65,
+      "max_price": 0.65,
+      "price_std": 0,
+      "set_name": "plc"
+    },
+    "plst": {
+      "card_count": 10,
+      "total_quantity": 10,
+      "average_card_price": 8.933,
+      "median_card_price": 0.72,
+      "total_set_value": 89.33,
+      "min_price": 0.27,
+      "max_price": 71.0,
+      "price_std": 20.997780382697595,
+      "set_name": "plst"
+    },
+    "pmei": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 51.41,
+      "median_card_price": 51.41,
+      "total_set_value": 51.41,
+      "min_price": 51.41,
+      "max_price": 51.41,
+      "price_std": 0,
+      "set_name": "pmei"
+    },
+    "pw21": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 60.32,
+      "median_card_price": 60.32,
+      "total_set_value": 60.32,
+      "min_price": 60.32,
+      "max_price": 60.32,
+      "price_std": 0,
+      "set_name": "pw21"
+    },
+    "pw24": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 13.635,
+      "median_card_price": 13.635,
+      "total_set_value": 27.27,
+      "min_price": 1.0,
+      "max_price": 26.27,
+      "price_std": 12.635,
+      "set_name": "pw24"
+    },
+    "rav": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.4333333333333333,
+      "median_card_price": 0.5,
+      "total_set_value": 1.2999999999999998,
+      "min_price": 0.21,
+      "max_price": 0.59,
+      "price_std": 0.16213848676020412,
+      "set_name": "rav"
+    },
+    "rix": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.31,
+      "median_card_price": 0.31,
+      "total_set_value": 0.62,
+      "min_price": 0.18,
+      "max_price": 0.44,
+      "price_std": 0.13,
+      "set_name": "rix"
+    },
+    "rna": {
+      "card_count": 14,
+      "total_quantity": 14,
+      "average_card_price": 0.6735714285714287,
+      "median_card_price": 0.14,
+      "total_set_value": 9.43,
+      "min_price": 0.07,
+      "max_price": 4.83,
+      "price_std": 1.2408960307711816,
+      "set_name": "rna"
+    },
+    "rtr": {
+      "card_count": 22,
+      "total_quantity": 22,
+      "average_card_price": 3.5159090909090907,
+      "median_card_price": 0.10500000000000001,
+      "total_set_value": 77.35,
+      "min_price": 0.02,
+      "max_price": 74.78,
+      "price_std": 15.551341555427099,
+      "set_name": "rtr"
+    },
+    "rvr": {
+      "card_count": 7,
+      "total_quantity": 7,
+      "average_card_price": 14.319999999999999,
+      "median_card_price": 1.32,
+      "total_set_value": 100.24,
+      "min_price": 0.08,
+      "max_price": 64.56,
+      "price_std": 23.168035245632225,
+      "set_name": "rvr"
+    },
+    "scd": {
+      "card_count": 136,
+      "total_quantity": 136,
+      "average_card_price": 0.7976470588235295,
+      "median_card_price": 0.18,
+      "total_set_value": 108.47999999999998,
+      "min_price": 0.04,
+      "max_price": 22.88,
+      "price_std": 2.6302242789894303,
+      "set_name": "scd"
+    },
+    "shm": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.5599999999999999,
+      "median_card_price": 0.45,
+      "total_set_value": 1.68,
+      "min_price": 0.24,
+      "max_price": 0.99,
+      "price_std": 0.3159113799786263,
+      "set_name": "shm"
+    },
+    "snc": {
+      "card_count": 44,
+      "total_quantity": 44,
+      "average_card_price": 0.21590909090909094,
+      "median_card_price": 0.10500000000000001,
+      "total_set_value": 9.5,
+      "min_price": 0.03,
+      "max_price": 1.34,
+      "price_std": 0.3027474058279231,
+      "set_name": "snc"
+    },
+    "soi": {
+      "card_count": 32,
+      "total_quantity": 32,
+      "average_card_price": 0.1790625,
+      "median_card_price": 0.07500000000000001,
+      "total_set_value": 5.729999999999998,
+      "min_price": 0.01,
+      "max_price": 1.34,
+      "price_std": 0.2947600652967597,
+      "set_name": "soi"
+    },
+    "som": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 1.44,
+      "median_card_price": 1.44,
+      "total_set_value": 1.44,
+      "min_price": 1.44,
+      "max_price": 1.44,
+      "price_std": 0,
+      "set_name": "som"
+    },
+    "ss2": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 1.9,
+      "median_card_price": 1.9,
+      "total_set_value": 1.9,
+      "min_price": 1.9,
+      "max_price": 1.9,
+      "price_std": 0,
+      "set_name": "ss2"
+    },
+    "sta": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 27.88,
+      "median_card_price": 27.88,
+      "total_set_value": 27.88,
+      "min_price": 27.88,
+      "max_price": 27.88,
+      "price_std": 0,
+      "set_name": "sta"
+    },
+    "stx": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 3.3019999999999996,
+      "median_card_price": 0.17,
+      "total_set_value": 16.509999999999998,
+      "min_price": 0.08,
+      "max_price": 15.77,
+      "price_std": 6.235169283989008,
+      "set_name": "stx"
+    },
+    "svow": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "svow"
+    },
+    "tblb": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.87,
+      "median_card_price": 0.87,
+      "total_set_value": 0.87,
+      "min_price": 0.87,
+      "max_price": 0.87,
+      "price_std": 0,
+      "set_name": "tblb"
+    },
+    "tblc": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "tblc"
+    },
+    "tbng": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 3.55,
+      "median_card_price": 3.55,
+      "total_set_value": 3.55,
+      "min_price": 3.55,
+      "max_price": 3.55,
+      "price_std": 0,
+      "set_name": "tbng"
+    },
+    "tdc": {
+      "card_count": 86,
+      "total_quantity": 86,
+      "average_card_price": 1.6540697674418607,
+      "median_card_price": 0.94,
+      "total_set_value": 142.25,
+      "min_price": 0.08,
+      "max_price": 19.8,
+      "price_std": 2.9283082575006443,
+      "set_name": "tdc"
+    },
+    "tdm": {
+      "card_count": 15,
+      "total_quantity": 15,
+      "average_card_price": 0.7053333333333334,
+      "median_card_price": 0.35,
+      "total_set_value": 10.579999999999998,
+      "min_price": 0.24,
+      "max_price": 2.4,
+      "price_std": 0.6619452813908077,
+      "set_name": "tdm"
+    },
+    "tdmu": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.11249999999999999,
+      "median_card_price": 0.075,
+      "total_set_value": 0.44999999999999996,
+      "min_price": 0.05,
+      "max_price": 0.25,
+      "price_std": 0.08073877630977572,
+      "set_name": "tdmu"
+    },
+    "tdtk": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.09,
+      "median_card_price": 0.09,
+      "total_set_value": 0.09,
+      "min_price": 0.09,
+      "max_price": 0.09,
+      "price_std": 0,
+      "set_name": "tdtk"
+    },
+    "temn": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.27,
+      "median_card_price": 0.27,
+      "total_set_value": 0.27,
+      "min_price": 0.27,
+      "max_price": 0.27,
+      "price_std": 0,
+      "set_name": "temn"
+    },
+    "tfdn": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "tfdn"
+    },
+    "thb": {
+      "card_count": 14,
+      "total_quantity": 14,
+      "average_card_price": 0.4007142857142857,
+      "median_card_price": 0.22999999999999998,
+      "total_set_value": 5.609999999999999,
+      "min_price": 0.06,
+      "max_price": 2.13,
+      "price_std": 0.5177901434491209,
+      "set_name": "thb"
+    },
+    "ths": {
+      "card_count": 12,
+      "total_quantity": 12,
+      "average_card_price": 0.24583333333333335,
+      "median_card_price": 0.16,
+      "total_set_value": 2.95,
+      "min_price": 0.03,
+      "max_price": 1.15,
+      "price_std": 0.28499878167380915,
+      "set_name": "ths"
+    },
+    "tinr": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "tinr"
+    },
+    "tkhm": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 4.12,
+      "median_card_price": 4.12,
+      "total_set_value": 4.12,
+      "min_price": 4.12,
+      "max_price": 4.12,
+      "price_std": 0,
+      "set_name": "tkhm"
+    },
+    "tlcc": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "tlcc"
+    },
+    "tlci": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.63,
+      "median_card_price": 0.63,
+      "total_set_value": 1.26,
+      "min_price": 0.49,
+      "max_price": 0.77,
+      "price_std": 0.14,
+      "set_name": "tlci"
+    },
+    "tm3c": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 0.33399999999999996,
+      "median_card_price": 0.49,
+      "total_set_value": 1.67,
+      "min_price": 0.1,
+      "max_price": 0.49,
+      "price_std": 0.19106019993708787,
+      "set_name": "tm3c"
+    },
+    "tmh3": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 22.910000000000007,
+      "median_card_price": 0.43,
+      "total_set_value": 68.73000000000002,
+      "min_price": 0.15,
+      "max_price": 68.15,
+      "price_std": 31.989715013839472,
+      "set_name": "tmh3"
+    },
+    "tmoc": {
+      "card_count": 2,
+      "total_quantity": 2,
+      "average_card_price": 0.135,
+      "median_card_price": 0.135,
+      "total_set_value": 0.27,
+      "min_price": 0.13,
+      "max_price": 0.14,
+      "price_std": 0.0050000000000000044,
+      "set_name": "tmoc"
+    },
+    "totj": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.49,
+      "median_card_price": 0.49,
+      "total_set_value": 0.49,
+      "min_price": 0.49,
+      "max_price": 0.49,
+      "price_std": 0,
+      "set_name": "totj"
+    },
+    "tscd": {
+      "card_count": 11,
+      "total_quantity": 11,
+      "average_card_price": 3.5172727272727276,
+      "median_card_price": 0.13,
+      "total_set_value": 38.690000000000005,
+      "min_price": 0.03,
+      "max_price": 37.39,
+      "price_std": 10.711686134064552,
+      "set_name": "tscd"
+    },
+    "tsoi": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.36000000000000004,
+      "median_card_price": 0.11,
+      "total_set_value": 1.08,
+      "min_price": 0.07,
+      "max_price": 0.9,
+      "price_std": 0.38218669085496254,
+      "set_name": "tsoi"
+    },
+    "tsp": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.62,
+      "median_card_price": 0.62,
+      "total_set_value": 0.62,
+      "min_price": 0.62,
+      "max_price": 0.62,
+      "price_std": 0,
+      "set_name": "tsp"
+    },
+    "tsr": {
+      "card_count": 10,
+      "total_quantity": 10,
+      "average_card_price": 5.207,
+      "median_card_price": 0.35,
+      "total_set_value": 52.07,
+      "min_price": 0.14,
+      "max_price": 46.05,
+      "price_std": 13.652236483448416,
+      "set_name": "tsr"
+    },
+    "tvow": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 0.356,
+      "median_card_price": 0.49,
+      "total_set_value": 1.7799999999999998,
+      "min_price": 0.06,
+      "max_price": 0.58,
+      "price_std": 0.20597087172704784,
+      "set_name": "tvow"
+    },
+    "txln": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.53,
+      "median_card_price": 0.53,
+      "total_set_value": 0.53,
+      "min_price": 0.53,
+      "max_price": 0.53,
+      "price_std": 0,
+      "set_name": "txln"
+    },
+    "uma": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 2.0,
+      "median_card_price": 1.85,
+      "total_set_value": 6.0,
+      "min_price": 0.02,
+      "max_price": 4.13,
+      "price_std": 1.6812495353159207,
+      "set_name": "uma"
+    },
+    "usg": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.51,
+      "median_card_price": 0.42,
+      "total_set_value": 2.04,
+      "min_price": 0.29,
+      "max_price": 0.91,
+      "price_std": 0.23706539182259398,
+      "set_name": "usg"
+    },
+    "voc": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 3.685,
+      "median_card_price": 0.845,
+      "total_set_value": 22.11,
+      "min_price": 0.29,
+      "max_price": 18.23,
+      "price_std": 6.5128789077232705,
+      "set_name": "voc"
+    },
+    "vow": {
+      "card_count": 131,
+      "total_quantity": 131,
+      "average_card_price": 0.30145038167938926,
+      "median_card_price": 0.1,
+      "total_set_value": 39.48999999999998,
+      "min_price": 0.01,
+      "max_price": 11.64,
+      "price_std": 1.0674097363468003,
+      "set_name": "vow"
+    },
+    "war": {
+      "card_count": 9,
+      "total_quantity": 9,
+      "average_card_price": 0.6866666666666666,
+      "median_card_price": 0.27,
+      "total_set_value": 6.180000000000001,
+      "min_price": 0.04,
+      "max_price": 2.95,
+      "price_std": 0.8956437783950592,
+      "set_name": "war"
+    },
+    "who": {
+      "card_count": 6,
+      "total_quantity": 6,
+      "average_card_price": 9.248333333333333,
+      "median_card_price": 1.745,
+      "total_set_value": 55.49,
+      "min_price": 0.12,
+      "max_price": 46.99,
+      "price_std": 16.948785026924167,
+      "set_name": "who"
+    },
+    "woc": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 8.672500000000001,
+      "median_card_price": 1.5,
+      "total_set_value": 34.690000000000005,
+      "min_price": 0.18,
+      "max_price": 31.51,
+      "price_std": 13.212619677792894,
+      "set_name": "woc"
+    },
+    "woe": {
+      "card_count": 4,
+      "total_quantity": 4,
+      "average_card_price": 0.6149999999999999,
+      "median_card_price": 0.19,
+      "total_set_value": 2.4599999999999995,
+      "min_price": 0.03,
+      "max_price": 2.05,
+      "price_std": 0.831820293092204,
+      "set_name": "woe"
+    },
+    "wot": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 1.05,
+      "median_card_price": 0.51,
+      "total_set_value": 5.25,
+      "min_price": 0.07,
+      "max_price": 2.85,
+      "price_std": 1.0871062505569546,
+      "set_name": "wot"
+    },
+    "wwk": {
+      "card_count": 1,
+      "total_quantity": 1,
+      "average_card_price": 0.29,
+      "median_card_price": 0.29,
+      "total_set_value": 0.29,
+      "min_price": 0.29,
+      "max_price": 0.29,
+      "price_std": 0,
+      "set_name": "wwk"
+    },
+    "xln": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 1.2619999999999998,
+      "median_card_price": 0.27,
+      "total_set_value": 6.309999999999999,
+      "min_price": 0.06,
+      "max_price": 4.18,
+      "price_std": 1.5647670753182406,
+      "set_name": "xln"
+    },
+    "zen": {
+      "card_count": 5,
+      "total_quantity": 5,
+      "average_card_price": 10.106,
+      "median_card_price": 0.29,
+      "total_set_value": 50.53,
+      "min_price": 0.24,
+      "max_price": 27.87,
+      "price_std": 12.19963048620736,
+      "set_name": "zen"
+    },
+    "znc": {
+      "card_count": 3,
+      "total_quantity": 3,
+      "average_card_price": 0.4466666666666666,
+      "median_card_price": 0.47,
+      "total_set_value": 1.3399999999999999,
+      "min_price": 0.11,
+      "max_price": 0.76,
+      "price_std": 0.2658738213681236,
+      "set_name": "znc"
+    },
+    "znr": {
+      "card_count": 25,
+      "total_quantity": 25,
+      "average_card_price": 0.3772,
+      "median_card_price": 0.11,
+      "total_set_value": 9.429999999999998,
+      "min_price": 0.04,
+      "max_price": 2.11,
+      "price_std": 0.5824054944795765,
+      "set_name": "znr"
+    }
+  },
+  "rarity_level": {
+    "common": {
+      "card_count": 130,
+      "total_quantity": 130,
+      "average_price": 0.20500000000000002,
+      "median_price": 0.1,
+      "total_value": 26.64999999999997,
+      "min_price": 0.01,
+      "max_price": 2.43,
+      "price_std": 0.37961164365704064
+    },
+    "mythic": {
+      "card_count": 17,
+      "total_quantity": 17,
+      "average_price": 33.81117647058824,
+      "median_price": 1.8,
+      "total_value": 574.79,
+      "min_price": 0.19,
+      "max_price": 165.14,
+      "price_std": 52.50446948844428
+    },
+    "rare": {
+      "card_count": 72,
+      "total_quantity": 72,
+      "average_price": 5.268750000000001,
+      "median_price": 0.79,
+      "total_value": 379.34999999999997,
+      "min_price": 0.08,
+      "max_price": 105.42,
+      "price_std": 16.441066886973744
+    },
+    "uncommon": {
+      "card_count": 70,
+      "total_quantity": 70,
+      "average_price": 0.3171428571428571,
+      "median_price": 0.14500000000000002,
+      "total_value": 22.199999999999992,
+      "min_price": 0.02,
+      "max_price": 3.73,
+      "price_std": 0.5518906280288899
+    }
+  },
+  "condition_level": {
+    "Near Mint": {
+      "card_count": 1834,
+      "total_quantity": 1834,
+      "average_price": 2.611494002181025,
+      "median_price": 0.22,
+      "total_value": 4789.479999999993,
+      "min_price": 0.01,
+      "max_price": 300.07,
+      "price_std": 13.405544526400623
+    }
+  },
+  "foil_analysis": {
+    "foil": {
+      "card_count": 103,
+      "total_quantity": 103,
+      "average_price": 11.305339805825243,
+      "median_price": 0.5,
+      "total_value": 1164.4499999999998,
+      "min_price": 0.02,
+      "max_price": 300.07,
+      "price_std": 33.793056471133696
+    },
+    "non-foil": {
+      "card_count": 1731,
+      "total_quantity": 1731,
+      "average_price": 2.0941825534373195,
+      "median_price": 0.21,
+      "total_value": 3625.0299999999843,
+      "min_price": 0.01,
+      "max_price": 165.14,
+      "price_std": 10.848314985438472
+    },
+    "foil_premium": 5.398450000105791
+  },
+  "price_tiers": {
+    "bulk": {
+      "card_count": 1498,
+      "price_range": "$0-$1",
+      "average_price": 0.24309078771695597,
+      "median_price": 0.16,
+      "total_value": 364.15,
+      "min_price": 0.01,
+      "max_price": 0.99,
+      "price_std": 0.22414500011528826
+    },
+    "low": {
+      "card_count": 237,
+      "price_range": "$1-$5",
+      "average_price": 1.9547257383966243,
+      "median_price": 1.68,
+      "total_value": 463.27,
+      "min_price": 1.0,
+      "max_price": 4.92,
+      "price_std": 0.9196887823748545
+    },
+    "medium": {
+      "card_count": 50,
+      "price_range": "$5-$25",
+      "average_price": 14.607000000000001,
+      "median_price": 15.41,
+      "total_value": 730.35,
+      "min_price": 5.02,
+      "max_price": 24.85,
+      "price_std": 5.233556056831722
+    },
+    "high": {
+      "card_count": 41,
+      "price_range": "$25-$100",
+      "average_price": 48.63414634146341,
+      "median_price": 49.19,
+      "total_value": 1994.0,
+      "min_price": 25.51,
+      "max_price": 92.39,
+      "price_std": 17.730865602191408
+    },
+    "ultra_high": {
+      "card_count": 8,
+      "price_range": "$100-$\u221e",
+      "average_price": 154.71375,
+      "median_price": 136.655,
+      "total_value": 1237.71,
+      "min_price": 105.42,
+      "max_price": 300.07,
+      "price_std": 58.55425559630572
+    }
+  },
+  "collection_overview": {
+    "total_cards": 1834,
+    "total_quantity": 1834,
+    "total_value": 4789.479999999993,
+    "average_card_price": 2.611494002181025,
+    "median_card_price": 0.22,
+    "min_price": 0.01,
+    "max_price": 300.07,
+    "price_std": 13.405544526400623
+  }
+}

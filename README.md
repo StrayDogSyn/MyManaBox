@@ -1,15 +1,28 @@
 # MyManaBox - Magic: The Gathering Collection Manager
 
-A comprehensive Python tool for managing and organizing Magic: The Gathering card collections.
+A comprehensive Python tool for managing and organizing Magic: The Gathering card collections with advanced pricing analytics and modern GUI.
 
 ## Features
 
 - **Collection Management**: Import and manage MTG card collections from various sources
-- **Smart Sorting**: Sort cards by set, color, type, rarity, and more
+- **Advanced Pricing**: Market-accurate pricing with TCGPlayer-style logic and aggressive premium multipliers
+- **Smart Analytics**: Comprehensive average pricing analysis by rarity, set, condition, and price tiers
+- **Modern GUI**: Dark theme interface with enhanced statistics and filtering capabilities
 - **Search & Filter**: Advanced search capabilities across your collection
-- **Analytics**: Generate statistics and insights about your collection
+- **Foil Premium Tracking**: Automatic foil detection and premium calculation (5.40x multiplier)
+- **Price Coverage**: 100% USD and foil price coverage with purchase price optimization
 - **Multiple Formats**: Support for CSV imports from Moxfield and other platforms
 - **Cache System**: Efficient card data caching with Scryfall API integration
+- **Export Capabilities**: JSON export for detailed analysis and reporting
+
+## Key Analytics
+
+- **Collection Overview**: Total value ($4,789.48), averages, medians, and price ranges
+- **Rarity Analysis**: Pricing breakdown by mythic, rare, uncommon, and common cards
+- **Price Tiers**: Distribution from bulk ($0-1) to ultra-high value ($100+) cards
+- **Set Analysis**: Average pricing across 186+ Magic sets
+- **Duplicate Detection**: Identify 157+ cards with multiple copies for trading
+- **Market Insights**: Price distribution analysis and collection optimization tips
 
 ## Quick Start
 

@@ -501,6 +501,7 @@ class MyManaBoxGUI:
         tools_menu.add_command(label="Verify Collection", command=self.verify_collection)
         tools_menu.add_separator()
         tools_menu.add_command(label="Enhanced Price Update", command=self.enhanced_price_update)
+        tools_menu.add_command(label="Average Pricing Analysis", command=self.average_pricing_analysis)
         tools_menu.add_command(label="Analytics", command=self.show_analytics)
         
         # Help menu
@@ -1297,16 +1298,142 @@ Built with Python and tkinter."""
         except Exception as e:
             messagebox.showerror("Error", f"Price update failed: {e}")
             self.status_var.set("Price update failed")
-
-def main():
-    """Main entry point for the GUI application."""
-    try:
-        app = MyManaBoxGUI()
-        app.run()
-    except Exception as e:
-        print(f"Error starting GUI: {e}")
-        messagebox.showerror("Error", f"Failed to start MyManaBox GUI: {e}")
-
-
-if __name__ == "__main__":
-    main()
+    
+    def average_pricing_analysis(self):
+        """Run comprehensive average pricing analysis."""
+        if not self.current_collection:
+            messagebox.showwarning("Warning", "No collection loaded")
+            return
+        
+        result = messagebox.askyesno("Average Pricing Analysis",
+                                   "This will analyze your collection's pricing patterns.\n\n"
+                                   "The analysis will provide:\n"
+                                   "• Card-level averages for duplicates\n"
+                                   "• Set-level pricing statistics\n"
+                                   "• Rarity-based averages\n"
+                                   "• Foil vs non-foil comparison\n"
+                                   "• Price tier analysis\n\n"
+                                   "Continue?")
+        if not result:
+            return
+        
+        try:
+            self.status_var.set("Running average pricing analysis...")
+            self.root.update()
+            
+            # Import the average pricing service
+            import sys
+            from pathlib import Path
+            sys.path.append(str(Path(__file__).parent / "scripts"))
+            from average_pricing import AveragePricingService
+            
+            # Run the analysis
+            pricing_service = AveragePricingService()
+            results = pricing_service.calculate_comprehensive_averages()
+            
+            if results:
+                # Create results window
+                self.show_average_pricing_results(results)
+                
+                # Save results
+                pricing_service.save_results(results)
+                
+                messagebox.showinfo("Analysis Complete", 
+                                  "Average pricing analysis completed!\n\n"
+                                  "Results have been displayed and saved to JSON file.\n"
+                                  "Check the data directory for detailed analysis.")
+            else:
+                messagebox.showerror("Error", "Failed to complete analysis")
+            
+            self.status_var.set("Average pricing analysis complete")
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Average pricing analysis failed: {e}")
+            self.status_var.set("Analysis failed")
+    
+    def show_average_pricing_results(self, results: dict):
+        """Display average pricing results in a new window."""
+        # Create results window
+        results_window = tk.Toplevel(self.root)
+        results_window.title("Average Pricing Analysis Results")
+        results_window.geometry("800x600")
+        results_window.configure(bg='#2b2b2b')
+        
+        # Create text widget with scrollbar
+        frame = ttk.Frame(results_window)
+        frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        
+        text_widget = tk.Text(frame, bg='#3c3c3c', fg='#ffffff', 
+                             font=('Consolas', 10), wrap=tk.WORD)
+        scrollbar = ttk.Scrollbar(frame, orient=tk.VERTICAL, command=text_widget.yview)
+        text_widget.configure(yscrollcommand=scrollbar.set)
+        
+        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Format and display results
+        output = []
+        output.append("🧮 AVERAGE PRICING ANALYSIS RESULTS")
+        output.append("=" * 60)
+        
+        # Collection overview
+        overview = results.get('collection_overview', {})
+        if overview:
+            output.append(f"\n📊 Collection Overview:")
+            output.append(f"   Total Cards: {overview.get('total_cards', 0):,}")
+            output.append(f"   Total Quantity: {overview.get('total_quantity', 0):,}")
+            output.append(f"   Total Value: ${overview.get('total_value', 0):,.2f}")
+            output.append(f"   Average Price: ${overview.get('average_card_price', 0):.2f}")
+            output.append(f"   Median Price: ${overview.get('median_card_price', 0):.2f}")
+            output.append(f"   Price Range: ${overview.get('min_price', 0):.2f} - ${overview.get('max_price', 0):.2f}")
+        
+        # Rarity averages
+        rarity_stats = results.get('rarity_level', {})
+        if rarity_stats:
+            output.append(f"\n💎 Average by Rarity:")
+            for rarity, stats in sorted(rarity_stats.items(), 
+                                      key=lambda x: x[1]['average_price'], reverse=True):
+                output.append(f"   {rarity:<12}: ${stats['average_price']:>7.2f} "
+                              f"(median: ${stats['median_price']:>6.2f}, "
+                              f"cards: {stats['card_count']:>4})")
+        
+        # Price tier averages
+        tier_stats = results.get('price_tiers', {})
+        if tier_stats:
+            output.append(f"\n💰 Average by Price Tier:")
+            tier_order = ['bulk', 'low', 'medium', 'high', 'ultra_high']
+            for tier in tier_order:
+                if tier in tier_stats:
+                    stats = tier_stats[tier]
+                    output.append(f"   {tier:<12}: ${stats['average_price']:>7.2f} "
+                                  f"(range: {stats['price_range']}, "
+                                  f"cards: {stats['card_count']:>4})")
+        
+        # Foil analysis
+        foil_stats = results.get('foil_analysis', {})
+        if foil_stats:
+            output.append(f"\n✨ Foil Analysis:")
+            if 'non-foil' in foil_stats:
+                stats = foil_stats['non-foil']
+                output.append(f"   Non-foil avg: ${stats['average_price']:>7.2f} "
+                              f"(cards: {stats['card_count']:>4})")
+            if 'foil' in foil_stats:
+                stats = foil_stats['foil']
+                output.append(f"   Foil avg:     ${stats['average_price']:>7.2f} "
+                              f"(cards: {stats['card_count']:>4})")
+            if 'foil_premium' in foil_stats:
+                output.append(f"   Foil premium: {foil_stats['foil_premium']:>7.2f}x")
+        
+        # Top sets by average price
+        set_stats = results.get('set_level', {})
+        if set_stats:
+            output.append(f"\n📦 Top 15 Sets by Average Price:")
+            top_sets = sorted(set_stats.items(), 
+                            key=lambda x: x[1]['average_card_price'], reverse=True)[:15]
+            for set_code, stats in top_sets:
+                set_name = stats.get('set_name', set_code)
+                output.append(f"   {set_code:<6}: ${stats['average_card_price']:>7.2f} "
+                              f"({set_name[:25]:<25}, cards: {stats['card_count']:>3})")
+        
+        # Cards with multiple copies
+        card_stats = results.get('card_level', {})
