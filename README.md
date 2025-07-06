@@ -2,7 +2,7 @@
 
 A comprehensive Python tool for managing and organizing Magic: The Gathering card collections with advanced pricing analytics and modern GUI.
 
-![MyManaBox GUI](image/README/mymanabox_gui_screenshot.png)
+![MyManaBox GUI](image/README/MainGUI.png)
 *Modern GUI interface showing collection overview, card table with pricing data, and detailed card information panels*
 
 ## Features
