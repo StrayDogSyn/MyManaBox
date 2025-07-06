@@ -75,16 +75,29 @@ MyManaBox/
 │   ├── services/          # Business logic (sorting, search, analytics)
 │   ├── presentation/      # User interface (CLI, formatters)
 │   └── utils/             # Utilities and constants
-├── data/                  # Data files
+├── data/                  # Collection data files
 ├── docs/                  # Documentation
-├── scripts/               # Development and utility scripts
+├── scripts/               # Essential utility scripts
 ├── legacy/                # Legacy scripts (for reference)
 ├── tests/                 # Test files
 ├── sorted_output/         # Generated sorted collections
 ├── backups/               # Automatic backups
-├── dev.py                 # Development utility script
-└── main.py                # Main entry point
+├── gui.py                 # Modern GUI application
+├── main.py                # Command-line interface
+└── run_gui.py             # GUI launcher
 ```
+
+## Essential Scripts
+
+The `scripts/` directory contains the following essential tools:
+
+- **`average_pricing.py`** - Comprehensive pricing analysis and statistics
+- **`enrich_collection.py`** - Enrich collection with Scryfall API data
+- **`price_analysis.py`** - Analyze pricing gaps and coverage
+- **`comprehensive_price_update.py`** - Complete price update system
+- **`advanced_price_enhancement.py`** - Advanced TCGPlayer-style pricing
+
+Most scripts are integrated into the GUI for easy access.
 
 ## Documentation
 

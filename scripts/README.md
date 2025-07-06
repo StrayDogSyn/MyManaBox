@@ -1,22 +1,78 @@
-# Scripts Directory
+# MyManaBox Scripts
 
-This directory contains utility and development scripts for MyManaBox.
+This directory contains essential scripts for MyManaBox collection management.
 
-## Scripts
+## Core Scripts
 
-- `demonstrate_coverage.py` - Demonstrates the comprehensive Scryfall API field coverage
-- `enrich_collection.py` - Enriches collection data with all available Scryfall API fields
-- `field_verification.py` - Verifies that all expected fields are present in CSV exports
-- `show_fields.py` - Shows what fields are available for export
+### `average_pricing.py`
 
-## Usage
+Comprehensive average pricing analysis service that provides:
 
-Run these scripts from the project root directory:
+- Card-level averages for duplicate cards
+- Set-level pricing statistics  
+- Rarity-based price analysis
+- Foil vs non-foil comparison
+- Price tier distribution analysis
+- JSON export for detailed reporting
 
-```bash
-python scripts/script_name.py
-```
+**Usage**: Called automatically from GUI "Average Pricing Analysis" menu option
 
-## Note
+### `enrich_collection.py`
 
-These are primarily development and demonstration utilities. For normal collection management, use `main.py` or `dev.py`.
+Enriches collection data with Scryfall API information:
+
+- Fetches missing card details
+- Updates pricing information
+- Adds comprehensive card metadata
+- Handles rate limiting and API errors
+
+**Usage**: `python scripts/enrich_collection.py [csv_file]`
+
+### `price_analysis.py`
+
+Analyzes pricing gaps and coverage in the collection:
+
+- Identifies cards with missing prices
+- Reports pricing coverage statistics
+- Suggests improvements for data quality
+
+**Usage**: `python scripts/price_analysis.py`
+
+### `comprehensive_price_update.py`
+
+Complete price update system with advanced features:
+
+- Updates missing USD and foil prices
+- Applies premium multipliers for accurate market pricing
+- Handles purchase price optimization
+- Creates backups and detailed reports
+
+**Usage**: Called from GUI "Enhanced Price Update" menu option
+
+### `advanced_price_enhancement.py`
+
+Advanced pricing logic with TCGPlayer-style multipliers:
+
+- Aggressive premium pricing for competitive accuracy
+- Special handling for foils, rarities, and high-value cards
+- Market-accurate pricing adjustments
+- Value optimization for collection accuracy
+
+**Usage**: `python scripts/advanced_price_enhancement.py`
+
+## Usage Notes
+
+- Most scripts are integrated into the GUI for easy access
+- All scripts create backups before making changes
+- Run scripts from the MyManaBox root directory
+- Check `data/` directory for output files and backups
+
+## Requirements
+
+All scripts require the main MyManaBox dependencies:
+
+- pandas
+- requests
+- python-dateutil
+
+See `requirements.txt` in the root directory for complete dependencies.
