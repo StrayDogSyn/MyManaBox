@@ -187,8 +187,20 @@ class CardDetailPanel:
     """Panel showing detailed information about selected card."""
     
     def __init__(self, parent, main_gui=None):
-        self.frame = ttk.LabelFrame(parent, text="Card Details", padding=15)
+        # Create a custom frame with purple theme
+        self.frame = tk.Frame(parent, bg='#1a1625', relief='flat', bd=1)
         self.frame.pack(fill=tk.BOTH, expand=True, padx=(5, 10), pady=(0, 5))
+        
+        # Title label
+        title_label = tk.Label(self.frame, text="Card Details", 
+                              font=('TkDefaultFont', 10, 'bold'),
+                              bg='#1a1625', fg='white')
+        title_label.pack(anchor='w', padx=15, pady=(15, 10))
+        
+        # Create detail content frame
+        detail_content = tk.Frame(self.frame, bg='#1a1625')
+        detail_content.pack(fill=tk.BOTH, expand=True, padx=15, pady=(0, 15))
+        
         self.main_gui = main_gui
         
         # Create detail labels
@@ -202,7 +214,8 @@ class CardDetailPanel:
         
         row = 0
         for label, key in detail_fields:
-            ttk.Label(self.frame, text=f"{label}:", font=('TkDefaultFont', 9, 'bold')).grid(
+            tk.Label(detail_content, text=f"{label}:", font=('TkDefaultFont', 9, 'bold'),
+                    bg='#1a1625', fg='#b8b0d0').grid(
                 row=row, column=0, sticky='w', padx=(0, 10), pady=2
             )
             
@@ -210,19 +223,22 @@ class CardDetailPanel:
             self.detail_vars[key] = var
             
             if key == "oracle_text":
-                # Multi-line text for oracle text
-                text_widget = tk.Text(self.frame, height=4, width=50, wrap=tk.WORD, 
-                                    font=('TkDefaultFont', 9))
+                # Multi-line text for oracle text with purple theme
+                text_widget = tk.Text(detail_content, height=4, width=40, wrap=tk.WORD, 
+                                    font=('TkDefaultFont', 9),
+                                    bg='#2a2235', fg='white', insertbackground='white',
+                                    relief='flat', bd=1)
                 text_widget.grid(row=row, column=1, sticky='ew', pady=2)
                 self.oracle_text_widget = text_widget
             else:
-                ttk.Label(self.frame, textvariable=var, font=('TkDefaultFont', 9)).grid(
+                tk.Label(detail_content, textvariable=var, font=('TkDefaultFont', 9),
+                        bg='#1a1625', fg='white').grid(
                     row=row, column=1, sticky='w', pady=2
                 )
             
             row += 1
         
-        self.frame.grid_columnconfigure(1, weight=1)
+        detail_content.grid_columnconfigure(1, weight=1)
     
     def update_details(self, card_values):
         """Update the detail panel with selected card information."""
@@ -501,37 +517,52 @@ class MyManaBoxGUI:
     
     def create_filter_panel(self, parent):
         """Create filter options panel."""
-        filter_frame = ttk.LabelFrame(parent, text="Filters", padding=15)
+        # Create a custom frame with purple theme
+        filter_frame = tk.Frame(parent, bg='#1a1625', relief='flat', bd=1)
         filter_frame.pack(fill=tk.X, padx=(5, 10), pady=5)
         
+        # Title label
+        title_label = tk.Label(filter_frame, text="Filters", 
+                              font=('TkDefaultFont', 10, 'bold'),
+                              bg='#1a1625', fg='white')
+        title_label.pack(anchor='w', padx=15, pady=(15, 10))
+        
+        # Create filter content frame
+        filter_content = tk.Frame(filter_frame, bg='#1a1625')
+        filter_content.pack(fill=tk.X, padx=15, pady=(0, 15))
+        
         # Rarity filter
-        ttk.Label(filter_frame, text="Rarity:", font=('TkDefaultFont', 9)).grid(row=0, column=0, sticky='w', pady=3)
+        tk.Label(filter_content, text="Rarity:", font=('TkDefaultFont', 9, 'bold'),
+                bg='#1a1625', fg='#b8b0d0').grid(row=0, column=0, sticky='w', pady=3)
         self.rarity_var = tk.StringVar()
-        rarity_combo = ttk.Combobox(filter_frame, textvariable=self.rarity_var, 
+        rarity_combo = ttk.Combobox(filter_content, textvariable=self.rarity_var, 
                                   values=["All", "Common", "Uncommon", "Rare", "Mythic"],
                                   font=('TkDefaultFont', 9))
         rarity_combo.grid(row=0, column=1, sticky='ew', pady=3)
         rarity_combo.set("All")
         
         # Set filter
-        ttk.Label(filter_frame, text="Set:", font=('TkDefaultFont', 9)).grid(row=1, column=0, sticky='w', pady=3)
+        tk.Label(filter_content, text="Set:", font=('TkDefaultFont', 9, 'bold'),
+                bg='#1a1625', fg='#b8b0d0').grid(row=1, column=0, sticky='w', pady=3)
         self.set_var = tk.StringVar()
-        self.set_combo = ttk.Combobox(filter_frame, textvariable=self.set_var, font=('TkDefaultFont', 9))
+        self.set_combo = ttk.Combobox(filter_content, textvariable=self.set_var, font=('TkDefaultFont', 9))
         self.set_combo.grid(row=1, column=1, sticky='ew', pady=3)
         self.set_combo.set("All")
         
         # Foil filter
         self.foil_var = tk.BooleanVar()
-        ttk.Checkbutton(filter_frame, text="Foils Only", variable=self.foil_var).grid(
-            row=2, column=0, columnspan=2, sticky='w', pady=5
-        )
+        foil_check = tk.Checkbutton(filter_content, text="Foils Only", variable=self.foil_var,
+                                   bg='#1a1625', fg='white', selectcolor='#2a2235',
+                                   activebackground='#1a1625', activeforeground='white')
+        foil_check.grid(row=2, column=0, columnspan=2, sticky='w', pady=5)
         
         # Apply filters button
-        ttk.Button(filter_frame, text="Apply Filters", command=self.apply_filters).grid(
-            row=3, column=0, columnspan=2, pady=10
-        )
+        apply_btn = tk.Button(filter_content, text="Apply Filters", command=self.apply_filters,
+                             bg='#5a4fcf', fg='white', bd=0, padx=20, pady=8,
+                             font=('TkDefaultFont', 9), activebackground='#6a5fdf')
+        apply_btn.grid(row=3, column=0, columnspan=2, pady=10)
         
-        filter_frame.grid_columnconfigure(1, weight=1)
+        filter_content.grid_columnconfigure(1, weight=1)
     
     def create_status_bar(self):
         """Create status bar."""
