@@ -1,12 +1,13 @@
 # MyManaBox - Magic: The Gathering Collection Manager
 
-A comprehensive Python tool for managing and organizing Magic: The Gathering card collections with advanced pricing analytics and modern GUI.
+A comprehensive Python tool for managing and organizing Magic: The Gathering card collections with advanced pricing analytics, automation, and modern GUI.
 
 ![MyManaBox GUI](image/README/MainGUI.png)
 *Modern GUI interface showing collection overview, card table with pricing data, and detailed card information panels*
 
-## Features
+## ✨ Features
 
+### Core Features
 - **Collection Management**: Import and manage MTG card collections from various sources
 - **Advanced Pricing**: Market-accurate pricing with TCGPlayer-style logic and aggressive premium multipliers
 - **Smart Analytics**: Comprehensive average pricing analysis by rarity, set, condition, and price tiers
@@ -14,9 +15,14 @@ A comprehensive Python tool for managing and organizing Magic: The Gathering car
 - **Search & Filter**: Advanced search capabilities across your collection
 - **Foil Premium Tracking**: Automatic foil detection and premium calculation (5.40x multiplier)
 - **Price Coverage**: 100% USD and foil price coverage with purchase price optimization
-- **Multiple Formats**: Support for CSV imports from Moxfield and other platforms
 - **Cache System**: Efficient card data caching with Scryfall API integration
-- **Export Capabilities**: JSON export for detailed analysis and reporting
+
+### 🚀 Enhanced Features (New!)
+- **Automated Enrichment**: Schedule daily price updates via Windows Task Scheduler
+- **Mobile ManaBox Import**: Smart format detection and merging from mobile app exports
+- **Multi-Platform Export**: Export to Moxfield, Archidekt, TappedOut, MTG Goldfish, Deckbox
+- **Automation Setup**: One-command Task Scheduler integration
+- **Setup Verification**: Health checks for dependencies and configuration
 
 ## Key Analytics
 
@@ -55,18 +61,46 @@ pip install -r requirements.txt
 ### Basic Usage
 
 ```bash
-# Sort your collection by set
-python main.py --sort set --input data/moxfield_export.csv
+# View collection summary
+python main.py --summary
 
 # Search for specific cards
 python main.py --search "Lightning Bolt"
 
+# Sort collection by color
+python main.py --sort color
+
 # Generate collection analytics
 python main.py --analytics
-
-# Get help
-python main.py --help
 ```
+
+### 🚀 Enhanced Usage (New!)
+
+```bash
+# Verify setup
+python scripts/verify_setup.py
+
+# Auto-enrich with current prices
+python scripts/auto_enrich.py --backup
+
+# Import from mobile ManaBox
+python scripts/import_mobile.py ~/Downloads/manabox_export.csv --merge
+
+# Export to Moxfield
+python scripts/export_collection.py --format moxfield
+
+# Setup automation
+python scripts/setup_automation.py
+```
+
+## 📚 Documentation
+
+- **[GET_STARTED_NOW.md](GET_STARTED_NOW.md)** ⭐ Start here!
+- **[docs/ENHANCED_FEATURES.md](docs/ENHANCED_FEATURES.md)** - Detailed feature guide
+- **[docs/QUICK_START.md](docs/QUICK_START.md)** - Complete command reference
+- **[docs/USAGE.md](docs/USAGE.md)** - Detailed usage instructions
+- **[docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)** - Code organization
+- **[REPOSITORY_STRUCTURE.md](REPOSITORY_STRUCTURE.md)** - Folder organization
 
 ## Project Structure
 
@@ -80,17 +114,42 @@ MyManaBox/
 │   └── utils/             # Utilities and constants
 ├── data/                  # Collection data files
 ├── docs/                  # Documentation
-├── scripts/               # Essential utility scripts
+├── scripts/               # 🆕 Automation & enhancement scripts
+│   ├── auto_enrich.py    # 🆕 Automated price updates
+│   ├── import_mobile.py  # 🆕 Mobile ManaBox import
+│   ├── export_collection.py # 🆕 Multi-platform export
+│   ├── setup_automation.py # 🆕 Task Scheduler setup
+│   └── verify_setup.py   # 🆕 Setup verification
 ├── legacy/                # Legacy scripts (for reference)
 ├── tests/                 # Test files
-├── sorted_output/         # Generated sorted collections
-├── backups/               # Automatic backups
 ├── gui.py                 # Modern GUI application
 ├── main.py                # Command-line interface
 └── run_gui.py             # GUI launcher
 ```
 
-## Essential Scripts
+## 🔄 Complete Workflows
+
+### Daily Automation
+```bash
+# Setup once
+python scripts/setup_automation.py
+# Collection auto-updates daily! ✨
+```
+
+### Mobile Scanning
+```bash
+# 1. Scan in mobile ManaBox
+# 2. Export & transfer CSV
+# 3. Import and enrich
+python scripts/import_mobile.py manabox_export.csv --merge
+python scripts/auto_enrich.py --backup
+```
+
+### Multi-Platform Export
+```bash
+# Export to all platforms at once
+python scripts/export_collection.py --all
+```
 
 The `scripts/` directory contains the following essential tools:
 
