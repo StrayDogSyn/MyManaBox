@@ -1,0 +1,16 @@
+# MTG Collection Manager - API Keys Configuration
+# Copy this file to api_keys.env and fill in your credentials
+
+# TCGPlayer API (optional - for real-time market prices)
+# Get keys from: https://developer.tcgplayer.com/
+TCGPLAYER_PUBLIC_KEY=your_public_key_here
+TCGPLAYER_PRIVATE_KEY=your_private_key_here
+
+# Scryfall API
+# No key required! Scryfall is completely free.
+# This placeholder is just for documentation.
+SCRYFALL_API_KEY=not_required
+
+# Future integrations (not yet implemented)
+# MOXFIELD_API_KEY=coming_soon
+# DECKBOX_API_KEY=coming_soon

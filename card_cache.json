@@ -249036,5 +249036,137 @@
       "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=566448&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
       "cardhoarder": "https://www.cardhoarder.com/cards/91027?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
     }
+  },
+  "syr konrad, the grim|m3c": {
+    "object": "card",
+    "id": "b945f8c2-acfc-4622-8e96-993921d58995",
+    "oracle_id": "14c3ff84-1e82-4606-a433-869fc52cc382",
+    "multiverse_ids": [
+      665621
+    ],
+    "mtgo_id": 126955,
+    "tcgplayer_id": 553531,
+    "cardmarket_id": 773191,
+    "name": "Syr Konrad, the Grim",
+    "lang": "en",
+    "released_at": "2024-06-14",
+    "uri": "https://api.scryfall.com/cards/b945f8c2-acfc-4622-8e96-993921d58995",
+    "scryfall_uri": "https://scryfall.com/card/m3c/207/syr-konrad-the-grim?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.jpg?1717190426",
+      "normal": "https://cards.scryfall.io/normal/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.jpg?1717190426",
+      "large": "https://cards.scryfall.io/large/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.jpg?1717190426",
+      "png": "https://cards.scryfall.io/png/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.png?1717190426",
+      "art_crop": "https://cards.scryfall.io/art_crop/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.jpg?1717190426",
+      "border_crop": "https://cards.scryfall.io/border_crop/front/b/9/b945f8c2-acfc-4622-8e96-993921d58995.jpg?1717190426"
+    },
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type_line": "Legendary Creature \u2014 Human Knight",
+    "oracle_text": "Whenever another creature dies, or a creature card is put into a graveyard from anywhere other than the battlefield, or a creature card leaves your graveyard, Syr Konrad deals 1 damage to each opponent.\n{1}{B}: Each player mills a card. (They each put the top card of their library into their graveyard.)",
+    "power": "5",
+    "toughness": "4",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "keywords": [
+      "Mill"
+    ],
+    "legalities": {
+      "standard": "not_legal",
+      "future": "not_legal",
+      "historic": "legal",
+      "timeless": "legal",
+      "gladiator": "legal",
+      "pioneer": "legal",
+      "modern": "legal",
+      "legacy": "legal",
+      "pauper": "not_legal",
+      "vintage": "legal",
+      "penny": "not_legal",
+      "commander": "legal",
+      "oathbreaker": "legal",
+      "standardbrawl": "not_legal",
+      "brawl": "legal",
+      "alchemy": "not_legal",
+      "paupercommander": "not_legal",
+      "duel": "legal",
+      "oldschool": "not_legal",
+      "premodern": "not_legal",
+      "predh": "not_legal"
+    },
+    "games": [
+      "paper",
+      "mtgo"
+    ],
+    "reserved": false,
+    "game_changer": false,
+    "foil": true,
+    "nonfoil": true,
+    "finishes": [
+      "nonfoil",
+      "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "f5e00721-cf99-43ba-bf16-b22d56d12c73",
+    "set": "m3c",
+    "set_name": "Modern Horizons 3 Commander",
+    "set_type": "commander",
+    "set_uri": "https://api.scryfall.com/sets/f5e00721-cf99-43ba-bf16-b22d56d12c73",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Am3c&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/m3c?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/b945f8c2-acfc-4622-8e96-993921d58995/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A14c3ff84-1e82-4606-a433-869fc52cc382&unique=prints",
+    "collector_number": "207",
+    "digital": false,
+    "rarity": "uncommon",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Anna Steinbauer",
+    "artist_ids": [
+      "3516496c-c279-4b56-8239-720683d03ae0"
+    ],
+    "illustration_id": "a2f5bc34-b09d-4d18-ab26-4a6cceda6248",
+    "border_color": "black",
+    "frame": "2015",
+    "frame_effects": [
+      "legendary"
+    ],
+    "full_art": false,
+    "textless": false,
+    "booster": false,
+    "story_spotlight": false,
+    "promo_types": [
+      "ripplefoil"
+    ],
+    "edhrec_rank": 237,
+    "penny_rank": 3682,
+    "prices": {
+      "usd": "0.44",
+      "usd_foil": null,
+      "usd_etched": null,
+      "eur": "0.44",
+      "eur_foil": "1.00",
+      "tix": "0.04"
+    },
+    "related_uris": {
+      "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=665621&printed=false",
+      "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSyr%2BKonrad%252C%2Bthe%2BGrim",
+      "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Fdecks&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Fdecks%3FproductLineName%3Dmagic%26q%3DSyr%2BKonrad%252C%2Bthe%2BGrim",
+      "edhrec": "https://edhrec.com/route/?cc=Syr+Konrad%2C+the+Grim"
+    },
+    "purchase_uris": {
+      "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F553531%3Fpage%3D1",
+      "cardmarket": "https://www.cardmarket.com/en/Magic/Products?idProduct=773191&referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+      "cardhoarder": "https://www.cardhoarder.com/cards/126955?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
   }
 }

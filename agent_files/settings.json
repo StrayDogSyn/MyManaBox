@@ -1,0 +1,58 @@
+{
+  "application": {
+    "name": "MTG Collection Manager",
+    "version": "1.0.0",
+    "author": "Hunter McGuire"
+  },
+  
+  "database": {
+    "default_path": "data/collections/main.db",
+    "backup_enabled": true,
+    "backup_frequency_days": 7
+  },
+  
+  "scryfall": {
+    "cache_enabled": true,
+    "cache_duration_hours": 24,
+    "rate_limit_per_second": 10,
+    "bulk_data_type": "oracle_cards"
+  },
+  
+  "tcgplayer": {
+    "enabled": false,
+    "cache_duration_hours": 4,
+    "rate_limit_per_5min": 300
+  },
+  
+  "cardkingdom": {
+    "enabled": false,
+    "scraping_delay_seconds": 2,
+    "respect_robots_txt": true
+  },
+  
+  "pricing": {
+    "default_source": "scryfall",
+    "update_frequency_hours": 168,
+    "sources_priority": ["scryfall", "tcgplayer", "cardkingdom"]
+  },
+  
+  "collection": {
+    "default_condition": "NM",
+    "default_language": "English",
+    "track_purchase_prices": true,
+    "track_purchase_dates": true
+  },
+  
+  "exports": {
+    "default_format": "standard",
+    "moxfield_compatible": true,
+    "include_pricing": true,
+    "include_images": false
+  },
+  
+  "ui": {
+    "show_progress_bars": true,
+    "verbose_logging": false,
+    "color_output": true
+  }
+}

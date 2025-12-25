@@ -265,7 +265,9 @@ class Card:
             if s is None:
                 return ""
             if isinstance(s, set):
-                return "|".join(str(item.value) if hasattr(item, 'value') else str(item) for item in sorted(s))
+                # Sort by string representation to avoid enum comparison issues
+                sorted_items = sorted(s, key=lambda x: str(x.value) if hasattr(x, 'value') else str(x))
+                return "|".join(str(item.value) if hasattr(item, 'value') else str(item) for item in sorted_items)
             elif isinstance(s, list):
                 return "|".join(str(item) for item in s)
             return str(s)
