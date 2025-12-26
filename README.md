@@ -110,19 +110,19 @@
 <table>
 <tr>
 <td align="center">
-<img src="assets/screenshots/qt_main_window.png" alt="CardForge Main Window" width="600" />
+<img src="assets/screenshots/splash.png" alt="CardForge Main Window" width="600" />
 <br><em>Main Window - Collection browser with analytics dashboard</em>
 </td>
 </tr>
 <tr>
 <td align="center">
-<img src="assets/screenshots/qt_collection_table.png" alt="Collection Table" width="600" />
+<img src="assets/screenshots/stable.png" alt="Collection Table" width="600" />
 <br><em>Collection Table - Sortable columns, alternating rows, real-time search</em>
 </td>
 </tr>
 <tr>
 <td align="center">
-<img src="assets/screenshots/qt_card_details.png" alt="Card Details Panel" width="600" />
+<img src="assets/screenshots/success.png" alt="Card Details Panel" width="600" />
 <br><em>Card Details - Full card info, pricing, and collection metadata</em>
 </td>
 </tr>
