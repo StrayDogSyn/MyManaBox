@@ -3,9 +3,10 @@
         "*.sqlite.sql": "sql"
     },
     "mssql.ignoredFiles": [
-        "**/cardforge/**/*.sql",
+        "**/*.sql",
         "**/*.sqlite.sql"
     ],
+    "mssql.intelliSense.enableIntellisense": false,
     "[sql]": {
         "editor.defaultFormatter": null
     },
