@@ -6,8 +6,9 @@ Main application window and controller
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import sys
+import csv
 from pathlib import Path
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
 from .async_bridge import AsyncBridge
 from .theme import Theme, Icons
@@ -15,6 +16,7 @@ from .widgets import StyledFrame, StyledButton, SearchBar, LoadingOverlay, Toast
 from .panels import StatsPanel, CollectionBrowserPanel, CardDetailPanel
 
 from cardforge.services import CollectionService, CardService
+from cardforge.repositories import CardRepository
 from cardforge.models import CollectionStats, CollectionCard
 
 
@@ -267,15 +269,161 @@ class CardForgeGUI(tk.Tk):
     # =========================================================================
 
     def _import_csv(self):
-        """Import CSV file"""
+        """Import CSV file from Moxfield/ManaBox export."""
         filename = filedialog.askopenfilename(
             title="Import Collection CSV",
             filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
         )
 
-        if filename:
-            # TODO: Implement CSV import via service
-            messagebox.showinfo("Import", f"CSV import not yet implemented.\nFile: {filename}")
+        if not filename:
+            return
+
+        # Read the CSV file first to get row count
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                rows = list(reader)
+        except Exception as e:
+            messagebox.showerror("Import Error", f"Failed to read CSV file:\n{e}")
+            return
+
+        if not rows:
+            messagebox.showwarning("Import", "CSV file is empty or has no valid rows.")
+            return
+
+        # Confirm import
+        result = messagebox.askyesno(
+            "Confirm Import",
+            f"Found {len(rows)} card entries.\n\n"
+            f"This will import cards into your collection.\n"
+            f"Cards not found locally will be fetched from Scryfall.\n\n"
+            f"Continue?"
+        )
+
+        if not result:
+            return
+
+        # Show loading overlay
+        loading = LoadingOverlay(self, f"Importing {len(rows)} cards...")
+
+        # Run the import in background
+        async def do_import():
+            from cardforge.database import init_database
+            await init_database()
+
+            card_repo = CardRepository()
+            imported = 0
+            skipped = 0
+            fetched = 0
+            errors = []
+
+            for row in rows:
+                # Parse CSV row (handle multiple formats: Moxfield, ManaBox, etc.)
+                name = (row.get('Name') or row.get('name') or row.get('Card Name') or
+                        row.get('card_name') or row.get('Card') or '')
+                quantity = int(row.get('Count') or row.get('Quantity') or row.get('quantity') or
+                              row.get('Qty') or 1)
+                set_code = (row.get('Edition') or row.get('Set Code') or row.get('set_code') or
+                           row.get('Set') or row.get('set') or '').lower()
+                foil_raw = row.get('Foil') or row.get('foil') or row.get('Finish') or ''
+                condition = row.get('Condition') or row.get('condition') or 'NM'
+
+                # Normalize condition
+                condition = condition.replace('Near Mint', 'NM').replace('Lightly Played', 'LP')
+                condition = condition.replace('Moderately Played', 'MP').replace('Heavily Played', 'HP')
+                if condition not in ['NM', 'LP', 'MP', 'HP', 'DMG']:
+                    condition = 'NM'
+
+                if not name:
+                    skipped += 1
+                    continue
+
+                foil = 'foil' if foil_raw.lower() in ['foil', 'yes', 'true', 'f', 'etched'] else 'normal'
+
+                # Check if card exists in DB
+                card = await card_repo.get_by_name(name, set_code if set_code else None)
+
+                if not card:
+                    # Fetch from Scryfall
+                    try:
+                        card = await self.card_service.fetch_from_scryfall(name, set_code if set_code else None)
+                        if card:
+                            fetched += 1
+                        else:
+                            # Try fuzzy match without set
+                            card = await self.card_service.fetch_from_scryfall(name, None)
+                            if card:
+                                fetched += 1
+                    except Exception as e:
+                        errors.append(f"{name}: {str(e)[:50]}")
+                        skipped += 1
+                        continue
+
+                    if not card:
+                        errors.append(f"{name}: Not found")
+                        skipped += 1
+                        continue
+
+                # Add to collection
+                try:
+                    result = await self.collection_service.add_card(
+                        card_name=card.name,
+                        quantity=quantity,
+                        foil=foil,
+                        condition=condition,
+                        set_code=card.set_code,
+                    )
+
+                    if result:
+                        imported += 1
+                    else:
+                        skipped += 1
+                except Exception as e:
+                    errors.append(f"{name}: {str(e)[:50]}")
+                    skipped += 1
+
+            return {
+                'imported': imported,
+                'skipped': skipped,
+                'fetched': fetched,
+                'errors': errors
+            }
+
+        def on_import_success(result: Dict[str, Any]):
+            loading.close()
+
+            imported = result['imported']
+            skipped = result['skipped']
+            fetched = result['fetched']
+            errors = result['errors']
+
+            # Show summary
+            error_msg = ""
+            if errors:
+                error_msg = "\n\nSome cards had issues:\n• " + "\n• ".join(errors[:5])
+                if len(errors) > 5:
+                    error_msg += f"\n...and {len(errors) - 5} more"
+
+            messagebox.showinfo(
+                "Import Complete",
+                f"✅ Imported: {imported} cards\n"
+                f"📥 Fetched from Scryfall: {fetched} new cards\n"
+                f"⏭ Skipped: {skipped} cards{error_msg}"
+            )
+
+            # Refresh collection display
+            self._load_collection()
+            ToastNotification.show(self, f"Imported {imported} cards!", type='success')
+
+        def on_import_error(error: Exception):
+            loading.close()
+            messagebox.showerror("Import Error", f"Import failed:\n{error}")
+
+        self.async_bridge.run_async(
+            do_import(),
+            callback=on_import_success,
+            error_callback=on_import_error
+        )
 
     def _export_collection(self):
         """Export collection"""
