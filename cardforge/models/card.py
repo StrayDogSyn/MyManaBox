@@ -3,10 +3,11 @@ CardForge Card Model
 Represents MTG cards with full Scryfall data
 """
 
+import json
 from typing import Optional, List, Dict, Any, Set
 from datetime import datetime
 from decimal import Decimal
-from pydantic import Field, computed_field
+from pydantic import Field, computed_field, field_validator
 
 from .base import BaseModel, TimestampMixin
 from .enums import (
@@ -127,7 +128,45 @@ class Card(BaseModel, TimestampMixin):
     
     # Multi-face cards
     card_faces: Optional[List[CardFace]] = None
-    
+
+    # =========================================================================
+    # Validators - Parse JSON strings from database into Python types
+    # =========================================================================
+
+    @field_validator('colors', 'color_identity', 'keywords', 'produced_mana', mode='before')
+    @classmethod
+    def parse_list_field(cls, v: Any) -> Optional[List[str]]:
+        """Parse JSON string to list if needed."""
+        if v is None:
+            return None
+        if isinstance(v, list):
+            return v
+        if isinstance(v, str):
+            try:
+                parsed = json.loads(v)
+                if isinstance(parsed, list):
+                    return parsed
+            except (json.JSONDecodeError, TypeError):
+                pass
+        return None
+
+    @field_validator('image_uris', 'prices_json', 'legalities_json', mode='before')
+    @classmethod
+    def parse_dict_field(cls, v: Any) -> Optional[Dict[str, Any]]:
+        """Parse JSON string to dict if needed."""
+        if v is None:
+            return None
+        if isinstance(v, dict):
+            return v
+        if isinstance(v, str):
+            try:
+                parsed = json.loads(v)
+                if isinstance(parsed, dict):
+                    return parsed
+            except (json.JSONDecodeError, TypeError):
+                pass
+        return None
+
     # Computed properties
     @computed_field
     @property
