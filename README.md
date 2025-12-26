@@ -166,23 +166,39 @@ python -m cardforge.cli.main collection stats
 
 CardForge provides both a comprehensive CLI and a modern GUI.
 
-### Graphical Interface
+### Graphical Interfaces
 
-Launch the GUI for a visual experience:
+CardForge provides **two** professional GUI options:
+
+#### PyQt6 GUI (Recommended - Professional Desktop App)
+
+```bash
+python run_qt_gui.py
+```
+
+**Features:**
+
+- 🖥️ **Native look and feel** - True desktop app experience
+- ⚡ **High performance** - Optimized Qt rendering
+- 🎨 **Full QSS theming** - CSS-like customization
+- 🔄 **Built-in threading** - Smooth async operations
+
+See the [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) for details.
+
+#### Tkinter GUI (Lightweight Alternative)
 
 ```bash
 python run_gui.py
 ```
 
-**GUI Features:**
+**Features:**
 
 - 📊 Real-time collection dashboard
 - 🔍 Advanced search and filtering
-- 📈 Visual analytics (coming soon)
 - 🎴 Card detail views
 - 💰 Price tracking
 
-See the [GUI Guide](docs/GUI_GUIDE.md) for detailed usage.
+See the [Tkinter GUI Guide](docs/GUI_GUIDE.md) for details.
 
 ### Command-Line Interface
 
@@ -379,7 +395,8 @@ cardforge/
 | Document | Description |
 |----------|-------------|
 | [API Reference](docs/API.md) | Full CLI and Python API documentation |
-| [GUI Guide](docs/GUI_GUIDE.md) | Graphical interface usage guide |
+| [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) | Professional PyQt6 desktop interface |
+| [Tkinter GUI Guide](docs/GUI_GUIDE.md) | Lightweight Tkinter interface |
 | [Architecture](docs/ARCHITECTURE.md) | System design and patterns |
 | [MCP Integration](docs/MCP_INTEGRATION.md) | Claude Desktop setup guide |
 
@@ -405,7 +422,8 @@ python -m ruff check cardforge/
 
 ## 🗺 Roadmap
 
-- [x] **Desktop GUI** - Tkinter-based interface ✨ NEW
+- [x] **Tkinter GUI** - Lightweight desktop interface
+- [x] **PyQt6 GUI** - Professional desktop application ✨ NEW
 - [ ] **Web Interface** - React-based dashboard
 - [ ] **Price Alerts** - Notifications for price changes
 - [ ] **Deck Sharing** - Export/import deck lists
