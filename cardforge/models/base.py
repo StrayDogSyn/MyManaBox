@@ -69,16 +69,41 @@ class BaseModel(PydanticBaseModel):
         
         return cls.model_validate(data)
     
+    # Fields that map to separate tables (not columns)
+    _relationship_fields: set[str] = set()
+    
     def to_db_dict(self) -> Dict[str, Any]:
         """
         Convert model to dictionary suitable for database insertion.
         
         Serializes nested objects to JSON strings.
+        Excludes computed fields and relationship fields.
         """
-        data = self.model_dump(exclude_none=False)
+        # Exclude computed fields and relationship fields
+        exclude_fields = set(getattr(self, '_relationship_fields', set()))
         
-        for key, value in data.items():
-            if isinstance(value, (list, dict)):
+        for field_name, field_info in self.model_fields.items():
+            if hasattr(field_info, 'computed') and field_info.computed:
+                exclude_fields.add(field_name)
+        
+        # Also exclude any property fields not in model_fields
+        data = self.model_dump(
+            exclude_none=False, 
+            exclude=exclude_fields,
+            exclude_unset=False
+        )
+        
+        # Filter out computed_field decorated properties
+        field_names = set(self.model_fields.keys()) - exclude_fields
+        data = {k: v for k, v in data.items() if k in field_names}
+        
+        for key, value in list(data.items()):
+            # Skip nested model objects (relationships stored in separate tables)
+            if isinstance(value, list) and value and isinstance(value[0], BaseModel):
+                del data[key]
+            elif isinstance(value, BaseModel):
+                del data[key]
+            elif isinstance(value, (list, dict)):
                 data[key] = json.dumps(value)
             elif isinstance(value, datetime):
                 data[key] = value.isoformat()

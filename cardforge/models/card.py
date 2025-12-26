@@ -59,6 +59,9 @@ class Card(BaseModel, TimestampMixin):
     Maps to the 'cards' table with full Scryfall data normalization.
     """
     
+    # Fields that are stored in separate tables, not columns
+    _relationship_fields: set[str] = {'card_faces'}
+    
     # Primary identification
     id: Optional[int] = None
     scryfall_id: str

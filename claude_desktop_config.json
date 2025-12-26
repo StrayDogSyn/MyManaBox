@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "cardforge": {
+      "command": "python",
+      "args": ["-m", "cardforge.mcp.server"],
+      "cwd": "C:\\Users\\EHunt\\Repos\\Projects\\MyManaBox"
+    }
+  }
+}
