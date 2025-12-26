@@ -49,8 +49,9 @@ dependencies = [
     "click>=8.1.0",
     "rich>=13.0.0",
     
-    # GUI
-    "customtkinter>=5.2.0",
+    # GUI - Tkinter (Built-in)
+    # GUI - PyQt6 (Professional)
+    "PyQt6>=6.6.0",
     
     # MCP (Claude Integration)
     "mcp>=1.0.0",
