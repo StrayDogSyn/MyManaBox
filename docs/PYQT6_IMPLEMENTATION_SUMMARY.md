@@ -6,7 +6,13 @@
 
 A **professional PyQt6-based desktop GUI** for CardForge that provides a native, high-performance alternative to the existing Tkinter interface.
 
-### 📦 Dependencies Installed
+### � Working Prototype
+
+![CardForge PyQt6 Main Window](../assets/screenshots/qt_main_window.png)
+
+*The CardForge PyQt6 GUI running on Windows 11 with the dark purple theme.*
+
+### �📦 Dependencies Installed
 
 - **PyQt6 6.10.1** - Professional Qt6 bindings for Python
 - Added to `requirements.txt` and `pyproject.toml`

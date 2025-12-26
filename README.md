@@ -101,7 +101,49 @@
 
 ---
 
-## 🚀 Quick Start
+## � Screenshots
+
+<div align="center">
+
+### PyQt6 Professional GUI
+
+<table>
+<tr>
+<td align="center">
+<img src="assets/screenshots/qt_main_window.png" alt="CardForge Main Window" width="600" />
+<br><em>Main Window - Collection browser with analytics dashboard</em>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="assets/screenshots/qt_collection_table.png" alt="Collection Table" width="600" />
+<br><em>Collection Table - Sortable columns, alternating rows, real-time search</em>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="assets/screenshots/qt_card_details.png" alt="Card Details Panel" width="600" />
+<br><em>Card Details - Full card info, pricing, and collection metadata</em>
+</td>
+</tr>
+</table>
+
+</div>
+
+<details>
+<summary>📷 <strong>More Screenshots</strong></summary>
+
+| Screenshot | Description |
+|------------|-------------|
+| ![Analytics](assets/screenshots/qt_analytics.png) | Analytics dashboard with collection statistics |
+| ![Search](assets/screenshots/qt_search.png) | Real-time search with debounced filtering |
+| ![Dark Theme](assets/screenshots/qt_dark_theme.png) | Full dark purple theme in action |
+
+</details>
+
+---
+
+## �🚀 Quick Start
 
 ### Prerequisites
 

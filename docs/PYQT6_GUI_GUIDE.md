@@ -4,6 +4,34 @@
 
 CardForge now includes a **professional PyQt6-based desktop GUI** that provides a native, high-performance interface for managing your MTG collection.
 
+## 📸 Screenshots
+
+### Main Application Window
+
+![CardForge PyQt6 Main Window](../assets/screenshots/qt_main_window.png)
+
+*The main CardForge window features a modern dark purple theme with collection browser, analytics dashboard, and card details panel.*
+
+### Collection Browser
+
+![Collection Table](../assets/screenshots/qt_collection_table.png)
+
+*High-performance sortable table with 9 columns - click headers to sort ascending/descending.*
+
+### Card Details Panel
+
+![Card Details](../assets/screenshots/qt_card_details.png)
+
+*Detailed card view showing full card information, current pricing, and collection metadata.*
+
+### Analytics Dashboard
+
+![Analytics Dashboard](../assets/screenshots/qt_analytics.png)
+
+*Real-time statistics including total value, card counts, and set distribution.*
+
+---
+
 ### Why PyQt6?
 
 - **Native Performance** - Truly native look and feel on Windows, macOS, and Linux

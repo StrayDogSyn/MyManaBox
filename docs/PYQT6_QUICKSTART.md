@@ -48,6 +48,8 @@ python run_qt_gui.py
 
 ## Quick Tour
 
+![CardForge PyQt6 Interface](../assets/screenshots/qt_main_window.png)
+
 ### 📊 Dashboard
 Top panel shows:
 - **Total Value** - Your collection's worth
