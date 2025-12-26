@@ -4,7 +4,7 @@
 
 ### **Professional Magic: The Gathering Collection Management Platform**
 
-*A modern, async-first Python application for managing MTG card collections, building decks, tracking trades, and integrating with AI assistants via MCP.*
+*A modern, async-first Python application for managing MTG card collections, building decks, tracking trades, and integrating with AI assistants via MCP. Available as CLI, GUI, and MCP server.*
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![SQLite](https://img.shields.io/badge/SQLite-FTS5-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
@@ -13,13 +13,13 @@
 
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000?style=flat-square)](https://github.com/psf/black)
 [![Type Checked](https://img.shields.io/badge/type%20checked-mypy-blue?style=flat-square)](http://mypy-lang.org/)
-[![Async](https://img.shields.io/badge/async-first-purple?style=flat-square)]()
+[![Async](https://img.shields.io/badge/async-first-purple?style=flat-square)](https://docs.python.org/3/library/asyncio.html)
 
 ---
 
 [Features](#-features) •
 [Quick Start](#-quick-start) •
-[CLI Reference](#-cli-reference) •
+[CLI & GUI](#-cli--gui) •
 [MCP Integration](#-mcp-integration) •
 [Architecture](#-architecture) •
 [Documentation](#-documentation)
@@ -125,6 +125,9 @@ pip install -r requirements.txt
 
 # Initialize the database
 python -m cardforge.cli.main db init
+
+# Launch the GUI (optional)
+python run_gui.py
 ```
 
 ### Import Your Collection
@@ -140,7 +143,7 @@ python -m cardforge.cli.main collection stats
 <details>
 <summary>📋 <strong>Example Output</strong></summary>
 
-```
+```text
 ╭─────────────────── Collection Statistics ───────────────────╮
 │                                                             │
 │   📊 Overview                                               │
@@ -159,9 +162,31 @@ python -m cardforge.cli.main collection stats
 
 ---
 
-## 💻 CLI Reference
+## 💻 CLI & GUI
 
-CardForge provides a comprehensive command-line interface with beautiful Rich formatting.
+CardForge provides both a comprehensive CLI and a modern GUI.
+
+### Graphical Interface
+
+Launch the GUI for a visual experience:
+
+```bash
+python run_gui.py
+```
+
+**GUI Features:**
+
+- 📊 Real-time collection dashboard
+- 🔍 Advanced search and filtering
+- 📈 Visual analytics (coming soon)
+- 🎴 Card detail views
+- 💰 Price tracking
+
+See the [GUI Guide](docs/GUI_GUIDE.md) for detailed usage.
+
+### Command-Line Interface
+
+For power users and automation, use the comprehensive CLI:
 
 ### Collection Commands
 
@@ -271,7 +296,7 @@ Add to your Claude Desktop configuration:
 
 CardForge follows clean architecture principles with clear separation of concerns:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                    Presentation Layer                        │
 │         CLI (Click + Rich)  │  MCP Server (Claude)          │
@@ -289,7 +314,7 @@ CardForge follows clean architecture principles with clear separation of concern
 
 ### Project Structure
 
-```
+```text
 cardforge/
 ├── 📁 api/           # External API clients
 ├── 📁 cli/           # Command-line interface
@@ -354,6 +379,7 @@ cardforge/
 | Document | Description |
 |----------|-------------|
 | [API Reference](docs/API.md) | Full CLI and Python API documentation |
+| [GUI Guide](docs/GUI_GUIDE.md) | Graphical interface usage guide |
 | [Architecture](docs/ARCHITECTURE.md) | System design and patterns |
 | [MCP Integration](docs/MCP_INTEGRATION.md) | Claude Desktop setup guide |
 
@@ -379,6 +405,7 @@ python -m ruff check cardforge/
 
 ## 🗺 Roadmap
 
+- [x] **Desktop GUI** - Tkinter-based interface ✨ NEW
 - [ ] **Web Interface** - React-based dashboard
 - [ ] **Price Alerts** - Notifications for price changes
 - [ ] **Deck Sharing** - Export/import deck lists
