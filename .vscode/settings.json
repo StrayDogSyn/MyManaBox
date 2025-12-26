@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "*.sqlite.sql": "sql"
+    },
+    "mssql.ignoredFiles": [
+        "**/cardforge/**/*.sql",
+        "**/*.sqlite.sql"
+    ],
+    "[sql]": {
+        "editor.defaultFormatter": null
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        ".pytest_cache": true
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ]
+}

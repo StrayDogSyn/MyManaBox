@@ -2,10 +2,11 @@
 -- CARDFORGE DATABASE SCHEMA v2.0
 -- Magic: The Gathering Collection Management System
 -- ============================================================================
--- SQLite with FTS5 full-text search
+-- Database: SQLite 3.x with FTS5 full-text search
+-- NOTE: This is SQLite syntax, NOT T-SQL/MSSQL
 -- ============================================================================
 
--- Enable foreign keys
+-- SQLite: Enable foreign keys
 PRAGMA foreign_keys = ON;
 
 -- ============================================================================

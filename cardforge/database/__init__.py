@@ -24,7 +24,7 @@ async def init_database():
     db_path = Path(config.database.path)
     db_path.parent.mkdir(parents=True, exist_ok=True)
     
-    schema_path = Path(__file__).parent / "schema.sql"
+    schema_path = Path(__file__).parent / "schema.sqlite.sql"
     
     async with aiosqlite.connect(str(db_path)) as conn:
         with open(schema_path, 'r') as f:

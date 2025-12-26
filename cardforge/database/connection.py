@@ -73,7 +73,7 @@ class DatabaseConnection:
                 await db.execute("PRAGMA temp_store=MEMORY")
                 
                 # Run schema initialization
-                schema_path = Path(__file__).parent / 'schema.sql'
+                schema_path = Path(__file__).parent / 'schema.sqlite.sql'
                 if schema_path.exists():
                     schema_sql = schema_path.read_text()
                     await db.executescript(schema_sql)
