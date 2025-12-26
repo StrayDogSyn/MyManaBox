@@ -69,6 +69,8 @@ class Icons:
     LINK = "🔗"
     WARNING = "⚠"
     INFO = "ℹ"
+    SORT_ASC = "▲"
+    SORT_DESC = "▼"
 
 
 class RarityColors:
