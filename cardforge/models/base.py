@@ -59,13 +59,20 @@ class BaseModel(PydanticBaseModel):
         else:
             data = dict(row._asdict()) if hasattr(row, '_asdict') else dict(row)
         
-        # Parse JSON fields
+        # Parse special fields
         for key, value in data.items():
+            # Parse JSON fields
             if isinstance(value, str) and value.startswith(('[', '{')):
                 try:
                     data[key] = json.loads(value)
                 except (json.JSONDecodeError, TypeError):
                     pass
+            # Parse SQLite datetime strings (YYYY-MM-DD HH:MM:SS)
+            elif key in ('created_at', 'updated_at') and isinstance(value, str):
+                try:
+                    data[key] = datetime.fromisoformat(value.replace(' ', 'T'))
+                except (ValueError, TypeError):
+                    data[key] = None
         
         return cls.model_validate(data)
     

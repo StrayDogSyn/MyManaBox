@@ -59,7 +59,7 @@ class BuyListRepository(BaseRepository[BuyListItem]):
             results = []
             for row in rows:
                 item = BuyListItem.from_row(row)
-                item.card = None  # Could load full card if needed
+                item.card_name = row['card_name']  # Attach card name for display
                 item.deck_name = row['deck_name']
                 item.category = row['category']
                 results.append(item)

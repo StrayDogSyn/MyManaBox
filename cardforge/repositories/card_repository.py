@@ -75,60 +75,62 @@ class CardRepository(BaseRepository[Card]):
                 WHERE cards_fts MATCH ?
             """
             params.append(f'"{query}"*')  # Prefix match
+            table_alias = "c."
         else:
             base_sql = "SELECT * FROM cards WHERE 1=1"
+            table_alias = ""
         
         # Color filter (card contains these colors)
         if colors:
             for color in colors:
-                conditions.append("colors LIKE ?")
+                conditions.append(f"{table_alias}colors LIKE ?")
                 params.append(f'%"{color}"%')
         
         # Color identity filter (exact or subset)
         if color_identity:
             # Check each color is present
             for color in color_identity:
-                conditions.append("color_identity LIKE ?")
+                conditions.append(f"{table_alias}color_identity LIKE ?")
                 params.append(f'%"{color}"%')
         
         # Set filter
         if set_code:
-            conditions.append("set_code = ?")
+            conditions.append(f"{table_alias}set_code = ?")
             params.append(set_code.lower())
         
         # Rarity filter
         if rarity:
-            conditions.append("rarity = ?")
+            conditions.append(f"{table_alias}rarity = ?")
             params.append(rarity.lower())
         
         # Type filter
         if type_filter:
-            conditions.append("type_line LIKE ?")
+            conditions.append(f"{table_alias}type_line LIKE ?")
             params.append(f'%{type_filter}%')
         
         # Price filters
         if min_price is not None:
-            conditions.append("CAST(json_extract(prices_json, '$.usd') AS REAL) >= ?")
+            conditions.append(f"CAST(json_extract({table_alias}prices_json, '$.usd') AS REAL) >= ?")
             params.append(float(min_price))
         
         if max_price is not None:
-            conditions.append("CAST(json_extract(prices_json, '$.usd') AS REAL) <= ?")
+            conditions.append(f"CAST(json_extract({table_alias}prices_json, '$.usd') AS REAL) <= ?")
             params.append(float(max_price))
         
         # CMC filters
         if min_cmc is not None:
-            conditions.append("cmc >= ?")
+            conditions.append(f"{table_alias}cmc >= ?")
             params.append(min_cmc)
         
         if max_cmc is not None:
-            conditions.append("cmc <= ?")
+            conditions.append(f"{table_alias}cmc <= ?")
             params.append(max_cmc)
         
         # Commander filter (legendary creatures or cards that say "can be your commander")
         if is_commander:
             conditions.append(
-                "(type_line LIKE '%Legendary%Creature%' OR "
-                "oracle_text LIKE '%can be your commander%')"
+                f"({table_alias}type_line LIKE '%Legendary%Creature%' OR "
+                f"{table_alias}oracle_text LIKE '%can be your commander%')"
             )
         
         # Build final query
@@ -136,7 +138,7 @@ class CardRepository(BaseRepository[Card]):
         if conditions:
             sql += " AND " + " AND ".join(conditions)
         
-        sql += f" ORDER BY name LIMIT ? OFFSET ?"
+        sql += f" ORDER BY {table_alias}name LIMIT ? OFFSET ?"
         params.extend([limit, offset])
         
         async with get_connection() as conn:

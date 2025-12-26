@@ -52,6 +52,7 @@ class BuyListItem(BaseModel, TimestampMixin):
     
     # Loaded data (not persisted)
     card: Optional[Card] = Field(default=None, exclude=True)
+    card_name: Optional[str] = Field(default=None, exclude=True)  # For display
     deck_name: Optional[str] = Field(default=None, exclude=True)
     category: Optional[str] = Field(default=None, exclude=True)
     

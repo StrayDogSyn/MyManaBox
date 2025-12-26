@@ -31,6 +31,88 @@ def cli():
 
 
 # =====================
+# Card Commands
+# =====================
+
+@cli.group()
+def card():
+    """Card search and lookup commands."""
+    pass
+
+
+@card.command("search")
+@click.argument("query")
+@click.option("--type", "-t", "card_type", help="Filter by type (creature, instant, etc.)")
+@click.option("--color", "-c", "colors", help="Filter by color (W, U, B, R, G)")
+@click.option("--set", "-s", "set_code", help="Filter by set code")
+@click.option("--limit", "-l", default=20, help="Max results")
+@async_command
+async def card_search(query: str, card_type: str, colors: str, set_code: str, limit: int):
+    """Search all cards in database."""
+    from cardforge.services import CardService
+    svc = CardService()
+    
+    color_list = colors.upper().split(',') if colors else None
+    
+    cards = await svc.search(
+        query=query, 
+        colors=color_list,
+        set_code=set_code,
+        type_filter=card_type,
+        limit=limit
+    )
+    
+    table = Table(title=f"Card Search: {query}")
+    table.add_column("Name", style="cyan")
+    table.add_column("Type", style="white")
+    table.add_column("Set", style="yellow")
+    table.add_column("Price", style="green")
+    
+    for c in cards:
+        price = f"${c.prices.usd}" if c.prices and c.prices.usd else "N/A"
+        type_short = (c.type_line or "")[:30]
+        table.add_row(c.name, type_short, (c.set_code or "").upper(), price)
+    
+    console.print(table)
+    console.print(f"\n[dim]Found {len(cards)} cards[/dim]")
+
+
+@card.command("lookup")
+@click.argument("name")
+@click.option("--set", "-s", "set_code", help="Specific set code")
+@async_command
+async def card_lookup(name: str, set_code: str):
+    """Look up a specific card by name."""
+    from cardforge.services import CardService
+    from cardforge.api import ScryfallClient
+    
+    svc = CardService()
+    
+    # Try local first
+    card = await svc.get_by_name(name, set_code)
+    
+    # Fetch from Scryfall if not found
+    if not card:
+        console.print("[dim]Not in local DB, fetching from Scryfall...[/dim]")
+        card = await svc.fetch_from_scryfall(name, set_code)
+    
+    if not card:
+        console.print(f"[red]Card not found: {name}[/red]")
+        return
+    
+    # Display card info
+    panel_content = f"""[bold cyan]{card.name}[/bold cyan]
+{card.mana_cost or ''}  •  {(card.type_line or '')}
+
+[italic]{card.oracle_text or ''}[/italic]
+
+[dim]Set: {(card.set_code or '').upper()}  •  Rarity: {card.rarity or 'unknown'}[/dim]
+[green]Price: ${card.prices.usd if card.prices and card.prices.usd else 'N/A'}[/green]"""
+    
+    console.print(Panel(panel_content, title="Card Details"))
+
+
+# =====================
 # Collection Commands
 # =====================
 
