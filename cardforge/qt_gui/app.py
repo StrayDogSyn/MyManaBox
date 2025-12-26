@@ -11,6 +11,12 @@ from .theme import THEME
 from .main_window import MainWindow
 
 
+# Enable high DPI scaling BEFORE any QApplication is created
+QApplication.setHighDpiScaleFactorRoundingPolicy(
+    Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
+)
+
+
 class CardForgeApp(QApplication):
     """
     CardForge Qt Application.
@@ -26,11 +32,6 @@ class CardForgeApp(QApplication):
         self.setApplicationVersion("2.0.0")
         self.setOrganizationName("StrayDog Syndications")
         self.setOrganizationDomain("github.com/StrayDogSyn/MyManaBox")
-
-        # Enable high DPI scaling
-        self.setHighDpiScaleFactorRoundingPolicy(
-            Qt.HighDpiScaleFactorRoundingPolicy.PassThrough
-        )
 
         # Apply theme
         self._apply_theme()
