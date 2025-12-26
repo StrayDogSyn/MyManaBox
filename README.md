@@ -412,7 +412,7 @@ cardforge/
 <br><sub>CLI Framework</sub>
 </td>
 <td align="center" width="120">
-<img src="https://raw.githubusercontent.com/Textualize/rich/master/imgs/logo.svg" width="48" height="48" alt="Rich" />
+<img src="https://raw.githubusercontent.com/Textualize/rich/master/imgs/logo.png" width="48" height="48" alt="Rich" />
 <br><strong>Rich</strong>
 <br><sub>Terminal UI</sub>
 </td>
