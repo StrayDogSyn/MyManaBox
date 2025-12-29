@@ -101,7 +101,7 @@
 
 ---
 
-## � Screenshots
+## 📸 Screenshots
 
 <div align="center">
 
@@ -143,7 +143,7 @@
 
 ---
 
-## �🚀 Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -407,12 +407,12 @@ cardforge/
 <br><sub>Validation</sub>
 </td>
 <td align="center" width="120">
-<img src="https://click.palletsprojects.com/en/8.1.x/_images/click-logo.png" width="48" height="48" alt="Click" />
+<img src="https://img.icons8.com/color/48/console.png" width="48" height="48" alt="Click" />
 <br><strong>Click</strong>
 <br><sub>CLI Framework</sub>
 </td>
 <td align="center" width="120">
-<img src="https://raw.githubusercontent.com/Textualize/rich/master/imgs/logo.png" width="48" height="48" alt="Rich" />
+<img src="https://img.icons8.com/fluency/48/console.png" width="48" height="48" alt="Rich" />
 <br><strong>Rich</strong>
 <br><sub>Terminal UI</sub>
 </td>
