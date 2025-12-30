@@ -14,6 +14,7 @@ from .theme import THEME
 from .async_bridge import AsyncBridge
 from .widgets import SearchBar, StatsPanel, LoadingOverlay
 from .panels import CollectionBrowserPanel, CardDetailPanel
+from .panels.analytics_panel import AnalyticsPanel
 
 from cardforge.services import CollectionService, CardService
 from cardforge.models import CollectionStats
@@ -107,6 +108,11 @@ class MainWindow(QMainWindow):
         duplicates_action.triggered.connect(self._find_duplicates)
         collection_menu.addAction(duplicates_action)
 
+        analytics_action = QAction("📊 &Analytics Dashboard", self)
+        analytics_action.setShortcut(QKeySequence("Ctrl+Shift+A"))
+        analytics_action.triggered.connect(self._show_analytics)
+        collection_menu.addAction(analytics_action)
+
         collection_menu.addSeparator()
 
         add_card_action = QAction("&Add Card...", self)
@@ -178,6 +184,34 @@ class MainWindow(QMainWindow):
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
         self.statusBar.showMessage("Ready")
+    
+    def _show_analytics(self):
+        """Show analytics dashboard in a separate window."""
+        if not hasattr(self, 'analytics_window') or not self.analytics_window.isVisible():
+            from PyQt6.QtWidgets import QDialog
+            self.analytics_window = QDialog(self)
+            self.analytics_window.setWindowTitle("Collection Analytics")
+            self.analytics_window.resize(1200, 800)
+            
+            layout = QVBoxLayout(self.analytics_window)
+            layout.setContentsMargins(0, 0, 0, 0)
+            
+            self.analytics_panel = AnalyticsPanel()
+            layout.addWidget(self.analytics_panel)
+            
+            # Update with current stats
+            if self.current_stats:
+                stats_dict = {
+                    'total_cards': self.current_stats.total_cards,
+                    'total_value': float(self.current_stats.total_value),
+                    'unique_cards': self.current_stats.unique_cards,
+                    'average_price': float(self.current_stats.average_price) if self.current_stats.average_price else 0.0,
+                }
+                self.analytics_panel.update_stats(stats_dict)
+        
+        self.analytics_window.show()
+        self.analytics_window.raise_()
+        self.analytics_window.activateWindow()
 
     # =========================================================================
     # DATA LOADING

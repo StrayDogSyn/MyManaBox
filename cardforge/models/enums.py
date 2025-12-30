@@ -372,3 +372,49 @@ class PriceSource(str, Enum):
     TCGPLAYER = "tcgplayer"
     CARDKINGDOM = "cardkingdom"
     CARDMARKET = "cardmarket"
+
+
+class Language(str, Enum):
+    """Card language codes."""
+    ENGLISH = "en"
+    GERMAN = "de"
+    FRENCH = "fr"
+    ITALIAN = "it"
+    SPANISH = "es"
+    PORTUGUESE = "pt"
+    JAPANESE = "ja"
+    KOREAN = "ko"
+    RUSSIAN = "ru"
+    CHINESE_SIMPLIFIED = "zhs"
+    CHINESE_TRADITIONAL = "zht"
+    PHYREXIAN = "ph"
+    
+    @classmethod
+    def from_string(cls, value: str) -> "Language":
+        """Convert string to Language enum."""
+        if not value:
+            return cls.ENGLISH
+        value = value.lower().strip()
+        for lang in cls:
+            if lang.value == value:
+                return lang
+        return cls.ENGLISH  # Default
+    
+    @property
+    def display_name(self) -> str:
+        """Get human-readable language name."""
+        names = {
+            cls.ENGLISH: "English",
+            cls.GERMAN: "German",
+            cls.FRENCH: "French",
+            cls.ITALIAN: "Italian",
+            cls.SPANISH: "Spanish",
+            cls.PORTUGUESE: "Portuguese",
+            cls.JAPANESE: "Japanese",
+            cls.KOREAN: "Korean",
+            cls.RUSSIAN: "Russian",
+            cls.CHINESE_SIMPLIFIED: "Chinese Simplified",
+            cls.CHINESE_TRADITIONAL: "Chinese Traditional",
+            cls.PHYREXIAN: "Phyrexian",
+        }
+        return names.get(self, "English")

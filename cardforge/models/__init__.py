@@ -17,6 +17,7 @@ from .enums import (
     SyncPlatform,
     GameResult,
     PriceSource,
+    Language,
 )
 
 from .base import BaseModel, TimestampMixin
@@ -76,6 +77,7 @@ __all__ = [
     'SyncPlatform',
     'GameResult',
     'PriceSource',
+    'Language',
     
     # Base
     'BaseModel',
