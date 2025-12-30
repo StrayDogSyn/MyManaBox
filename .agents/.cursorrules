@@ -1,0 +1,52 @@
+# CardForge/MyManaBox - Cursor AI Rules
+
+You are working on CardForge, a professional MTG collection management platform.
+
+## Project Context
+- Python 3.9+ with PyQt6 GUI (transitioning from tkinter)
+- Windows 11 primary, cross-platform compatible
+- SQLite + FTS5 for search
+- Scryfall API integration (10 req/sec limit)
+- Claude MCP server for AI features
+
+## Key Reference Documents
+Before implementing features, check these files:
+- `PYQT6_BUILD_SPECIFICATION.md` - GUI implementation spec
+- `MTG_COLLECTION_MANAGER_DESIGN_PATTERN.md` - Architecture
+- `docs/PROJECT_STRUCTURE.md` - Codebase organization
+
+## Code Style
+- Use type hints on all functions
+- Use pathlib for file paths (no hardcoded strings)
+- Async/await for I/O operations
+- Follow existing patterns in src/
+
+## GUI Theme (REQUIRED)
+```python
+BG_PRIMARY = "#1e1e1e"
+BG_SECONDARY = "#252526"
+ACCENT_PRIMARY = "#5a4fcf"
+TEXT_PRIMARY = "#cccccc"
+```
+
+## Testing
+- Target 80% coverage
+- Test files: `test_<module>.py`
+- Functions: `test_<func>_<scenario>()`
+
+## DO NOT
+- Block main thread with I/O
+- Skip error handling
+- Hard-code file paths
+- Ignore Scryfall rate limits
+- Modify user data without backup
+
+## Architecture
+```
+src/
+├── models/      # Card, Collection, Deck
+├── data/        # CSV, Database, API clients
+├── services/    # Business logic
+├── presentation/# CLI, GUI
+└── mcp/         # Claude integration
+```

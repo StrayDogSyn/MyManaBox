@@ -1,0 +1,273 @@
+{
+  "name": "cardforge",
+  "version": "1.0.0",
+  "description": "CardForge MTG Collection Manager - Claude MCP Integration",
+  
+  "server": {
+    "command": "python",
+    "args": ["-m", "cardforge.mcp.server"],
+    "cwd": "C:\\Users\\EHunt\\Repos\\Projects\\MyManaBox",
+    "env": {
+      "PYTHONPATH": "C:\\Users\\EHunt\\Repos\\Projects\\MyManaBox"
+    }
+  },
+  
+  "tools": [
+    {
+      "name": "search_collection",
+      "description": "Search your MTG collection by name, set, color, type, or rarity. Returns matching cards with quantities and prices.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Card name or partial name to search"
+          },
+          "colors": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Filter by colors (W, U, B, R, G)"
+          },
+          "set_code": {
+            "type": "string",
+            "description": "Filter by set code (e.g., 'FIC', 'MH3')"
+          },
+          "rarity": {
+            "type": "string",
+            "enum": ["common", "uncommon", "rare", "mythic"],
+            "description": "Filter by rarity"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum USD price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum USD price"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_card_details",
+      "description": "Get full details for a specific card including all printings, prices, and deck usage.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "card_name": {
+            "type": "string",
+            "description": "Exact card name"
+          },
+          "set_code": {
+            "type": "string",
+            "description": "Specific set code (optional)"
+          }
+        },
+        "required": ["card_name"]
+      }
+    },
+    {
+      "name": "analyze_deck",
+      "description": "Analyze a deck's composition, mana curve, color distribution, and identify weaknesses.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "deck_name": {
+            "type": "string",
+            "description": "Name of the deck to analyze"
+          }
+        },
+        "required": ["deck_name"]
+      }
+    },
+    {
+      "name": "suggest_upgrades",
+      "description": "Suggest upgrades for a deck based on strategy, budget, and available cards in collection.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "deck_name": {
+            "type": "string",
+            "description": "Name of the deck"
+          },
+          "budget": {
+            "type": "number",
+            "description": "Maximum budget for upgrades in USD"
+          },
+          "strategy": {
+            "type": "string",
+            "description": "Optimization strategy (e.g., 'aggro', 'control', 'combo', 'value')"
+          },
+          "prefer_owned": {
+            "type": "boolean",
+            "description": "Prefer cards already in collection",
+            "default": true
+          }
+        },
+        "required": ["deck_name"]
+      }
+    },
+    {
+      "name": "price_check",
+      "description": "Get current market prices for one or more cards from multiple sources.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "card_names": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "List of card names to check"
+          },
+          "include_foil": {
+            "type": "boolean",
+            "description": "Include foil prices",
+            "default": true
+          }
+        },
+        "required": ["card_names"]
+      }
+    },
+    {
+      "name": "collection_stats",
+      "description": "Get overview statistics for the entire collection.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "find_duplicates",
+      "description": "Find cards with multiple copies that could be sold or traded.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "min_copies": {
+            "type": "integer",
+            "description": "Minimum copies to consider duplicate",
+            "default": 4
+          },
+          "min_value": {
+            "type": "number",
+            "description": "Minimum USD value per card",
+            "default": 1.0
+          },
+          "exclude_decks": {
+            "type": "boolean",
+            "description": "Exclude cards used in active decks",
+            "default": true
+          }
+        }
+      }
+    },
+    {
+      "name": "generate_buylist",
+      "description": "Generate optimized buy list for deck completion or collection goals.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "deck_name": {
+            "type": "string",
+            "description": "Deck to complete (optional)"
+          },
+          "budget": {
+            "type": "number",
+            "description": "Maximum total budget"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["price", "impact", "availability"],
+            "description": "Sorting priority"
+          }
+        }
+      }
+    },
+    {
+      "name": "generate_selllist",
+      "description": "Generate list of cards to sell based on value and deck needs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "min_value": {
+            "type": "number",
+            "description": "Minimum card value to include",
+            "default": 1.0
+          },
+          "exclude_decks": {
+            "type": "boolean",
+            "description": "Exclude cards in active decks",
+            "default": true
+          }
+        }
+      }
+    },
+    {
+      "name": "optimize_deck",
+      "description": "Get comprehensive optimization recommendations for a deck based on format meta and strategy.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "deck_name": {
+            "type": "string",
+            "description": "Name of the deck"
+          },
+          "strategy": {
+            "type": "string",
+            "description": "Target strategy (e.g., 'turn3_kaalia', 'go_wide_voltron')"
+          },
+          "power_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "description": "Target power level (1-10)"
+          },
+          "budget": {
+            "type": "number",
+            "description": "Budget constraint for recommendations"
+          }
+        },
+        "required": ["deck_name"]
+      }
+    }
+  ],
+  
+  "resources": [
+    {
+      "uri": "cardforge://collection/summary",
+      "name": "Collection Summary",
+      "description": "Overview of entire collection with value and statistics"
+    },
+    {
+      "uri": "cardforge://decks/list",
+      "name": "Deck List",
+      "description": "All configured decks with basic stats"
+    },
+    {
+      "uri": "cardforge://buy-list/current",
+      "name": "Current Buy List",
+      "description": "Active shopping list with prices"
+    },
+    {
+      "uri": "cardforge://sell-list/current",
+      "name": "Current Sell List",
+      "description": "Cards flagged for selling"
+    }
+  ],
+  
+  "claude_desktop_config": {
+    "description": "Add this to Claude Desktop config file",
+    "location": {
+      "windows": "%APPDATA%\\Claude\\claude_desktop_config.json",
+      "mac": "~/Library/Application Support/Claude/claude_desktop_config.json"
+    },
+    "config": {
+      "mcpServers": {
+        "cardforge": {
+          "command": "python",
+          "args": ["-m", "cardforge.mcp.server"],
+          "cwd": "C:\\Users\\EHunt\\Repos\\Projects\\MyManaBox"
+        }
+      }
+    }
+  }
+}

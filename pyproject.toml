@@ -137,15 +137,21 @@ ignore_missing_imports = true
 exclude = ["archive/", "tests/"]
 
 [tool.pytest.ini_options]
+minversion = "7.0"
 asyncio_mode = "auto"
-testpaths = ["cardforge/tests"]
+testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
-addopts = "-v --tb=short"
+addopts = "-ra -q --strict-markers"
+markers = [
+    "slow: marks tests as slow",
+    "gui: marks GUI tests",
+    "integration: marks integration tests",
+]
 
 [tool.coverage.run]
 source = ["cardforge"]
-omit = ["cardforge/tests/*", "*/test_*.py"]
+omit = ["*/tests/*", "*/__pycache__/*", "*/test_*.py"]
 branch = true
 
 [tool.coverage.report]
@@ -154,35 +160,4 @@ exclude_lines = [
     "def __repr__",
     "raise NotImplementedError",
     "if TYPE_CHECKING:",
-]
-mymanabox = "main:main"
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.black]
-line-length = 88
-target-version = ['py38']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  | legacy
-)/
-'''
-
-[tool.mypy]
-python_version = "3.8"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
-exclude = [
-    "legacy/",
-    "tests/",
 ]
