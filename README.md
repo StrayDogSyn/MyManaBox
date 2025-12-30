@@ -130,17 +130,6 @@
 
 </div>
 
-<details>
-<summary>📷 <strong>More Screenshots</strong></summary>
-
-| Screenshot | Description |
-|------------|-------------|
-| ![Analytics](assets/screenshots/qt_analytics.png) | Analytics dashboard with collection statistics |
-| ![Search](assets/screenshots/qt_search.png) | Real-time search with debounced filtering |
-| ![Dark Theme](assets/screenshots/qt_dark_theme.png) | Full dark purple theme in action |
-
-</details>
-
 ---
 
 ## 🚀 Quick Start
