@@ -590,19 +590,25 @@ Contributions to CardForge are welcome and appreciated. This project follows sta
 
 1. Fork the repository on GitHub
 2. Create a feature branch from `main`
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. Implement your changes with appropriate tests
 4. Ensure all tests pass and code quality checks succeed
 5. Commit your changes with clear, descriptive messages
+
    ```bash
    git commit -m "Add feature: description of changes"
    ```
+
 6. Push to your fork
+
    ```bash
    git push origin feature/your-feature-name
    ```
+
 7. Submit a pull request to the main repository
 
 ### Contribution Guidelines
