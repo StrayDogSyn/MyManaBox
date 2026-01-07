@@ -7,79 +7,56 @@ from ..theme import THEME
 
 
 class StatCard(QFrame):
-    """Card widget displaying a statistic with optional trend."""
-    
-    def __init__(self, title: str, value: str = "0", icon: str = "", trend: str = "", parent=None):
+    """
+    Metric display card.
+
+    Shows a title, main value, and optional subtitle.
+    """
+
+    def __init__(self, title: str, value: str = "0", subtitle: str = "",
+                 icon: str = "", parent=None):
         super().__init__(parent)
-        self._title = title
-        self._value = value
-        self._icon = icon
-        self._trend = trend
-        self._setup_ui()
-        self._apply_style()
-    
-    def _setup_ui(self):
-        self.setMinimumSize(150, 100)
-        self.setMaximumHeight(120)
-        
-        layout = QVBoxLayout(self)
-        layout.setContentsMargins(16, 12, 16, 12)
-        layout.setSpacing(4)
-        
-        # Header with icon and title
-        header = QHBoxLayout()
-        if self._icon:
-            icon_label = QLabel(self._icon)
-            icon_label.setFont(QFont(THEME.FONT_FAMILY, 16))
-            header.addWidget(icon_label)
-        
-        title_label = QLabel(self._title)
-        title_label.setStyleSheet(f"color: {THEME.TEXT_SECONDARY}; font-size: 11px;")
-        header.addWidget(title_label)
-        header.addStretch()
-        layout.addLayout(header)
-        
-        # Value row
-        value_row = QHBoxLayout()
-        self.value_label = QLabel(self._value)
-        self.value_label.setFont(QFont(THEME.FONT_FAMILY, 24, QFont.Weight.Bold))
-        value_row.addWidget(self.value_label)
-        
-        self.trend_label = QLabel(self._trend)
-        self.trend_label.setFont(QFont(THEME.FONT_FAMILY, 11))
-        value_row.addWidget(self.trend_label)
-        value_row.addStretch()
-        layout.addLayout(value_row)
-        
-        layout.addStretch()
-    
-    def _apply_style(self):
-        self.setStyleSheet(f"""
-            StatCard {{
-                background-color: {THEME.BG_SECONDARY};
-                border: 1px solid {THEME.BORDER_COLOR};
-                border-radius: 8px;
-            }}
-            StatCard:hover {{
-                border-color: {THEME.ACCENT_PRIMARY};
-            }}
-        """)
-        self._update_trend_color()
-    
-    def _update_trend_color(self):
-        if self._trend.startswith('+'):
-            color = THEME.SUCCESS
-        elif self._trend.startswith('-'):
-            color = THEME.ERROR
+
+        self.setFrameShape(QFrame.Shape.Box)
+        self.setObjectName("statCard")
+
+        layout = QHBoxLayout(self)
+        layout.setContentsMargins(15, 12, 15, 12)
+
+        # Icon (if provided)
+        if icon:
+            icon_label = QLabel(icon)
+            icon_label.setFont(QFont(THEME.FONT_FAMILY, 20))
+            layout.addWidget(icon_label)
+
+        # Text container
+        text_layout = QVBoxLayout()
+        text_layout.setSpacing(2)
+
+        # Title
+        title_label = QLabel(title)
+        title_label.setProperty("class", "subtitle")
+        title_label.setFont(THEME.get_font("small"))
+        text_layout.addWidget(title_label)
+
+        # Value
+        self.value_label = QLabel(value)
+        self.value_label.setFont(THEME.get_font("large", bold=True))
+        text_layout.addWidget(self.value_label)
+
+        # Subtitle (if provided)
+        if subtitle:
+            self.subtitle_label = QLabel(subtitle)
+            self.subtitle_label.setProperty("class", "muted")
+            self.subtitle_label.setFont(THEME.get_font("small"))
+            text_layout.addWidget(self.subtitle_label)
         else:
-            color = THEME.TEXT_MUTED
-        self.trend_label.setStyleSheet(f"color: {color};")
-    
-    def set_value(self, value: str):
-        self._value = value
+            self.subtitle_label = None
+
+        layout.addLayout(text_layout, 1)  # Stretch
+
+    def update_value(self, value: str, subtitle: str = None):
+        """Update the displayed value."""
         self.value_label.setText(value)
-    
-    def set_trend(self, trend: str):
-        self._trend = trend
-        self.trend_label.setText(trend)
-        self._update_trend_color()
+        if subtitle and self.subtitle_label:
+            self.subtitle_label.setText(subtitle)

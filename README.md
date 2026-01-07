@@ -1,143 +1,135 @@
 <div align="center">
 
-# ⚔️ CardForge
+# CardForge
 
-### **Professional Magic: The Gathering Collection Management Platform**
+### Professional Magic: The Gathering Collection Management Platform
 
-*A modern, async-first Python application for managing MTG card collections, building decks, tracking trades, and integrating with AI assistants via MCP. Available as CLI, GUI, and MCP server.*
+A modern, async-first Python application for managing MTG card collections, building decks, tracking trades, and integrating with AI assistants via Model Context Protocol. Available as CLI, PyQt6 GUI, and MCP server.
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![SQLite](https://img.shields.io/badge/SQLite-FTS5-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
-[![Pydantic](https://img.shields.io/badge/Pydantic-v2-E92063?style=for-the-badge&logo=pydantic&logoColor=white)](https://pydantic.dev)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![PyQt6](https://img.shields.io/badge/PyQt6-6.6+-41CD52?style=for-the-badge&logo=qt&logoColor=white)](https://riverbankcomputing.com/software/pyqt/)
+[![License](https://img.shields.io/badge/License-Unlicense-blue?style=for-the-badge)](LICENSE)
 
-[![Code Style](https://img.shields.io/badge/code%20style-black-000000?style=flat-square)](https://github.com/psf/black)
-[![Type Checked](https://img.shields.io/badge/type%20checked-mypy-blue?style=flat-square)](http://mypy-lang.org/)
-[![Async](https://img.shields.io/badge/async-first-purple?style=flat-square)](https://docs.python.org/3/library/asyncio.html)
+[![Code Quality](https://img.shields.io/badge/code%20quality-maintained-success?style=flat-square)](https://github.com/StrayDogSyn/MyManaBox)
+[![Type Safety](https://img.shields.io/badge/type%20safety-pydantic%20v2-E92063?style=flat-square)](https://pydantic.dev)
+[![Development Status](https://img.shields.io/badge/status-beta-yellow?style=flat-square)](https://github.com/StrayDogSyn/MyManaBox)
 
 ---
 
-[Features](#-features) •
-[Quick Start](#-quick-start) •
-[CLI & GUI](#-cli--gui) •
-[MCP Integration](#-mcp-integration) •
-[Architecture](#-architecture) •
-[Documentation](#-documentation)
+[Features](#features) •
+[Quick Start](#quick-start) •
+[User Interfaces](#user-interfaces) •
+[MCP Integration](#model-context-protocol-integration) •
+[Architecture](#architecture) •
+[Documentation](#documentation)
 
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
-<table>
-<tr>
-<td width="50%">
+### Collection Management
 
-### 📦 Collection Management
+- Import collections from Moxfield, ManaBox, and CSV formats
+- Track card quantities, conditions, foil status, and variants
+- Real-time collection valuation with market price integration
+- Intelligent duplicate detection with trade value suggestions
+- Multi-format support for collection organization
 
-- Import from **Moxfield**, **ManaBox**, CSV
-- Track quantities, conditions, foils
-- Real-time collection valuation
-- Duplicate detection & trade suggestions
+### Deck Building
 
-</td>
-<td width="50%">
+- Support for Commander, Standard, Modern, and custom formats
+- Inventory-aware deck construction with ownership tracking
+- Automated buy list generation with budget constraints
+- Card categorization by type (creatures, removal, ramp, card draw)
+- Missing card analysis with pricing optimization
 
-### 🎴 Deck Building
+### Price Intelligence
 
-- Create **Commander**, Standard, Modern decks
-- Track missing cards with buy lists
-- Budget-aware deck planning
-- Category organization (creatures, removal, etc.)
+- Live market data integration via Scryfall API
+- Historical price tracking and trend analysis
+- Cross-set printing comparison and optimization
+- Price alert system for collection monitoring
+- Budget-aware purchasing recommendations
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+### Advanced Search Capabilities
 
-### 💰 Price Intelligence
+- Full-text search powered by SQLite FTS5
+- Multi-criteria filtering (color, type, CMC, rarity, price)
+- Oracle text and rules text search
+- EDHREC rank integration for Commander staples
+- Performance-optimized query execution
 
-- Live pricing via **Scryfall API**
-- Price history tracking
-- Compare printings across sets
-- Budget alerts and watchlists
+### Analytics and Reporting
 
-</td>
-<td width="50%">
+- Comprehensive collection value breakdown
+- Set completion tracking and gap analysis
+- Investment performance metrics
+- Rarity and color distribution statistics
+- Export capabilities for external analysis
 
-### 🔍 Smart Search
+### AI-Powered Integration
 
-- **Full-text search** with FTS5
-- Filter by color, type, CMC, price
-- Oracle text search
-- EDHREC rank sorting
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📊 Analytics
-
-- Collection value breakdown
-- Set completion tracking
-- Investment performance
-- Rarity distribution
-
-</td>
-<td width="50%">
-
-### 🤖 AI Integration
-
-- **Claude Desktop** via MCP
-- Natural language deck building
-- Smart card suggestions
-- Automated buy list generation
-
-</td>
-</tr>
-</table>
+- Claude Desktop integration via Model Context Protocol
+- Natural language deck building assistance
+- Context-aware card suggestions and recommendations
+- Automated buy list optimization
+- Conversational collection management
 
 ---
 
-## 📸 Screenshots
+## Application Screenshots
 
 <div align="center">
 
-### PyQt6 Professional GUI
+### PyQt6 Desktop Interface
 
 <table>
 <tr>
 <td align="center">
 <img src="assets/screenshots/splash.png" alt="CardForge Main Window" width="600" />
-<br><em>Main Window - Collection browser with analytics dashboard</em>
+<br><em>Main window featuring collection browser and analytics dashboard</em>
 </td>
 </tr>
 <tr>
 <td align="center">
 <img src="assets/screenshots/stable.png" alt="Collection Table" width="600" />
-<br><em>Collection Table - Sortable columns, alternating rows, real-time search</em>
+<br><em>Collection table with sortable columns, alternating row colors, and real-time search</em>
 </td>
 </tr>
 <tr>
 <td align="center">
 <img src="assets/screenshots/success.png" alt="Card Details Panel" width="600" />
-<br><em>Card Details - Full card info, pricing, and collection metadata</em>
+<br><em>Detailed card view displaying comprehensive card information and metadata</em>
 </td>
 </tr>
 </table>
 
 </div>
 
+<details>
+<summary><strong>Additional Screenshots</strong></summary>
+
+| Screenshot | Description |
+|------------|-------------|
+| ![Analytics](assets/screenshots/qt_analytics.png) | Analytics dashboard with comprehensive collection statistics |
+| ![Search](assets/screenshots/qt_search.png) | Real-time search interface with debounced filtering |
+| ![Dark Theme](assets/screenshots/qt_dark_theme.png) | Dark theme implementation with custom styling |
+
+</details>
+
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### Prerequisites
+### System Requirements
 
-- Python 3.11 or higher
+- Python 3.9 or higher (3.11+ recommended)
 - pip package manager
+- 50MB available disk space
+- Windows, macOS, or Linux operating system
 
 ### Installation
 
@@ -146,19 +138,33 @@
 git clone https://github.com/StrayDogSyn/MyManaBox.git
 cd MyManaBox
 
-# Create virtual environment
+# Create and activate virtual environment
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-# source .venv/bin/activate  # macOS/Linux
+
+# Windows
+.venv\Scripts\activate
+
+# macOS/Linux
+source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Initialize the database
 python -m cardforge.cli.main db init
+```
 
-# Launch the GUI (optional)
+### Launching the Application
+
+```bash
+# PyQt6 GUI (recommended)
+python run_qt_gui.py
+
+# Tkinter GUI (lightweight)
 python run_gui.py
+
+# CLI interface
+python -m cardforge.cli.main --help
 ```
 
 ### Import Your Collection
@@ -167,73 +173,79 @@ python run_gui.py
 # Import from Moxfield CSV export
 python -m cardforge.cli.main collection import "path/to/moxfield_export.csv"
 
-# View your collection stats
+# View collection statistics
 python -m cardforge.cli.main collection stats
+
+# Search your collection
+python -m cardforge.cli.main collection search "lightning bolt"
 ```
 
 <details>
-<summary>📋 <strong>Example Output</strong></summary>
+<summary><strong>Example CLI Output</strong></summary>
 
 ```text
-╭─────────────────── Collection Statistics ───────────────────╮
-│                                                             │
-│   📊 Overview                                               │
-│   ├── Unique Cards:     1,769                               │
-│   ├── Total Cards:      2,222                               │
-│   ├── Foils:            127                                 │
-│   └── Sets:             89                                  │
-│                                                             │
-│   💰 Value                                                  │
-│   └── Estimated Total:  $1,284.96                           │
-│                                                             │
-╰─────────────────────────────────────────────────────────────╯
+Collection Statistics
+
+Overview:
+  Unique Cards:     1,769
+  Total Cards:      2,222
+  Foil Cards:       127
+  Unique Sets:      89
+
+Value Summary:
+  Estimated Total:  $1,284.96
+  Average/Card:     $0.58
 ```
 
 </details>
 
 ---
 
-## 💻 CLI & GUI
+## User Interfaces
 
-CardForge provides both a comprehensive CLI and a modern GUI.
+CardForge offers multiple interface options to suit different workflows and preferences.
 
-### Graphical Interfaces
+### PyQt6 Desktop Application (Recommended)
 
-CardForge provides **two** professional GUI options:
-
-#### PyQt6 GUI (Recommended - Professional Desktop App)
+The primary interface is a professional desktop application built with PyQt6, providing native performance and modern UI/UX design.
 
 ```bash
 python run_qt_gui.py
 ```
 
-**Features:**
+**Key Features:**
 
-- 🖥️ **Native look and feel** - True desktop app experience
-- ⚡ **High performance** - Optimized Qt rendering
-- 🎨 **Full QSS theming** - CSS-like customization
-- 🔄 **Built-in threading** - Smooth async operations
+- Native desktop application with platform-specific styling
+- High-performance rendering with hardware acceleration
+- Custom QSS theming system for visual customization
+- Asynchronous operations with responsive UI threading
+- Advanced table views with sorting and filtering
+- Integrated card detail panels with image previews
+- Real-time search with debounced input handling
 
-See the [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) for details.
+For comprehensive documentation, see the [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md).
 
-#### Tkinter GUI (Lightweight Alternative)
+### Tkinter GUI (Lightweight Alternative)
+
+A lightweight alternative interface using Python's built-in Tkinter library, ideal for systems with limited resources or simpler use cases.
 
 ```bash
 python run_gui.py
 ```
 
-**Features:**
+**Key Features:**
 
-- 📊 Real-time collection dashboard
-- 🔍 Advanced search and filtering
-- 🎴 Card detail views
-- 💰 Price tracking
+- Minimal dependencies with built-in Python support
+- Real-time collection dashboard and statistics
+- Advanced search and filtering capabilities
+- Detailed card information views
+- Price tracking and valuation displays
 
-See the [Tkinter GUI Guide](docs/GUI_GUIDE.md) for details.
+For detailed usage instructions, see the [Tkinter GUI Guide](docs/GUI_GUIDE.md).
 
 ### Command-Line Interface
 
-For power users and automation, use the comprehensive CLI:
+CardForge provides a comprehensive command-line interface for power users, automation, and scripting workflows.
 
 ### Collection Commands
 
@@ -270,37 +282,42 @@ For power users and automation, use the comprehensive CLI:
 | `buylist add <card>` | Add card to buy list |
 
 <details>
-<summary>📖 <strong>Full Command Examples</strong></summary>
+<summary><strong>Command Reference Examples</strong></summary>
 
 ```bash
 # Search for angels under $5
-python -m cardforge.cli.main card search "angel" --type creature --color W
+python -m cardforge.cli.main card search "angel" --type creature --color W --max-price 5.00
 
 # Create a Commander deck
 python -m cardforge.cli.main deck create "Kaalia Voltron" \
     --format commander \
     --commander "Kaalia of the Vast"
 
-# Generate buy list with budget
+# Generate buy list with budget constraint
 python -m cardforge.cli.main deck buy-list "Kaalia Voltron" --budget 50
 
-# Find valuable duplicates
+# Find valuable duplicates for trading
 python -m cardforge.cli.main collection duplicates --min-value 2.00
+
+# Export collection to CSV
+python -m cardforge.cli.main collection export --format csv --output collection.csv
 ```
 
 </details>
 
 ---
 
-## 🤖 MCP Integration
+## Model Context Protocol Integration
 
-CardForge includes a **Model Context Protocol (MCP)** server for seamless integration with Claude Desktop, enabling AI-assisted deck building and collection management.
+CardForge includes a Model Context Protocol (MCP) server implementation for seamless integration with Claude Desktop and other MCP-compatible AI assistants, enabling natural language collection management and deck building.
 
-### Setup
+### Configuration
 
-Add to your Claude Desktop configuration:
+Add the following configuration to Claude Desktop:
 
 **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 ```json
 {
@@ -314,75 +331,107 @@ Add to your Claude Desktop configuration:
 }
 ```
 
-### Available Tools
+### Available MCP Tools
+
+The CardForge MCP server exposes the following tools for AI-assisted operations:
 
 | Tool | Description |
 |------|-------------|
-| `search_cards` | Search cards with filters |
-| `check_ownership` | Check if you own specific cards |
-| `get_collection_stats` | Get collection overview |
-| `get_deck_missing_cards` | Find cards needed for a deck |
-| `add_to_buy_list` | Add cards to buy list |
-| `suggest_deck_upgrades` | AI-powered upgrade suggestions |
-| `find_duplicates` | Find tradeable duplicates |
-| `compare_printings` | Compare prices across sets |
+| `search_cards` | Search cards with advanced filtering options |
+| `check_ownership` | Verify card ownership and quantities |
+| `get_collection_stats` | Retrieve comprehensive collection statistics |
+| `get_deck_missing_cards` | Analyze missing cards for deck completion |
+| `add_to_buy_list` | Add cards to prioritized buy list |
+| `suggest_deck_upgrades` | Generate AI-powered upgrade recommendations |
+| `find_duplicates` | Identify tradeable duplicate cards |
+| `compare_printings` | Compare prices across different set printings |
 
-### Example Conversation
+### Usage Example
 
-> **You:** I want to build a Kaalia deck. What angels, demons, and dragons do I own?
->
-> **Claude:** Based on your collection, you own 12 angels including Aurelia and Gisela, 8 demons including Rune-Scarred Demon, and 6 dragons including Balefire Dragon...
->
-> **You:** Add the missing staples to my buy list under $100
->
-> **Claude:** Added 8 cards to your buy list totaling $87.50...
+```text
+User: I want to build a Kaalia deck. What angels, demons, and dragons do I own?
+
+Claude: Analyzing your collection...
+        You own 12 angels including Aurelia and Gisela,
+        8 demons including Rune-Scarred Demon,
+        and 6 dragons including Balefire Dragon.
+
+User: Add the missing staples to my buy list under $100 total.
+
+Claude: Added 8 essential cards to your buy list:
+        - Master of Cruelties ($12.50)
+        - Dragon Tyrant ($8.75)
+        [... 6 more cards ...]
+        Total: $87.50
+```
+
+For complete MCP integration documentation, see [MCP Integration Guide](docs/MCP_INTEGRATION.md).
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
-CardForge follows clean architecture principles with clear separation of concerns:
+CardForge is built following clean architecture principles with clear separation of concerns and async-first design patterns.
+
+### System Architecture
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│                    Presentation Layer                        │
-│         CLI (Click + Rich)  │  MCP Server (Claude)          │
-├─────────────────────────────────────────────────────────────┤
-│                      Service Layer                           │
-│   CardService │ CollectionService │ DeckService │ Trade     │
-├─────────────────────────────────────────────────────────────┤
-│                    Repository Layer                          │
-│         Async Data Access with Full-Text Search             │
-├─────────────────────────────────────────────────────────────┤
-│                       Data Layer                             │
-│         SQLite (FTS5)  │  Scryfall API  │  TCGPlayer        │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                       Presentation Layer                          │
+│    PyQt6 GUI    │    Tkinter GUI    │    CLI    │    MCP Server │
+├──────────────────────────────────────────────────────────────────┤
+│                        Service Layer                              │
+│  CardService  │  CollectionService  │  DeckService  │  Trade     │
+├──────────────────────────────────────────────────────────────────┤
+│                      Repository Layer                             │
+│           Async Data Access with Full-Text Search                │
+├──────────────────────────────────────────────────────────────────┤
+│                        Data Layer                                 │
+│       SQLite (FTS5)    │    Scryfall API    │    TCGPlayer       │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ### Project Structure
 
 ```text
 cardforge/
-├── 📁 api/           # External API clients
-├── 📁 cli/           # Command-line interface
-├── 📁 config/        # Configuration management
-├── 📁 database/      # SQLite schema & migrations
-├── 📁 models/        # Pydantic data models
-├── 📁 repositories/  # Data access layer
-├── 📁 services/      # Business logic
-├── 📁 mcp/           # Claude Desktop integration
-└── 📁 tests/         # Test suite
+├── api/              External API clients (Scryfall, TCGPlayer, Moxfield)
+├── cli/              Command-line interface implementation
+├── config/           Configuration management and settings
+├── database/         SQLite schema, migrations, and connection handling
+├── exporters/        Data export modules (CSV, Archidekt, Moxfield)
+├── gui/              Tkinter GUI implementation
+├── importers/        Data import modules (CSV, ManaBox, Moxfield)
+├── mcp/              Model Context Protocol server
+├── models/           Pydantic data models and validation
+├── qt_gui/           PyQt6 desktop application
+├── repositories/     Data access layer with async operations
+├── services/         Business logic and domain services
+└── tests/            Test suite (unit and integration)
 ```
+
+### Design Principles
+
+- **Async-First:** All I/O operations use async/await patterns for responsive performance
+- **Type Safety:** Comprehensive type hints with Pydantic v2 validation
+- **Layered Architecture:** Clear separation between presentation, business logic, and data access
+- **Repository Pattern:** Abstracted data access for testability and maintainability
+- **Service Layer:** Encapsulated business logic independent of presentation
+- **API Clients:** Modular external API integration with error handling
+
+For detailed architectural documentation, see [Architecture Guide](docs/architecture/ARCHITECTURE.md).
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
+
+### Core Technologies
 
 <table>
 <tr>
 <td align="center" width="120">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" height="48" alt="Python" />
-<br><strong>Python 3.11+</strong>
+<br><strong>Python 3.9+</strong>
 <br><sub>Async/Await</sub>
 </td>
 <td align="center" width="120">
@@ -396,98 +445,212 @@ cardforge/
 <br><sub>Validation</sub>
 </td>
 <td align="center" width="120">
-<img src="https://img.icons8.com/color/48/console.png" width="48" height="48" alt="Click" />
-<br><strong>Click</strong>
-<br><sub>CLI Framework</sub>
-</td>
-<td align="center" width="120">
-<img src="https://img.icons8.com/fluency/48/console.png" width="48" height="48" alt="Rich" />
-<br><strong>Rich</strong>
-<br><sub>Terminal UI</sub>
+<img src="https://www.riverbankcomputing.com/static/images/logo.svg" width="48" height="48" alt="PyQt6" />
+<br><strong>PyQt6</strong>
+<br><sub>Desktop GUI</sub>
 </td>
 </tr>
 </table>
 
 ### Key Dependencies
 
-| Package | Purpose |
-|---------|---------|
-| `aiosqlite` | Async SQLite database access |
-| `httpx` / `aiohttp` | Async HTTP clients |
-| `pydantic` | Data validation & serialization |
-| `click` | CLI command framework |
-| `rich` | Beautiful terminal formatting |
-| `mcp` | Model Context Protocol server |
+| Package | Version | Purpose |
+|---------|---------|----------|
+| `PyQt6` | 6.6.0+ | Professional desktop GUI framework |
+| `aiosqlite` | 0.19.0+ | Asynchronous SQLite database access |
+| `aiohttp` | 3.9.0+ | Async HTTP client for API integration |
+| `pydantic` | 2.0.0+ | Data validation and serialization |
+| `pandas` | 2.0.0+ | Data manipulation and CSV processing |
+| `requests` | 2.31.0+ | Synchronous HTTP client |
+| `click` | Latest | CLI command framework |
+| `rich` | Latest | Terminal formatting and styling |
+| `mcp` | 0.1.0+ | Model Context Protocol implementation |
 
 ---
 
-## 📚 Documentation
+## Documentation
+
+Comprehensive documentation is available in the [docs](docs/) directory:
+
+### User Guides
 
 | Document | Description |
 |----------|-------------|
-| [API Reference](docs/API.md) | Full CLI and Python API documentation |
-| [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) | Professional PyQt6 desktop interface |
-| [Tkinter GUI Guide](docs/GUI_GUIDE.md) | Lightweight Tkinter interface |
-| [Architecture](docs/ARCHITECTURE.md) | System design and patterns |
-| [MCP Integration](docs/MCP_INTEGRATION.md) | Claude Desktop setup guide |
+| [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) | Professional desktop interface documentation |
+| [Tkinter GUI Guide](docs/GUI_GUIDE.md) | Lightweight GUI documentation |
+| [CLI Reference](docs/api/API.md) | Complete command-line interface reference |
+| [MCP Integration](docs/MCP_INTEGRATION.md) | Claude Desktop and AI assistant setup |
+
+### Developer Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Architecture Overview](docs/architecture/ARCHITECTURE.md) | System design and architectural patterns |
+| [Development Environment](docs/development/ENVIRONMENT_VALIDATION.md) | Development setup and validation |
+| [API Documentation](docs/api/API.md) | Python API reference and examples |
 
 ---
 
-## 🧪 Development
+## Development
+
+### Development Setup
 
 ```bash
-# Run tests
-python -m pytest cardforge/tests/ -v
+# Install development dependencies
+pip install -e ".[dev]"
 
+# Install optional features
+pip install -e ".[charts,mcp]"
+```
+
+### Testing
+
+```bash
+# Run test suite
+python -m pytest tests/ -v
+
+# Run with coverage
+python -m pytest tests/ --cov=cardforge --cov-report=html
+
+# Run specific test categories
+python -m pytest tests/unit/ -v
+python -m pytest tests/integration/ -v
+python -m pytest -m "not slow" -v
+```
+
+### Code Quality
+
+```bash
 # Type checking
 python -m mypy cardforge/
 
-# Format code
-python -m black cardforge/
-
-# Lint
+# Linting and formatting
 python -m ruff check cardforge/
+python -m ruff format cardforge/
+```
+
+### Building
+
+```bash
+# Build distribution packages
+python -m build
+
+# Install from source
+pip install -e .
 ```
 
 ---
 
-## 🗺 Roadmap
+## Development Roadmap
 
-- [x] **Tkinter GUI** - Lightweight desktop interface
-- [x] **PyQt6 GUI** - Professional desktop application ✨ NEW
-- [ ] **Web Interface** - React-based dashboard
-- [ ] **Price Alerts** - Notifications for price changes
-- [ ] **Deck Sharing** - Export/import deck lists
-- [ ] **Collection Sync** - Cloud backup & sync
-- [ ] **Mobile App** - React Native companion
-- [ ] **Trade Finder** - Match with other collectors
+### Current Phase: Beta (v2.0.0)
+
+The project is currently in beta development with active feature implementation and refinement.
+
+### Completed Features
+
+- Core collection management system
+- SQLite database with FTS5 full-text search
+- Scryfall API integration for card data and pricing
+- CSV import/export for Moxfield and ManaBox
+- Command-line interface with comprehensive commands
+- Tkinter GUI for lightweight desktop access
+- PyQt6 professional desktop application
+- Model Context Protocol server for AI integration
+- Deck building with inventory tracking
+- Buy list generation and management
+
+### In Progress
+
+- Enhanced price tracking and historical data
+- Advanced analytics and reporting
+- Performance optimizations for large collections
+- Comprehensive test coverage expansion
+- Documentation improvements
+
+### Planned Features
+
+- Web-based interface with REST API
+- Mobile companion application
+- Cloud synchronization and backup
+- Trade matching system with other collectors
+- Deck sharing and community features
+- Price alert notifications
+- Advanced deck statistics and analysis
+- Integration with additional marketplaces
+- Automated collection photography and cataloging
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions to CardForge are welcome and appreciated. This project follows standard open-source contribution practices.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### How to Contribute
+
+1. Fork the repository on GitHub
+2. Create a feature branch from `main`
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Implement your changes with appropriate tests
+4. Ensure all tests pass and code quality checks succeed
+5. Commit your changes with clear, descriptive messages
+   ```bash
+   git commit -m "Add feature: description of changes"
+   ```
+6. Push to your fork
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+7. Submit a pull request to the main repository
+
+### Contribution Guidelines
+
+- Follow existing code style and conventions
+- Include tests for new functionality
+- Update documentation as needed
+- Ensure all tests pass before submitting
+- Keep pull requests focused on a single feature or fix
+- Write clear commit messages and PR descriptions
+
+### Development Standards
+
+- Python 3.9+ compatibility
+- Type hints for all public APIs
+- Async/await patterns for I/O operations
+- Comprehensive error handling
+- Unit and integration test coverage
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is released under the Unlicense, dedicating it to the public domain. See the [LICENSE](LICENSE) file for complete details.
+
+---
+
+## Acknowledgments
+
+CardForge is built for and by the Magic: The Gathering community. Special thanks to:
+
+- Scryfall for providing comprehensive card data and pricing APIs
+- The Python open-source community for excellent libraries and tools
+- Wizards of the Coast for creating Magic: The Gathering
+- The Commander/EDH community for inspiration and feedback
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for the Magic: The Gathering community**
+### Built for the Magic: The Gathering Community
 
-[![GitHub Stars](https://img.shields.io/github/stars/StrayDogSyn/MyManaBox?style=social)](https://github.com/StrayDogSyn/MyManaBox)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/StrayDogSyn/MyManaBox)
+[![Version](https://img.shields.io/badge/version-2.0.0-informational?style=flat-square)](https://github.com/StrayDogSyn/MyManaBox/releases)
+[![Status](https://img.shields.io/badge/status-beta-yellow?style=flat-square)](https://github.com/StrayDogSyn/MyManaBox)
 
-*Magic: The Gathering is © Wizards of the Coast. CardForge is not affiliated with or endorsed by Wizards of the Coast.*
+Magic: The Gathering and all associated trademarks are property of Wizards of the Coast LLC.
+
+CardForge is an independent project and is not affiliated with, endorsed by, or sponsored by Wizards of the Coast.
 
 </div>
