@@ -27,6 +27,9 @@ data/*.csv
 # Claude Desktop config (contains local paths)
 claude_desktop_config.json
 
+# Continue MCP servers (may contain tokens/secrets)
+.continue/mcpServers/
+
 # Archive folder (preserved locally but not in repo)
 archive/
 
