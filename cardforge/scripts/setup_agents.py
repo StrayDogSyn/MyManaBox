@@ -93,6 +93,8 @@ class CardForgeSetup:
     
     async def check_ollama_running(self) -> bool:
         """Check if Ollama service is running."""
+        if not self.session:
+            return False
         try:
             async with self.session.get(
                 f"{self.ollama_host}/api/tags",
@@ -104,6 +106,8 @@ class CardForgeSetup:
     
     async def get_available_models(self) -> List[str]:
         """Get list of available models from Ollama."""
+        if not self.session:
+            return []
         try:
             async with self.session.get(
                 f"{self.ollama_host}/api/tags",

@@ -455,7 +455,7 @@ class CardForgeOrchestrator:
     
     async def _initialize_agents(self, client: OllamaClient):
         """Initialize all specialized agents."""
-        agents_config = {
+        agents_config: Dict[str, type] = {
             "router": TaskRouter,
             "deck_optimizer": DeckOptimizer,
             "price_analyzer": PriceAnalyzer,
@@ -465,7 +465,7 @@ class CardForgeOrchestrator:
             "synergy_finder": SynergyFinder,
         }
         
-        task_types = {
+        task_types: Dict[str, TaskType] = {
             "router": TaskType.UNKNOWN,
             "deck_optimizer": TaskType.DECK_OPTIMIZATION,
             "price_analyzer": TaskType.PRICE_ANALYSIS,
@@ -478,7 +478,8 @@ class CardForgeOrchestrator:
         for agent_name, agent_class in agents_config.items():
             config = self._get_model_config(agent_name)
             agent = agent_class(agent_name, config, client)
-            self.agents[task_types[agent_name]] = agent
+            task_type = task_types.get(agent_name, TaskType.UNKNOWN)
+            self.agents[task_type] = agent
     
     async def execute(
         self,
@@ -523,11 +524,11 @@ class CardForgeOrchestrator:
                 await self._initialize_agents(client)
                 
                 # Route task
-                router = self.agents.get(TaskType.UNKNOWN)
+                router: Optional[BaseAgent] = self.agents.get(TaskType.UNKNOWN)
                 if not router:
                     raise RuntimeError("Router agent not initialized")
                 
-                task_type = await router.execute(task)
+                task_type: TaskType = await router.execute(task)
                 
                 # Get specialized agent
                 agent: Optional[BaseAgent] = self.agents.get(task_type)

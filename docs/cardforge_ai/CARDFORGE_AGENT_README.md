@@ -15,7 +15,7 @@ CardForge AI is a zero-cost, local AI orchestration system that uses your 12 Oll
 
 ## Architecture Overview
 
-```
+```text
 User Task
     ↓
 [TaskRouter] (Llama 3.2 3B, 2s)
@@ -86,6 +86,7 @@ Response:
 **Space Complexity:** O(c)
 
 Analyzes:
+
 - Current market prices
 - Price trends (trending up/down)
 - Reprint risk
@@ -98,6 +99,7 @@ Analyzes:
 **Purpose:** Organize and manage collections  
 **Time:** 5-8 seconds  
 **Space Complexity:** O(n) where n = collection size
+
 
 Features:
 - Duplicate detection
@@ -118,6 +120,7 @@ Generates:
 - Price-to-impact analysis
 - Budget allocation
 - Bulk discount identification
+
 
 **Priority Weights:**
 - Mana Base: 30%

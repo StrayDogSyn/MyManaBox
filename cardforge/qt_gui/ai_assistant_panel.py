@@ -242,11 +242,11 @@ class AIAssistantPanel(QWidget):
         params_label.setFont(params_font)
         main_layout.addWidget(params_label)
         
-        scroll = QScrollArea()
-        scroll.setWidgetResizable(True)
+        self.scroll = QScrollArea()
+        self.scroll.setWidgetResizable(True)
         self.params_form = TaskParametersForm("deck_optimization")
-        scroll.setWidget(self.params_form)
-        main_layout.addWidget(scroll)
+        self.scroll.setWidget(self.params_form)
+        main_layout.addWidget(self.scroll)
         
         # Execute button
         exec_layout = QHBoxLayout()
@@ -318,11 +318,9 @@ class AIAssistantPanel(QWidget):
         task_type = task_map.get(task_name, "deck_optimization")
         
         # Recreate form
-        scroll_parent = self.params_form.parent()
         old_form = self.params_form
         self.params_form = TaskParametersForm(task_type)
-        if isinstance(scroll_parent, QScrollArea):
-            scroll_parent.setWidget(self.params_form)
+        self.scroll.setWidget(self.params_form)
         old_form.deleteLater()
     
     def _execute_task(self):
@@ -369,11 +367,13 @@ class AIAssistantPanel(QWidget):
         self.progress_bar.setVisible(False)
         
         if result.success:
-            self.status_label.setText(
+            status_text = (
                 f"✓ Complete ({result.execution_time:.2f}s) - "
                 f"Agent: {result.agent_name} | Model: {result.model_used}"
             )
-            self.status_label.setStyleSheet("color: green;")
+            if self.status_label:
+                self.status_label.setText(status_text)
+                self.status_label.setStyleSheet("color: green;")
             self.results_text.setText(result.result)
         else:
             self._show_error(result.result)

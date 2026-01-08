@@ -30,11 +30,13 @@ ollama pull gemma2:4b        # Collection manager (2 min)
 ```
 
 **Optional (for premium analysis):**
+
 ```bash
 ollama pull llama3.1:70b     # Meta analysis (15+ min, 40GB)
 ```
 
 Verify installation:
+
 ```bash
 ollama list
 ```
@@ -50,7 +52,8 @@ python cardforge/scripts/setup_agents.py
 ```
 
 Expected output:
-```
+
+```text
 ✓ Ollama running at http://localhost:11434
 ✓ llama3.2:3b (required)
 ✓ qwen2.5-coder:7b (required)
@@ -63,12 +66,14 @@ Expected output:
 ## Step 4: Test It (1-2 minutes)
 
 ### Option A: Quick Test (Command Line)
+
 ```bash
 python cardforge/ai/orchestration.py
 ```
 
 You'll see output like:
-```
+
+```text
 CardForge AI Orchestration System - Demo
 ============================================================
 
@@ -83,6 +88,7 @@ Result:
 ```
 
 ### Option B: GUI Demo
+
 ```bash
 python cardforge/qt_gui/ai_assistant_panel.py
 ```
@@ -243,6 +249,7 @@ ollama list
 ### "Task takes 30+ seconds"
 
 Likely using 70B model. For faster responses:
+
 - Use `qwen2.5-coder:7b` for code tasks
 - Use `llama3.2:3b` for quick analysis
 - Only use `llama3.1:70b` for complex reasoning
