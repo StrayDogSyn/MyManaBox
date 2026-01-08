@@ -1,0 +1,75 @@
+{
+  "ollama_host": "http://localhost:11434",
+  "default_timeout": 60,
+  "agents": {
+    "router": {
+      "model": "llama3.2:3b",
+      "temperature": 0.3,
+      "max_tokens": 500,
+      "description": "Routes tasks to specialized agents"
+    },
+    "deck_optimizer": {
+      "model": "qwen2.5-coder:7b",
+      "temperature": 0.5,
+      "max_tokens": 2000,
+      "description": "Analyzes and optimizes Magic decks"
+    },
+    "price_analyzer": {
+      "model": "llama3.2:3b",
+      "temperature": 0.3,
+      "max_tokens": 1500,
+      "description": "Analyzes card prices and trends"
+    },
+    "collection_manager": {
+      "model": "gemma2:4b",
+      "temperature": 0.4,
+      "max_tokens": 1500,
+      "description": "Manages and organizes collections"
+    },
+    "buy_list_generator": {
+      "model": "qwen2.5-coder:7b",
+      "temperature": 0.5,
+      "max_tokens": 2000,
+      "description": "Generates prioritized shopping lists"
+    },
+    "meta_analyzer": {
+      "model": "llama3.1:70b",
+      "temperature": 0.6,
+      "max_tokens": 2500,
+      "description": "Analyzes competitive meta-game"
+    },
+    "synergy_finder": {
+      "model": "qwen2.5-coder:7b",
+      "temperature": 0.5,
+      "max_tokens": 2000,
+      "description": "Finds card synergies and combos"
+    }
+  },
+  "deck_optimization": {
+    "turn_3_ramp_target": 12,
+    "mana_curve_ideal": {
+      "one_drop": 0.08,
+      "two_drop": 0.15,
+      "three_drop": 0.15,
+      "four_plus": 0.62
+    },
+    "max_mana_symbols": 3,
+    "min_ramp_sources": 10
+  },
+  "buy_list": {
+    "max_price_per_card": 50,
+    "priority_weights": {
+      "mana_base": 0.3,
+      "ramp": 0.25,
+      "card_draw": 0.2,
+      "removal": 0.15,
+      "synergy": 0.1
+    }
+  },
+  "teaching_mode": {
+    "enabled": true,
+    "explain_reasoning": true,
+    "show_alternatives": true,
+    "include_big_o": true
+  }
+}
