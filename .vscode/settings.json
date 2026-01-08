@@ -17,5 +17,11 @@
     },
     "python.analysis.extraPaths": [
         "${workspaceFolder}"
-    ]
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "git.enabled": true,
+    "git.path": "C:\\Program Files\\Git\\cmd\\git.exe"
 }
