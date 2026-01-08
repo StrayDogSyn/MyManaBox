@@ -58,6 +58,9 @@ class OrchestrationResult:
     tokens_used: Optional[int] = None
 
 
+DEFAULT_AGENT_MODEL = "qwen2.5-coder:7b"
+
+
 class OllamaClient:
     """Client for communicating with local Ollama instance."""
     
@@ -203,6 +206,20 @@ class BaseAgent(ABC):
             self.model_config.max_tokens,
         )
         return response.strip()
+
+
+class DefaultAgent(BaseAgent):
+    """Fallback agent for unclassified tasks."""
+
+    def _build_system_prompt(self) -> str:
+        return (
+            "You are the default CardForge agent. Handle general MTG tasks, "
+            "delegate-style reasoning, and provide concise, actionable answers."
+        )
+
+    async def execute(self, task: str, **kwargs) -> str:
+        prompt = f"{self._build_system_prompt()}\n\nTask: {task}"
+        return await self._generate(prompt)
 
 
 class TaskRouter(BaseAgent):
@@ -424,6 +441,7 @@ class CardForgeOrchestrator:
         self.config = self._load_config(config_path)
         self.ollama_host = self.config.get("ollama_host", "http://localhost:11434")
         self.agents: Dict[TaskType, BaseAgent] = {}
+        self.default_agent: Optional[BaseAgent] = None
     
     def _load_config(self, config_path: Optional[str]) -> Dict[str, Any]:
         """Load configuration from JSON file."""
@@ -480,6 +498,15 @@ class CardForgeOrchestrator:
             agent = agent_class(agent_name, config, client)
             task_type = task_types.get(agent_name, TaskType.UNKNOWN)
             self.agents[task_type] = agent
+
+        # Default fallback agent for unknown tasks
+        default_config = ModelConfig(
+            model=DEFAULT_AGENT_MODEL,
+            temperature=0.4,
+            max_tokens=2000,
+            timeout=self.config.get("default_timeout", 60),
+        )
+        self.default_agent = DefaultAgent("default_agent", default_config, client)
     
     async def execute(
         self,
@@ -533,12 +560,9 @@ class CardForgeOrchestrator:
                 # Get specialized agent
                 agent: Optional[BaseAgent] = self.agents.get(task_type)
                 if not agent:
-                    # Fallback to router if specialized agent not found
-                    agent = self.agents.get(TaskType.UNKNOWN)
-                    if agent:
-                        task_type = TaskType.UNKNOWN
-                    else:
-                        raise RuntimeError("No agent available for task")
+                    # Fallback to default agent if specialized agent not found
+                    agent = self.default_agent or self.agents.get(TaskType.UNKNOWN)
+                    task_type = TaskType.UNKNOWN
                 
                 # Execute task
                 if agent:

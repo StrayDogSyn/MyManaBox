@@ -71,5 +71,15 @@
     "explain_reasoning": true,
     "show_alternatives": true,
     "include_big_o": true
+  },
+  "alternatives": {
+    "code": [
+      "deepseek-coder:6.7b",
+      "codellama:13b"
+    ],
+    "fast": [
+      "phi3:mini",
+      "gemma2:4b"
+    ]
   }
 }
