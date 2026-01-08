@@ -1,0 +1,10 @@
+name: github-mcp
+version: 1.0.0
+mcpServers:
+  - name: github
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-github"
+    env:
+      GITHUB_TOKEN: y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
