@@ -1,81 +1,178 @@
+# CardForge/MyManaBox - Project Configuration
+# Clean pyproject.toml - December 2025
+
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mymanabox"
-version = "1.0.0"
-description = "A comprehensive Python tool for managing Magic: The Gathering card collections"
+name = "cardforge"
+version = "2.0.0"
+description = "Professional MTG Collection Management Platform"
 readme = "README.md"
-requires-python = ">=3.8"
-license = {file = "LICENSE"}
+license = {text = "Unlicense"}
+requires-python = ">=3.9"
 authors = [
-    {name = "MyManaBox Contributors"}
+    {name = "Hunter", email = "hunter@straydogsyndications.com"}
 ]
-keywords = ["magic", "mtg", "cards", "collection", "management"]
+keywords = ["mtg", "magic-the-gathering", "collection", "commander", "edh"]
 classifiers = [
     "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Games/Entertainment",
 ]
 dependencies = [
+    "PyQt6>=6.6.0",
+    "aiohttp>=3.9.0",
+    "aiosqlite>=0.19.0",
     "pandas>=2.0.0",
-    "requests>=2.28.0",
-    "python-mtgsdk>=1.3.0",
-    "colorama>=0.4.6",
-    "tabulate>=0.9.0",
+    "requests>=2.31.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0",
-    "black>=22.0",
-    "flake8>=5.0",
-    "mypy>=0.991",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "pytest-qt>=4.2.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+charts = [
+    "pyqtgraph>=0.13.0",
+    "numpy>=1.24.0",
+]
+mcp = [
+    "mcp>=0.1.0",
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/MyManaBox"
-Repository = "https://github.com/yourusername/MyManaBox.git"
-Issues = "https://github.com/yourusername/MyManaBox/issues"
+Homepage = "https://github.com/StrayDogSyn/MyManaBox"
+Repository = "https://github.com/StrayDogSyn/MyManaBox"
+Documentation = "https://github.com/StrayDogSyn/MyManaBox#readme"
 
 [project.scripts]
-mymanabox = "main:main"
+cardforge = "cardforge.__main__:main"
+
+[project.gui-scripts]
+cardforge-gui = "cardforge.qt_gui.main_window:main"
+
+# =============================================================================
+# SETUPTOOLS CONFIGURATION
+# =============================================================================
+
+[tool.setuptools]
+package-dir = {"" = "."}
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["."]
+include = ["cardforge*"]
+exclude = ["tests*", "docs*", "archive*"]
 
-[tool.black]
-line-length = 88
-target-version = ['py38']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  | legacy
-)/
-'''
+# =============================================================================
+# PYTEST CONFIGURATION
+# =============================================================================
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gui: marks tests requiring GUI (deselect with '-m \"not gui\"')",
+    "integration: marks integration tests",
+    "unit: marks unit tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+# =============================================================================
+# COVERAGE CONFIGURATION
+# =============================================================================
+
+[tool.coverage.run]
+source = ["cardforge"]
+branch = true
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+    "*/migrations/*",
+    "*/.venv/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+show_missing = true
+fail_under = 50
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+# =============================================================================
+# RUFF LINTER CONFIGURATION
+# =============================================================================
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "archive",
+    "legacy",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # Pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "UP",     # pyupgrade
+]
+ignore = [
+    "E501",   # line too long (handled by formatter)
+    "B008",   # do not perform function calls in argument defaults
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cardforge"]
+
+# =============================================================================
+# MYPY TYPE CHECKING
+# =============================================================================
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
-disallow_untyped_defs = true
+ignore_missing_imports = true
 exclude = [
-    "legacy/",
     "tests/",
+    "archive/",
+    "legacy/",
 ]

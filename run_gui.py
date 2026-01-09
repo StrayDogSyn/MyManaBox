@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
-"""Simple GUI launcher for MyManaBox."""
-
+"""
+DEPRECATED: Use run_qt_gui.py for the new PyQt6 interface.
+This file is kept only for backward compatibility.
+"""
+import warnings
 import sys
-import os
-from pathlib import Path
 
-# Ensure we're in the right directory
-project_root = Path(__file__).parent
-os.chdir(project_root)
-
-# Add src to path
-sys.path.insert(0, str(project_root / "src"))
-
-try:
-    # Import and run the GUI
-    from gui import MyManaBoxGUI
+def main():
+    warnings.warn(
+        "\n" + "="*60 + "\n"
+        "WARNING: run_gui.py is DEPRECATED\n"
+        "Please use 'python run_qt_gui.py' instead.\n"
+        "This launcher will be removed in CardForge v2.0\n"
+        + "="*60,
+        DeprecationWarning,
+        stacklevel=2
+    )
     
-    print("Starting MyManaBox GUI...")
-    app = MyManaBoxGUI()
-    app.run()
-    
-except Exception as e:
-    print(f"Error starting GUI: {e}")
-    import traceback
-    traceback.print_exc()
+    print("\n" + "="*60)
+    print("DEPRECATED: This launcher is no longer supported")
+    print("Please use: python run_qt_gui.py")
+    print("="*60 + "\n")
+    sys.exit(1)
+
+if __name__ == "__main__":
+    main()

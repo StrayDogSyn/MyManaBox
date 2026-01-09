@@ -1,0 +1,51 @@
+# .windsurfrules - CardForge/MyManaBox
+# Place in project root for automatic loading
+
+project: CardForge
+type: python
+version: 3.9+
+gui: PyQt6
+
+# Critical reference documents - READ BEFORE IMPLEMENTING
+references:
+  - PYQT6_BUILD_SPECIFICATION.md      # GUI implementation spec
+  - MTG_COLLECTION_MANAGER_DESIGN_PATTERN.md  # Architecture
+  - docs/PROJECT_STRUCTURE.md         # Codebase organization
+  - agents/CLAUDE.md                  # Full AI instructions
+  - WINDSURF_CONTEXT.md              # Complete project context
+
+# Code style
+style:
+  type_hints: required
+  paths: use pathlib
+  io: async/await
+  docstrings: required for public functions
+
+# Theme colors (MANDATORY for GUI)
+theme:
+  bg_primary: "#1e1e1e"
+  bg_secondary: "#252526"
+  accent: "#5a4fcf"
+  text: "#cccccc"
+
+# Testing
+testing:
+  framework: pytest
+  coverage_target: 80%
+  pattern: test_<function>_<scenario>()
+
+# Constraints
+constraints:
+  - Never block main thread
+  - Handle both CSV schemas (15 and 17 columns)
+  - Respect Scryfall 10 req/sec limit
+  - Backup before destructive operations
+  - Follow existing patterns in src/
+
+# Entry points
+commands:
+  cli: python main.py
+  gui_current: python run_gui.py
+  gui_new: python run_pyqt_gui.py
+  test: pytest tests/ -v
+  verify: python scripts/verify_setup.py

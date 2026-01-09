@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "database": {
+    "path": "data/collections/main.db",
+    "backup_count": 7,
+    "auto_backup": true
+  },
+  "api": {
+    "scryfall_rate_limit": 10,
+    "cache_ttl_hours": 24
+  },
+  "import": {
+    "watch_directory": "data/imports",
+    "backup_before_import": true,
+    "default_binder": "Default",
+    "default_condition": "NM"
+  },
+  "export": {
+    "output_directory": "data/exports",
+    "formats": ["moxfield", "archidekt", "csv"]
+  },
+  "gui": {
+    "theme": "dark",
+    "default_size": [1440, 900],
+    "min_size": [1280, 720]
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/cardforge.log",
+    "max_size_mb": 10,
+    "backup_count": 3
+  }
+}
