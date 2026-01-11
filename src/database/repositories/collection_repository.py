@@ -34,12 +34,12 @@ class CollectionRepository(BaseRepository[CollectionItem]):
             .first()
         )
     
-    def get_all_with_cards(
+    def get_all_items(
         self,
         session: Session,
         limit: Optional[int] = None,
     ) -> List[CollectionItem]:
-        """Get all collection items with card data."""
+        """Get all collection items with card data eagerly loaded."""
         query = (
             session.query(CollectionItem)
             .options(joinedload(CollectionItem.card))
@@ -47,6 +47,14 @@ class CollectionRepository(BaseRepository[CollectionItem]):
         if limit:
             query = query.limit(limit)
         return query.all()
+    
+    def get_all_with_cards(
+        self,
+        session: Session,
+        limit: Optional[int] = None,
+    ) -> List[CollectionItem]:
+        """Get all collection items with card data."""
+        return self.get_all_items(session, limit)
     
     def get_by_card_id(self, session: Session, card_id: int) -> List[CollectionItem]:
         """Get all collection items for a specific card."""
