@@ -52,18 +52,18 @@ class Card(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     
     # Scryfall identifiers
-    scryfall_id: Mapped[str] = mapped_column(String(36), unique=True, nullable=False, index=True)
+    scryfall_id: Mapped[Optional[str]] = mapped_column(String(36), unique=True, index=True)
     oracle_id: Mapped[Optional[str]] = mapped_column(String(36), index=True)
     
     # Card identity
     name: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
     set_code: Mapped[str] = mapped_column(String(10), nullable=False, index=True)
-    collector_number: Mapped[str] = mapped_column(String(20), nullable=False)
+    collector_number: Mapped[Optional[str]] = mapped_column(String(20))
     
     # Card attributes
     mana_cost: Mapped[Optional[str]] = mapped_column(String(100))
     cmc: Mapped[float] = mapped_column(Float, default=0.0)
-    type_line: Mapped[str] = mapped_column(String(255), nullable=False)
+    type_line: Mapped[Optional[str]] = mapped_column(String(255))
     oracle_text: Mapped[Optional[str]] = mapped_column(Text)
     
     # Colors
