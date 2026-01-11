@@ -86,9 +86,11 @@ class TestDatabaseManager:
     
     def test_fts5_tables_created(self, db_manager):
         """Test FTS5 tables are created."""
+        from sqlalchemy import text
+        
         with db_manager.get_session() as session:
             # Query FTS5 table (should not raise error)
-            result = session.execute("SELECT name FROM sqlite_master WHERE name='cards_fts'")
+            result = session.execute(text("SELECT name FROM sqlite_master WHERE name='cards_fts'"))
             tables = result.fetchall()
             assert len(tables) == 1
     

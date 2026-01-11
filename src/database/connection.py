@@ -11,7 +11,7 @@ from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 from typing import AsyncGenerator, Generator, Optional
 
-from sqlalchemy import create_engine, event, pool
+from sqlalchemy import create_engine, event, pool, text
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
     AsyncSession,
@@ -143,7 +143,7 @@ class DatabaseManager:
         """Create FTS5 full-text search tables."""
         with self.get_session() as session:
             # Create FTS5 virtual table for card search
-            session.execute("""
+            session.execute(text("""
                 CREATE VIRTUAL TABLE IF NOT EXISTS cards_fts USING fts5(
                     card_id UNINDEXED,
                     name,
@@ -152,18 +152,18 @@ class DatabaseManager:
                     content='cards',
                     content_rowid='id'
                 )
-            """)
+            """))
             
             # Create triggers to keep FTS5 in sync
-            session.execute("""
+            session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_insert AFTER INSERT ON cards
                 BEGIN
                     INSERT INTO cards_fts(card_id, name, type_line, oracle_text)
                     VALUES (new.id, new.name, new.type_line, new.oracle_text);
                 END
-            """)
+            """))
             
-            session.execute("""
+            session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_update AFTER UPDATE ON cards
                 BEGIN
                     UPDATE cards_fts
@@ -172,14 +172,14 @@ class DatabaseManager:
                         oracle_text = new.oracle_text
                     WHERE card_id = new.id;
                 END
-            """)
+            """))
             
-            session.execute("""
+            session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_delete AFTER DELETE ON cards
                 BEGIN
                     DELETE FROM cards_fts WHERE card_id = old.id;
                 END
-            """)
+            """))
             
             session.commit()
             logger.info("FTS5 tables and triggers created")
@@ -188,7 +188,7 @@ class DatabaseManager:
         """Create FTS5 full-text search tables asynchronously."""
         async with self.async_session_factory() as session:
             # Create FTS5 virtual table for card search
-            await session.execute("""
+            await session.execute(text("""
                 CREATE VIRTUAL TABLE IF NOT EXISTS cards_fts USING fts5(
                     card_id UNINDEXED,
                     name,
@@ -197,18 +197,18 @@ class DatabaseManager:
                     content='cards',
                     content_rowid='id'
                 )
-            """)
+            """))
             
             # Create triggers (same as sync version)
-            await session.execute("""
+            await session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_insert AFTER INSERT ON cards
                 BEGIN
                     INSERT INTO cards_fts(card_id, name, type_line, oracle_text)
                     VALUES (new.id, new.name, new.type_line, new.oracle_text);
                 END
-            """)
+            """))
             
-            await session.execute("""
+            await session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_update AFTER UPDATE ON cards
                 BEGIN
                     UPDATE cards_fts
@@ -217,14 +217,14 @@ class DatabaseManager:
                         oracle_text = new.oracle_text
                     WHERE card_id = new.id;
                 END
-            """)
+            """))
             
-            await session.execute("""
+            await session.execute(text("""
                 CREATE TRIGGER IF NOT EXISTS cards_fts_delete AFTER DELETE ON cards
                 BEGIN
                     DELETE FROM cards_fts WHERE card_id = old.id;
                 END
-            """)
+            """))
             
             await session.commit()
             logger.info("FTS5 tables and triggers created (async)")
@@ -236,7 +236,7 @@ class DatabaseManager:
         
         # Drop FTS5 tables
         with self.get_session() as session:
-            session.execute("DROP TABLE IF EXISTS cards_fts")
+            session.execute(text("DROP TABLE IF EXISTS cards_fts"))
             session.commit()
         
         logger.warning("All database tables dropped")
