@@ -1,4 +1,4 @@
-import { ChatInterface } from '@/components/ai/ChatInterface';
+import { ChatInterface } from '../components/ai/ChatInterface';
 import { Database, Layers, Sparkles } from 'lucide-react';
 
 export function AIWorkspace() {
