@@ -6,6 +6,7 @@ import pytest
 import pytest_asyncio
 import shutil
 import asyncio
+import pandas as pd
 from pathlib import Path
 from unittest.mock import MagicMock, patch, AsyncMock
 
@@ -43,54 +44,89 @@ def test_csv_path(tmp_path):
 @pytest.mark.asyncio
 class TestCsvCollectionManager:
     
-    async def test_initialize_syncs_from_csv(self, test_csv_path, mock_scryfall):
-        """Test that initialization reads the CSV and populates DB."""
-        # Setup mock card repo to avoid scryfall calls
-        with patch('cardforge.importers.csv_importer.CardRepository.get_by_name', new_callable=AsyncMock) as mock_get:
-            # Return dummy card
-            mock_get.return_value = Card(id=1, name="Sol Ring", scryfall_id="sol-1", set_code="CMD")
-            
-            manager = CsvCollectionManager(test_csv_path)
-            await manager.initialize()
-            
-            # Check DB
-            repo = CollectionRepository()
-            coll = await repo.get_by_name("moxfield_collection_test")
-            assert coll is not None
-            
-            cards = await CollectionCardRepository().get_by_collection(coll.id)
-            # Should have 2 entries (Sol Ring and Command Tower - assuming importer creates placeholder for 2nd)
-            # Note: Importer creates placeholders if not found.
-            # We mocked the first one. The second one will hit _create_placeholder_card.
-            
-            assert len(cards) == 2
+    async def _seed_db(self):
+        """Seed DB with necessary sets and cards."""
+        from cardforge.repositories import SetRepository, CardRepository
+        from cardforge.models import SetInfo, Card
+        
+        # Sets
+        set_repo = SetRepository()
+        await set_repo.upsert(SetInfo(code="CMD", name="Commander", release_date="2011-06-17"))
+        await set_repo.upsert(SetInfo(code="CMR", name="Commander Legends", release_date="2020-11-20"))
+        
+        # Cards
+        card_repo = CardRepository()
+        await card_repo.upsert(Card(
+            name="Sol Ring", 
+            set_code="CMD", 
+            scryfall_id="sol-1", 
+            oracle_id="oracle-sol",
+            collector_number="1"
+        ))
+        await card_repo.upsert(Card(
+            name="Command Tower", 
+            set_code="CMR", 
+            scryfall_id="tower-1", 
+            oracle_id="oracle-tower",
+            collector_number="2"
+        ))
 
-    async def test_add_card_syncs_to_csv(self, test_csv_path, tmp_path):
-        """Test that adding a card writes back to CSV."""
+    async def test_initialize_syncs_from_csv(self, test_csv_path):
+        """Test that initialization reads the CSV and populates DB."""
+        await self._seed_db()
+        
         manager = CsvCollectionManager(test_csv_path)
+        await manager.initialize()
         
-        # Initialize (sync IN)
-        with patch('cardforge.importers.csv_importer.CardRepository.get_by_name', new_callable=AsyncMock) as mock_get:
-            mock_get.return_value = Card(id=1, name="Sol Ring", scryfall_id="sol-1", set_code="CMD")
-            await manager.initialize()
+        # Check DB
+        repo = CollectionRepository()
+        coll = await repo.get_by_name("moxfield_collection_test")
+        assert coll is not None
         
-        # Mock card repo for ADD
-        with patch('cardforge.repositories.CardRepository.get_by_scryfall_id', new_callable=AsyncMock) as mock_get_sf:
-            mock_get_sf.return_value = Card(id=1, name="Sol Ring", scryfall_id="sol-1", set_code="CMD")
-            
-            # Add a card
-            await manager.add_card("sol-1", quantity=4)
-            
-            # Check CSV content
-            content = test_csv_path.read_text(encoding='utf-8')
-            assert "Sol Ring" in content
-            # Quantity should be updated or new row added depending on exporter logic.
-            # The exporter likely aggregates.
-            
-            # Verify version created
-            history_dir = test_csv_path.parent / "history"
-            assert history_dir.exists()
-            assert len(list(history_dir.glob("*.csv"))) == 1
+        cards = await CollectionCardRepository().get_by_collection(coll.id)
+        assert len(cards) == 2
+        
+        # Verify specific card data
+        sol_ring = next(c for c in cards if c.card_id == 1) # Assuming auto-inc ID 1
+        assert sol_ring.quantity == 1
+        assert sol_ring.condition == "Near Mint"
+
+    async def test_add_card_syncs_to_csv(self, test_csv_path):
+        """Test that adding a card writes back to CSV."""
+        await self._seed_db()
+        
+        # First sync (import existing)
+        manager = CsvCollectionManager(test_csv_path)
+        await manager.initialize()
+        
+        # Add Sol Ring (already exists, so should update quantity or fail unique constraint depending on impl)
+        # add_card implementation in CsvCollectionManager calls CollectionCardRepository.add_card
+        # which handles "existing" by updating quantity if attributes match.
+        # But here we just pass scryfall_id and quantity.
+        # Defaults: foil="normal", condition="NM".
+        # The CSV Sol Ring is Near Mint, Normal (implied False).
+        
+        await manager.add_card("sol-1", quantity=4)
+        
+        # Check CSV content
+        content = test_csv_path.read_text(encoding='utf-8')
+        
+        # Re-read to verify logical content
+        df = pd.read_csv(test_csv_path)
+        # Find Sol Ring row
+        # Note: Exporter might combine or separate rows. 
+        # CSVImporter separates by condition/foil/lang.
+        # CollectionCardRepository separates by same.
+        # So we should see updated quantity for the matching row.
+        
+        row = df[(df["Name"] == "Sol Ring") & (df["Condition"] == "Near Mint")]
+        # Original was 1, added 4 -> 5
+        assert row["Count"].sum() == 5
+        
+        # Verify version created
+        history_dir = test_csv_path.parent / "history"
+        assert history_dir.exists()
+        assert len(list(history_dir.glob("*.csv"))) >= 1
 
     async def test_file_locking(self, test_csv_path):
         """Test that file locking prevents concurrent access."""
@@ -103,26 +139,18 @@ class TestCsvCollectionManager:
         lock.acquire()
         
         try:
-            # Try to sync while locked (should fail or wait -> we simulate fail with short timeout)
-            # We need to patch the internal lock of manager or use a separate process.
-            # Since we are in same process, re-entrant locking isn't supported by our simple FileLock.
-            # So creating another lock object for same file should fail.
-            
             lock2 = FileLock(test_csv_path, timeout=0.1)
             with pytest.raises(FileLockError):
                 lock2.acquire()
-                
         finally:
             lock.release()
 
     async def test_data_integrity_roundtrip(self, test_csv_path):
         """Test full round trip: CSV -> DB -> Update -> CSV."""
-        manager = CsvCollectionManager(test_csv_path)
+        await self._seed_db()
         
-        # 1. Init
-        with patch('cardforge.importers.csv_importer.CardRepository.get_by_name', new_callable=AsyncMock) as mock_get:
-            mock_get.return_value = Card(id=1, name="Sol Ring", scryfall_id="sol-1", set_code="CMD")
-            await manager.initialize()
+        manager = CsvCollectionManager(test_csv_path)
+        await manager.initialize()
             
         # 2. Update quantity of existing card
         cards = await manager.get_all_cards()
@@ -132,8 +160,16 @@ class TestCsvCollectionManager:
         await manager.update_quantity(target_card.id, original_qty + 5)
         
         # 3. Verify CSV updated
-        content = test_csv_path.read_text()
-        # Exporter format might differ slightly but data should be there
+        df = pd.read_csv(test_csv_path)
+        # We need to find the specific row corresponding to target_card
+        # Since we only have 2 cards and unique names, name matching is enough
+        
+        # We need the card name. CollectionCard has card_id.
+        card_repo = CardRepository()
+        card_obj = await card_repo.get(target_card.card_id)
+        
+        row = df[df["Name"] == card_obj.name]
+        assert row["Count"].sum() == original_qty + 5
         # We rely on CSVImporter logic to parse it back to verify
         
         # 4. Re-read to verify

@@ -69,6 +69,12 @@ Welcome to the CardForge documentation! This guide will help you find the inform
 
 Historical and deprecated documentation can be found in [archive/](archive/)
 
+## Project Organization
+
+For information about the project structure and organization, see:
+- [Project Structure Guide](PROJECT_STRUCTURE.md) - Complete directory layout and organization
+- [Cleanup Summary](CLEANUP_SUMMARY.md) - Recent project reorganization details
+
 ---
 
 ## Documentation Organization

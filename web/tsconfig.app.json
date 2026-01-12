@@ -24,6 +24,7 @@
       "@api/*": ["src/api/*"],
       "@types/*": ["src/types/*"]
     },
+    "ignoreDeprecations": "6.0",
 
     /* Linting */
     "strict": true,

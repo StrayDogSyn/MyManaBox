@@ -20,6 +20,7 @@ class CSVSchema(Enum):
     """CSV schema versions."""
     FULL_17_COLUMN = "full_17"  # With Binder Name, Binder Type
     MINIMAL_15_COLUMN = "minimal_15"  # Without Binder columns
+    MOXFIELD_SIMPLE = "moxfield_simple" # Basic Moxfield columns
     UNKNOWN = "unknown"
 
 
@@ -42,6 +43,8 @@ def detect_csv_schema(file_path: Path) -> CSVSchema:
             return CSVSchema.FULL_17_COLUMN
         elif len(df.columns) >= 15:
             return CSVSchema.MINIMAL_15_COLUMN
+        elif "Name" in columns and ("Edition" in columns or "Set code" in columns) and "Count" in columns:
+            return CSVSchema.MOXFIELD_SIMPLE
         else:
             return CSVSchema.UNKNOWN
             
@@ -174,7 +177,12 @@ class CSVImporter:
         # Extract card data
         name = row.get("Name", "").strip()
         set_code = row.get("Edition", "").strip().upper()
+        if not set_code:
+            set_code = row.get("Set code", "").strip().upper()
+            
         collector_number = str(row.get("Card Number", "")).strip()
+        if not collector_number:
+            collector_number = str(row.get("Collector Number", "")).strip()
         
         if not name:
             raise ValueError("Card name is required")

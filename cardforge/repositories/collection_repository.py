@@ -37,6 +37,24 @@ class CollectionRepository(BaseRepository[Collection]):
     async def get_by_name(self, name: str) -> Optional[Collection]:
         """Get collection by name."""
         return await self.find_one_by(name=name)
+        
+    async def clear_collection(self, collection_id: int) -> int:
+        """
+        Remove all cards from a collection.
+        
+        Args:
+            collection_id: ID of collection to clear
+            
+        Returns:
+            Number of cards removed
+        """
+        async with get_connection() as conn:
+            cursor = await conn.execute(
+                "DELETE FROM collection_cards WHERE collection_id = ?",
+                (collection_id,)
+            )
+            await conn.commit()
+            return cursor.rowcount
     
     async def get_with_cards(
         self, 
