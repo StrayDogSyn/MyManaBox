@@ -470,24 +470,34 @@ For detailed architectural documentation, see [Architecture Guide](docs/architec
 
 ## Documentation
 
-Comprehensive documentation is available in the [docs](docs/) directory:
+Comprehensive documentation is available in the [docs](docs/) directory. See the [Documentation Index](docs/README.md) for a complete guide to all available documentation.
 
-### User Guides
-
-| Document | Description |
-|----------|-------------|
-| [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md) | Professional desktop interface documentation |
-| [Tkinter GUI Guide](docs/GUI_GUIDE.md) | Lightweight GUI documentation |
-| [CLI Reference](docs/api/API.md) | Complete command-line interface reference |
-| [MCP Integration](docs/MCP_INTEGRATION.md) | Claude Desktop and AI assistant setup |
-
-### Developer Documentation
+### Quick Links
 
 | Document | Description |
 |----------|-------------|
-| [Architecture Overview](docs/architecture/ARCHITECTURE.md) | System design and architectural patterns |
-| [Development Environment](docs/development/ENVIRONMENT_VALIDATION.md) | Development setup and validation |
-| [API Documentation](docs/api/API.md) | Python API reference and examples |
+| [📚 Documentation Index](docs/README.md) | Complete documentation guide and navigation |
+| [🚀 Collection Quick Start](docs/guides/COLLECTION_QUICK_START.md) | Get started with collection management |
+| [🖥️ GUI Quick Start](docs/guides/GUI_QUICKSTART.md) | Quick guide to the graphical interface |
+| [🎯 PyQt6 Quick Start](docs/development/PYQT6_QUICKSTART.md) | Setting up PyQt6 development |
+| [🤖 MCP Integration](docs/guides/MCP_INTEGRATION.md) | Claude Desktop and AI assistant setup |
+| [📊 Import/Export Guide](docs/IMPORT_EXPORT_GUIDE.md) | Importing and exporting your collection |
+
+### Developer Resources
+
+| Document | Description |
+|----------|-------------|
+| [🏗️ Phase 2 Development Guide](docs/development/PHASE_2_DEVELOPMENT_GUIDE.md) | Current development phase documentation |
+| [🧪 Integration Testing](docs/integration_testing.md) | Testing the integration system |
+| [📈 Progress Tracker](docs/development/PROGRESS_TRACKER.md) | Development progress and roadmap |
+| [💻 VS Code Quick Reference](docs/development/VS_CODE_QUICK_REFERENCE.md) | VS Code tips and shortcuts |
+
+### Project Reports
+
+Completion reports and implementation summaries are available in [docs/reports](docs/reports/):
+- [Integration Implementation Summary](docs/reports/INTEGRATION_IMPLEMENTATION_SUMMARY.md)
+- [Phase 1 Completion](docs/reports/PHASE1_COMPLETION.md)
+- [TRAE Executive Summary](docs/reports/TRAE_EXECUTIVE_SUMMARY.md)
 
 ---
 

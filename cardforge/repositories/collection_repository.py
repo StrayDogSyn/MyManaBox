@@ -93,7 +93,13 @@ class CollectionCardRepository(BaseRepository[CollectionCard]):
         offset: int = 0
     ) -> List[CollectionCard]:
         """Get all cards in a collection."""
-        return await self.find_by(collection_id=collection_id, limit=limit, offset=offset)
+        async with get_connection() as conn:
+            cursor = await conn.execute(
+                f"SELECT * FROM {self.table_name} WHERE collection_id = ? LIMIT ? OFFSET ?",
+                (collection_id, limit, offset)
+            )
+            rows = await cursor.fetchall()
+            return [self.model_class.from_row(row) for row in rows]
     
     async def get_with_card_data(
         self, 

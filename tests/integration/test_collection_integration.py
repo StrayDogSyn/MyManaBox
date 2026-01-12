@@ -15,51 +15,44 @@ from cardforge.repositories import CardRepository, CollectionRepository, Collect
 from cardforge.utils.monitoring import PerformanceMonitor
 from cardforge.database import init_db
 
-@pytest.fixture(autouse=True)
+@pytest_asyncio.fixture(autouse=True)
 async def setup_db(tmp_path):
     """Initialize a temporary database for each test."""
+    from cardforge.database import connection
     from cardforge.database.connection import DatabaseConnection
     
-    # Reset singleton
+    # Reset singleton and global variable
     if DatabaseConnection._instance:
         await DatabaseConnection._instance.close()
+        DatabaseConnection._instance = None
+    
+    connection._db = None  # Reset global variable
         
     db_path = tmp_path / "test.db"
     await init_db(str(db_path))
     
-    # Create a default set for testing
+    # Create default sets for testing
     set_repo = SetRepository()
-    await set_repo.upsert(SetInfo(
-        code="tst", 
-        name="Test Set", 
-        release_date="2023-01-01"
-    ))
+    test_sets = [
+        SetInfo(code="tst", name="Test Set", release_date="2023-01-01"),
+        SetInfo(code="cmd", name="Commander Set", release_date="2023-01-01"),
+        SetInfo(code="prf", name="Perf Set", release_date="2023-01-01"),
+        SetInfo(code="del", name="Delete Set", release_date="2023-01-01"),
+    ]
     
-    # Verify set exists
+    for set_info in test_sets:
+        await set_repo.upsert(set_info)
+    
+    # Verify sets exist
     sets = await set_repo.get_all_codes()
     print(f"DEBUG: Existing sets: {sets}")
-    
-    await set_repo.upsert(SetInfo(
-        code="cmd", 
-        name="Commander Set", 
-        release_date="2023-01-01"
-    ))
-    await set_repo.upsert(SetInfo(
-        code="prf", 
-        name="Perf Set", 
-        release_date="2023-01-01"
-    ))
-    await set_repo.upsert(SetInfo(
-        code="del", 
-        name="Delete Set", 
-        release_date="2023-01-01"
-    ))
     
     yield
     
     # Cleanup
     if DatabaseConnection._instance:
         await DatabaseConnection._instance.close()
+        DatabaseConnection._instance = None
 
 @pytest_asyncio.fixture
 async def integration_service():

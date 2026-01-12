@@ -24,7 +24,8 @@ def main():
     retcode = pytest.main([
         "-v",
         str(test_file),
-        "-W", "ignore::DeprecationWarning"
+        "-W", "ignore::DeprecationWarning",
+        "--no-cov"  # Disable coverage for integration verification
     ])
     
     print("\n" + "="*60)

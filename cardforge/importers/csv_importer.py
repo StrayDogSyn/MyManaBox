@@ -180,7 +180,7 @@ class CSVImporter:
             raise ValueError("Card name is required")
         
         # Get or create card in database
-        card = await self.card_repo.get_by_name_and_set(name, set_code)
+        card = await self.card_repo.get_by_name(name, set_code)
         
         if not card:
             # Card not in cache - need to fetch from Scryfall
