@@ -72,6 +72,15 @@ class DatabaseConfig:
 
 
 @dataclass
+class OllamaConfig:
+    """Ollama AI configuration."""
+    base_url: str = field(default_factory=lambda: get_env('OLLAMA_BASE_URL', 'http://localhost:11434'))
+    timeout: int = field(default_factory=lambda: get_env_int('OLLAMA_TIMEOUT', 300))
+    default_model: str = field(default_factory=lambda: get_env('OLLAMA_DEFAULT_MODEL', 'llama3.2:3b'))
+    complex_model: str = field(default_factory=lambda: get_env('OLLAMA_COMPLEX_MODEL', 'llama3.1:70b'))
+
+
+@dataclass
 class ScryfallConfig:
     """Scryfall API configuration."""
     base_url: str = "https://api.scryfall.com"
