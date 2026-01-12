@@ -155,11 +155,11 @@ class TestProtocols:
 
     def test_enum_str_mixin_for_json(self):
         """Enums inherit from str for JSON serialization."""
-        rarity_str = str(Rarity.MYTHIC)
+        rarity_str = Rarity.MYTHIC.value
         assert isinstance(rarity_str, str)
         assert rarity_str == "mythic"
 
-        condition_str = str(Condition.MINT)
+        condition_str = Condition.MINT.value
         assert isinstance(condition_str, str)
         assert condition_str == "mint"
 

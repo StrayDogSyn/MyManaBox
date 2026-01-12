@@ -100,8 +100,10 @@ class CSVImporter:
     
     def __init__(self):
         """Initialize importer with repositories."""
+        from cardforge.repositories import CardRepository, CollectionCardRepository
+        
         self.card_repo = CardRepository()
-        self.collection_repo = CollectionRepository()
+        self.collection_repo = CollectionCardRepository()
         
     async def import_csv(
         self,
@@ -143,7 +145,7 @@ class CSVImporter:
         
         # Backup if requested
         if backup and not merge:
-            await self._create_backup(collection_id)
+            stats["backup_path"] = await self._create_backup(collection_id)
         
         # Clear collection if not merging
         if not merge:
@@ -156,7 +158,12 @@ class CSVImporter:
                 stats["imported"] += 1
             except Exception as e:
                 stats["errors"] += 1
-                stats["warnings"].append(f"Row {idx + 2}: {str(e)}")
+                error_msg = f"Row {idx + 2}: {str(e)}"
+                stats["warnings"].append(error_msg)
+                # Debug: Print first error
+                if stats["errors"] == 1:
+                    import traceback
+                    print(f"DEBUG First import error:\n{traceback.format_exc()}")
         
         return stats
     
@@ -195,40 +202,32 @@ class CSVImporter:
             # For now, create placeholder
             card = await self._create_placeholder_card(name, set_code, collector_number)
         
-        # Parse collection card data
+        # Ensure card.id is set before using it
+        if not card or not card.id:
+            raise ValueError(f"Failed to create card: {name} ({set_code})")
+        
+        # Parse collection card data (normalize enums to raw values for storage)
         quantity = int(row.get("Count", 1))
         foil = self._parse_foil(row.get("Foil", ""))
-        condition = self._parse_condition(row.get("Condition", "Near Mint"))
-        language = self._parse_language(row.get("Language", "English"))
+        condition_enum = self._parse_condition(row.get("Condition", "Near Mint"))
+        condition = condition_enum.value if hasattr(condition_enum, "value") else str(condition_enum)
+        language_enum = self._parse_language(row.get("Language", "English"))
+        language = language_enum.value if hasattr(language_enum, "value") else str(language_enum)
         
         # Optional fields
         purchase_price = self._parse_price(row.get("Purchase Price"))
         tags = row.get("Tags", "")
         
-        # Schema-specific fields
-        if schema == CSVSchema.FULL_17_COLUMN:
-            binder_name = row.get("Binder Name", "Default")
-            binder_type = row.get("Binder Type", "Collection")
-        else:
-            binder_name = "Default"
-            binder_type = "Collection"
-        
-        # Create collection card entry
-        collection_card = CollectionCard(
-            card_id=card.id,
+        # Save to database with upsert semantics to handle duplicate rows gracefully
+        await self.collection_repo.add_card(
             collection_id=collection_id,
+            card_id=card.id,
             quantity=quantity,
             foil=foil,
             condition=condition,
             language=language,
             purchase_price=purchase_price,
-            tags=tags,
-            binder_name=binder_name,
-            acquired_date=datetime.now(),
         )
-        
-        # Save to database
-        await self.collection_repo.add_card(collection_card)
     
     async def _create_placeholder_card(
         self,
@@ -247,11 +246,35 @@ class CSVImporter:
         Returns:
             Created card object
         """
+        import uuid
+        from cardforge.database import get_connection
+        
+        # Ensure set exists (required by FOREIGN KEY)
+        async with get_connection() as conn:
+            # Check if set exists
+            cursor = await conn.execute(
+                "SELECT code FROM sets WHERE code = ? LIMIT 1",
+                (set_code.upper(),)
+            )
+            existing_set = await cursor.fetchone()
+            
+            if not existing_set:
+                # Create placeholder set
+                await conn.execute(
+                    "INSERT INTO sets (code, name) VALUES (?, ?)",
+                    (set_code.upper(), f"Set {set_code.upper()}")
+                )
+                await conn.commit()
+        
+        # Generate a temporary UUID for placeholder cards
+        # Will be replaced with real Scryfall ID during enrichment
+        temp_id = f"placeholder-{uuid.uuid4().hex[:12]}"
+        
         card = Card(
             name=name,
-            set_code=set_code,
+            set_code=set_code.upper(),
             collector_number=collector_number,
-            scryfall_id=None,  # Will be filled by enrichment
+            scryfall_id=temp_id,  # Will be filled by enrichment
             oracle_text="",
             type_line="",
             mana_cost="",
@@ -259,17 +282,18 @@ class CSVImporter:
             colors=[],
             color_identity=[],
             rarity="common",
-            prices={},
         )
         
         return await self.card_repo.create(card)
     
-    def _parse_foil(self, value: str) -> bool:
-        """Parse foil status from CSV."""
+    def _parse_foil(self, value: str) -> str:
+        """Parse foil status from CSV and return as string."""
         if pd.isna(value):
-            return False
+            return "normal"
         value_str = str(value).lower().strip()
-        return value_str in ("foil", "true", "1", "yes")
+        if value_str in ("foil", "true", "1", "yes"):
+            return "foil"
+        return "normal"
     
     def _parse_condition(self, value: str) -> Condition:
         """Parse condition from CSV."""
@@ -301,24 +325,30 @@ class CSVImporter:
         language_map = {
             "english": Language.ENGLISH,
             "en": Language.ENGLISH,
-            "japanese": Language.JAPANESE,
-            "ja": Language.JAPANESE,
-            "chinese": Language.CHINESE,
-            "zh": Language.CHINESE,
-            "korean": Language.KOREAN,
-            "ko": Language.KOREAN,
-            "french": Language.FRENCH,
-            "fr": Language.FRENCH,
             "german": Language.GERMAN,
             "de": Language.GERMAN,
-            "spanish": Language.SPANISH,
-            "es": Language.SPANISH,
+            "french": Language.FRENCH,
+            "fr": Language.FRENCH,
             "italian": Language.ITALIAN,
             "it": Language.ITALIAN,
+            "spanish": Language.SPANISH,
+            "es": Language.SPANISH,
             "portuguese": Language.PORTUGUESE,
             "pt": Language.PORTUGUESE,
+            "japanese": Language.JAPANESE,
+            "ja": Language.JAPANESE,
+            "korean": Language.KOREAN,
+            "ko": Language.KOREAN,
             "russian": Language.RUSSIAN,
             "ru": Language.RUSSIAN,
+            "chinese": Language.CHINESE_SIMPLIFIED,
+            "zh": Language.CHINESE_SIMPLIFIED,
+            "chinese simplified": Language.CHINESE_SIMPLIFIED,
+            "zhs": Language.CHINESE_SIMPLIFIED,
+            "chinese traditional": Language.CHINESE_TRADITIONAL,
+            "zht": Language.CHINESE_TRADITIONAL,
+            "phyrexian": Language.PHYREXIAN,
+            "ph": Language.PHYREXIAN,
         }
         
         return language_map.get(value_str, Language.ENGLISH)

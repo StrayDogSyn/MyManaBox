@@ -229,6 +229,13 @@ def temp_db(tmp_path):
     return db_path
 
 
+@pytest.fixture
+def temp_db_path(tmp_path):
+    """Alias for temp_db - returns path to temporary database."""
+    db_path = tmp_path / "test.db"
+    return db_path
+
+
 # =============================================================================
 # MOCK FIXTURES
 # =============================================================================
