@@ -22,7 +22,7 @@
    - Technical implementation details
    - Backup and recovery information
 
-3. **[data/imports/INTEGRATION_COMPLETE_GUIDE.md](data/imports/INTEGRATION_COMPLETE_GUIDE.md)**
+3. **[data/imports/INTEGRATION_COMPLETE_GUIDE.md](../../data/imports/INTEGRATION_COMPLETE_GUIDE.md)**
    - Original integration specifications
    - Complete statistics and analysis
    - Teaching opportunities for students
@@ -61,7 +61,7 @@ All in `data/imports/` directory:
 
 ## 📈 Collection Statistics
 
-```
+```text
 Total Unique Cards:       3,629
 Physical Cards:           6,080 (with duplicates)
 Estimated Value:          $2,323.02
@@ -98,7 +98,7 @@ Deck Status:
 
 ### This Week (1-2 hours)
 - [ ] Import to Moxfield (5 min)
-  - Go to: https://moxfield.com/collection
+  - Go to: [moxfield.com/collection](https://moxfield.com/collection)
   - Upload: `data/imports/moxfield_complete_collection.csv`
 
 - [ ] Plan purchases (30 min)
@@ -120,7 +120,7 @@ Deck Status:
 
 ## 📁 File Structure
 
-```
+```text
 MyManaBox/
 ├── data/
 │   ├── enriched_collection_complete.csv      ← Main database
@@ -134,9 +134,15 @@ MyManaBox/
 │       ├── deck_missing_*.txt                (9 files)
 │       ├── ManaBox_Collection_Bulk.csv
 │       └── Update-CardForge.ps1
-├── COLLECTION_INTEGRATION_REPORT.md          ← Full report
-├── COLLECTION_QUICK_START.md                 ← Easy reference
-└── PROGRESS.md                               ← Development tracking
+├── docs/
+│   ├── guides/
+│   │   ├── COLLECTION_INTEGRATION_REPORT.md  ← Full report
+│   │   ├── COLLECTION_QUICK_START.md         ← Easy reference
+│   │   └── COLLECTION_INDEX.md               ← This index
+│   └── development/
+│       ├── PROGRESS.md                       ← Development tracking
+│       └── PROGRESS_TRACKER.md               ← Progress history
+└── README.md
 ```
 
 ---
@@ -168,19 +174,19 @@ MyManaBox/
 ## 💡 Key Statistics
 
 ### Strongest Areas
-✅ **Foundations Set:** 1,164 cards - Excellent staples  
-✅ **Recent Releases:** Strong inventory in newer sets  
-✅ **Commander Basics:** Good mix of general utility cards  
+✅ **Foundations Set:** 1,164 cards - Excellent staples
+✅ **Recent Releases:** Strong inventory in newer sets
+✅ **Commander Basics:** Good mix of general utility cards
 
 ### Growth Areas
-⚠️ **Fetch Lands:** None currently  
-⚠️ **Premium Mana:** Limited fast mana sources  
-⚠️ **Board Wipes:** Could add more sweep effects  
+⚠️ **Fetch Lands:** None currently
+⚠️ **Premium Mana:** Limited fast mana sources
+⚠️ **Board Wipes:** Could add more sweep effects
 
 ### Value Highlights
-💰 **Total:** $2,323.02  
-💰 **Top Cards:** Reconnaissance (~$5.39), Deserted Beach (~$5.08)  
-💰 **Foils:** 30 special edition cards  
+💰 **Total:** $2,323.02
+💰 **Top Cards:** Reconnaissance (~$5.39), Deserted Beach (~$5.08)
+💰 **Foils:** 30 special edition cards
 
 ---
 
@@ -291,7 +297,7 @@ Copy-Item "new_collection.csv" "data\enriched_collection_complete.csv" -Force
 
 ## 🏆 Final Status
 
-```
+```text
 ╔════════════════════════════════════════════════════════════════╗
 ║                    🎉 COMPLETE! 🎉                            ║
 ║                                                                ║

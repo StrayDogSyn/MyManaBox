@@ -7,8 +7,9 @@ Quick launcher for the CardForge PyQt6 graphical interface
 import sys
 from pathlib import Path
 
-# Ensure cardforge module can be imported
-sys.path.insert(0, str(Path(__file__).parent))
+# Ensure project root is on sys.path
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 from cardforge.qt_gui.app import main
 

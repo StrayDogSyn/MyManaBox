@@ -158,10 +158,10 @@ python -m cardforge.cli.main db init
 
 ```bash
 # PyQt6 GUI (recommended)
-python run_qt_gui.py
+python scripts/run_qt_gui.py
 
-# Tkinter GUI (lightweight)
-python run_gui.py
+# Legacy GUI (deprecated)
+python scripts/run_gui.py
 
 # CLI interface
 python -m cardforge.cli.main --help
