@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-CardForge Collection Migration Guide
-====================================
+# CardForge Collection Migration Guide
 
 This document describes the CSV import/export workflow for CardForge.
 
@@ -48,15 +45,18 @@ python scripts/export_collection.py --format json --with-prices
 ## Supported CSV Formats
 
 ### 1. ManaBox Format (Recommended)
+
 Used by ManaBox mobile app. Supports flexible column names.
 
 **Example:**
-```
+
+```csv
 Name,Card Name,Set Code,Set,Quantity,Foil?,Condition,Language,Location,Notes
 Aetherflux Reservoir,Aetherflux Reservoir,KLD,Kaladesh,1,No,NM,English,Binder,Test card
 ```
 
 **Columns:**
+
 - Name or Card Name: Card name (required)
 - Set Code or Set: Magic set code (required)
 - Quantity: Number of copies (default: 1)
@@ -67,28 +67,34 @@ Aetherflux Reservoir,Aetherflux Reservoir,KLD,Kaladesh,1,No,NM,English,Binder,Te
 - Notes: Custom notes
 
 ### 2. Standard Format
+
 Minimal format for bulk imports.
 
 **Example:**
-```
+
+```csv
 Name,Set,Quantity,Foil
 Aetherflux Reservoir,KLD,1,No
 ```
 
 ### 3. Archidekt Format
+
 Used by Archidekt deck builder.
 
 **Example:**
-```
+
+```csv
 Quantity,Card Name,Set Code,Foil
 1,Aetherflux Reservoir,KLD,0
 ```
 
 ### 4. Moxfield Format
+
 Used by Moxfield deck building tool.
 
 **Example:**
-```
+
+```csv
 Count,Name,Edition,Foil?,Language
 1,Aetherflux Reservoir,KLD,nonfoil,en
 ```
@@ -96,21 +102,27 @@ Count,Name,Edition,Foil?,Language
 ## Import Process
 
 ### Step 1: Prepare CSV File
+
 - Place CSV file in `data/imports/` directory
 - Ensure it follows one of the supported formats
 
 ### Step 2: Run Import
+
 ```bash
 python scripts/import_collection.py data/imports/your_file.csv
 ```
 
 ### Step 3: Backup Created
+
 The import script automatically creates a backup:
+
 - Location: `data/backups/pre_import_YYYYMMDD_HHMMSS/`
 - Contains database snapshot before import
 
 ### Step 4: Scryfall Enrichment
+
 The import process automatically enriches cards with Scryfall data:
+
 - Pricing (USD, foil, EUR, TIX)
 - Card metadata (colors, type, oracle text)
 - Legality information
@@ -118,13 +130,17 @@ The import process automatically enriches cards with Scryfall data:
 - Time: ~10-15 minutes for 3,830 cards
 
 ### Step 5: Database Insertion
+
 Cards are inserted into the database with:
+
 - Duplicate detection by name+set code
 - Quantity accumulation for multiples
 - Replace mode option (clear existing collection)
 
 ### Step 6: Statistics
+
 Final statistics shown:
+
 - CSV import stats (cards imported, errors)
 - Enrichment stats (found, not found, errors)
 - Database insertion stats (inserted, updated, skipped)
@@ -133,6 +149,7 @@ Final statistics shown:
 ## Export Process
 
 ### Export to CSV
+
 ```bash
 python scripts/export_collection.py --format csv --with-prices
 ```
@@ -140,10 +157,12 @@ python scripts/export_collection.py --format csv --with-prices
 Output: `data/exports/collection_YYYYMMDD_HHMMSS.csv`
 
 **Columns:**
+
 - Name, Set Code, Quantity, Foil, Condition, Language, Location, Notes
 - Price USD, Foil Price USD, Total Value (if --with-prices)
 
 ### Export to Moxfield
+
 ```bash
 python scripts/export_collection.py --format moxfield
 ```
@@ -153,6 +172,7 @@ Output: `data/exports/moxfield_export_YYYYMMDD_HHMMSS.csv`
 Compatible with Moxfield import.
 
 ### Export to Archidekt
+
 ```bash
 python scripts/export_collection.py --format archidekt
 ```
@@ -162,6 +182,7 @@ Output: `data/exports/archidekt_export_YYYYMMDD_HHMMSS.csv`
 Compatible with Archidekt import.
 
 ### Export to JSON
+
 ```bash
 python scripts/export_collection.py --format json --with-prices
 ```
@@ -173,26 +194,31 @@ Includes full metadata as JSON structure.
 ## Filtering
 
 ### By Set Code
+
 ```bash
 python scripts/export_collection.py --set-code KLD
 ```
 
 ### By Rarity
+
 ```bash
 python scripts/export_collection.py --rarity mythic
 ```
 
 ### By Foil Status
+
 ```bash
 python scripts/export_collection.py --foil
 ```
 
 ### By Minimum Value
+
 ```bash
 python scripts/export_collection.py --min-value 10.00
 ```
 
 ### By Format Legality
+
 ```bash
 python scripts/export_collection.py --format-legal modern
 ```
@@ -200,11 +226,13 @@ python scripts/export_collection.py --format-legal modern
 ## Backup and Recovery
 
 ### View Backups
+
 ```bash
 python scripts/import_collection.py --list-backups
 ```
 
 ### Restore Backup
+
 ```bash
 python scripts/import_collection.py --restore data/backups/pre_import_20240101_120000
 ```
@@ -214,15 +242,18 @@ python scripts/import_collection.py --restore data/backups/pre_import_20240101_1
 ### Common Issues
 
 **CSV file not found:**
+
 - Ensure file exists in correct location
 - Check file path is correct
 
 **Scryfall lookup failures:**
+
 - Some cards may not be found (e.g., older/custom cards)
 - Check logs for specific failures
 - Can manually update prices later
 
 **Database errors:**
+
 - Check database file is not locked
 - Ensure adequate disk space
 - Restore from backup if needed
@@ -230,16 +261,19 @@ python scripts/import_collection.py --restore data/backups/pre_import_20240101_1
 ### Troubleshooting
 
 Enable verbose logging:
+
 ```bash
 python scripts/import_collection.py data/imports/file.csv --verbose
 ```
 
 Check backup directory:
+
 ```bash
 ls -la data/backups/
 ```
 
 Restore if needed:
+
 ```bash
 python scripts/import_collection.py --restore /path/to/backup
 ```
@@ -247,12 +281,14 @@ python scripts/import_collection.py --restore /path/to/backup
 ## Performance
 
 ### Import Timing
+
 - CSV parsing: < 1 second
 - Scryfall enrichment: 10-15 minutes for 3,830 cards
 - Database insertion: 1-2 minutes
 - Total: ~15-20 minutes
 
 ### Rate Limiting
+
 - Scryfall API: 10 requests/second
 - Database commits: Every 100 cards
 - Backoff on rate limits: Automatic
@@ -260,7 +296,9 @@ python scripts/import_collection.py --restore /path/to/backup
 ## Advanced Usage
 
 ### Replace Existing Collection
+
 Clears existing collection before import:
+
 ```bash
 python scripts/import_collection.py data/imports/file.csv --replace
 ```
@@ -268,13 +306,17 @@ python scripts/import_collection.py data/imports/file.csv --replace
 **Warning:** This removes all existing collection data before importing.
 
 ### Skip Backup
+
 Proceed without creating backup (not recommended):
+
 ```bash
 python scripts/import_collection.py data/imports/file.csv --no-backup
 ```
 
 ### Auto-Detect Format
+
 Script automatically detects CSV format:
+
 ```bash
 python scripts/import_collection.py data/imports/file.csv
 ```
@@ -284,6 +326,7 @@ Supports: ManaBox, Archidekt, Moxfield, Standard
 ## API Usage
 
 ### Import Collection Programmatically
+
 ```python
 import asyncio
 from src.services.migration_service import MigrationManager
@@ -306,6 +349,7 @@ asyncio.run(main())
 ```
 
 ### Export Collection Programmatically
+
 ```python
 from src.services.export_service import CollectionExporter
 from src.database.connection import DatabaseManager
@@ -322,6 +366,7 @@ path = exporter.export_moxfield()
 ```
 
 ### Get Collection Status
+
 ```python
 from src.services.migration_service import MigrationManager
 from src.database.connection import DatabaseManager
@@ -337,11 +382,13 @@ print(f"Total value: ${status['total_value']}")
 ## Testing
 
 Run integration tests:
+
 ```bash
 pytest tests/integration/test_import_workflow.py -v
 ```
 
 Test specific functionality:
+
 ```bash
 # Test CSV import
 pytest tests/integration/test_import_workflow.py::TestCSVImporter -v
@@ -355,7 +402,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 
 ## Data Directory Structure
 
-```
+```text
 data/
 ├── imports/              # CSV files for import
 │   ├── ManaBox_Collection_Bulk.csv
@@ -380,7 +427,3 @@ data/
 5. Check backups: `ls -la data/backups/`
 
 For questions or issues, check the logs in the backup directory.
-"""
-
-if __name__ == "__main__":
-    print(__doc__)

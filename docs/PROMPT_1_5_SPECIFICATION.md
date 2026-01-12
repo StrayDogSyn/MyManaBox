@@ -1,16 +1,13 @@
 # PROMPT 1.5: Integration Testing & Refinement
 
-**Status**: In Progress  
-**Phase**: Phase 1 Foundation - Final Integration & Testing  
-**Target Completion**: Current Session  
-**Success Criteria**: Phase 1 reaches 75% (70% → 75%)  
-**Estimated Duration**: 90 minutes
+**Status**: In Progress\n**Phase**: Phase 1 Foundation - Final Integration & Testing\n**Target Completion**: Current Session\n**Success Criteria**: Phase 1 reaches 75% (70% → 75%)\n**Estimated Duration**: 90 minutes
 
 ---
 
 ## Objectives
 
 ### Primary Goals
+
 1. Run full integration tests with real 3,830-card CSV dataset
 2. Validate end-to-end import/export workflows
 3. Verify Scryfall enrichment performance and reliability
@@ -19,6 +16,7 @@
 6. Final code review and documentation updates
 
 ### Success Metrics
+
 - ✅ All integration tests passing
 - ✅ 3,830-card import completes successfully
 - ✅ Scryfall enrichment completes in <20 minutes
@@ -35,9 +33,11 @@
 ## Testing Scope
 
 ### 1. Integration Tests Execution
+
 **Module**: `tests/integration/test_import_workflow.py`
 
 **Test Classes**:
+
 - `TestCSVImporter`: All 4 format importers
 - `TestBackupManager`: Backup creation/listing/restore
 - `TestMigrationManager`: End-to-end import workflow
@@ -45,6 +45,7 @@
 - `TestEndToEndWorkflow`: Complete import → enrichment → insert workflow
 
 **Execution Plan**:
+
 ```bash
 pytest tests/integration/test_import_workflow.py -v
 pytest tests/integration/test_import_workflow.py::TestCSVImporter -v
@@ -52,6 +53,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 ```
 
 **Expected Results**:
+
 - 15+ tests passing
 - All importers working correctly
 - Backup/restore procedures validated
@@ -59,9 +61,11 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - Statistics tracking accurate
 
 ### 2. Real Data Testing
+
 **Dataset**: `data/imports/ManaBox_Collection_Bulk.csv` (3,830 cards)
 
 **Steps**:
+
 1. Run import with auto-detect format
 2. Monitor Scryfall enrichment progress
 3. Validate card count matches CSV
@@ -70,6 +74,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 6. Validate database structure
 
 **Expected Results**:
+
 - 3,830 cards imported successfully
 - <10% Scryfall lookup failures (normal for older/custom cards)
 - Enrichment completes in 10-15 minutes
@@ -77,9 +82,11 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - Database integrity verified
 
 ### 3. Export Format Validation
+
 **Formats to Test**: CSV, Moxfield, Archidekt, JSON
 
 **Testing Procedure**:
+
 1. Export to each format
 2. Verify file structure
 3. Spot-check card data accuracy
@@ -87,6 +94,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 5. Validate price inclusion
 
 **Expected Results**:
+
 - All 4 formats export successfully
 - Card data matches source
 - Filters work correctly
@@ -94,7 +102,9 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - No data corruption
 
 ### 4. Scryfall Integration Testing
+
 **Aspects**:
+
 - Rate limiting adherence
 - Cache effectiveness
 - Error handling for missing cards
@@ -102,6 +112,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - Performance under load
 
 **Testing**:
+
 1. Monitor request patterns
 2. Verify rate limit enforcement
 3. Check cache hit rate
@@ -109,6 +120,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 5. Validate price update frequency
 
 **Expected Results**:
+
 - Rate limiting working (10 req/sec)
 - Cache improves performance (>50% hit rate)
 - Graceful handling of missing cards
@@ -116,7 +128,9 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - Consistent response times
 
 ### 5. Database Integrity Checks
+
 **Validations**:
+
 - No orphaned records
 - Referential integrity
 - Constraint enforcement
@@ -124,6 +138,7 @@ pytest tests/integration/test_import_workflow.py::TestEndToEndWorkflow -v
 - Query performance
 
 **Testing**:
+
 ```python
 # Check for orphaned collection items
 orphaned = session.query(CollectionItem).filter(
@@ -137,13 +152,16 @@ duplicates = session.query(Card).group_by(
 ```
 
 **Expected Results**:
+
 - Zero orphaned records
 - Zero constraint violations
 - Indexes working efficiently
 - Query performance <100ms
 
 ### 6. Error Recovery Testing
+
 **Scenarios**:
+
 - Invalid CSV data
 - Missing Scryfall matches
 - Database connection errors
@@ -151,6 +169,7 @@ duplicates = session.query(Card).group_by(
 - Partial import failures
 
 **Testing**:
+
 1. Introduce test errors in CSV
 2. Test with incomplete Scryfall data
 3. Simulate connection issues
@@ -158,6 +177,7 @@ duplicates = session.query(Card).group_by(
 5. Test recovery procedures
 
 **Expected Results**:
+
 - Graceful error handling
 - Clear error messages
 - Recovery procedures work
@@ -165,7 +185,9 @@ duplicates = session.query(Card).group_by(
 - Informative logging
 
 ### 7. Performance Profiling
+
 **Metrics to Measure**:
+
 - CSV parsing time
 - Scryfall API latency
 - Database insertion rate
@@ -174,12 +196,14 @@ duplicates = session.query(Card).group_by(
 - Total end-to-end time
 
 **Tools**:
+
 - Python `cProfile` for CPU profiling
 - `memory_profiler` for memory usage
 - Custom timing decorators
 - asyncio task tracking
 
 **Expected Results**:
+
 - CSV parsing: <1 second
 - Scryfall enrichment: 10-15 minutes (3,830 cards)
 - Database insertion: 1-2 minutes
@@ -191,12 +215,14 @@ duplicates = session.query(Card).group_by(
 ## Implementation Plan
 
 ### Phase 1: Test Infrastructure Setup (15 min)
+
 - [ ] Create test data fixtures
 - [ ] Set up test database isolation
 - [ ] Configure logging for test runs
 - [ ] Create performance tracking utilities
 
 ### Phase 2: Integration Tests Execution (30 min)
+
 - [ ] Run unit tests for importers
 - [ ] Run backup/restore tests
 - [ ] Run migration manager tests
@@ -204,6 +230,7 @@ duplicates = session.query(Card).group_by(
 - [ ] Document test results
 
 ### Phase 3: Real Data Validation (25 min)
+
 - [ ] Import 3,830-card CSV
 - [ ] Monitor enrichment progress
 - [ ] Validate card counts
@@ -211,6 +238,7 @@ duplicates = session.query(Card).group_by(
 - [ ] Check database integrity
 
 ### Phase 4: Export Validation (15 min)
+
 - [ ] Test CSV export
 - [ ] Test Moxfield export
 - [ ] Test Archidekt export
@@ -218,12 +246,14 @@ duplicates = session.query(Card).group_by(
 - [ ] Verify filtering options
 
 ### Phase 5: Performance Analysis (10 min)
+
 - [ ] Run performance profiler
 - [ ] Analyze bottlenecks
 - [ ] Document metrics
 - [ ] Suggest optimizations
 
 ### Phase 6: Final Cleanup (15 min)
+
 - [ ] Code review and cleanup
 - [ ] Update documentation
 - [ ] Update progress tracker
@@ -236,6 +266,7 @@ duplicates = session.query(Card).group_by(
 ### CSV Importer Tests
 
 **Test: ManaBox Format Detection**
+
 ```python
 def test_manabox_format_auto_detection():
     csv_file = create_sample_csv("manabox")
@@ -247,6 +278,7 @@ def test_manabox_format_auto_detection():
 ```
 
 **Test: Flexible Header Matching**
+
 ```python
 def test_flexible_headers():
     # Test with different column names
@@ -262,6 +294,7 @@ def test_flexible_headers():
 ```
 
 **Test: Error Line Tracking**
+
 ```python
 def test_error_line_tracking():
     csv_file = create_csv_with_errors()
@@ -275,6 +308,7 @@ def test_error_line_tracking():
 ### Scryfall Integration Tests
 
 **Test: Rate Limiting Enforcement**
+
 ```python
 async def test_rate_limiting():
     client = ScryfallClient()
@@ -289,6 +323,7 @@ async def test_rate_limiting():
 ```
 
 **Test: Cache Effectiveness**
+
 ```python
 async def test_cache_hits():
     client = ScryfallClient(cache_enabled=True)
@@ -305,6 +340,7 @@ async def test_cache_hits():
 ```
 
 **Test: Missing Card Handling**
+
 ```python
 async def test_missing_card_handling():
     client = ScryfallClient()
@@ -320,6 +356,7 @@ async def test_missing_card_handling():
 ### Batch Insert Tests
 
 **Test: Deduplication Logic**
+
 ```python
 def test_deduplication():
     cards = [
@@ -342,6 +379,7 @@ def test_deduplication():
 ```
 
 **Test: Replace Mode**
+
 ```python
 def test_replace_mode():
     # Create initial collection
@@ -364,6 +402,7 @@ def test_replace_mode():
 ### End-to-End Workflow Tests
 
 **Test: Complete Import Pipeline**
+
 ```python
 async def test_complete_import_workflow():
     # 1. Import CSV
@@ -393,7 +432,8 @@ async def test_complete_import_workflow():
 
 ## Documentation Updates
 
-### Areas to Update:
+### Areas to Update
+
 1. **IMPORT_EXPORT_GUIDE.md**
    - Add real test results
    - Document expected timing
@@ -419,6 +459,7 @@ async def test_complete_import_workflow():
 ## Success Criteria Checklist
 
 ### Testing
+
 - [ ] All unit tests passing (50+)
 - [ ] All integration tests passing (15+)
 - [ ] Real 3,830-card import succeeding
@@ -427,6 +468,7 @@ async def test_complete_import_workflow():
 - [ ] Error recovery validated
 
 ### Code Quality
+
 - [ ] Code review complete
 - [ ] No critical issues found
 - [ ] Type hints complete
@@ -434,18 +476,21 @@ async def test_complete_import_workflow():
 - [ ] Comments clear
 
 ### Documentation
+
 - [ ] IMPORT_EXPORT_GUIDE.md complete
 - [ ] API documentation updated
 - [ ] Examples provided
 - [ ] Troubleshooting guide written
 
 ### Performance
+
 - [ ] End-to-end time <20 minutes
 - [ ] Memory usage <500MB peak
 - [ ] Database queries optimized
 - [ ] Cache effectiveness >50%
 
 ### Project Status
+
 - [ ] Phase 1 at 75% completion
 - [ ] Commits pushed to main
 - [ ] Progress tracker updated
@@ -456,6 +501,7 @@ async def test_complete_import_workflow():
 ## Exit Criteria
 
 PROMPT 1.5 is complete when:
+
 1. All integration tests pass
 2. Real data import validated
 3. Export formats verified
@@ -469,20 +515,23 @@ PROMPT 1.5 is complete when:
 
 ## Post-PROMPT 1.5 State
 
-### Deliverables:
+### Deliverables
+
 - ✅ Complete testing infrastructure
 - ✅ Validated import/export pipeline
 - ✅ Performance benchmarks
 - ✅ Comprehensive documentation
 - ✅ Phase 1 at 75% completion (v0.75)
 
-### Ready For:
+### Ready For
+
 - Phase 2: GUI Development (PyQt6)
 - User beta testing
 - Real-world collection imports
 - Advanced analytics
 
-### Known Limitations (Addressed in Phase 2+):
+### Known Limitations (Addressed in Phase 2+)
+
 - No GUI interface (Phase 2)
 - No real-time pricing (Phase 3)
 - No sync features yet (Phase 3)
@@ -493,3 +542,4 @@ PROMPT 1.5 is complete when:
 **Created**: During PROMPT 1.5 Execution
 **Target Completion**: Current Session
 **Estimated Duration**: 90 minutes
+-

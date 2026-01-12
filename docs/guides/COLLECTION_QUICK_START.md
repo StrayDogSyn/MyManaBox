@@ -26,37 +26,46 @@ Decks Nearly Complete:  3 decks (89-97%)
 ## 🎯 Quick Actions (Next 5 Minutes)
 
 ### 1. View Your Statistics
+
 📄 **File:** `data/imports/collection_statistics_report.txt`
+
 - Shows complete rarity breakdown
 - Top 20 sets in your collection
 - Missing cards by priority
 - Estimated card values
 
 ### 2. See Your Deck Status
+
 📋 **Files:** `data/imports/deck_missing_*.txt` (9 files)
+
 - List of cards needed for each deck
 - Quick wins (Fallout Boy: 3 cards, ~$6)
 - Major projects (Kaalia: 47 cards)
 
 ### 3. Export Your Collection
+
 💾 **File:** `data/imports/moxfield_complete_collection.csv`
+
 - Ready to import to Moxfield.com
-- Just go to https://moxfield.com/collection → Import CSV
+- Just go to <https://moxfield.com/collection> → Import CSV
 
 ---
 
 ## 🎮 Your Decks
 
 ### Ready Now (Play Immediately!)
+
 - ✅ **Counter Blitz Precon** - Complete!
 - ✅ **Revival Trance Precon** - Complete!
 
 ### Almost Ready (One Game Store Trip!)
+
 - 🟡 **Fallout Boy** - 3 cards needed (~$6)
 - 🟡 **Scions & Spellcraft** - 4 cards needed (~$2)
 - 🟡 **Limit Break Omnislash** - 11 cards needed (~$20)
 
 ### In Development (Build Over Time)
+
 - 🟠 Wizardly Genomes - 23 cards needed
 - 🟠 The Lost Boys - 42 cards needed
 - 🟠 Kaalia Khanum - 47 cards needed (major investment)

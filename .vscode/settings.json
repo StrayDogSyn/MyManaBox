@@ -19,7 +19,7 @@
         "${workspaceFolder}"
     ],
     "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
-    "python.languageServer": "Pylance",
+    "python.languageServer": "None",
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": true,
     "git.enabled": true,
