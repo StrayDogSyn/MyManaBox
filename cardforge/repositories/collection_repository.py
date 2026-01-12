@@ -93,7 +93,7 @@ class CollectionCardRepository(BaseRepository[CollectionCard]):
         offset: int = 0
     ) -> List[CollectionCard]:
         """Get all cards in a collection."""
-        return await self.find_by(collection_id=collection_id)
+        return await self.find_by(collection_id=collection_id, limit=limit, offset=offset)
     
     async def get_with_card_data(
         self, 

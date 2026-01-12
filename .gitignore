@@ -32,6 +32,7 @@ claude_desktop_config.json
 
 # Archive folder (preserved locally but not in repo)
 archive/
+data/archive/
 
 # Sorted output
 sorted_output/

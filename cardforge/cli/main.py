@@ -218,7 +218,7 @@ async def collection_import(csv_path: str, mode: str):
     """Import collection from CSV (ManaBox/Moxfield format)."""
     import csv
     from pathlib import Path
-    from cardforge.database import init_database
+    from cardforge.database import init_database, get_connection
     from cardforge.services import CollectionService, CardService
     from cardforge.repositories import CardRepository
     from cardforge.models import Card
@@ -230,6 +230,13 @@ async def collection_import(csv_path: str, mode: str):
     card_svc = CardService()
     card_repo = CardRepository()
     collection = await coll_svc.get_or_create_default()
+
+    # If replace mode, clear existing entries in default collection
+    if mode == 'replace':
+        async with get_connection() as conn:
+            await conn.execute("DELETE FROM collection_cards WHERE collection_id = ?", (collection.id,))
+            await conn.commit()
+        console.print(f"[yellow]Cleared existing collection entries (mode=replace).[/yellow]")
     
     csv_file = Path(csv_path)
     console.print(f"[cyan]Importing from {csv_file.name}...[/cyan]")
@@ -245,6 +252,7 @@ async def collection_import(csv_path: str, mode: str):
     skipped = 0
     fetched = 0
     errors = []
+    error_msg = ""
     
     with Progress(console=console) as progress:
         task = progress.add_task("[green]Importing...", total=len(rows))

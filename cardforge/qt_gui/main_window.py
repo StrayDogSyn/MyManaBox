@@ -227,7 +227,7 @@ class MainWindow(QMainWindow):
             self.current_collection_id = collection.id
 
             stats = await self.collection_service.get_stats(collection.id)
-            cards = await self.collection_service.get_cards(collection.id, limit=1000)
+            cards = await self.collection_service.get_cards(collection.id, limit=100000)
 
             return stats, cards
 
