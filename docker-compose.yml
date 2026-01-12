@@ -1,0 +1,32 @@
+services:
+  cardforge:
+    build: .
+    volumes:
+      - .:/app
+      - cardforge_data:/app/data
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - DATABASE_PATH=/app/data/cardforge.db
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    # Uncomment to enable GPU support if available
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+volumes:
+  cardforge_data:
+  ollama_data:

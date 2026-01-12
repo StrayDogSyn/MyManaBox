@@ -170,6 +170,7 @@ class AppConfig:
     
     # Sub-configurations
     database: DatabaseConfig = field(default_factory=DatabaseConfig)
+    ollama: OllamaConfig = field(default_factory=OllamaConfig)
     scryfall: ScryfallConfig = field(default_factory=ScryfallConfig)
     tcgplayer: TCGPlayerConfig = field(default_factory=TCGPlayerConfig)
     cardmarket: CardMarketConfig = field(default_factory=CardMarketConfig)

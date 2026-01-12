@@ -737,6 +737,61 @@ async def db_sync_cards(set_code: str):
     console.print(f"[green]Synced {count} cards[/green]")
 
 
+# =====================
+# Agent Commands
+# =====================
+
+@cli.group()
+def agent():
+    """AI agent commands."""
+    pass
+
+
+@agent.command("list")
+def agent_list():
+    """List available AI agents."""
+    from cardforge.services.ai.registry import AgentRegistry
+    
+    agents = AgentRegistry.list_agents()
+    if not agents:
+        console.print("[yellow]No agents registered.[/yellow]")
+        return
+        
+    table = Table(title="Available AI Agents")
+    table.add_column("ID", style="cyan")
+    table.add_column("Status", style="green")
+    
+    for agent_id in agents:
+        table.add_row(agent_id, "Active")
+        
+    console.print(table)
+
+
+@agent.command("run")
+@click.argument("agent_name")
+@click.argument("task")
+def agent_run(agent_name: str, task: str):
+    """Run an AI agent task."""
+    console.print(f"[yellow]Running agent {agent_name} on task: {task}[/yellow]")
+
+
+# =====================
+# Server Commands
+# =====================
+
+@cli.group()
+def server():
+    """Web/API server commands."""
+    pass
+
+
+@server.command("start")
+@click.option("--port", default=8000, help="Port to listen on")
+def server_start(port: int):
+    """Start the CardForge server."""
+    console.print(f"[green]Starting server on port {port}...[/green]")
+
+
 def main():
     """Entry point."""
     cli()
