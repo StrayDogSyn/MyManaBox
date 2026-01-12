@@ -1,6 +1,13 @@
-import { Home, Layers, Database, Bot, Settings, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
+import { Library, Layers, Bot, Settings, ChevronLeft, ChevronRight, TrendingUp, Swords } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import clsx from 'clsx';
+
+const navItems = [
+  { icon: Library, label: 'Collection', path: '/collection' },
+  { icon: Layers, label: 'Decks', path: '/decks' },
+  { icon: TrendingUp, label: 'Analytics', path: '/analytics' },
+  { icon: Bot, label: 'AI Workspace', path: '/ai' },
+  { icon: Settings, label: 'Settings', path: '/settings' },
+];
 
 interface SidebarProps {
   collapsed: boolean;
@@ -8,81 +15,49 @@ interface SidebarProps {
 }
 
 export function Sidebar({ collapsed, onToggle }: SidebarProps) {
-  
-  const navItems = [
-    { icon: Home, label: 'Dashboard', path: '/' },
-    { icon: Database, label: 'Collection', path: '/collection' },
-    { icon: Layers, label: 'Decks', path: '/decks' },
-    { icon: TrendingUp, label: 'Analytics', path: '/analytics' },
-    { icon: Bot, label: 'AI Workspace', path: '/ai' },
-  ];
-
-  const bottomItems = [
-    { icon: Settings, label: 'Settings', path: '/settings' },
-  ];
-
   return (
     <aside 
-      className={clsx(
-        "bg-bg-secondary border-r border-bg-tertiary h-screen fixed left-0 top-0 flex flex-col transition-all duration-300 z-20",
-        collapsed ? "w-16" : "w-64"
-      )}
+      className={`
+        ${collapsed ? 'w-16' : 'w-64'} 
+        bg-bg-secondary border-r border-bg-tertiary
+        transition-all duration-300 flex flex-col shrink-0
+      `}
     >
-      <div className="p-4 border-b border-bg-tertiary flex items-center justify-between min-h-[64px]">
+      <div className="h-16 flex items-center justify-center border-b border-bg-tertiary">
         {collapsed ? (
-          <span className="text-2xl mx-auto">⚔️</span>
+          <Swords className="w-6 h-6 text-accent-gold" />
         ) : (
-          <h1 className="text-xl font-display font-bold text-accent-gold">CardForge</h1>
+          <span className="font-display text-xl text-accent-gold">CardForge</span>
         )}
       </div>
       
-      <nav className="flex-1 p-2 space-y-1">
+      <nav className="flex-1 py-4">
         {navItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
-            className={({ isActive }) => clsx(
-              "flex items-center px-3 py-3 rounded-lg transition-colors",
-              collapsed ? "justify-center" : "space-x-3",
-              isActive
-                ? "bg-accent-gold/10 text-accent-gold border-l-2 border-accent-gold" 
-                : "text-gray-400 hover:bg-bg-hover hover:text-white"
-            )}
-            title={collapsed ? item.label : undefined}
+            className={({ isActive }) => `
+              flex items-center gap-3 px-4 py-3 mx-2 rounded-lg
+              transition-colors duration-200
+              ${isActive 
+                ? 'bg-accent-gold/10 text-accent-gold' 
+                : 'text-text-secondary hover:bg-bg-hover hover:text-text-primary'
+              }
+            `}
           >
-            <item.icon size={20} />
+            <item.icon className="w-5 h-5 shrink-0" />
             {!collapsed && <span>{item.label}</span>}
           </NavLink>
         ))}
       </nav>
-
-      <div className="p-2 border-t border-bg-tertiary space-y-1">
-        {bottomItems.map((item) => (
-          <NavLink
-            key={item.path}
-            to={item.path}
-            className={({ isActive }) => clsx(
-              "flex items-center px-3 py-3 rounded-lg transition-colors",
-              collapsed ? "justify-center" : "space-x-3",
-              isActive
-                ? "bg-accent-gold/10 text-accent-gold" 
-                : "text-gray-400 hover:bg-bg-hover hover:text-white"
-            )}
-            title={collapsed ? item.label : undefined}
-          >
-            <item.icon size={20} />
-            {!collapsed && <span>{item.label}</span>}
-          </NavLink>
-        ))}
-        
-        <button
-          onClick={onToggle}
-          className="w-full flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-bg-hover hover:text-white transition-colors justify-center"
-          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-        >
-          {collapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
-        </button>
-      </div>
+      
+      <button
+        onClick={onToggle}
+        className="h-12 flex items-center justify-center border-t border-bg-tertiary
+                   text-text-secondary hover:text-text-primary transition-colors"
+      >
+        {collapsed ? <ChevronRight className="w-5 h-5" /> : <ChevronLeft className="w-5 h-5" />}
+      </button>
     </aside>
   );
 }

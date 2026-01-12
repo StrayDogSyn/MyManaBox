@@ -1,27 +1,27 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
-import { Outlet } from 'react-router-dom';
-import clsx from 'clsx';
 
-export function AppShell() {
+interface AppShellProps {
+  children: ReactNode;
+  title?: string;
+}
+
+export function AppShell({ children, title }: AppShellProps) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-
+  
   return (
-    <div className="min-h-screen bg-bg-primary">
+    <div className="flex h-screen bg-bg-primary overflow-hidden">
       <Sidebar 
-        collapsed={sidebarCollapsed} 
-        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)} 
+        collapsed={sidebarCollapsed}
+        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
-      <Header sidebarCollapsed={sidebarCollapsed} />
-      <main 
-        className={clsx(
-          "p-6 pt-6 min-h-[calc(100vh-64px)] transition-all duration-300",
-          sidebarCollapsed ? "ml-16" : "ml-64"
-        )}
-      >
-        <Outlet />
-      </main>
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <Header title={title} />
+        <main className="flex-1 overflow-auto p-6">
+          {children}
+        </main>
+      </div>
     </div>
   );
 }
