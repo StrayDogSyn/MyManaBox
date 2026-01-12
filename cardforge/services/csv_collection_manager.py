@@ -267,13 +267,19 @@ class CsvCollectionManager:
             
             # Import each row
             for idx, row in df.iterrows():
+                # Handle pandas index which may be int or other type
                 try:
-                    await self._import_csv_row(row, idx + 2)  # +2 for 1-indexed + header
+                    line_num = int(idx) + 2  # +2 for 1-indexed + header
+                except (ValueError, TypeError):
+                    line_num = idx  # Use raw index if conversion fails
+                
+                try:
+                    await self._import_csv_row(row, line_num)
                     stats.imported += 1
                 except Exception as e:
                     stats.errors += 1
-                    stats.warnings.append(f"Row {idx + 2}: {str(e)}")
-                    logger.warning(f"Error importing row {idx + 2}: {e}")
+                    stats.warnings.append(f"Row {line_num}: {str(e)}")
+                    logger.warning(f"Error importing row {line_num}: {e}")
             
         finally:
             lock.release()
@@ -371,10 +377,14 @@ class CsvCollectionManager:
     
     async def _import_csv_row(self, row: pd.Series, line_num: int) -> None:
         """Import a single CSV row into the database."""
-        name = str(row.get("Name", "")).strip()
-        set_code = str(row.get("Edition", "")).strip().upper()
+        raw_name = row.get("Name", "")
+        name = "" if pd.isna(raw_name) else str(raw_name).strip()
+        
+        raw_set = row.get("Edition", "")
+        set_code = "" if pd.isna(raw_set) else str(raw_set).strip().upper()
         if not set_code:
-            set_code = str(row.get("Set code", "")).strip().upper()
+            raw_set = row.get("Set code", "")
+            set_code = "" if pd.isna(raw_set) else str(raw_set).strip().upper()
         
         if not name:
             raise ValueError(f"Missing card name at line {line_num}")
@@ -402,7 +412,11 @@ class CsvCollectionManager:
             card = await self.card_master_repo.create(card)
         
         # Parse collection card attributes
-        quantity = int(row.get("Count", 1) or 1)
+        try:
+            quantity = int(row.get("Count", 1) or 1)
+        except (ValueError, TypeError):
+            raise ValueError(f"Invalid quantity value at line {line_num}")
+        
         foil_str = str(row.get("Foil", "")).lower()
         foil = "foil" if foil_str in ("foil", "true", "1", "yes") else "normal"
         
