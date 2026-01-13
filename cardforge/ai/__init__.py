@@ -9,6 +9,7 @@ price analysis, and meta-game insights.
 __version__ = "1.0.0"
 __author__ = "CardForge Development"
 
+from .ollama_client import OllamaClient
 from .orchestration import (
     CardForgeOrchestrator,
     TaskRouter,
@@ -21,6 +22,7 @@ from .orchestration import (
 )
 
 __all__ = [
+    "OllamaClient",
     "CardForgeOrchestrator",
     "TaskRouter",
     "DeckOptimizer",

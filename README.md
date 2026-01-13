@@ -28,6 +28,46 @@ A modern, async-first Python application for managing MTG card collections, buil
 
 ---
 
+## Quick Start
+
+### Option 1: Auto-Initialize Everything (Recommended)
+
+**Windows - Double-click launcher:**
+```bash
+start_cardforge.bat
+```
+
+**Any OS - Use auto-launcher:**
+```bash
+# One-time setup (handles everything!)
+python setup_wizard.py
+
+# Daily use (auto-starts Ollama!)
+python cardforge.py stats
+python cardforge.py import data/collection.csv
+python cardforge.py ai "What cards synergize with Kaalia?"
+```
+
+The launcher automatically:
+- ✅ Starts Ollama if not running
+- ✅ Initializes database
+- ✅ Creates required directories
+- ✅ Manages all dependencies
+
+### Option 2: Full Manual Control
+
+```bash
+# Terminal 1: Start Ollama
+ollama serve
+
+# Terminal 2: Use CardForge
+python -m cardforge.cli stats
+```
+
+**For detailed setup guide:** See [STREAMLINED_QUICKSTART.md](docs/STREAMLINED_QUICKSTART.md)
+
+---
+
 ## Features
 
 ### Collection Management

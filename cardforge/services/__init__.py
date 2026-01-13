@@ -6,6 +6,7 @@ from .deck_service import DeckService
 from .trade_service import TradeService
 from .pricing_service import PricingService
 from .sync_service import SyncService
+from .analytics_service import AnalyticsService
 
 __all__ = [
     'CardService',
@@ -14,4 +15,5 @@ __all__ = [
     'TradeService',
     'PricingService',
     'SyncService',
+    'AnalyticsService',
 ]

@@ -6,7 +6,7 @@ Coordinates execution across specialized agents, handles routing, and manages re
 
 import logging
 from typing import Dict, Optional
-from src.data import OllamaClient
+from cardforge.ai import OllamaClient
 
 from .base_agent import BaseAgent, AgentTask, AgentResponse, TaskType, TaskComplexity
 from .agents import (

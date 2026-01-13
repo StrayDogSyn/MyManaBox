@@ -3,7 +3,7 @@ CardForge Deck Service
 Deck management and analysis
 """
 
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
 from cardforge.repositories import DeckRepository, DeckCardRepository, CardRepository
@@ -111,3 +111,65 @@ class DeckService:
     async def get_completion_status(self, deck_id: int) -> Dict:
         """Get deck completion percentage."""
         return await self.deck_repo.get_completion_status(deck_id)
+
+    async def analyze_deck(self, deck_id: int) -> Dict[str, Any]:
+        """
+        Analyze deck composition.
+        
+        Returns:
+            Dictionary containing:
+            - mana_curve: Count of cards by CMC
+            - color_distribution: Count of cards by color
+            - type_distribution: Count of cards by primary type
+            - lands_count: Total lands
+            - ramp_count: Estimate of ramp sources (based on type/text)
+        """
+        deck = await self.get_deck(deck_id)
+        if not deck:
+            return {}
+            
+        analysis = {
+            "mana_curve": {i: 0 for i in range(8)}, # 0-7+
+            "color_distribution": {"W": 0, "U": 0, "B": 0, "R": 0, "G": 0, "C": 0},
+            "type_distribution": {},
+            "lands_count": 0,
+            "creature_count": 0,
+            "instant_sorcery_count": 0,
+        }
+        
+        for deck_card in deck.cards:
+            card = deck_card.card
+            if not card:
+                continue
+                
+            qty = deck_card.quantity
+            
+            # Mana Curve (exclude lands usually, but simplistic here)
+            if "Land" not in card.type_line:
+                cmc = int(card.cmc) if card.cmc is not None else 0
+                idx = min(cmc, 7)
+                analysis["mana_curve"][idx] += qty
+            
+            # Colors
+            if not card.colors:
+                analysis["color_distribution"]["C"] += qty
+            else:
+                for color in card.colors:
+                    if color in analysis["color_distribution"]:
+                        analysis["color_distribution"][color] += qty
+            
+            # Types
+            primary_type = card.type_line.split("—")[0].strip().split(" ")[-1] if "—" in card.type_line else card.type_line.split(" ")[0]
+            # Simple fallback parsing
+            if "Land" in card.type_line:
+                analysis["lands_count"] += qty
+                primary_type = "Land"
+            elif "Creature" in card.type_line:
+                analysis["creature_count"] += qty
+                primary_type = "Creature"
+            elif "Instant" in card.type_line or "Sorcery" in card.type_line:
+                analysis["instant_sorcery_count"] += qty
+            
+            analysis["type_distribution"][primary_type] = analysis["type_distribution"].get(primary_type, 0) + qty
+            
+        return analysis

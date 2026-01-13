@@ -116,20 +116,27 @@ class WeeklyReport:
     
     async def _price_movers(self) -> dict:
         """Find cards with significant price movements."""
-        # Get price history for last 7 days
-        days_ago = datetime.now() - timedelta(days=7)
+        gainers = await self.price_repo.get_biggest_movers(days=7, limit=5, direction='up')
+        losers = await self.price_repo.get_biggest_movers(days=7, limit=5, direction='down')
         
-        # This would query price history
-        # For now, return placeholder
         return {
             "gainers": [
-                {"card": "Orcish Bowmasters", "change": "+$15.00", "percent": "+25%"},
-                {"card": "The One Ring", "change": "+$8.50", "percent": "+12%"},
+                {
+                    "card": f"{g['name']} ({g['set_code']})",
+                    "change": f"+${g['change']:.2f}",
+                    "percent": f"+{g['change_pct']:.1f}%"
+                }
+                for g in gainers
             ],
             "losers": [
-                {"card": "Sheoldred", "change": "-$5.00", "percent": "-8%"},
+                {
+                    "card": f"{l['name']} ({l['set_code']})",
+                    "change": f"${l['change']:.2f}",
+                    "percent": f"{l['change_pct']:.1f}%"
+                }
+                for l in losers
             ],
-            "note": "Requires price history tracking",
+            "note": "Based on recorded price history",
         }
     
     async def _deck_progress(self) -> dict:
