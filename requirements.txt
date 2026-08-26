@@ -1,4 +1,4 @@
-# CardForge Dependencies
+# CardForge Runtime Dependencies
 # Install with: pip install -r requirements.txt
 
 # Core
@@ -19,16 +19,12 @@ click>=8.1.0
 rich>=13.0.0
 
 # GUI - PyQt6 (Professional Desktop GUI)
+# PyQt6-Qt6 is a transitive dependency of PyQt6 and does not need to be listed separately.
 PyQt6>=6.6.0
-PyQt6-Qt6>=6.6.0
+
+# Web server (cardforge.py 'web' command)
+uvicorn>=0.27.0
+fastapi>=0.109.0
 
 # MCP (Claude Desktop integration)
 mcp>=1.0.0
-
-# Development (optional)
-pytest>=7.0.0
-pytest-asyncio>=0.21.0
-pytest-cov>=4.0.0
-pytest-qt>=4.2.0
-black>=23.0.0
-mypy>=1.0.0
