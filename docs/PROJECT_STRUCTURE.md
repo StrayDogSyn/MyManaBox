@@ -47,8 +47,6 @@ docs/
 │   ├── PYQT6_QUICKSTART.md
 │   └── VS_CODE_QUICK_REFERENCE.md
 │
-├── reports/                     # Completion reports and summaries
-│
 ├── architecture/                # Architecture documentation
 ├── api/                         # API documentation
 ├── cardforge_ai/                # AI system documentation
@@ -252,7 +250,6 @@ Application screenshots for documentation
 3. **Development**: See [docs/development/](development/)
 4. **Architecture**: See [docs/architecture/](architecture/)
 5. **API reference**: See [docs/api/](api/)
-6. **Reports**: See [docs/reports/](reports/)
 
 ## Quick Access
 

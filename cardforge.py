@@ -21,6 +21,10 @@ from pathlib import Path
 from typing import Optional, List
 import atexit
 
+# Windows cp1252 terminals cannot encode emoji -- use UTF-8 with replacement
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 
 class OllamaManager:
     """Manages Ollama lifecycle automatically."""
