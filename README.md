@@ -28,93 +28,6 @@ A modern, async-first Python application for managing MTG card collections, buil
 
 ---
 
-## CTD Python Advanced Submission -- Scryfall Card Lookup CLI
-
-This project was submitted for the Code The Dream Python Advanced (Python 200) pre-work. The CLI entry point lives at the project root and uses the Scryfall API as its data source.
-
-**API:** [Scryfall](https://scryfall.com/docs/api) -- free, no API key required. Same one-request-per-record pattern as PokeAPI (CTD Option 3).
-
-### Module layout
-
-| File | Responsibility |
-|------|----------------|
-| `api_client.py` | All network calls. `requests`-based, rate-limited, timeout-guarded. |
-| `card_data.py` | Data transformation. No network, no printing. Converts raw Scryfall dicts to clean Python data. |
-| `display.py` | Output formatting. Standard library only. No raw dict printing. |
-| `main.py` | Orchestration. `argparse` CLI that calls the three modules above and nothing else. |
-
-### CLI Setup
-
-```bash
-git clone https://github.com/StrayDogSyn/MyManaBox.git
-cd MyManaBox
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
-
-pip install requests
-```
-
-`requests` is the only dependency for the CLI. The full `requirements.txt` covers the larger CardForge platform.
-
-### Usage
-
-```bash
-python main.py lookup "lightning bolt"
-python main.py lookup "sol ring"
-python main.py compare "black lotus" "mox pearl"
-python main.py search "t:goblin c:r"
-```
-
-### Example output
-
-```text
-  Lightning Bolt
-  ----------------------
-  Mana Cost      {R}
-  Type           Instant
-  Rarity         Common
-  Set            Mystery Booster
-  Released       2019-11-07
-  Price (USD)    $0.25
-  Artist         Christopher Moeller
-
-  Lightning Bolt deals 3 damage to any target.
-```
-
-```text
-  Sol Ring
-  ----------------------
-  Mana Cost      {1}
-  Type           Artifact
-  Rarity         Uncommon
-  Set            Commander Masters
-  Released       2023-08-04
-  Price (USD)    $1.99
-  Artist         Mike Bierek
-
-  {T}: Add {C}{C}.
-```
-
-Note that Sol Ring has no P/T row -- it is not a creature, and the field is absent entirely in the Scryfall payload. The project handles this correctly rather than printing a placeholder.
-
-### Error handling
-
-| Scenario | Response |
-|----------|----------|
-| Empty or whitespace input | `Error: Card name cannot be empty.` -- no request is made |
-| No card matches the name | `Error: No card found for "zzzzzzzz".` |
-| Ambiguous fuzzy match | `Error: "jace" matched several cards. Try a more specific name...` |
-| Network timeout | `Error: Scryfall did not respond within 10s. Check your connection.` |
-| No internet connection | `Error: Could not reach Scryfall. Check your internet connection.` |
-
-No stack traces reach the user. Non-zero exit code on failure, zero on success.
-
----
-
 ## Quick Start
 
 ### Option 1: Auto-Initialize Everything (Recommended)
@@ -236,20 +149,9 @@ python -m cardforge.cli stats
 
 </div>
 
-<details>
-<summary><strong>Additional Screenshots</strong></summary>
-
-| Screenshot | Description |
-|------------|-------------|
-| ![Analytics](assets/screenshots/qt_analytics.png) | Analytics dashboard with comprehensive collection statistics |
-| ![Search](assets/screenshots/qt_search.png) | Real-time search interface with debounced filtering |
-| ![Dark Theme](assets/screenshots/qt_dark_theme.png) | Dark theme implementation with custom styling |
-
-</details>
-
 ---
 
-## Quick Start
+## Installation
 
 ### System Requirements
 
@@ -258,7 +160,7 @@ python -m cardforge.cli stats
 - 50MB available disk space
 - Windows, macOS, or Linux operating system
 
-### Installation
+### Setup Steps
 
 ```bash
 # Clone the repository
@@ -337,7 +239,7 @@ CardForge offers multiple interface options to suit different workflows and pref
 The primary interface is a professional desktop application built with PyQt6, providing native performance and modern UI/UX design.
 
 ```bash
-python run_qt_gui.py
+python scripts/run_qt_gui.py
 ```
 
 **Key Features:**
@@ -350,14 +252,14 @@ python run_qt_gui.py
 - Integrated card detail panels with image previews
 - Real-time search with debounced input handling
 
-For comprehensive documentation, see the [PyQt6 GUI Guide](docs/PYQT6_GUI_GUIDE.md).
+For comprehensive documentation, see the [PyQt6 GUI Guide](docs/development/PYQT6_GUI_GUIDE.md).
 
 ### Tkinter GUI (Lightweight Alternative)
 
 A lightweight alternative interface using Python's built-in Tkinter library, ideal for systems with limited resources or simpler use cases.
 
 ```bash
-python run_gui.py
+python scripts/run_gui.py
 ```
 
 **Key Features:**
@@ -368,7 +270,7 @@ python run_gui.py
 - Detailed card information views
 - Price tracking and valuation displays
 
-For detailed usage instructions, see the [Tkinter GUI Guide](docs/GUI_GUIDE.md).
+For detailed usage instructions, see the [Tkinter GUI Guide](docs/guides/GUI_GUIDE.md).
 
 ### Command-Line Interface
 
@@ -492,7 +394,7 @@ Claude: Added 8 essential cards to your buy list:
         Total: $87.50
 ```
 
-For complete MCP integration documentation, see [MCP Integration Guide](docs/MCP_INTEGRATION.md).
+For complete MCP integration documentation, see [MCP Integration Guide](docs/guides/MCP_INTEGRATION.md).
 
 ---
 
