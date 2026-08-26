@@ -12,7 +12,6 @@ Welcome to the CardForge documentation! This guide will help you find the inform
 
 ### Collection Management
 - [Collection Index](guides/COLLECTION_INDEX.md) - Comprehensive collection features overview
-- [Collection Integration Report](guides/COLLECTION_INTEGRATION_REPORT.md) - Collection system integration details
 - [Import/Export Guide](IMPORT_EXPORT_GUIDE.md) - Importing and exporting your collection
 
 ### User Interfaces
@@ -29,7 +28,6 @@ Welcome to the CardForge documentation! This guide will help you find the inform
 ### Development Guides
 - [Phase 2 Development Guide](development/PHASE_2_DEVELOPMENT_GUIDE.md) - Phase 2 implementation details
 - [Parallel Development](development/PARALLEL_DEVELOPMENT.md) - Guidelines for parallel development
-- [Progress Tracker](development/PROGRESS_TRACKER.md) - Development progress tracking
 - [VS Code Quick Reference](development/VS_CODE_QUICK_REFERENCE.md) - VS Code tips and shortcuts
 
 ### Testing & Integration
@@ -47,21 +45,6 @@ Welcome to the CardForge documentation! This guide will help you find the inform
 
 ## Project Reports
 
-### Completion Reports
-- [Foundation Ready](reports/FOUNDATION_READY.md) - Foundation phase completion
-- [Phase 1 Completion](reports/PHASE1_COMPLETION.md) - Phase 1 milestone report
-- [Phase 2 Completion](reports/PHASE_2_COMPLETION_REPORT.md) - Phase 2 milestone report
-- [Integration Implementation Summary](reports/INTEGRATION_IMPLEMENTATION_SUMMARY.md) - Integration system implementation
-
-### Implementation Summaries
-- [PyQt6 Implementation Summary](development/PYQT6_IMPLEMENTATION_SUMMARY.md) - PyQt6 GUI implementation details
-- [Opus Tasks Completion](development/OPUS_TASKS_COMPLETION_SUMMARY.md) - Opus AI tasks summary
-- [Phase 2 Quick Fixes](development/PHASE_2_QUICK_FIXES_SUMMARY.md) - Phase 2 bug fixes and improvements
-
-### TRAE Reports
-- [TRAE Executive Summary](reports/TRAE_EXECUTIVE_SUMMARY.md) - High-level TRAE system overview
-- [TRAE Audit Report](reports/TRAE_AUDIT_REPORT.md) - Detailed TRAE system audit
-
 ### Progress Tracking
 - [Progress](development/PROGRESS.md) - Current development progress
 
@@ -73,7 +56,6 @@ Historical and deprecated documentation can be found in [archive/](archive/)
 
 For information about the project structure and organization, see:
 - [Project Structure Guide](PROJECT_STRUCTURE.md) - Complete directory layout and organization
-- [Cleanup Summary](CLEANUP_SUMMARY.md) - Recent project reorganization details
 
 ---
 
@@ -92,10 +74,6 @@ docs/
 │   ├── PROGRESS*.md               # Progress tracking
 │   └── VS_CODE_QUICK_REFERENCE.md # VS Code tips
 ├── reports/                        # Completion reports & summaries
-│   ├── FOUNDATION_READY.md        # Foundation completion
-│   ├── PHASE*_COMPLETION.md       # Phase completions
-│   ├── INTEGRATION_*.md           # Integration reports
-│   └── TRAE_*.md                  # TRAE system reports
 ├── architecture/                   # Architecture documentation
 ├── api/                           # API documentation
 ├── cardforge_ai/                  # AI system documentation

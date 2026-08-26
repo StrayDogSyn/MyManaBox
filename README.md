@@ -616,15 +616,7 @@ Comprehensive documentation is available in the [docs](docs/) directory. See the
 |----------|-------------|
 | [🏗️ Phase 2 Development Guide](docs/development/PHASE_2_DEVELOPMENT_GUIDE.md) | Current development phase documentation |
 | [🧪 Integration Testing](docs/integration_testing.md) | Testing the integration system |
-| [📈 Progress Tracker](docs/development/PROGRESS_TRACKER.md) | Development progress and roadmap |
 | [💻 VS Code Quick Reference](docs/development/VS_CODE_QUICK_REFERENCE.md) | VS Code tips and shortcuts |
-
-### Project Reports
-
-Completion reports and implementation summaries are available in [docs/reports](docs/reports/):
-- [Integration Implementation Summary](docs/reports/INTEGRATION_IMPLEMENTATION_SUMMARY.md)
-- [Phase 1 Completion](docs/reports/PHASE1_COMPLETION.md)
-- [TRAE Executive Summary](docs/reports/TRAE_EXECUTIVE_SUMMARY.md)
 
 ---
 

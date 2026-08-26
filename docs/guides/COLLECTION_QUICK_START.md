@@ -81,7 +81,6 @@ Decks Nearly Complete:  3 decks (89-97%)
 | **Statistics** | `data/imports/collection_statistics_report.txt` | View details |
 | **Moxfield Export** | `data/imports/moxfield_complete_collection.csv` | Import online |
 | **Shopping Lists** | `data/imports/deck_missing_*.txt` | Buy lists |
-| **Full Report** | `COLLECTION_INTEGRATION_REPORT.md` | Complete details |
 | **Backup** | `data/backups/pre_integration_*.csv` | Safe restore point |
 
 ---

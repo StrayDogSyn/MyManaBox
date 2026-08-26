@@ -33,7 +33,6 @@ docs/
 │
 ├── guides/                      # User guides
 │   ├── COLLECTION_INDEX.md
-│   ├── COLLECTION_INTEGRATION_REPORT.md
 │   ├── COLLECTION_QUICK_START.md
 │   ├── GUI_GUIDE.md
 │   ├── GUI_QUICKSTART.md
@@ -41,31 +40,20 @@ docs/
 │
 ├── development/                 # Developer documentation
 │   ├── ENVIRONMENT_VALIDATION.md
-│   ├── OPUS_TASKS_COMPLETION_SUMMARY.md
 │   ├── PARALLEL_DEVELOPMENT.md
-│   ├── PHASE_2_COMPLETION_REPORT.md
 │   ├── PHASE_2_DEVELOPMENT_GUIDE.md
-│   ├── PHASE_2_QUICK_FIXES_SUMMARY.md
 │   ├── PROGRESS.md
-│   ├── PROGRESS_TRACKER.md
 │   ├── PYQT6_GUI_GUIDE.md
-│   ├── PYQT6_IMPLEMENTATION_SUMMARY.md
 │   ├── PYQT6_QUICKSTART.md
 │   └── VS_CODE_QUICK_REFERENCE.md
 │
 ├── reports/                     # Completion reports and summaries
-│   ├── FOUNDATION_READY.md
-│   ├── INTEGRATION_IMPLEMENTATION_SUMMARY.md
-│   ├── PHASE1_COMPLETION.md
-│   ├── TRAE_AUDIT_REPORT.md
-│   └── TRAE_EXECUTIVE_SUMMARY.md
 │
 ├── architecture/                # Architecture documentation
 ├── api/                         # API documentation
 ├── cardforge_ai/                # AI system documentation
 ├── archive/                     # Archived/deprecated docs
 │
-├── CARDFORGE_TRAE_AUTONOMOUS_ROADMAP.md
 ├── IMPORT_EXPORT_GUIDE.md
 ├── integration_testing.md
 └── PROMPT_1_5_SPECIFICATION.md

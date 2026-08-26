@@ -17,13 +17,6 @@
 
 ### For Detailed Information
 
-1. **[COLLECTION_INTEGRATION_REPORT.md](COLLECTION_INTEGRATION_REPORT.md)**
-   - Complete integration results
-   - Deck-by-deck breakdown
-   - File locations and purposes
-   - Technical implementation details
-   - Backup and recovery information
-
 2. **[data/imports/INTEGRATION_COMPLETE_GUIDE.md](../../data/imports/INTEGRATION_COMPLETE_GUIDE.md)**
    - Original integration specifications
    - Complete statistics and analysis
@@ -141,12 +134,10 @@ MyManaBox/
 │       └── Update-CardForge.ps1
 ├── docs/
 │   ├── guides/
-│   │   ├── COLLECTION_INTEGRATION_REPORT.md  ← Full report
 │   │   ├── COLLECTION_QUICK_START.md         ← Easy reference
 │   │   └── COLLECTION_INDEX.md               ← This index
 │   └── development/
-│       ├── PROGRESS.md                       ← Development tracking
-│       └── PROGRESS_TRACKER.md               ← Progress history
+│       └── PROGRESS.md                       ← Development tracking
 └── README.md
 ```
 
@@ -275,7 +266,6 @@ Copy-Item "new_collection.csv" "data\enriched_collection_complete.csv" -Force
 
 ### Have Questions?
 
-- Full details in `COLLECTION_INTEGRATION_REPORT.md`
 - Original specs in `data/imports/INTEGRATION_COMPLETE_GUIDE.md`
 - All files documented here
 
