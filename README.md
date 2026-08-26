@@ -28,6 +28,93 @@ A modern, async-first Python application for managing MTG card collections, buil
 
 ---
 
+## CTD Python Advanced Submission -- Scryfall Card Lookup CLI
+
+This project was submitted for the Code The Dream Python Advanced (Python 200) pre-work. The CLI entry point lives at the project root and uses the Scryfall API as its data source.
+
+**API:** [Scryfall](https://scryfall.com/docs/api) -- free, no API key required. Same one-request-per-record pattern as PokeAPI (CTD Option 3).
+
+### Module layout
+
+| File | Responsibility |
+|------|----------------|
+| `api_client.py` | All network calls. `requests`-based, rate-limited, timeout-guarded. |
+| `card_data.py` | Data transformation. No network, no printing. Converts raw Scryfall dicts to clean Python data. |
+| `display.py` | Output formatting. Standard library only. No raw dict printing. |
+| `main.py` | Orchestration. `argparse` CLI that calls the three modules above and nothing else. |
+
+### CLI Setup
+
+```bash
+git clone https://github.com/StrayDogSyn/MyManaBox.git
+cd MyManaBox
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
+
+pip install requests
+```
+
+`requests` is the only dependency for the CLI. The full `requirements.txt` covers the larger CardForge platform.
+
+### Usage
+
+```bash
+python main.py lookup "lightning bolt"
+python main.py lookup "sol ring"
+python main.py compare "black lotus" "mox pearl"
+python main.py search "t:goblin c:r"
+```
+
+### Example output
+
+```text
+  Lightning Bolt
+  ----------------------
+  Mana Cost      {R}
+  Type           Instant
+  Rarity         Common
+  Set            Mystery Booster
+  Released       2019-11-07
+  Price (USD)    $0.25
+  Artist         Christopher Moeller
+
+  Lightning Bolt deals 3 damage to any target.
+```
+
+```text
+  Sol Ring
+  ----------------------
+  Mana Cost      {1}
+  Type           Artifact
+  Rarity         Uncommon
+  Set            Commander Masters
+  Released       2023-08-04
+  Price (USD)    $1.99
+  Artist         Mike Bierek
+
+  {T}: Add {C}{C}.
+```
+
+Note that Sol Ring has no P/T row -- it is not a creature, and the field is absent entirely in the Scryfall payload. The project handles this correctly rather than printing a placeholder.
+
+### Error handling
+
+| Scenario | Response |
+|----------|----------|
+| Empty or whitespace input | `Error: Card name cannot be empty.` -- no request is made |
+| No card matches the name | `Error: No card found for "zzzzzzzz".` |
+| Ambiguous fuzzy match | `Error: "jace" matched several cards. Try a more specific name...` |
+| Network timeout | `Error: Scryfall did not respond within 10s. Check your connection.` |
+| No internet connection | `Error: Could not reach Scryfall. Check your internet connection.` |
+
+No stack traces reach the user. Non-zero exit code on failure, zero on success.
+
+---
+
 ## Quick Start
 
 ### Option 1: Auto-Initialize Everything (Recommended)
