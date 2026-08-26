@@ -21,6 +21,13 @@ import sys
 
 import requests
 
+# Windows consoles default to cp1252; Scryfall artist names may contain
+# accented characters. Reconfigure stdout to UTF-8 so they print instead
+# of crashing. errors='replace' ensures robustness on terminals that truly
+# cannot handle UTF-8.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 import display
 from api_client import CardNotFoundError, fetch_card_by_name, search_cards
 from card_data import compare_cards, extract_card_summary
