@@ -73,7 +73,6 @@ docs/
 │   ├── PYQT6_*.md                 # PyQt6 development docs
 │   ├── PROGRESS*.md               # Progress tracking
 │   └── VS_CODE_QUICK_REFERENCE.md # VS Code tips
-├── reports/                        # Completion reports & summaries
 ├── architecture/                   # Architecture documentation
 ├── api/                           # API documentation
 ├── cardforge_ai/                  # AI system documentation

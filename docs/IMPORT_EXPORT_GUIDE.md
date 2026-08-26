@@ -7,20 +7,17 @@ This document describes the CSV import/export workflow for CardForge.
 ### Import Collection from CSV
 
 ```bash
-# Auto-detect format and import
-python scripts/import_collection.py data/imports/ManaBox_Collection_Bulk.csv
-
-# Specify format explicitly
-python scripts/import_collection.py data/imports/manabox.csv --format manabox
+# Auto-detect format and import (merge mode, default)
+python -m cardforge.cli collection import data/imports/ManaBox_Collection_Bulk.csv
 
 # Replace existing collection
-python scripts/import_collection.py data/imports/manabox.csv --replace
+python -m cardforge.cli collection import data/imports/manabox.csv --mode replace
 
-# Skip backup
-python scripts/import_collection.py data/imports/manabox.csv --no-backup
+# Or use the auto-launcher shorthand
+python cardforge.py import data/imports/manabox.csv
 
 # View collection status
-python scripts/import_collection.py --status
+python -m cardforge.cli collection stats
 ```
 
 ### Export Collection
@@ -109,7 +106,7 @@ Count,Name,Edition,Foil?,Language
 ### Step 2: Run Import
 
 ```bash
-python scripts/import_collection.py data/imports/your_file.csv
+python -m cardforge.cli collection import data/imports/your_file.csv
 ```
 
 ### Step 3: Backup Created
@@ -228,13 +225,15 @@ python scripts/export_collection.py --format-legal modern
 ### View Backups
 
 ```bash
-python scripts/import_collection.py --list-backups
+ls data/backups/
 ```
 
 ### Restore Backup
 
+Restore manually by copying the backup database file:
+
 ```bash
-python scripts/import_collection.py --restore data/backups/pre_import_20240101_120000
+cp data/backups/pre_import_20240101_120000/cardforge.db data/cardforge.db
 ```
 
 ## Error Handling
@@ -263,7 +262,7 @@ python scripts/import_collection.py --restore data/backups/pre_import_20240101_1
 Enable verbose logging:
 
 ```bash
-python scripts/import_collection.py data/imports/file.csv --verbose
+python -m cardforge.cli collection import data/imports/file.csv
 ```
 
 Check backup directory:
@@ -275,7 +274,7 @@ ls -la data/backups/
 Restore if needed:
 
 ```bash
-python scripts/import_collection.py --restore /path/to/backup
+cp /path/to/backup/cardforge.db data/cardforge.db
 ```
 
 ## Performance
@@ -300,25 +299,26 @@ python scripts/import_collection.py --restore /path/to/backup
 Clears existing collection before import:
 
 ```bash
-python scripts/import_collection.py data/imports/file.csv --replace
+python -m cardforge.cli collection import data/imports/file.csv --mode replace
 ```
 
 **Warning:** This removes all existing collection data before importing.
 
 ### Skip Backup
 
-Proceed without creating backup (not recommended):
+The CLI import command does not create automatic backups. Back up manually
+before destructive operations:
 
 ```bash
-python scripts/import_collection.py data/imports/file.csv --no-backup
+cp data/cardforge.db data/backups/manual_backup.db
 ```
 
 ### Auto-Detect Format
 
-Script automatically detects CSV format:
+The CLI import command automatically detects CSV format:
 
 ```bash
-python scripts/import_collection.py data/imports/file.csv
+python -m cardforge.cli collection import data/imports/file.csv
 ```
 
 Supports: ManaBox, Archidekt, Moxfield, Standard
@@ -421,9 +421,9 @@ data/
 ## Next Steps
 
 1. Prepare your CSV file (ManaBox format recommended)
-2. Run import: `python scripts/import_collection.py data/imports/file.csv`
+2. Run import: `python -m cardforge.cli collection import data/imports/file.csv`
 3. Review import statistics
 4. Export to other formats as needed: `python scripts/export_collection.py`
-5. Check backups: `ls -la data/backups/`
+5. Check backups: `ls data/backups/`
 
 For questions or issues, check the logs in the backup directory.

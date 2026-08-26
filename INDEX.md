@@ -148,10 +148,9 @@ python -m cardforge.cli stats
 |--------|-------|
 | Core Files | 3 |
 | Configuration Files | 2 |
-| Documentation Files | 8 |
-| Total Deliverables | 14 |
+| Documentation Files | 2 |
+| Total Deliverables | 7 |
 | Lines of Code | ~1,100 |
-| Lines of Docs | ~3,000+ |
 | Setup Time | 5 min |
 | Daily Friction | Zero |
 
